@@ -126,7 +126,7 @@ export default function App() {
 
   return (
     <div className="app">
-      {/* HEADER (se oculta en modo stream) */}
+      {/* HEADER oculto en modo stream */}
       {!streamMode && (
         <header className="app__header">
           <h1>DBD Roulette Manager</h1>
@@ -169,7 +169,7 @@ export default function App() {
         </header>
       )}
 
-      {/* MAIN */}
+      {/* CONTENIDO */}
       <main
         className={
           streamMode
