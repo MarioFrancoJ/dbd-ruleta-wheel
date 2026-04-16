@@ -45,10 +45,22 @@ export default function StreamView() {
   };
 
   return (
-  <div className="stream-page">
-    
+    <div className="stream-page">
+      <div className="stream-page__topbar">
+        <label htmlFor="stream-wheel-select">Ruleta:</label>
+        <select
+          id="stream-wheel-select"
+          value={selectedWheelId}
+          onChange={(e) => setSelectedWheelId(e.target.value)}
+        >
+          {wheels.map((wheel) => (
+            <option key={wheel.id} value={wheel.id}>
+              {wheel.title}
+            </option>
+          ))}
+        </select>
+      </div>
 
-    
       <div className="stream-page__content">
         <WheelCard
           wheel={wheelForRender}
