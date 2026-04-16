@@ -12,7 +12,8 @@ export default function WheelCard({
   onColorChange,
   onAddColor,
   onRemoveColor,
-  cleanMode,
+  cleanMode = false,
+  streamMode = false,
 }) {
   const [isSpinning, setIsSpinning] = useState(false);
   const [rotation, setRotation] = useState(0);
@@ -31,9 +32,7 @@ export default function WheelCard({
   function playTick() {
     const audio = new Audio("/sounds/tick.wav");
     audio.volume = 0.6;
-    audio.play().catch((error) => {
-      console.error("Error reproduciendo tick:", error);
-    });
+    audio.play().catch(() => {});
   }
 
   function startTicking(duration) {
@@ -90,70 +89,72 @@ export default function WheelCard({
   }
 
   const cleanClass = cleanMode ? " wheel-card--clean" : "";
+  const streamClass = streamMode ? " wheel-card--stream" : "";
   const visualClass = showWinnerOverlay
     ? "wheel-card__visual wheel-card__visual--winner"
     : "wheel-card__visual";
 
   return (
-    <div className={`wheel-card${cleanClass}`}>
+    <div className={`wheel-card${cleanClass}${streamClass}`}>
       <div className="wheel-card__header">
         <h2>{wheel.title}</h2>
       </div>
 
-    <div
-  className={`${visualClass} wheel-card__visual--clickable`}
-  onClick={handleSpin}
-  role="button"
-  tabIndex={0}
-  onKeyDown={(e) => {
-    if (e.key === "Enter" || e.key === " ") {
-      e.preventDefault();
-      handleSpin();
-    }
-  }}
->
-  <SpinWheel
-    options={wheel.options}
-    rotation={rotation}
-    spinDuration={wheel.spinDuration}
-    colors={wheel.colors}
-  />
-  
+      <div
+        className={`${visualClass} wheel-card__visual--clickable`}
+        onClick={handleSpin}
+        role="button"
+        tabIndex={0}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            handleSpin();
+          }
+        }}
+      >
+        <SpinWheel
+          options={wheel.options}
+          rotation={rotation}
+          spinDuration={wheel.spinDuration}
+          colors={wheel.colors}
+        />
 
-       {showWinnerOverlay && (
-  <div className="wheel-card__winner-overlay">
-    <div className="wheel-card__winner-box">
-      <strong className="wheel-card__winner-text">
-        {wheel.result || "Sin resultado"}
-      </strong>
-    </div>
-  </div>
-)}
+        {showWinnerOverlay && (
+          <div className="wheel-card__winner-overlay">
+            <div className="wheel-card__winner-box">
+              <strong className="wheel-card__winner-text">
+                {wheel.result || "Sin resultado"}
+              </strong>
+            </div>
+          </div>
+        )}
       </div>
 
-      <div className="wheel-card__controls">
-        <label>
-          Tiempo de giro (segundos)
-          <input
-            type="number"
-            min="1"
-            max="20"
-            value={wheel.spinDuration}
-            onChange={(e) => onDurationChange(wheel.id, Number(e.target.value))}
-          />
-        </label>
+      {!streamMode && (
+        <div className="wheel-card__controls">
+          <label>
+            Tiempo de giro (segundos)
+            <input
+              type="number"
+              min="1"
+              max="20"
+              value={wheel.spinDuration}
+              onChange={(e) => onDurationChange(wheel.id, Number(e.target.value))}
+            />
+          </label>
 
-        <div className="wheel-card__buttons">
-  <button
-    onClick={() => onShuffle(wheel.id)}
-    disabled={isSpinning || wheel.options.length < 2}
-  >
-    Random
-  </button>
-</div>
-      </div>
+          <div className="wheel-card__buttons">
+            <button
+              onClick={() => onShuffle(wheel.id)}
+              disabled={isSpinning || wheel.options.length < 2}
+            >
+              Random
+            </button>
+          </div>
+        </div>
+      )}
 
-      {!cleanMode && (
+      {!cleanMode && !streamMode && (
         <>
           <div className="wheel-card__result">
             <strong>Resultado:</strong>
