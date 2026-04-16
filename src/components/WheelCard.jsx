@@ -13,6 +13,7 @@ export default function WheelCard({
   onAddColor,
   onRemoveColor,
   cleanMode,
+  streamMode,
 }) {
   const [isSpinning, setIsSpinning] = useState(false);
   const [rotation, setRotation] = useState(0);
@@ -89,13 +90,13 @@ export default function WheelCard({
     }, wheel.spinDuration * 1000);
   }
 
-  const cleanClass = cleanMode ? " wheel-card--clean" : "";
+  const streamClass = streamMode ? " wheel-card--stream" : "";
   const visualClass = showWinnerOverlay
     ? "wheel-card__visual wheel-card__visual--winner"
     : "wheel-card__visual";
 
   return (
-    <div className={`wheel-card${cleanClass}`}>
+    <div className={`wheel-card${cleanClass}${streamClass}`}>
       <div className="wheel-card__header">
         <h2>{wheel.title}</h2>
       </div>
@@ -131,8 +132,9 @@ export default function WheelCard({
 )}
       </div>
 
-      <div className="wheel-card__controls">
-        <label>
+{!streamMode && (
+  <div className="wheel-card__controls">
+            <label>
           Tiempo de giro (segundos)
           <input
             type="number"
@@ -151,9 +153,10 @@ export default function WheelCard({
     Random
   </button>
 </div>
-      </div>
+      </div> 
+)}
 
-      {!cleanMode && (
+      {!cleanMode && !streamMode && (
         <>
           <div className="wheel-card__result">
             <strong>Resultado:</strong>

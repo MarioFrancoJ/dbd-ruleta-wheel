@@ -25,10 +25,10 @@ export default function App() {
     const saved = loadWheels();
     return saved ? withInitialResult(saved) : withInitialResult(defaultWheels);
   });
-const [cleanMode, setCleanMode] = useState(false);
 
-const [selectedCleanWheelId, setSelectedCleanWheelId] = useState("killers");
-
+  const [cleanMode, setCleanMode] = useState(false);
+  const [streamMode, setStreamMode] = useState(false);
+  const [selectedCleanWheelId, setSelectedCleanWheelId] = useState("killers");
 
   useEffect(() => {
     saveWheels(wheels);
@@ -44,14 +44,16 @@ const [selectedCleanWheelId, setSelectedCleanWheelId] = useState("killers");
   }
 
   function handleSpin(id, winnerIndex) {
-  updateWheel(id, (wheel) => ({
-    ...wheel,
-    result: wheel.options[winnerIndex] || "",
-  }));
-}
+    updateWheel(id, (wheel) => ({
+      ...wheel,
+      result: wheel.options[winnerIndex] || "",
+    }));
+  }
 
   function handleDurationChange(id, value) {
-    const safeValue = Number.isFinite(value) ? Math.max(1, Math.min(20, value)) : 4;
+    const safeValue = Number.isFinite(value)
+      ? Math.max(1, Math.min(20, value))
+      : 4;
 
     updateWheel(id, (wheel) => ({
       ...wheel,
@@ -93,30 +95,30 @@ const [selectedCleanWheelId, setSelectedCleanWheelId] = useState("killers");
   }
 
   function handleColorChange(id, index, value) {
-  updateWheel(id, (wheel) => {
-    const nextColors = [...(wheel.colors || [])];
-    nextColors[index] = value;
+    updateWheel(id, (wheel) => {
+      const nextColors = [...(wheel.colors || [])];
+      nextColors[index] = value;
 
-    return {
+      return {
+        ...wheel,
+        colors: nextColors,
+      };
+    });
+  }
+
+  function handleAddColor(id) {
+    updateWheel(id, (wheel) => ({
       ...wheel,
-      colors: nextColors,
-    };
-  });
-}
+      colors: [...(wheel.colors || []), "#ffffff"],
+    }));
+  }
 
-function handleAddColor(id) {
-  updateWheel(id, (wheel) => ({
-    ...wheel,
-    colors: [...(wheel.colors || []), "#ffffff"],
-  }));
-}
-
-function handleRemoveColor(id, index) {
-  updateWheel(id, (wheel) => ({
-    ...wheel,
-    colors: (wheel.colors || []).filter((_, i) => i !== index),
-  }));
-}
+  function handleRemoveColor(id, index) {
+    updateWheel(id, (wheel) => ({
+      ...wheel,
+      colors: (wheel.colors || []).filter((_, i) => i !== index),
+    }));
+  }
 
   function handleResetAll() {
     setWheels(withInitialResult(defaultWheels));
@@ -124,58 +126,81 @@ function handleRemoveColor(id, index) {
 
   return (
     <div className="app">
-    <header className="app__header">
-  <h1>DBD Roulette Manager</h1>
-  <p>Administra y gira tus ruletas personalizadas de Dead by Daylight.</p>
+      {/* HEADER (se oculta en modo stream) */}
+      {!streamMode && (
+        <header className="app__header">
+          <h1>DBD Roulette Manager</h1>
+          <p>
+            Administra y gira tus ruletas personalizadas de Dead by Daylight.
+          </p>
 
- <div className="app__header-buttons">
-  <button onClick={() => setCleanMode((prev) => !prev)}>
-    {cleanMode ? "Volver al editor" : "Modo ruleta limpia"}
-  </button>
+          <div className="app__header-buttons">
+            <button onClick={() => setCleanMode((prev) => !prev)}>
+              {cleanMode ? "Volver al editor" : "Modo ruleta limpia"}
+            </button>
 
-  <button onClick={handleResetAll}>
-    Restaurar ruletas por defecto
-  </button>
-</div>
+            <button onClick={() => setStreamMode((prev) => !prev)}>
+              {streamMode ? "Salir modo stream" : "Modo Stream"}
+            </button>
 
-{cleanMode && (
-  <div className="app__clean-selector">
-    <label htmlFor="clean-wheel-select">Ruleta visible:</label>
-    <select
-      id="clean-wheel-select"
-      value={selectedCleanWheelId}
-      onChange={(e) => setSelectedCleanWheelId(e.target.value)}
-    >
-      {wheels.map((wheel) => (
-        <option key={wheel.id} value={wheel.id}>
-          {wheel.title}
-        </option>
-      ))}
-    </select>
-  </div>
-)}
-</header>
+            <button onClick={handleResetAll}>
+              Restaurar ruletas por defecto
+            </button>
+          </div>
 
-<main className={`app__grid${cleanMode ? " app__grid--clean" : ""}`}>
-  {wheels
-    .filter((wheel) => !cleanMode || wheel.id === selectedCleanWheelId)
-    .map((wheel) => (
-      <WheelCard
-        key={wheel.id}
-        wheel={wheel}
-        onSpin={handleSpin}
-        onDurationChange={handleDurationChange}
-        onOptionChange={handleOptionChange}
-        onAddOption={handleAddOption}
-        onRemoveOption={handleRemoveOption}
-        onShuffle={handleShuffle}
-        onColorChange={handleColorChange}
-        onAddColor={handleAddColor}
-        onRemoveColor={handleRemoveColor}
-        cleanMode={cleanMode}
-      />
-    ))}
-</main>
+          {cleanMode && (
+            <div className="app__clean-selector">
+              <label htmlFor="clean-wheel-select">
+                Ruleta visible:
+              </label>
+              <select
+                id="clean-wheel-select"
+                value={selectedCleanWheelId}
+                onChange={(e) => setSelectedCleanWheelId(e.target.value)}
+              >
+                {wheels.map((wheel) => (
+                  <option key={wheel.id} value={wheel.id}>
+                    {wheel.title}
+                  </option>
+                ))}
+              </select>
+            </div>
+          )}
+        </header>
+      )}
+
+      {/* MAIN */}
+      <main
+        className={
+          streamMode
+            ? "app__stream"
+            : `app__grid${cleanMode ? " app__grid--clean" : ""}`
+        }
+      >
+        {wheels
+          .filter((wheel) => {
+            if (streamMode) return wheel.id === selectedCleanWheelId;
+            if (cleanMode) return wheel.id === selectedCleanWheelId;
+            return true;
+          })
+          .map((wheel) => (
+            <WheelCard
+              key={wheel.id}
+              wheel={wheel}
+              onSpin={handleSpin}
+              onDurationChange={handleDurationChange}
+              onOptionChange={handleOptionChange}
+              onAddOption={handleAddOption}
+              onRemoveOption={handleRemoveOption}
+              onShuffle={handleShuffle}
+              onColorChange={handleColorChange}
+              onAddColor={handleAddColor}
+              onRemoveColor={handleRemoveColor}
+              cleanMode={cleanMode}
+              streamMode={streamMode}
+            />
+          ))}
+      </main>
     </div>
   );
 }
