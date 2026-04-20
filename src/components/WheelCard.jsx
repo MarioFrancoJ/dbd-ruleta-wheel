@@ -104,7 +104,7 @@ export default function WheelCard({
         className={`${visualClass} wheel-card__visual--clickable`}
         onClick={handleSpin}
         role="button"
-        tabIndex={0}
+        tabIndex={-1}
         onKeyDown={(e) => {
           if (e.key === "Enter" || e.key === " ") {
             e.preventDefault();

@@ -555,3 +555,12 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
     opacity: 1;
   }
 }
+
+/* eliminar borde azul al hacer click en la ruleta */
+
+.wheel-card__visual--clickable:focus,
+.wheel-card__visual--clickable:focus-visible,
+.wheel-card__visual--clickable:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
