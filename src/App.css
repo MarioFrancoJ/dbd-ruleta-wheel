@@ -312,7 +312,7 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 
 .wheel-card__winner-text {
   display: block;
-  font-size: 4.5rem;
+  font-size: 50px;
   line-height: 1.3;
   color: #f8fafc;
   word-break: break-word;
@@ -441,7 +441,7 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 }
 
 .wheel-card--stream .wheel-card__winner-text {
-  font-size: 2rem;
+  font-size: 50px;
 }
 
 @media (max-width: 768px) {
@@ -460,7 +460,7 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 
 
 .wheel-card--stream .wheel-card__winner-text {
-  font-size: 3.5rem;
+  font-size: 50px;
 }
 
 .stream-page {
@@ -521,7 +521,12 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 }
 
 .wheel-card--stream .wheel-card__winner-text {
-  font-size: 2.4rem;
+  font-size: 50px;
+}
+
+.wheel-card--stream .wheel-card__winner-image {
+  width: 220px;
+  height: 220px;
 }
 
 @media (max-width: 768px) {
@@ -541,7 +546,7 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 
 .wheel-card__winner-text {
   display: block;
-  font-size: 4.5rem;
+  font-size: 50px;
   line-height: 1.3;
   color: #f8fafc;
   word-break: break-word;
