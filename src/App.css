@@ -525,8 +525,8 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 }
 
 .wheel-card--stream .wheel-card__winner-image {
-  width: 220px;
-  height: 220px;
+  width: 500px;
+  height: 500px;
 }
 
 @media (max-width: 768px) {
