@@ -102,7 +102,10 @@ export default function WheelCard({
 
       <div
         className={`${visualClass} wheel-card__visual--clickable`}
-        onClick={handleSpin}
+        onClick={(e) => {
+  e.currentTarget.blur();
+  handleSpin();
+}}
         role="button"
         tabIndex={-1}
         onKeyDown={(e) => {
