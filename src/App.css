@@ -576,3 +576,7 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 .spin-wheel-wrapper svg {
   outline: none;
 }
+
+.spin-wheel-wrapper svg {
+  outline: none;
+}

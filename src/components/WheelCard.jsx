@@ -102,8 +102,14 @@ export default function WheelCard({
 
       <div
   className={`${visualClass} wheel-card__visual--clickable`}
-  onMouseDown={(e) => e.preventDefault()}
-  onClick={handleSpin}
+  onMouseDown={(e) => {
+    e.preventDefault();
+    document.activeElement?.blur();
+  }}
+  onClick={(e) => {
+    document.activeElement?.blur();
+    handleSpin();
+  }}
 >
  
         <SpinWheel
