@@ -18,45 +18,19 @@ function withInitialResult(wheels) {
       "#92400e",
     ],
   }));
-} {
-  return wheels.map((wheel) => ({
-    ...wheel,
-
-    // asegurar que el resultado exista
-    result: wheel.result || "",
-
-    // asegurar colores
-    colors: wheel.colors || [
-      "#b91c1c",
-      "#1f2937",
-      "#7c3aed",
-      "#0f766e",
-      "#1d4ed8",
-      "#92400e",
-    ],
-
-    // convertir opciones antiguas (strings) en objetos
-    options: (wheel.options || []).map((option) => {
-      if (typeof option === "string") {
-        return {
-          label: option
-        };
-      }
-
-      return option;
-    }),
-  }));
 }
 
 export default function App() {
   const [wheels, setWheels] = useState(() => {
     const saved = loadWheels();
-    return saved ? withInitialResult(saved) : withInitialResult(defaultWheels);
+    return saved
+      ? withInitialResult(saved)
+      : withInitialResult(defaultWheels);
   });
-const [cleanMode, setCleanMode] = useState(false);
 
-const [selectedCleanWheelId, setSelectedCleanWheelId] = useState("killers");
-
+  const [cleanMode, setCleanMode] = useState(false);
+  const [selectedCleanWheelId, setSelectedCleanWheelId] =
+    useState("killers");
 
   useEffect(() => {
     saveWheels(wheels);
@@ -72,14 +46,16 @@ const [selectedCleanWheelId, setSelectedCleanWheelId] = useState("killers");
   }
 
   function handleSpin(id, winnerIndex) {
-  updateWheel(id, (wheel) => ({
-    ...wheel,
-    result: wheel.options[winnerIndex] || "",
-  }));
-}
+    updateWheel(id, (wheel) => ({
+      ...wheel,
+      result: wheel.options[winnerIndex] || "",
+    }));
+  }
 
   function handleDurationChange(id, value) {
-    const safeValue = Number.isFinite(value) ? Math.max(1, Math.min(20, value)) : 4;
+    const safeValue = Number.isFinite(value)
+      ? Math.max(1, Math.min(20, value))
+      : 4;
 
     updateWheel(id, (wheel) => ({
       ...wheel,
@@ -88,30 +64,6 @@ const [selectedCleanWheelId, setSelectedCleanWheelId] = useState("killers");
   }
 
   function handleOptionChange(id, index, value) {
-  updateWheel(id, (wheel) => {
-    const nextOptions = [...wheel.options];
-
-    const currentOption = nextOptions[index];
-
-    // Si ya es objeto, mantener la imagen
-    if (typeof currentOption === "object") {
-      nextOptions[index] = {
-        ...currentOption,
-        label: value,
-      };
-    } else {
-      // Si era string, convertirlo en objeto
-      nextOptions[index] = {
-        label: value,
-      };
-    }
-
-    return {
-      ...wheel,
-      options: nextOptions,
-    };
-  });
-} {
     updateWheel(id, (wheel) => {
       const nextOptions = [...wheel.options];
       nextOptions[index] = value;
@@ -145,30 +97,32 @@ const [selectedCleanWheelId, setSelectedCleanWheelId] = useState("killers");
   }
 
   function handleColorChange(id, index, value) {
-  updateWheel(id, (wheel) => {
-    const nextColors = [...(wheel.colors || [])];
-    nextColors[index] = value;
+    updateWheel(id, (wheel) => {
+      const nextColors = [...(wheel.colors || [])];
+      nextColors[index] = value;
 
-    return {
+      return {
+        ...wheel,
+        colors: nextColors,
+      };
+    });
+  }
+
+  function handleAddColor(id) {
+    updateWheel(id, (wheel) => ({
       ...wheel,
-      colors: nextColors,
-    };
-  });
-}
+      colors: [...(wheel.colors || []), "#ffffff"],
+    }));
+  }
 
-function handleAddColor(id) {
-  updateWheel(id, (wheel) => ({
-    ...wheel,
-    colors: [...(wheel.colors || []), "#ffffff"],
-  }));
-}
-
-function handleRemoveColor(id, index) {
-  updateWheel(id, (wheel) => ({
-    ...wheel,
-    colors: (wheel.colors || []).filter((_, i) => i !== index),
-  }));
-}
+  function handleRemoveColor(id, index) {
+    updateWheel(id, (wheel) => ({
+      ...wheel,
+      colors: (wheel.colors || []).filter(
+        (_, i) => i !== index
+      ),
+    }));
+  }
 
   function handleResetAll() {
     setWheels(withInitialResult(defaultWheels));
@@ -176,58 +130,95 @@ function handleRemoveColor(id, index) {
 
   return (
     <div className="app">
-    <header className="app__header">
-  <h1>DBD Roulette Manager</h1>
-  <p>Administra y gira tus ruletas personalizadas de Dead by Daylight.</p>
+      <header className="app__header">
+        <h1>DBD Roulette Manager</h1>
+        <p>
+          Administra y gira tus ruletas personalizadas de Dead by
+          Daylight.
+        </p>
 
- <div className="app__header-buttons">
-  <button onClick={() => setCleanMode((prev) => !prev)}>
-    {cleanMode ? "Volver al editor" : "Modo ruleta limpia"}
-  </button>
+        <div className="app__header-buttons">
+          <button
+            onClick={() =>
+              setCleanMode((prev) => !prev)
+            }
+          >
+            {cleanMode
+              ? "Volver al editor"
+              : "Modo ruleta limpia"}
+          </button>
 
-  <button onClick={handleResetAll}>
-    Restaurar ruletas por defecto
-  </button>
-</div>
+          <button onClick={handleResetAll}>
+            Restaurar ruletas por defecto
+          </button>
+        </div>
 
-{cleanMode && (
-  <div className="app__clean-selector">
-    <label htmlFor="clean-wheel-select">Ruleta visible:</label>
-    <select
-      id="clean-wheel-select"
-      value={selectedCleanWheelId}
-      onChange={(e) => setSelectedCleanWheelId(e.target.value)}
-    >
-      {wheels.map((wheel) => (
-        <option key={wheel.id} value={wheel.id}>
-          {wheel.title}
-        </option>
-      ))}
-    </select>
-  </div>
-)}
-</header>
+        {cleanMode && (
+          <div className="app__clean-selector">
+            <label htmlFor="clean-wheel-select">
+              Ruleta visible:
+            </label>
 
-<main className={`app__grid${cleanMode ? " app__grid--clean" : ""}`}>
-  {wheels
-    .filter((wheel) => !cleanMode || wheel.id === selectedCleanWheelId)
-    .map((wheel) => (
-      <WheelCard
-        key={wheel.id}
-        wheel={wheel}
-        onSpin={handleSpin}
-        onDurationChange={handleDurationChange}
-        onOptionChange={handleOptionChange}
-        onAddOption={handleAddOption}
-        onRemoveOption={handleRemoveOption}
-        onShuffle={handleShuffle}
-        onColorChange={handleColorChange}
-        onAddColor={handleAddColor}
-        onRemoveColor={handleRemoveColor}
-        cleanMode={cleanMode}
-      />
-    ))}
-</main>
+            <select
+              id="clean-wheel-select"
+              value={selectedCleanWheelId}
+              onChange={(e) =>
+                setSelectedCleanWheelId(
+                  e.target.value
+                )
+              }
+            >
+              {wheels.map((wheel) => (
+                <option
+                  key={wheel.id}
+                  value={wheel.id}
+                >
+                  {wheel.title}
+                </option>
+              ))}
+            </select>
+          </div>
+        )}
+      </header>
+
+      <main
+        className={`app__grid${
+          cleanMode ? " app__grid--clean" : ""
+        }`}
+      >
+        {wheels
+          .filter(
+            (wheel) =>
+              !cleanMode ||
+              wheel.id === selectedCleanWheelId
+          )
+          .map((wheel) => (
+            <WheelCard
+              key={wheel.id}
+              wheel={wheel}
+              onSpin={handleSpin}
+              onDurationChange={
+                handleDurationChange
+              }
+              onOptionChange={
+                handleOptionChange
+              }
+              onAddOption={handleAddOption}
+              onRemoveOption={
+                handleRemoveOption
+              }
+              onShuffle={handleShuffle}
+              onColorChange={
+                handleColorChange
+              }
+              onAddColor={handleAddColor}
+              onRemoveColor={
+                handleRemoveColor
+              }
+              cleanMode={cleanMode}
+            />
+          ))}
+      </main>
     </div>
   );
 }
