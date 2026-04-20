@@ -8,7 +8,11 @@ import "./App.css";
 function withInitialResult(wheels) {
   return wheels.map((wheel) => ({
     ...wheel,
+
+    // asegurar que el resultado exista
     result: wheel.result || "",
+
+    // asegurar colores
     colors: wheel.colors || [
       "#b91c1c",
       "#1f2937",
@@ -17,6 +21,17 @@ function withInitialResult(wheels) {
       "#1d4ed8",
       "#92400e",
     ],
+
+    // convertir opciones antiguas (strings) en objetos
+    options: (wheel.options || []).map((option) => {
+      if (typeof option === "string") {
+        return {
+          label: option
+        };
+      }
+
+      return option;
+    }),
   }));
 }
 
