@@ -4,12 +4,8 @@
     "title": "Ruleta de Asesinos",
     "spinDuration": 4,
     "colors": [
-      "#b91c1c",
-      "#1f2937",
-      "#7c3aed",
-      "#0f766e",
-      "#1d4ed8",
-      "#92400e"
+      "#D95E32",
+      "#A60D0D"
     ],
     "options": [
       { "label": "Trampero", "image": "/Images/Killers/K01_TheTrapper_Portrait.webp" },
@@ -61,12 +57,8 @@
     "title": "Ruleta de Supervivientes",
     "spinDuration": 4,
     "colors": [
-      "#b91c1c",
-      "#1f2937",
-      "#7c3aed",
-      "#0f766e",
-      "#1d4ed8",
-      "#92400e"
+      "#023859",
+      "#03588C"
     ],
     "options": [
       { "label": "Dwight Fairfield", "image": "/Images/Survivors/S01_DwightFairfield_Portrait.webp" },

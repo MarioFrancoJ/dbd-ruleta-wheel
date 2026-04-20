@@ -1,6 +1,6 @@
 const STORAGE_KEY = "dbd-wheels-config";
 const VERSION_KEY = "dbd-wheels-version";
-const CURRENT_VERSION = "2.5"; // Fix todos los nombres de survivors
+const CURRENT_VERSION = "2.6"; // Nuevos colores killers y survivors
 
 export function loadWheels() {
   try {
