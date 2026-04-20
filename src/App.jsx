@@ -132,8 +132,11 @@ export default function App() {
     }));
   }
 
+  function handleTitleChange(id, value) {
+    updateWheel(id, (wheel) => ({ ...wheel, title: value }));
+  }
+
   function handleResetAll() {
-    // Limpiar localStorage completamente
     localStorage.removeItem('dbd-wheels-config');
     setWheels(withInitialResult(defaultWheels));
   }
@@ -218,13 +221,10 @@ export default function App() {
                 handleRemoveOption
               }
               onShuffle={handleShuffle}
-              onColorChange={
-                handleColorChange
-              }
+              onColorChange={handleColorChange}
               onAddColor={handleAddColor}
-              onRemoveColor={
-                handleRemoveColor
-              }
+              onRemoveColor={handleRemoveColor}
+              onTitleChange={handleTitleChange}
               cleanMode={cleanMode}
             />
           ))}

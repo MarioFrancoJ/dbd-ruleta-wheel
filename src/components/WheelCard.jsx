@@ -12,6 +12,7 @@ export default function WheelCard({
   onColorChange,
   onAddColor,
   onRemoveColor,
+  onTitleChange,
   cleanMode = false,
   streamMode = false,
 }) {
@@ -97,7 +98,16 @@ export default function WheelCard({
   return (
     <div className={`wheel-card${cleanClass}${streamClass}`}>
       <div className="wheel-card__header">
-        <h2>{wheel.title}</h2>
+        {!cleanMode && !streamMode ? (
+          <input
+            className="wheel-card__title-input"
+            type="text"
+            value={wheel.title}
+            onChange={(e) => onTitleChange(wheel.id, e.target.value)}
+          />
+        ) : (
+          <h2>{wheel.title}</h2>
+        )}
       </div>
 
       <div

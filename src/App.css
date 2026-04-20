@@ -69,6 +69,26 @@ input {
   font-size: 1.2rem;
 }
 
+.wheel-card__title-input {
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 18px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: #f9fafb;
+  padding: 4px 8px;
+  border-radius: 0;
+  outline: none;
+}
+
+.wheel-card__title-input:focus {
+  border-bottom-color: rgba(255, 255, 255, 0.6);
+}
+
 .wheel-card__visual {
   display: flex;
   justify-content: center;
