@@ -58,8 +58,16 @@ export default function WheelCard({
 
     const winnerIndex = Math.floor(Math.random() * wheel.options.length);
     const anglePerSegment = 360 / wheel.options.length;
-    const targetAngle = 360 - (winnerIndex * anglePerSegment + anglePerSegment / 2);
-    const finalRotation = rotation + 360 * 6 + targetAngle;
+
+    // El puntero está arriba (270° en coordenadas SVG, o -90°)
+    // Necesitamos rotar para que el centro del segmento ganador quede en el puntero
+    const segmentCenter = winnerIndex * anglePerSegment + anglePerSegment / 2;
+    const targetAngle = (360 - segmentCenter) % 360;
+
+    // Normalizamos la rotación actual para evitar acumulación infinita
+    const currentNormalized = rotation % 360;
+    const extraSpins = 360 * 8;
+    const finalRotation = rotation - currentNormalized + extraSpins + targetAngle;
 
     setIsSpinning(true);
     setRotation(finalRotation);
