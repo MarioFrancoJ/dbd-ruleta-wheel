@@ -1,6 +1,6 @@
 const STORAGE_KEY = "dbd-wheels-config";
 const VERSION_KEY = "dbd-wheels-version";
-const CURRENT_VERSION = "2.1"; // Fix rutas de imágenes
+const CURRENT_VERSION = "2.2"; // Fix mayúsculas en rutas de imágenes
 
 export function loadWheels() {
   try {
