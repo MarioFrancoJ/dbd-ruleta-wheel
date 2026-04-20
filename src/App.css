@@ -384,7 +384,7 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 }
 
 .wheel-card__visual--clickable:focus {
-  outline: px solid #60a5fa00;
+  outline: none;
   outline-offset: 0px;
 }
 
@@ -556,76 +556,23 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
   }
 }
 
-/* eliminar borde azul al hacer click en la ruleta */
+/* ===== ELIMINAR BORDE AZUL DE LA RULETA ===== */
 
-/* ELIMINAR COMPLETAMENTE EL BORDE AZUL DE LA RULETA */
-
-.wheel-card__visual--clickable,
-.wheel-card__visual--clickable:focus,
-.wheel-card__visual--clickable:focus-visible,
-.wheel-card__visual--clickable:active {
-  outline: none !important;
-  box-shadow: none !important;
-  border: none !important;
-}
-
-/* prevenir highlight en algunos navegadores */
 .wheel-card__visual--clickable {
+  outline: none;
+  border: none;
+  box-shadow: none;
   -webkit-tap-highlight-color: transparent;
 }
-
-
-/* ===== ELIMINAR COMPLETAMENTE EL BORDE AZUL / FOCUS RING ===== */
-
-/* Quitar focus visual de cualquier elemento dentro de la ruleta */
-.spin-wheel-wrapper *,
-.spin-wheel-svg *,
-.wheel-card__visual *,
-.wheel-card__visual--clickable * {
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-/* Quitar focus del contenedor principal */
-.wheel-card__visual--clickable,
-.wheel-card__visual--clickable:focus,
-.wheel-card__visual--clickable:focus-visible,
-.wheel-card__visual--clickable:active {
-  outline: none !important;
-  box-shadow: none !important;
-  border: none !important;
-}
-
-/* Quitar highlight en Chrome / Edge / móvil */
-.wheel-card__visual--clickable {
-  -webkit-tap-highlight-color: transparent;
-  user-select: none;
-}
-
-/* Quitar focus global (último recurso seguro) */
-*:focus {
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-.wheel-card__visual {
-  border: none !important;
-}
-
-/* QUITAR BORDE AZUL AL HACER CLICK EN LA RULETA */
 
 .wheel-card__visual--clickable:focus,
 .wheel-card__visual--clickable:focus-visible,
 .wheel-card__visual--clickable:active {
-  outline: none !important;
-  box-shadow: none !important;
+  outline: none;
+  border: none;
+  box-shadow: none;
 }
 
-/* Evitar highlight azul en navegadores */
-.wheel-card__visual--clickable {
-  -webkit-tap-highlight-color: transparent;
-}
-
-.spin-wheel-wrapper svg:focus {
-  outline: none !important;
+.spin-wheel-wrapper svg {
+  outline: none;
 }
