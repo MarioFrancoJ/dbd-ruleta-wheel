@@ -122,9 +122,21 @@ export default function WheelCard({
         {showWinnerOverlay && (
           <div className="wheel-card__winner-overlay">
             <div className="wheel-card__winner-box">
-              <strong className="wheel-card__winner-text">
-                {wheel.result || "Sin resultado"}
-              </strong>
+{wheel.result && (
+  <>
+    {wheel.result.image && (
+      <img
+        src={wheel.result.image}
+        alt={wheel.result.label}
+        className="wheel-card__winner-image"
+      />
+    )}
+
+    <strong className="wheel-card__winner-text">
+      {wheel.result.label || wheel.result}
+    </strong>
+  </>
+)}
             </div>
           </div>
         )}
@@ -171,7 +183,7 @@ export default function WheelCard({
               >
                 <input
                   type="text"
-                  value={option}
+                  value={option.label || option}
                   onChange={(e) =>
                     onOptionChange(wheel.id, index, e.target.value)
                   }

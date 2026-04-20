@@ -536,3 +536,22 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
     height: 360px;
   }
 }
+
+.wheel-card__winner-image {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  animation: pop 0.25s ease;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

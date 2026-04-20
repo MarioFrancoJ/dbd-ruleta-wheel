@@ -94,7 +94,20 @@ export default function SpinWheel({ options, rotation, spinDuration, colors = []
                 dominantBaseline="middle"
                 transform={`rotate(${segment.textRotate} ${segment.textX} ${segment.textY})`}
               >
-                {truncateText(segment.option)}
+                {truncateText(segment.option.label || segment.option)}
+
+                <text
+  x={segment.textX}
+  y={segment.textY}
+  fill="#ffffff"
+  fontSize="12"
+  fontWeight="700"
+  textAnchor="middle"
+  dominantBaseline="middle"
+  transform={`rotate(${segment.textRotate} ${segment.textX} ${segment.textY})`}
+>
+  {truncateText(segment.option.label || segment.option)}
+</text>
               </text>
             </g>
           ))}
@@ -106,3 +119,4 @@ export default function SpinWheel({ options, rotation, spinDuration, colors = []
     </div>
   );
 }
+
