@@ -107,21 +107,19 @@ export default function WheelCard({
 
         {showWinnerOverlay && (
           <div className="wheel-card__winner-overlay">
-            <div className="wheel-card__winner-box">
-              {resultImage && (
-                <img
-                  key={resultImage}
-                  src={resultImage}
-                  alt={resultLabel}
-                  className="wheel-card__winner-image"
-                />
-              )}
-              {resultLabel && (
-                <strong className="wheel-card__winner-text">
-                  {resultLabel}
-                </strong>
-              )}
-            </div>
+            {resultImage && (
+              <img
+                key={resultImage}
+                src={resultImage}
+                alt={resultLabel}
+                className="wheel-card__winner-image"
+              />
+            )}
+            {resultLabel && (
+              <strong className="wheel-card__winner-text">
+                {resultLabel}
+              </strong>
+            )}
           </div>
         )}
       </div>
