@@ -607,3 +607,7 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
   outline: none !important;
   box-shadow: none !important;
 }
+
+.wheel-card__visual {
+  border: none !important;
+}

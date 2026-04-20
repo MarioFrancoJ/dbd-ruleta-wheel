@@ -101,20 +101,20 @@ export default function WheelCard({
       </div>
 
       <div
-        className={`${visualClass} wheel-card__visual--clickable`}
-        onClick={(e) => {
-  e.currentTarget.blur();
-  handleSpin();
-}}
-        role="button"
-        tabIndex={-1}
-        onKeyDown={(e) => {
-          if (e.key === "Enter" || e.key === " ") {
-            e.preventDefault();
-            handleSpin();
-          }
-        }}
-      >
+  className={`${visualClass} wheel-card__visual--clickable`}
+  onClick={(e) => {
+    e.currentTarget.blur();
+    handleSpin();
+  }}
+  tabIndex={-1}
+  onKeyDown={(e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      handleSpin();
+    }
+  }}
+>
+ 
         <SpinWheel
           options={wheel.options}
           rotation={rotation}
