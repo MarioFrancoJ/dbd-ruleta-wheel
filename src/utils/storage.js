@@ -1,6 +1,6 @@
 const STORAGE_KEY = "dbd-wheels-config";
 const VERSION_KEY = "dbd-wheels-version";
-const CURRENT_VERSION = "2.3"; // Survivors completos
+const CURRENT_VERSION = "2.4"; // Fix nombres de imágenes survivors
 
 export function loadWheels() {
   try {
