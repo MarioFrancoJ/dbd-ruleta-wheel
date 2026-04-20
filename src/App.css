@@ -630,3 +630,124 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 .spin-wheel-svg:focus-visible {
   outline: none !important;
 }
+
+
+/* ===== TEMA LIGHT ===== */
+
+.theme-light {
+  background: radial-gradient(circle at top, #f0f4f8 0%, #e2e8f0 45%, #cbd5e1 100%);
+}
+
+.theme-light .app {
+  background: transparent;
+}
+
+.theme-light body {
+  color: #1e293b;
+}
+
+.theme-light .app__header h1 {
+  color: #0f172a;
+}
+
+.theme-light .app__header p {
+  color: #475569;
+}
+
+.theme-light .app__header button {
+  background: #3b82f6;
+  color: white;
+}
+
+.theme-light .wheel-card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.15);
+}
+
+.theme-light .wheel-card__header h2,
+.theme-light .wheel-card__title-input {
+  color: #0f172a;
+}
+
+.theme-light .wheel-card__title-input {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.theme-light .wheel-card__title-input:focus {
+  border-bottom-color: rgba(0, 0, 0, 0.5);
+}
+
+.theme-light .wheel-card__controls label {
+  color: #1e293b;
+}
+
+.theme-light .wheel-card__controls input {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: #0f172a;
+}
+
+.theme-light .wheel-card__option-row input {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: #0f172a;
+}
+
+.theme-light .wheel-card__buttons button {
+  background: #dc2626;
+}
+
+.theme-light .wheel-card__buttons button:last-child {
+  background: #2563eb;
+}
+
+.theme-light .wheel-card__result {
+  background: #f8fafc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #0f172a;
+}
+
+.theme-light .wheel-card__result strong {
+  color: #0f172a;
+}
+
+.theme-light .wheel-card__result p {
+  color: #1e40af;
+}
+
+.theme-light .wheel-card__options h3,
+.theme-light .wheel-card__colors h3 {
+  color: #0f172a;
+}
+
+.theme-light .wheel-card__color-row input[type="color"] {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+}
+
+.theme-light .wheel-card__color-row input[type="text"] {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: #0f172a;
+}
+
+.theme-light .app__clean-selector label {
+  color: #1e293b;
+}
+
+.theme-light .app__clean-selector select {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: #0f172a;
+}
+
+.theme-light .spin-wheel-svg circle:first-child {
+  fill: #ffffff;
+  stroke: #1e293b;
+}
+
+.theme-light .spin-wheel-svg circle:last-child {
+  fill: #f1f5f9;
+  stroke: #0f172a;
+}

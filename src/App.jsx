@@ -27,12 +27,19 @@ export default function App() {
   });
 
   const [cleanMode, setCleanMode] = useState(false);
-  const [selectedCleanWheelId, setSelectedCleanWheelId] =
-    useState("killers");
+  const [selectedCleanWheelId, setSelectedCleanWheelId] = useState("killers");
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem('dbd-theme') || 'dark';
+  });
 
   useEffect(() => {
     saveWheels(wheels);
   }, [wheels]);
+
+  useEffect(() => {
+    localStorage.setItem('dbd-theme', theme);
+    document.body.className = theme === 'light' ? 'theme-light' : 'theme-dark';
+  }, [theme]);
 
   function updateWheel(id, updater) {
     setWheels((current) =>
@@ -151,14 +158,12 @@ export default function App() {
         </p>
 
         <div className="app__header-buttons">
-          <button
-            onClick={() =>
-              setCleanMode((prev) => !prev)
-            }
-          >
-            {cleanMode
-              ? "Volver al editor"
-              : "Modo ruleta limpia"}
+          <button onClick={() => setCleanMode((prev) => !prev)}>
+            {cleanMode ? "Volver al editor" : "Modo ruleta limpia"}
+          </button>
+
+          <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
+            {theme === 'dark' ? '☀️ Tema Claro' : '🌙 Tema Oscuro'}
           </button>
 
           <button onClick={handleResetAll}>
