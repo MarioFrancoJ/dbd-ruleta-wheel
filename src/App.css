@@ -611,3 +611,21 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 .wheel-card__visual {
   border: none !important;
 }
+
+/* QUITAR BORDE AZUL AL HACER CLICK EN LA RULETA */
+
+.wheel-card__visual--clickable:focus,
+.wheel-card__visual--clickable:focus-visible,
+.wheel-card__visual--clickable:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Evitar highlight azul en navegadores */
+.wheel-card__visual--clickable {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.spin-wheel-wrapper svg:focus {
+  outline: none !important;
+}
