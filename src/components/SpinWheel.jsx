@@ -79,7 +79,7 @@ export default function SpinWheel({ options, rotation, spinDuration, colors = []
         }}
       >
         <svg viewBox="0 0 400 400" className="spin-wheel-svg">
-          <circle cx="200" cy="200" r="190" fill="#0b1220" stroke="#e5e7eb" strokeWidth="6" />
+          <circle cx="200" cy="200" r="190" fill="#000000" stroke="#e5e7eb" strokeWidth="6" />
 
           {segments.map((segment, index) => (
             <g key={`${segment.option}-${index}`}>

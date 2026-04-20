@@ -6,7 +6,7 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background:
-    radial-gradient(circle at top, #1f2937 0%, #0f172a 45%, #020617 100%);
+    radial-gradient(circle at top, #000000 0%, #000000 45%, #000000 100%);
   color: #f9fafb;
 }
 
@@ -55,7 +55,7 @@ input {
 }
 
 .wheel-card {
-  background: rgba(17, 24, 39, 0.95);
+  background: rgba(0, 0, 0, 0.95);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 22px;
   padding: 20px;
@@ -296,7 +296,7 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 }
 
 .wheel-card__winner-box {
-  background: rgba(2, 6, 23, 0.95);
+  background: rgba(0, 0, 0, 0.95);
   border: 2px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
   border-radius: 24px;
@@ -391,7 +391,7 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 .stream-page {
   min-height: 100vh;
   background:
-    radial-gradient(circle at top, #1f2937 0%, #0f172a 45%, #020617 100%);
+    radial-gradient(circle at top, #000000 0%, #000000 45%, #000000 100%);
   padding: 24px;
 }
 
