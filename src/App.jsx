@@ -23,9 +23,7 @@ function withInitialResult(wheels) {
 export default function App() {
   const [wheels, setWheels] = useState(() => {
     const saved = loadWheels();
-    return saved
-      ? withInitialResult(saved)
-      : withInitialResult(defaultWheels);
+    return saved ? withInitialResult(saved) : withInitialResult(defaultWheels);
   });
 
   const [cleanMode, setCleanMode] = useState(false);
@@ -135,6 +133,8 @@ export default function App() {
   }
 
   function handleResetAll() {
+    // Limpiar localStorage completamente
+    localStorage.removeItem('dbd-wheels-config');
     setWheels(withInitialResult(defaultWheels));
   }
 

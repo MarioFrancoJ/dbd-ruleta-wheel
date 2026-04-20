@@ -22,10 +22,7 @@ export default function WheelCard({
 
   useEffect(() => {
     return () => {
-      if (tickTimeoutRef.current) {
-        clearTimeout(tickTimeoutRef.current);
-        tickTimeoutRef.current = null;
-      }
+      if (tickTimeoutRef.current) clearTimeout(tickTimeoutRef.current);
     };
   }, []);
 
@@ -38,22 +35,13 @@ export default function WheelCard({
   function startTicking(duration) {
     const startTime = Date.now();
     const totalDuration = duration * 1000;
-
     function scheduleNextTick() {
       const elapsed = Date.now() - startTime;
       const progress = elapsed / totalDuration;
-
-      if (progress >= 1) {
-        tickTimeoutRef.current = null;
-        return;
-      }
-
+      if (progress >= 1) { tickTimeoutRef.current = null; return; }
       playTick();
-
-      const nextDelay = 60 + progress * 220;
-      tickTimeoutRef.current = setTimeout(scheduleNextTick, nextDelay);
+      tickTimeoutRef.current = setTimeout(scheduleNextTick, 60 + progress * 220);
     }
-
     scheduleNextTick();
   }
 
@@ -66,15 +54,12 @@ export default function WheelCard({
 
   function handleSpin() {
     if (!wheel.options.length || isSpinning) return;
-
     setShowWinnerOverlay(false);
 
     const winnerIndex = Math.floor(Math.random() * wheel.options.length);
     const anglePerSegment = 360 / wheel.options.length;
-    const targetAngle =
-      360 - (winnerIndex * anglePerSegment + anglePerSegment / 2);
-    const extraSpins = 360 * 6;
-    const finalRotation = rotation + extraSpins + targetAngle;
+    const targetAngle = 360 - (winnerIndex * anglePerSegment + anglePerSegment / 2);
+    const finalRotation = rotation + 360 * 6 + targetAngle;
 
     setIsSpinning(true);
     setRotation(finalRotation);
@@ -87,6 +72,13 @@ export default function WheelCard({
       setShowWinnerOverlay(true);
     }, wheel.spinDuration * 1000);
   }
+
+  // Extraer label e imagen del resultado de forma segura
+  const result = wheel.result;
+  const resultLabel = result
+    ? (typeof result === "object" ? result.label : result)
+    : null;
+  const resultImage = result && typeof result === "object" ? result.image : null;
 
   const cleanClass = cleanMode ? " wheel-card--clean" : "";
   const streamClass = streamMode ? " wheel-card--stream" : "";
@@ -101,19 +93,11 @@ export default function WheelCard({
       </div>
 
       <div
-  className={`${visualClass} wheel-card__visual--clickable`}
-  tabIndex={-1}
-  onMouseDown={(e) => {
-    e.preventDefault();
-    e.currentTarget.blur();
-  }}
-  onClick={(e) => {
-    e.preventDefault();
-    e.currentTarget.blur();
-    handleSpin();
-  }}
->
- 
+        className={`${visualClass} wheel-card__visual--clickable`}
+        tabIndex={-1}
+        onMouseDown={(e) => { e.preventDefault(); e.currentTarget.blur(); }}
+        onClick={(e) => { e.preventDefault(); e.currentTarget.blur(); handleSpin(); }}
+      >
         <SpinWheel
           options={wheel.options}
           rotation={rotation}
@@ -122,32 +106,24 @@ export default function WheelCard({
         />
 
         {showWinnerOverlay && (
-  <div className="wheel-card__winner-overlay">
-    <div className="wheel-card__winner-box">
-
-      {wheel.result && (
-        <>
-          {/* Imagen */}
-          {typeof wheel.result === "object" && wheel.result.image && (
-            <img
-              src={wheel.result.image}
-              alt={wheel.result.label}
-              className="wheel-card__winner-image"
-            />
-          )}
-
-          {/* Texto */}
-          <strong className="wheel-card__winner-text">
-            {typeof wheel.result === "object"
-              ? wheel.result.label
-              : wheel.result}
-          </strong>
-        </>
-      )}
-
-    </div>
-  </div>
-)}
+          <div className="wheel-card__winner-overlay">
+            <div className="wheel-card__winner-box">
+              {resultImage && (
+                <img
+                  key={resultImage}
+                  src={resultImage}
+                  alt={resultLabel}
+                  className="wheel-card__winner-image"
+                />
+              )}
+              {resultLabel && (
+                <strong className="wheel-card__winner-text">
+                  {resultLabel}
+                </strong>
+              )}
+            </div>
+          </div>
+        )}
       </div>
 
       {!streamMode && (
@@ -162,7 +138,6 @@ export default function WheelCard({
               onChange={(e) => onDurationChange(wheel.id, Number(e.target.value))}
             />
           </label>
-
           <div className="wheel-card__buttons">
             <button
               onClick={() => onShuffle(wheel.id)}
@@ -178,80 +153,48 @@ export default function WheelCard({
         <>
           <div className="wheel-card__result">
             <strong>Resultado:</strong>
-            <p>
-              {wheel.result 
-                ? (typeof wheel.result === "object" ? wheel.result.label : wheel.result)
-                : "Sin resultado todavía"}
-            </p>
+            <p>{resultLabel || "Sin resultado todavía"}</p>
           </div>
 
           <div className="wheel-card__options">
             <h3>Opciones</h3>
-
             {wheel.options.map((option, index) => {
               const optionLabel = typeof option === "object" ? option.label : option;
-              
               return (
-                <div
-                  key={`${wheel.id}-${index}`}
-                  className="wheel-card__option-row"
-                >
+                <div key={`${wheel.id}-${index}`} className="wheel-card__option-row">
                   <input
                     type="text"
                     value={optionLabel}
-                    onChange={(e) =>
-                      onOptionChange(wheel.id, index, e.target.value)
-                    }
+                    onChange={(e) => onOptionChange(wheel.id, index, e.target.value)}
                     placeholder={`Opción ${index + 1}`}
                   />
-
-                  <button onClick={() => onRemoveOption(wheel.id, index)}>
-                    Eliminar
-                  </button>
+                  <button onClick={() => onRemoveOption(wheel.id, index)}>Eliminar</button>
                 </div>
               );
             })}
-
-            <button
-              className="wheel-card__add"
-              onClick={() => onAddOption(wheel.id)}
-            >
+            <button className="wheel-card__add" onClick={() => onAddOption(wheel.id)}>
               Agregar opción
             </button>
           </div>
 
           <div className="wheel-card__colors">
             <h3>Colores</h3>
-
             {(wheel.colors || []).map((color, index) => (
-              <div
-                key={`${wheel.id}-color-${index}`}
-                className="wheel-card__color-row"
-              >
+              <div key={`${wheel.id}-color-${index}`} className="wheel-card__color-row">
                 <input
                   type="color"
                   value={color}
-                  onChange={(e) =>
-                    onColorChange(wheel.id, index, e.target.value)
-                  }
+                  onChange={(e) => onColorChange(wheel.id, index, e.target.value)}
                 />
                 <input
                   type="text"
                   value={color}
-                  onChange={(e) =>
-                    onColorChange(wheel.id, index, e.target.value)
-                  }
+                  onChange={(e) => onColorChange(wheel.id, index, e.target.value)}
                 />
-                <button onClick={() => onRemoveColor(wheel.id, index)}>
-                  Eliminar
-                </button>
+                <button onClick={() => onRemoveColor(wheel.id, index)}>Eliminar</button>
               </div>
             ))}
-
-            <button
-              className="wheel-card__add"
-              onClick={() => onAddColor(wheel.id)}
-            >
+            <button className="wheel-card__add" onClick={() => onAddColor(wheel.id)}>
               Agregar color
             </button>
           </div>
