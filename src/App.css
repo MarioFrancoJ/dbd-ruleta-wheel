@@ -558,9 +558,18 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 
 /* eliminar borde azul al hacer click en la ruleta */
 
+/* ELIMINAR COMPLETAMENTE EL BORDE AZUL DE LA RULETA */
+
+.wheel-card__visual--clickable,
 .wheel-card__visual--clickable:focus,
 .wheel-card__visual--clickable:focus-visible,
 .wheel-card__visual--clickable:active {
   outline: none !important;
   box-shadow: none !important;
+  border: none !important;
+}
+
+/* prevenir highlight en algunos navegadores */
+.wheel-card__visual--clickable {
+  -webkit-tap-highlight-color: transparent;
 }
