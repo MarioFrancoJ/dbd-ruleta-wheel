@@ -383,9 +383,10 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
   transform: scale(1.01);
 }
 
-.wheel-card__visual--clickable:focus {
-  outline: 0px solid #60a5fa00;
-  outline-offset: 0px;
+.wheel-card__visual--clickable:focus,
+.wheel-card__visual--clickable:active {
+  outline: none;
+  box-shadow: none;
 }
 
 .stream-page {
