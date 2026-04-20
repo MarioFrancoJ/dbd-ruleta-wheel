@@ -66,7 +66,17 @@ export default function App() {
   function handleOptionChange(id, index, value) {
     updateWheel(id, (wheel) => {
       const nextOptions = [...wheel.options];
-      nextOptions[index] = value;
+      const currentOption = nextOptions[index];
+      
+      // Si la opción actual es un objeto, mantener la imagen
+      if (typeof currentOption === "object" && currentOption.image) {
+        nextOptions[index] = {
+          ...currentOption,
+          label: value
+        };
+      } else {
+        nextOptions[index] = value;
+      }
 
       return {
         ...wheel,

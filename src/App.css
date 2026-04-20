@@ -543,6 +543,7 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
   object-fit: contain;
   margin-bottom: 10px;
   animation: pop 0.25s ease;
+  border-radius: 8px;
 }
 
 @keyframes pop {

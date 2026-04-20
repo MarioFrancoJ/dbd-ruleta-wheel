@@ -32,10 +32,16 @@ function describeArcPath(cx, cy, r, startAngle, endAngle) {
   ].join(" ");
 }
 
-function getTextPosition(cx, cy, r, startAngle, endAngle) {
+function getTextPosition(cx, cy, r, startAngle, endAngle, hasImage = false) {
   const middleAngle = (startAngle + endAngle) / 2;
-  const textRadius = r * 0.62;
+  const textRadius = hasImage ? r * 0.72 : r * 0.62;
   return polarToCartesian(cx, cy, textRadius, middleAngle);
+}
+
+function getImagePosition(cx, cy, r, startAngle, endAngle) {
+  const middleAngle = (startAngle + endAngle) / 2;
+  const imageRadius = r * 0.48;
+  return polarToCartesian(cx, cy, imageRadius, middleAngle);
 }
 
 function truncateText(text, maxLength = 18) {
@@ -54,7 +60,12 @@ export default function SpinWheel({ options, rotation, spinDuration, colors = []
     return options.map((option, index) => {
       const startAngle = index * anglePerSegment;
       const endAngle = startAngle + anglePerSegment;
-      const textPosition = getTextPosition(200, 200, 180, startAngle, endAngle);
+      
+      // Detectar si la opción tiene imagen
+      const hasImage = typeof option === "object" && option.image;
+      
+      const textPosition = getTextPosition(200, 200, 180, startAngle, endAngle, hasImage);
+      const imagePosition = hasImage ? getImagePosition(200, 200, 180, startAngle, endAngle) : null;
 
       return {
         option,
@@ -63,6 +74,10 @@ export default function SpinWheel({ options, rotation, spinDuration, colors = []
         textX: textPosition.x,
         textY: textPosition.y,
         textRotate: (startAngle + endAngle) / 2 + 90,
+        hasImage,
+        imageX: imagePosition?.x,
+        imageY: imagePosition?.y,
+        imageRotate: (startAngle + endAngle) / 2 + 90,
       };
     });
   }, [options, palette]);
@@ -85,36 +100,45 @@ export default function SpinWheel({ options, rotation, spinDuration, colors = []
 >
           <circle cx="200" cy="200" r="190" fill="#000000" stroke="#e5e7eb" strokeWidth="6" />
 
-          {segments.map((segment, index) => (
-            <g key={`${segment.option}-${index}`}>
-              <path d={segment.path} fill={segment.color} stroke="#111827" strokeWidth="2" />
-              <text
-                x={segment.textX}
-                y={segment.textY}
-                fill="#ffffff"
-                fontSize="12"
-                fontWeight="700"
-                textAnchor="middle"
-                dominantBaseline="middle"
-                transform={`rotate(${segment.textRotate} ${segment.textX} ${segment.textY})`}
-              >
-                {truncateText(segment.option.label || segment.option)}
-
+          {segments.map((segment, index) => {
+            const label = typeof segment.option === "object" ? segment.option.label : segment.option;
+            const imageSrc = typeof segment.option === "object" ? segment.option.image : null;
+            
+            return (
+              <g key={`${label}-${index}`}>
+                <path d={segment.path} fill={segment.color} stroke="#111827" strokeWidth="2" />
+                
+                {/* Imagen si existe */}
+                {segment.hasImage && imageSrc && (
+                  <g transform={`rotate(${segment.imageRotate} ${segment.imageX} ${segment.imageY})`}>
+                    <image
+                      href={imageSrc}
+                      x={segment.imageX - 16}
+                      y={segment.imageY - 16}
+                      width="32"
+                      height="32"
+                      preserveAspectRatio="xMidYMid meet"
+                      style={{ pointerEvents: 'none' }}
+                    />
+                  </g>
+                )}
+                
+                {/* Texto */}
                 <text
-  x={segment.textX}
-  y={segment.textY}
-  fill="#ffffff"
-  fontSize="12"
-  fontWeight="700"
-  textAnchor="middle"
-  dominantBaseline="middle"
-  transform={`rotate(${segment.textRotate} ${segment.textX} ${segment.textY})`}
->
-  {truncateText(segment.option.label || segment.option)}
-</text>
-              </text>
-            </g>
-          ))}
+                  x={segment.textX}
+                  y={segment.textY}
+                  fill="#ffffff"
+                  fontSize="12"
+                  fontWeight="700"
+                  textAnchor="middle"
+                  dominantBaseline="middle"
+                  transform={`rotate(${segment.textRotate} ${segment.textX} ${segment.textY})`}
+                >
+                  {truncateText(label)}
+                </text>
+              </g>
+            );
+          })}
 
           <circle cx="200" cy="200" r="38" fill="#111827" stroke="#f9fafb" strokeWidth="4" />
           

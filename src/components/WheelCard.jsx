@@ -178,31 +178,39 @@ export default function WheelCard({
         <>
           <div className="wheel-card__result">
             <strong>Resultado:</strong>
-            <p>{wheel.result || "Sin resultado todavía"}</p>
+            <p>
+              {wheel.result 
+                ? (typeof wheel.result === "object" ? wheel.result.label : wheel.result)
+                : "Sin resultado todavía"}
+            </p>
           </div>
 
           <div className="wheel-card__options">
             <h3>Opciones</h3>
 
-            {wheel.options.map((option, index) => (
-              <div
-                key={`${wheel.id}-${index}`}
-                className="wheel-card__option-row"
-              >
-                <input
-                  type="text"
-                  value={option.label || option}
-                  onChange={(e) =>
-                    onOptionChange(wheel.id, index, e.target.value)
-                  }
-                  placeholder={`Opción ${index + 1}`}
-                />
+            {wheel.options.map((option, index) => {
+              const optionLabel = typeof option === "object" ? option.label : option;
+              
+              return (
+                <div
+                  key={`${wheel.id}-${index}`}
+                  className="wheel-card__option-row"
+                >
+                  <input
+                    type="text"
+                    value={optionLabel}
+                    onChange={(e) =>
+                      onOptionChange(wheel.id, index, e.target.value)
+                    }
+                    placeholder={`Opción ${index + 1}`}
+                  />
 
-                <button onClick={() => onRemoveOption(wheel.id, index)}>
-                  Eliminar
-                </button>
-              </div>
-            ))}
+                  <button onClick={() => onRemoveOption(wheel.id, index)}>
+                    Eliminar
+                  </button>
+                </div>
+              );
+            })}
 
             <button
               className="wheel-card__add"
