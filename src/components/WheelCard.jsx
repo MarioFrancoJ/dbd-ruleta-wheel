@@ -120,26 +120,32 @@ export default function WheelCard({
         />
 
         {showWinnerOverlay && (
-          <div className="wheel-card__winner-overlay">
-            <div className="wheel-card__winner-box">
-{wheel.result && (
-  <>
-    {wheel.result.image && (
-      <img
-        src={wheel.result.image}
-        alt={wheel.result.label}
-        className="wheel-card__winner-image"
-      />
-    )}
+  <div className="wheel-card__winner-overlay">
+    <div className="wheel-card__winner-box">
 
-    <strong className="wheel-card__winner-text">
-      {wheel.result.label || wheel.result}
-    </strong>
-  </>
+      {wheel.result && (
+        <>
+          {/* Imagen */}
+          {typeof wheel.result === "object" && wheel.result.image && (
+            <img
+              src={wheel.result.image}
+              alt={wheel.result.label}
+              className="wheel-card__winner-image"
+            />
+          )}
+
+          {/* Texto */}
+          <strong className="wheel-card__winner-text">
+            {typeof wheel.result === "object"
+              ? wheel.result.label
+              : wheel.result}
+          </strong>
+        </>
+      )}
+
+    </div>
+  </div>
 )}
-            </div>
-          </div>
-        )}
       </div>
 
       {!streamMode && (
