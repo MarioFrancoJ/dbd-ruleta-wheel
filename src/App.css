@@ -559,24 +559,33 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 /* ===== ELIMINAR BORDE AZUL DE LA RULETA ===== */
 
 .wheel-card__visual--clickable {
-  outline: none;
+  outline: none !important;
   border: none;
-  box-shadow: none;
+  box-shadow: none !important;
   -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .wheel-card__visual--clickable:focus,
 .wheel-card__visual--clickable:focus-visible,
 .wheel-card__visual--clickable:active {
-  outline: none;
+  outline: none !important;
   border: none;
-  box-shadow: none;
+  box-shadow: none !important;
 }
 
-.spin-wheel-wrapper svg {
-  outline: none;
+.spin-wheel-wrapper,
+.spin-wheel-wrapper *,
+.spin-wheel,
+.spin-wheel-svg {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
-.spin-wheel-wrapper svg {
-  outline: none;
+.spin-wheel-svg:focus,
+.spin-wheel-svg:focus-visible {
+  outline: none !important;
 }
