@@ -70,7 +70,7 @@
       "#92400e"
     ],
     "options": [
-      { "label": "Dwight Fairfield", "image": "/Images/Survivors/S01_Dwight_Fairfield.webp" },
+      { "label": "Dwight Fairfield", "image": "/images/Survivors/S01_DwightFairfield_Portrait.webp" },
       { "label": "Meg Thomas", "image": "/Images/Survivors/S02_Meg_Thomas.webp" },
       { "label": "Claudette Morel", "image": "/Images/Survivors/S03_Claudette_Morel.webp" },
       { "label": "Jake Park", "image": "/Images/Survivors/S04_Jake_Park.webp" },
