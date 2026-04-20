@@ -441,7 +441,7 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 }
 
 .wheel-card--stream .wheel-card__winner-text {
-  font-size: 50px;
+  font-size: 40px;
 }
 
 @media (max-width: 768px) {
@@ -460,7 +460,7 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 
 
 .wheel-card--stream .wheel-card__winner-text {
-  font-size: 50px;
+  font-size: 40px;
 }
 
 .stream-page {
@@ -521,12 +521,12 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 }
 
 .wheel-card--stream .wheel-card__winner-text {
-  font-size: 50px;
+  font-size: 40px;
 }
 
 .wheel-card--stream .wheel-card__winner-image {
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
 }
 
 @media (max-width: 768px) {
