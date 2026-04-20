@@ -386,7 +386,7 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 
 .stream-page {
   min-height: 100vh;
-  background: #000000;
+  background: #11fe02;
   padding: 24px;
 }
 
@@ -465,7 +465,7 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 
 .stream-page {
   min-height: 100vh;
-  background: #000000;
+  background: #11fe02;
   padding: 24px;
 }
 
