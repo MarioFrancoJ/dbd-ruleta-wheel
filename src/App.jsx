@@ -60,6 +60,30 @@ const [selectedCleanWheelId, setSelectedCleanWheelId] = useState("killers");
   }
 
   function handleOptionChange(id, index, value) {
+  updateWheel(id, (wheel) => {
+    const nextOptions = [...wheel.options];
+
+    const currentOption = nextOptions[index];
+
+    // Si ya es objeto, mantener la imagen
+    if (typeof currentOption === "object") {
+      nextOptions[index] = {
+        ...currentOption,
+        label: value,
+      };
+    } else {
+      // Si era string, convertirlo en objeto
+      nextOptions[index] = {
+        label: value,
+      };
+    }
+
+    return {
+      ...wheel,
+      options: nextOptions,
+    };
+  });
+} {
     updateWheel(id, (wheel) => {
       const nextOptions = [...wheel.options];
       nextOptions[index] = value;
