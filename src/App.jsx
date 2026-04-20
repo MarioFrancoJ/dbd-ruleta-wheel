@@ -8,6 +8,19 @@ import "./App.css";
 function withInitialResult(wheels) {
   return wheels.map((wheel) => ({
     ...wheel,
+    result: wheel.result || "",
+    colors: wheel.colors || [
+      "#b91c1c",
+      "#1f2937",
+      "#7c3aed",
+      "#0f766e",
+      "#1d4ed8",
+      "#92400e",
+    ],
+  }));
+} {
+  return wheels.map((wheel) => ({
+    ...wheel,
 
     // asegurar que el resultado exista
     result: wheel.result || "",
