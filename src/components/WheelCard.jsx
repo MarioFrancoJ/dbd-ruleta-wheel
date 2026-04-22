@@ -72,14 +72,26 @@ export default function WheelCard({
     const initialSegment = getCurrentSegmentAtPointer(startRotation, wheel.options.length);
     currentSegmentRef.current = initialSegment;
 
-    // Función de easing que coincide con cubic-bezier(0.17, 0.67, 0.2, 1)
+    // Implementación precisa de cubic-bezier(0.17, 0.67, 0.2, 1)
     function cubicBezier(t) {
-      // Aproximación de cubic-bezier(0.17, 0.67, 0.2, 1)
-      const t2 = t * t;
-      const t3 = t2 * t;
-      return 3 * (1 - t) * (1 - t) * t * 0.17 + 
-             3 * (1 - t) * t2 * 0.67 + 
-             t3;
+      const p0 = 0;
+      const p1 = 0.17;
+      const p2 = 0.2;
+      const p3 = 1;
+      
+      // Resolver para x usando Newton-Raphson
+      let x = t;
+      for (let i = 0; i < 8; i++) {
+        const z = 3 * (1 - x) * (1 - x) * x * p1 + 3 * (1 - x) * x * x * p2 + x * x * x - t;
+        if (Math.abs(z) < 1e-3) break;
+        const d = 3 * (1 - x) * (1 - x) * p1 + 6 * (1 - x) * x * (p2 - p1) + 3 * x * x * (1 - p2);
+        if (Math.abs(d) < 1e-6) break;
+        x = x - z / d;
+      }
+      
+      // Calcular y usando el x encontrado
+      const y = 3 * (1 - x) * (1 - x) * x * 0.67 + 3 * (1 - x) * x * x * 1 + x * x * x;
+      return y;
     }
 
     function checkSegment() {
