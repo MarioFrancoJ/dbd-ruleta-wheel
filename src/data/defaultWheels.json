@@ -129,21 +129,21 @@
       "#92400e"
     ],
     "options": [
-      "Ambulancia",
-      "Reparador",
-      "Rescatista",
-      "Cegador",
-      "Sigiloso",
-      "Loopero",
-      "Estratega",
-      "Saboteador",
-      "Tanque (Anti-túnel)",
-      "Clutch (Endgame)",
-      "Troll / Meme",
-      "Maestro de bendiciones",
-      "Velocista",
-      "Anti-Killer",
-      "SoloQ Carry"
+      { "label": "Ambulancia", "image": "/Images/Roles/Ambulancia.png" },
+      { "label": "Reparador", "image": "/Images/Roles/Reparador.png" },
+      { "label": "Rescatista", "image": "/Images/Roles/Rescatista.png" },
+      { "label": "Cegador", "image": "/Images/Roles/Cegador.png" },
+      { "label": "Sigiloso", "image": "/Images/Roles/Sigilo.png" },
+      { "label": "Loopero", "image": "/Images/Roles/Loopero.png" },
+      { "label": "Estratega", "image": "/Images/Roles/Estratega.png" },
+      { "label": "Saboteador", "image": "/Images/Roles/Saboteador.png" },
+      { "label": "Tanque (Anti-túnel)", "image": "/Images/Roles/Tanque.png" },
+      { "label": "Clutch (Endgame)", "image": "/Images/Roles/EndGame.png" },
+      { "label": "Troll / Meme", "image": "/Images/Roles/TrollMeme.png" },
+      { "label": "Maestro de bendiciones", "image": "/Images/Roles/Totems.png" },
+      { "label": "Velocista", "image": "/Images/Roles/Velocista.png" },
+      { "label": "Anti-Killer", "image": "/Images/Roles/Antikiller.png" },
+      { "label": "SoloQ Carry", "image": "/Images/Roles/SoloQ.png" }
     ]
   },
 

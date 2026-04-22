@@ -562,6 +562,7 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
   object-fit: contain;
   border-radius: 8px;
   animation: winnerImagePop 0.7s ease-in-out forwards;
+  animation-delay: 0s;
 }
 
 .wheel-card__winner-text {
@@ -573,6 +574,7 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
   text-align: center;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
   animation: winnerTextFade 0.7s ease-in-out forwards;
+  animation-delay: 0s;
 }
 
 @keyframes winnerImagePop {
