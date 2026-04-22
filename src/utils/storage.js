@@ -1,6 +1,6 @@
 const STORAGE_KEY = "dbd-wheels-config";
 const VERSION_KEY = "dbd-wheels-version";
-const CURRENT_VERSION = "2.8"; // Items con imágenes y reorden hardcore
+const CURRENT_VERSION = "2.9"; // Remove hardcore-roles, 15s spin, items colors, button updates
 
 export function loadWheels() {
   try {

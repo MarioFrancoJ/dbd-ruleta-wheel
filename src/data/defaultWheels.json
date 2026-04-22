@@ -2,7 +2,7 @@
   {
     "id": "killers",
     "title": "Ruleta de Asesinos",
-    "spinDuration": 4,
+    "spinDuration": 15,
     "colors": [
       "#D95E32",
       "#A60D0D"
@@ -55,7 +55,7 @@
   {
     "id": "survivors",
     "title": "Ruleta de Supervivientes",
-    "spinDuration": 4,
+    "spinDuration": 15,
     "colors": [
       "#023859",
       "#03588C"
@@ -119,7 +119,7 @@
   {
     "id": "roles",
     "title": "Ruleta de Roles",
-    "spinDuration": 4,
+    "spinDuration": 15,
     "colors": [
       "#b91c1c",
       "#1f2937",
@@ -150,14 +150,12 @@
   {
     "id": "items",
     "title": "Ruleta de Items",
-    "spinDuration": 4,
+    "spinDuration": 15,
     "colors": [
-      "#b91c1c",
-      "#1f2937",
-      "#7c3aed",
-      "#0f766e",
-      "#1d4ed8",
-      "#92400e"
+      "#654c3b",
+      "#408731",
+      "#6d3283",
+      "#315a8e"
     ],
     "options": [
       { "label": "Caja de herramientas de Alex", "image": "/Images/Items/AlexToolbox.webp" },
@@ -188,7 +186,7 @@
   {
     "id": "hardcore-items",
     "title": "Ruleta Hardcore - Items",
-    "spinDuration": 5,
+    "spinDuration": 15,
     "colors": [
       "#b91c1c",
       "#1f2937",
@@ -209,40 +207,10 @@
       "Ítem obligatorio pero limitado (2 usos)"
     ]
   },
-
-  {
-    "id": "hardcore-roles",
-    "title": "Ruleta Hardcore - Roles Extremos",
-    "spinDuration": 5,
-    "colors": [
-      "#b91c1c",
-      "#1f2937",
-      "#7c3aed",
-      "#0f766e",
-      "#1d4ed8",
-      "#92400e"
-    ],
-    "options": [
-      "Ambulancia Hardcore",
-      "Reparador Hardcore",
-      "Rescatista Suicida",
-      "Cegador Forzado",
-      "Sigilo Imposible",
-      "Loopero Sin Perks",
-      "Saboteador Obsesivo",
-      "Tanque Mártir",
-      "Clutch Egoísta",
-      "Boon Dependiente",
-      "Velocista Incontrolable",
-      "Anti-Killer Reactivo",
-      "SoloQ Realista",
-      "Troll Caótico"
-    ]
-  },
   {
     "id": "hardcore-modifiers",
     "title": "Ruleta Hardcore - Modificadores",
-    "spinDuration": 5,
+    "spinDuration": 15,
     "colors": [
     "#b91c1c",
     "#1f2937",

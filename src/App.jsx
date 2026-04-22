@@ -162,12 +162,12 @@ export default function App() {
             {cleanMode ? "Volver al editor" : "Modo ruleta limpia"}
           </button>
 
-          <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
-            {theme === 'dark' ? '☀️ Tema Claro' : '🌙 Tema Oscuro'}
-          </button>
-
           <button onClick={handleResetAll}>
             Restaurar ruletas por defecto
+          </button>
+
+          <button className="theme-toggle" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
+            {theme === 'dark' ? '☀️' : '🌙'}
           </button>
         </div>
 
