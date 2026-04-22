@@ -72,6 +72,16 @@ export default function WheelCard({
     const initialSegment = getCurrentSegmentAtPointer(startRotation, wheel.options.length);
     currentSegmentRef.current = initialSegment;
 
+    // Función de easing que coincide con cubic-bezier(0.17, 0.67, 0.2, 1)
+    function cubicBezier(t) {
+      // Aproximación de cubic-bezier(0.17, 0.67, 0.2, 1)
+      const t2 = t * t;
+      const t3 = t2 * t;
+      return 3 * (1 - t) * (1 - t) * t * 0.17 + 
+             3 * (1 - t) * t2 * 0.67 + 
+             t3;
+    }
+
     function checkSegment() {
       const elapsed = Date.now() - startTime;
       if (elapsed >= totalDuration) {
@@ -79,12 +89,9 @@ export default function WheelCard({
         return;
       }
 
-      // Calcular la rotación actual basada en el progreso
+      // Calcular la rotación actual basada en el progreso con easing correcto
       const progress = elapsed / totalDuration;
-      // Usar easing similar al CSS: cubic-bezier(0.17, 0.67, 0.2, 1)
-      const easeProgress = progress < 0.5 
-        ? 2 * progress * progress 
-        : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+      const easeProgress = cubicBezier(progress);
       
       const currentRotation = startRotation + (rotationDiff * easeProgress);
       const currentSegment = getCurrentSegmentAtPointer(currentRotation, wheel.options.length);
