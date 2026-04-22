@@ -63,10 +63,14 @@ export default function WheelCard({
     return segmentIndex;
   }
 
-  function startTicking(duration) {
+  function startTicking(duration, startRotation, endRotation) {
     const startTime = Date.now();
     const totalDuration = duration * 1000;
-    currentSegmentRef.current = -1;
+    const rotationDiff = endRotation - startRotation;
+    
+    // Inicializar con el segmento actual
+    const initialSegment = getCurrentSegmentAtPointer(startRotation, wheel.options.length);
+    currentSegmentRef.current = initialSegment;
 
     function checkSegment() {
       const elapsed = Date.now() - startTime;
@@ -75,28 +79,19 @@ export default function WheelCard({
         return;
       }
 
-      // Obtener la rotación actual del elemento
-      const wheelElement = document.querySelector('.spin-wheel');
-      if (wheelElement) {
-        const style = window.getComputedStyle(wheelElement);
-        const transform = style.transform;
-        
-        if (transform && transform !== 'none') {
-          const matrix = transform.match(/matrix\(([^)]+)\)/);
-          if (matrix) {
-            const values = matrix[1].split(',').map(parseFloat);
-            const a = values[0];
-            const b = values[1];
-            const currentRotation = Math.atan2(b, a) * (180 / Math.PI);
-            
-            const currentSegment = getCurrentSegmentAtPointer(currentRotation, wheel.options.length);
-            
-            if (currentSegment !== currentSegmentRef.current && currentSegment !== -1) {
-              currentSegmentRef.current = currentSegment;
-              playTick();
-            }
-          }
-        }
+      // Calcular la rotación actual basada en el progreso
+      const progress = elapsed / totalDuration;
+      // Usar easing similar al CSS: cubic-bezier(0.17, 0.67, 0.2, 1)
+      const easeProgress = progress < 0.5 
+        ? 2 * progress * progress 
+        : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+      
+      const currentRotation = startRotation + (rotationDiff * easeProgress);
+      const currentSegment = getCurrentSegmentAtPointer(currentRotation, wheel.options.length);
+      
+      if (currentSegment !== currentSegmentRef.current && currentSegment !== -1) {
+        currentSegmentRef.current = currentSegment;
+        playTick();
       }
 
       tickIntervalRef.current = requestAnimationFrame(checkSegment);
@@ -132,7 +127,7 @@ export default function WheelCard({
 
     setIsSpinning(true);
     setRotation(finalRotation);
-    startTicking(wheel.spinDuration);
+    startTicking(wheel.spinDuration, rotation, finalRotation);
 
     setTimeout(() => {
       onSpin(wheel.id, winnerIndex);
