@@ -147,20 +147,81 @@
     ]
   },
 
-  
+  {
+    "id": "items",
+    "title": "Ruleta de Items",
+    "spinDuration": 4,
+    "colors": [
+      "#b91c1c",
+      "#1f2937",
+      "#7c3aed",
+      "#0f766e",
+      "#1d4ed8",
+      "#92400e"
+    ],
+    "options": [
+      { "label": "Caja de herramientas de Alex", "image": "/Images/Items/AlexToolbox.webp" },
+      { "label": "Mapa anotado", "image": "/Images/Items/AnnotatedMap.webp" },
+      { "label": "Vial de niebla del aprendiz", "image": "/Images/Items/ApprenticesFogVial.webp" },
+      { "label": "Vial de niebla del artesano", "image": "/Images/Items/ArtisansFogVial.webp" },
+      { "label": "Llave rota", "image": "/Images/Items/BrokenKey.webp" },
+      { "label": "Botiquín de campamento", "image": "/Images/Items/CampingAidKit.webp" },
+      { "label": "Caja de herramientas cómoda", "image": "/Images/Items/CommodiousToolbox.webp" },
+      { "label": "Mapa críptico", "image": "/Images/Items/CrypticMap.webp" },
+      { "label": "Llave opaca", "image": "/Images/Items/DullKey.webp" },
+      { "label": "Botiquín de emergencia", "image": "/Images/Items/EmergencyMedKit.webp" },
+      { "label": "Caja de herramientas del ingeniero", "image": "/Images/Items/EngineersToolbox.webp" },
+      { "label": "Botiquín básico", "image": "/Images/Items/FirstAidKit.webp" },
+      { "label": "Linterna", "image": "/Images/Items/Flashlight.webp" },
+      { "label": "Caja de herramientas mecánica", "image": "/Images/Items/MechanicsToolbox.webp" },
+      { "label": "Botiquín de ranger", "image": "/Images/Items/RangerMedKit.webp" },
+      { "label": "Mapa garabateado", "image": "/Images/Items/ScribbledMap.webp" },
+      { "label": "Llave esqueleto", "image": "/Images/Items/SkeletonKey.webp" },
+      { "label": "Linterna deportiva", "image": "/Images/Items/SportFlashlight.webp" },
+      { "label": "Caja de herramientas", "image": "/Images/Items/Toolbox.webp" },
+      { "label": "Linterna de utilidad", "image": "/Images/Items/UtilityFlashlight.webp" },
+      { "label": "Vial de niebla vigoroso", "image": "/Images/Items/VigosFogVial.webp" },
+      { "label": "Caja de herramientas desgastada", "image": "/Images/Items/WornOutTools.webp" }
+    ]
+  },
+
+  {
+    "id": "hardcore-items",
+    "title": "Ruleta Hardcore - Items",
+    "spinDuration": 5,
+    "colors": [
+      "#b91c1c",
+      "#1f2937",
+      "#7c3aed",
+      "#0f766e",
+      "#1d4ed8",
+      "#92400e"
+    ],
+    "options": [
+      "Linterna sin add-ons",
+      "Botiquín marrón sin mejoras",
+      "Caja de herramientas rota",
+      "Mapa sin add-ons",
+      "Llave sin uso de hatch hasta endgame",
+      "Sin ítem",
+      "Ítem aleatorio + add-ons aleatorios",
+      "Ítem contrario a tu rol",
+      "Ítem obligatorio pero limitado (2 usos)"
+    ]
+  },
+
   {
     "id": "hardcore-roles",
     "title": "Ruleta Hardcore - Roles Extremos",
     "spinDuration": 5,
     "colors": [
-    "#b91c1c",
-    "#1f2937",
-    "#7c3aed",
-    "#0f766e",
-    "#1d4ed8",
-    "#92400e"
-  ],
-
+      "#b91c1c",
+      "#1f2937",
+      "#7c3aed",
+      "#0f766e",
+      "#1d4ed8",
+      "#92400e"
+    ],
     "options": [
       "Ambulancia Hardcore",
       "Reparador Hardcore",
@@ -176,31 +237,6 @@
       "Anti-Killer Reactivo",
       "SoloQ Realista",
       "Troll Caótico"
-    ]
-  },
-  {
-    "id": "hardcore-items",
-    "title": "Ruleta Hardcore - Items",
-    "spinDuration": 5,
-    "colors": [
-    "#b91c1c",
-    "#1f2937",
-    "#7c3aed",
-    "#0f766e",
-    "#1d4ed8",
-    "#92400e"
-  ],
-
-    "options": [
-      "Linterna sin add-ons",
-      "Botiquín marrón sin mejoras",
-      "Caja de herramientas rota",
-      "Mapa sin add-ons",
-      "Llave sin uso de hatch hasta endgame",
-      "Sin ítem",
-      "Ítem aleatorio + add-ons aleatorios",
-      "Ítem contrario a tu rol",
-      "Ítem obligatorio pero limitado (2 usos)"
     ]
   },
   {

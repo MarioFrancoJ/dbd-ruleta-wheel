@@ -1,6 +1,6 @@
 const STORAGE_KEY = "dbd-wheels-config";
 const VERSION_KEY = "dbd-wheels-version";
-const CURRENT_VERSION = "2.7"; // Roles con imágenes
+const CURRENT_VERSION = "2.8"; // Items con imágenes y reorden hardcore
 
 export function loadWheels() {
   try {
