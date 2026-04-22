@@ -29,6 +29,12 @@ export default function WheelCard({
 
   function playTick() {
     const audio = new Audio("/sounds/tick.wav");
+    audio.volume = 0.3;
+    audio.play().catch(() => {});
+  }
+
+  function playWinner() {
+    const audio = new Audio("/sounds/winner.wav");
     audio.volume = 0.6;
     audio.play().catch(() => {});
   }
@@ -78,6 +84,7 @@ export default function WheelCard({
       onSpin(wheel.id, winnerIndex);
       setIsSpinning(false);
       stopTicking();
+      playWinner();
       setShowWinnerOverlay(true);
     }, wheel.spinDuration * 1000);
   }
