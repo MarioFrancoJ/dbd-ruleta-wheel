@@ -19,11 +19,15 @@ export default function WheelCard({
   const [isSpinning, setIsSpinning] = useState(false);
   const [rotation, setRotation] = useState(0);
   const [showWinnerOverlay, setShowWinnerOverlay] = useState(false);
-  const tickTimeoutRef = useRef(null);
+  const tickIntervalRef = useRef(null);
+  const currentSegmentRef = useRef(-1);
 
   useEffect(() => {
     return () => {
-      if (tickTimeoutRef.current) clearTimeout(tickTimeoutRef.current);
+      if (tickIntervalRef.current) {
+        cancelAnimationFrame(tickIntervalRef.current);
+        tickIntervalRef.current = null;
+      }
     };
   }, []);
 
@@ -39,24 +43,74 @@ export default function WheelCard({
     audio.play().catch(() => {});
   }
 
+  function getCurrentSegmentAtPointer(currentRotation, totalSegments) {
+    if (totalSegments === 0) return -1;
+    
+    // Normalizar la rotación actual a 0-360
+    const normalizedRotation = ((currentRotation % 360) + 360) % 360;
+    
+    // El puntero está a 270° (izquierda)
+    // Calcular qué segmento está bajo el puntero
+    const pointerAngle = 270;
+    const anglePerSegment = 360 / totalSegments;
+    
+    // Ajustar por la rotación de la ruleta
+    const effectiveAngle = (pointerAngle - normalizedRotation + 360) % 360;
+    
+    // Calcular el índice del segmento
+    const segmentIndex = Math.floor(effectiveAngle / anglePerSegment) % totalSegments;
+    
+    return segmentIndex;
+  }
+
   function startTicking(duration) {
     const startTime = Date.now();
     const totalDuration = duration * 1000;
-    function scheduleNextTick() {
+    currentSegmentRef.current = -1;
+
+    function checkSegment() {
       const elapsed = Date.now() - startTime;
-      const progress = elapsed / totalDuration;
-      if (progress >= 1) { tickTimeoutRef.current = null; return; }
-      playTick();
-      tickTimeoutRef.current = setTimeout(scheduleNextTick, 60 + progress * 220);
+      if (elapsed >= totalDuration) {
+        tickIntervalRef.current = null;
+        return;
+      }
+
+      // Obtener la rotación actual del elemento
+      const wheelElement = document.querySelector('.spin-wheel');
+      if (wheelElement) {
+        const style = window.getComputedStyle(wheelElement);
+        const transform = style.transform;
+        
+        if (transform && transform !== 'none') {
+          const matrix = transform.match(/matrix\(([^)]+)\)/);
+          if (matrix) {
+            const values = matrix[1].split(',').map(parseFloat);
+            const a = values[0];
+            const b = values[1];
+            const currentRotation = Math.atan2(b, a) * (180 / Math.PI);
+            
+            const currentSegment = getCurrentSegmentAtPointer(currentRotation, wheel.options.length);
+            
+            if (currentSegment !== currentSegmentRef.current && currentSegment !== -1) {
+              currentSegmentRef.current = currentSegment;
+              playTick();
+            }
+          }
+        }
+      }
+
+      tickIntervalRef.current = requestAnimationFrame(checkSegment);
     }
-    scheduleNextTick();
+
+    checkSegment();
   }
 
   function stopTicking() {
-    if (tickTimeoutRef.current) {
-      clearTimeout(tickTimeoutRef.current);
-      tickTimeoutRef.current = null;
+    if (tickIntervalRef.current) {
+      cancelAnimationFrame(tickIntervalRef.current);
+      tickIntervalRef.current = null;
     }
+    currentSegmentRef.current = -1;
   }
 
   function handleSpin() {
@@ -66,10 +120,10 @@ export default function WheelCard({
     const winnerIndex = Math.floor(Math.random() * wheel.options.length);
     const anglePerSegment = 360 / wheel.options.length;
 
-    // El puntero está arriba (270° en coordenadas SVG, o -90°)
+    // El puntero está a la izquierda (270°)
     // Necesitamos rotar para que el centro del segmento ganador quede en el puntero
     const segmentCenter = winnerIndex * anglePerSegment + anglePerSegment / 2;
-    const targetAngle = (360 - segmentCenter) % 360;
+    const targetAngle = (segmentCenter - 270 + 360) % 360;
 
     // Normalizamos la rotación actual para evitar acumulación infinita
     const currentNormalized = rotation % 360;
