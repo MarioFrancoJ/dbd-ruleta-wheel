@@ -908,15 +908,27 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 .roles-v2-result__label {
   font-size: 16px;
   color: #cbd5e1;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: 900;
+  text-transform: capitalize;
+  letter-spacing: 0.05em;
+  font-weight: 700;
 }
 
 .roles-v2-result__value {
   font-size: 20px;
   font-weight: 700;
   color: #f8fafc;
+}
+
+.roles-v2-result__value--facil {
+  color: #22c55e;
+}
+
+.roles-v2-result__value--media {
+  color: #f97316;
+}
+
+.roles-v2-result__value--dificil {
+  color: #ef4444;
 }
 
 .roles-v2-result__separator {

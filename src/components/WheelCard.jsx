@@ -273,7 +273,13 @@ export default function WheelCard({
                     <span className="roles-v2-result__value">{result.variant}</span>
                     <span className="roles-v2-result__separator">-</span>
                     <span className="roles-v2-result__label">Dificultad</span>
-                    <span className="roles-v2-result__value">{result.difficulty}</span>
+                    <span className={`roles-v2-result__value ${
+                      result.difficulty === 'Fácil' ? 'roles-v2-result__value--facil' :
+                      result.difficulty === 'Media' ? 'roles-v2-result__value--media' :
+                      result.difficulty === 'Difícil' ? 'roles-v2-result__value--dificil' : ''
+                    }`}>
+                      {result.difficulty}
+                    </span>
                   </div>
                 </div>
               </div>
