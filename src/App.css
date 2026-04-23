@@ -769,7 +769,7 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto auto auto;
-  gap: 20px;
+  gap: 16px;
   padding: 32px;
   width: 100%;
   max-width: 900px;
@@ -811,8 +811,8 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 20px 0;
-  min-height: 280px;
+  padding: 30px 0;
+  min-height: 300px;
 }
 
 .roles-v2-result__perk-icon {
@@ -833,7 +833,7 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 /* Posicionamiento en forma de rombo con sobreposición */
 /* Perk 1: Arriba centro - más hacia el centro */
 .roles-v2-result__perk-icon:nth-child(1) {
-  top: 10px;
+  top: 5px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 4;
@@ -849,7 +849,7 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 
 /* Perk 3: Abajo centro - más hacia el centro */
 .roles-v2-result__perk-icon:nth-child(3) {
-  bottom: 10px;
+  bottom: 5px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
