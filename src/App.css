@@ -820,36 +820,35 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
   background: transparent;
   transition: transform 0.2s;
   position: absolute;
-  transform: rotate(45deg);
 }
 
 .roles-v2-result__perk-icon:hover {
-  transform: rotate(45deg) scale(1.1);
+  transform: scale(1.1);
 }
 
 /* Posicionamiento en forma de rombo/diamante */
 .roles-v2-result__perk-icon:nth-child(1) {
   top: 0;
   left: 50%;
-  margin-left: -70px;
+  transform: translateX(-50%);
 }
 
 .roles-v2-result__perk-icon:nth-child(2) {
   top: 50%;
-  left: 0;
-  margin-top: -70px;
+  left: 10%;
+  transform: translateY(-50%);
 }
 
 .roles-v2-result__perk-icon:nth-child(3) {
   bottom: 0;
   left: 50%;
-  margin-left: -70px;
+  transform: translateX(-50%);
 }
 
 .roles-v2-result__perk-icon:nth-child(4) {
   top: 50%;
-  right: 0;
-  margin-top: -70px;
+  right: 10%;
+  transform: translateY(-50%);
 }
 
 .roles-v2-result__perk-names {
@@ -980,22 +979,6 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 .wheel-card--stream .roles-v2-result__perk-icon {
   width: 180px;
   height: 180px;
-}
-
-.wheel-card--stream .roles-v2-result__perk-icon:nth-child(1) {
-  margin-left: -90px;
-}
-
-.wheel-card--stream .roles-v2-result__perk-icon:nth-child(2) {
-  margin-top: -90px;
-}
-
-.wheel-card--stream .roles-v2-result__perk-icon:nth-child(3) {
-  margin-left: -90px;
-}
-
-.wheel-card--stream .roles-v2-result__perk-icon:nth-child(4) {
-  margin-top: -90px;
 }
 
 .wheel-card--stream .roles-v2-result__perk-names {
