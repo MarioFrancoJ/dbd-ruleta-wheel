@@ -2,7 +2,7 @@
   {
     "id": "killers",
     "title": "Ruleta de Asesinos",
-    "spinDuration": 15,
+    "spinDuration": 13,
     "colors": [
       "#D95E32",
       "#A60D0D"
@@ -55,7 +55,7 @@
   {
     "id": "survivors",
     "title": "Ruleta de Supervivientes",
-    "spinDuration": 15,
+    "spinDuration": 13,
     "colors": [
       "#023859",
       "#03588C"
@@ -119,7 +119,7 @@
   {
     "id": "roles",
     "title": "Ruleta de Roles",
-    "spinDuration": 15,
+    "spinDuration": 13,
     "colors": [
       "#b91c1c",
       "#1f2937",
@@ -150,7 +150,7 @@
   {
     "id": "rolesV2",
     "title": "Roles",
-    "spinDuration": 15,
+    "spinDuration": 13,
     "colors": [
       "#b91c1c",
       "#1f2937",
@@ -160,29 +160,18 @@
       "#92400e"
     ],
     "options": [
-      "Ambulancia",
+      "Runner",
       "Reparador",
-      "Rescatista",
-      "Cegador",
-      "Sigiloso",
-      "Loopero",
-      "Estratega",
-      "Saboteador",
-      "Tanque (Anti-túnel)",
-      "Clutch (Endgame)",
-      "Troll / Meme",
-      "Maestro de bendiciones",
-      "Velocista",
-      "Anti-Killer",
-      "SoloQ Carry",
-      "Me la Pela"
+      "Explorador",
+      "Anti-Túnel",
+      "Recolector"
     ]
   },
 
   {
     "id": "items",
     "title": "Ruleta de Items",
-    "spinDuration": 15,
+    "spinDuration": 13,
     "colors": [
       "#654c3b",
       "#408731",
@@ -218,7 +207,7 @@
   {
     "id": "hardcore-items",
     "title": "Ruleta de Perks",
-    "spinDuration": 15,
+    "spinDuration": 13,
     "colors": [
       "#b91c1c",
       "#1f2937",
@@ -398,7 +387,7 @@
   {
     "id": "hardcore-modifiers",
     "title": "Ruleta Hardcore - Modificadores",
-    "spinDuration": 15,
+    "spinDuration": 13,
     "colors": [
     "#b91c1c",
     "#1f2937",
