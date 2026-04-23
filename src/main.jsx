@@ -11,6 +11,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/stream" element={<StreamView />} />
+        <Route path="/stream/:wheelId" element={<StreamView />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

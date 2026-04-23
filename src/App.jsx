@@ -212,6 +212,51 @@ export default function App() {
           </button>
         </div>
 
+        {!cleanMode && (
+          <div className="app__obs-urls" style={{ 
+            marginTop: '20px', 
+            padding: '15px', 
+            background: 'rgba(255,255,255,0.05)', 
+            borderRadius: '8px',
+            border: '1px solid rgba(255,255,255,0.1)'
+          }}>
+            <h3 style={{ marginBottom: '10px' }}>📺 URLs para OBS (Browser Source)</h3>
+            <p style={{ fontSize: '14px', marginBottom: '15px', opacity: 0.8 }}>
+              Usa estas URLs en OBS para mostrar cada ruleta. Cada URL muestra una ruleta específica:
+            </p>
+            <div style={{ 
+              display: 'grid', 
+              gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', 
+              gap: '10px', 
+              fontSize: '13px' 
+            }}>
+              {wheels.map((wheel) => (
+                <div key={wheel.id} style={{ 
+                  background: 'rgba(255,255,255,0.08)', 
+                  padding: '12px', 
+                  borderRadius: '6px',
+                  border: '1px solid rgba(255,255,255,0.1)'
+                }}>
+                  <strong style={{ display: 'block', marginBottom: '6px', color: '#60a5fa' }}>
+                    {wheel.title}
+                  </strong>
+                  <code style={{ 
+                    fontSize: '11px', 
+                    wordBreak: 'break-all',
+                    display: 'block',
+                    background: 'rgba(0,0,0,0.3)',
+                    padding: '6px 8px',
+                    borderRadius: '4px',
+                    fontFamily: 'monospace'
+                  }}>
+                    {window.location.origin}/stream/{wheel.id}
+                  </code>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {cleanMode && (
           <div className="app__clean-selector">
             <label htmlFor="clean-wheel-select">
