@@ -1,35 +1,35 @@
 {
-  "Runner": {
-    "image": "/Images/Roles/Velocista.png",
+  "Ambulancia": {
+    "image": "/Images/Roles/Ambulancia.png",
     "variants": [
       {
         "name": "1",
         "difficulty": "Fácil",
         "perks": [
-          { "name": "Estallido de Velocidad", "image": "sprint-burst.webp" },
-          { "name": "Ventanas de Oportunidad", "image": "windows-of-opportunity.webp" },
-          { "name": "Afinidad", "image": "kindred.webp" },
-          { "name": "Resiliencia", "image": "resilience.webp" }
+          { "name": "Conocimiento en Botánica", "image": "botany-knowledge.webp" },
+          { "name": "Lo Lograremos", "image": "well-make-it.webp" },
+          { "name": "Conexión Empática", "image": "empathic-connection.webp" },
+          { "name": "Medidas Desesperadas", "image": "desperate-measures.webp" }
         ]
       },
       {
         "name": "2",
         "difficulty": "Media",
         "perks": [
-          { "name": "Ágil", "image": "lithe.webp" },
-          { "name": "Rápido y Silencioso", "image": "quick-quiet.webp" },
-          { "name": "Baila Conmigo", "image": "dance-with-me.webp" },
-          { "name": "Ventanas de Oportunidad", "image": "windows-of-opportunity.webp" }
+          { "name": "Conocimiento en Botánica", "image": "botany-knowledge.webp" },
+          { "name": "Lo Lograremos", "image": "well-make-it.webp" },
+          { "name": "Conexión Empática", "image": "empathic-connection.webp" },
+          { "name": "Medidas Desesperadas", "image": "desperate-measures.webp" }
         ]
       },
       {
         "name": "3",
         "difficulty": "Difícil",
         "perks": [
-          { "name": "Aterrizaje Equilibrado", "image": "balanced-landing.webp" },
-          { "name": "Superar", "image": "overcome.webp" },
-          { "name": "Estrella Afortunada", "image": "lucky-star.webp" },
-          { "name": "Adrenalina", "image": "adrenaline.webp" }
+          { "name": "Conocimiento en Botánica", "image": "botany-knowledge.webp" },
+          { "name": "Lo Lograremos", "image": "well-make-it.webp" },
+          { "name": "Conexión Empática", "image": "empathic-connection.webp" },
+          { "name": "Medidas Desesperadas", "image": "desperate-measures.webp" }
         ]
       }
     ]
@@ -41,19 +41,299 @@
         "name": "1",
         "difficulty": "Fácil",
         "perks": [
-          { "name": "Demuestra tu Valía", "image": "prove-thyself.webp" },
-          { "name": "Déjà Vu", "image": "deja-vu.webp" },
-          { "name": "Resiliencia", "image": "resilience.webp" },
-          { "name": "Afinidad", "image": "kindred.webp" }
+          { "name": "Demuéstralo", "image": "prove-thyself.webp" },
+          { "name": "Hiperconcentración", "image": "hyperfocus.webp" },
+          { "name": "Vigilancia", "image": "stake-out.webp" },
+          { "name": "Hecho para Durar", "image": "built-to-last.webp" }
         ]
       },
       {
         "name": "2",
         "difficulty": "Media",
         "perks": [
+          { "name": "Demuéstralo", "image": "prove-thyself.webp" },
           { "name": "Hiperconcentración", "image": "hyperfocus.webp" },
           { "name": "Vigilancia", "image": "stake-out.webp" },
-          { "name": "Hecho para Durar", "image": "built-to-last.webp" },
+          { "name": "Hecho para Durar", "image": "built-to-last.webp" }
+        ]
+      },
+      {
+        "name": "3",
+        "difficulty": "Difícil",
+        "perks": [
+          { "name": "Demuéstralo", "image": "prove-thyself.webp" },
+          { "name": "Hiperconcentración", "image": "hyperfocus.webp" },
+          { "name": "Vigilancia", "image": "stake-out.webp" },
+          { "name": "Hecho para Durar", "image": "built-to-last.webp" }
+        ]
+      }
+    ]
+  },
+  "Rescatista": {
+    "image": "/Images/Roles/Rescatista.png",
+    "variants": [
+      {
+        "name": "1",
+        "difficulty": "Fácil",
+        "perks": [
+          { "name": "Tiempo Prestado", "image": "borrowed-time.webp" },
+          { "name": "Lo Lograremos", "image": "well-make-it.webp" },
+          { "name": "Fuera de Registro", "image": "off-the-record.webp" },
+          { "name": "Guardián", "image": "babysitter.webp" }
+        ]
+      },
+      {
+        "name": "2",
+        "difficulty": "Media",
+        "perks": [
+          { "name": "Tiempo Prestado", "image": "borrowed-time.webp" },
+          { "name": "Lo Lograremos", "image": "well-make-it.webp" },
+          { "name": "Fuera de Registro", "image": "off-the-record.webp" },
+          { "name": "Guardián", "image": "babysitter.webp" }
+        ]
+      },
+      {
+        "name": "3",
+        "difficulty": "Difícil",
+        "perks": [
+          { "name": "Tiempo Prestado", "image": "borrowed-time.webp" },
+          { "name": "Lo Lograremos", "image": "well-make-it.webp" },
+          { "name": "Fuera de Registro", "image": "off-the-record.webp" },
+          { "name": "Guardián", "image": "babysitter.webp" }
+        ]
+      }
+    ]
+  },
+  "Cegador": {
+    "image": "/Images/Roles/Cegador.png",
+    "variants": [
+      {
+        "name": "1",
+        "difficulty": "Fácil",
+        "perks": [
+          { "name": "Bomba de Luz", "image": "flashbang.webp" },
+          { "name": "Jugador de Fondo", "image": "background-player.webp" },
+          { "name": "Campeón de la Luz", "image": "champion-of-light.webp" },
+          { "name": "Manifestación Residual", "image": "residual-manifest.webp" }
+        ]
+      },
+      {
+        "name": "2",
+        "difficulty": "Media",
+        "perks": [
+          { "name": "Bomba de Luz", "image": "flashbang.webp" },
+          { "name": "Jugador de Fondo", "image": "background-player.webp" },
+          { "name": "Campeón de la Luz", "image": "champion-of-light.webp" },
+          { "name": "Manifestación Residual", "image": "residual-manifest.webp" }
+        ]
+      },
+      {
+        "name": "3",
+        "difficulty": "Difícil",
+        "perks": [
+          { "name": "Bomba de Luz", "image": "flashbang.webp" },
+          { "name": "Jugador de Fondo", "image": "background-player.webp" },
+          { "name": "Campeón de la Luz", "image": "champion-of-light.webp" },
+          { "name": "Manifestación Residual", "image": "residual-manifest.webp" }
+        ]
+      }
+    ]
+  },
+  "Sigiloso": {
+    "image": "/Images/Roles/Sigilo.png",
+    "variants": [
+      {
+        "name": "1",
+        "difficulty": "Fácil",
+        "perks": [
+          { "name": "Evasión Urbana", "image": "urban-evasion.webp" },
+          { "name": "Voluntad de Hierro", "image": "iron-will.webp" },
+          { "name": "Distorsión", "image": "distortion.webp" },
+          { "name": "Peso Ligero", "image": "lightweight.webp" }
+        ]
+      },
+      {
+        "name": "2",
+        "difficulty": "Media",
+        "perks": [
+          { "name": "Evasión Urbana", "image": "urban-evasion.webp" },
+          { "name": "Voluntad de Hierro", "image": "iron-will.webp" },
+          { "name": "Distorsión", "image": "distortion.webp" },
+          { "name": "Peso Ligero", "image": "lightweight.webp" }
+        ]
+      },
+      {
+        "name": "3",
+        "difficulty": "Difícil",
+        "perks": [
+          { "name": "Evasión Urbana", "image": "urban-evasion.webp" },
+          { "name": "Voluntad de Hierro", "image": "iron-will.webp" },
+          { "name": "Distorsión", "image": "distortion.webp" },
+          { "name": "Peso Ligero", "image": "lightweight.webp" }
+        ]
+      }
+    ]
+  },
+  "Loopero": {
+    "image": "/Images/Roles/Loopero.png",
+    "variants": [
+      {
+        "name": "1",
+        "difficulty": "Fácil",
+        "perks": [
+          { "name": "Ventanas de Oportunidad", "image": "windows-of-opportunity.webp" },
+          { "name": "Ágil", "image": "lithe.webp" },
+          { "name": "Resiliencia", "image": "resilience.webp" },
+          { "name": "Esfuerzo Final", "image": "dead-hard.webp" }
+        ]
+      },
+      {
+        "name": "2",
+        "difficulty": "Media",
+        "perks": [
+          { "name": "Ventanas de Oportunidad", "image": "windows-of-opportunity.webp" },
+          { "name": "Ágil", "image": "lithe.webp" },
+          { "name": "Resiliencia", "image": "resilience.webp" },
+          { "name": "Esfuerzo Final", "image": "dead-hard.webp" }
+        ]
+      },
+      {
+        "name": "3",
+        "difficulty": "Difícil",
+        "perks": [
+          { "name": "Ventanas de Oportunidad", "image": "windows-of-opportunity.webp" },
+          { "name": "Ágil", "image": "lithe.webp" },
+          { "name": "Resiliencia", "image": "resilience.webp" },
+          { "name": "Esfuerzo Final", "image": "dead-hard.webp" }
+        ]
+      }
+    ]
+  },
+  "Estratega": {
+    "image": "/Images/Roles/Estratega.png",
+    "variants": [
+      {
+        "name": "1",
+        "difficulty": "Fácil",
+        "perks": [
+          { "name": "Empatía Compartida", "image": "kindred.webp" },
+          { "name": "Vínculo", "image": "bond.webp" },
+          { "name": "Alerta", "image": "alert.webp" },
+          { "name": "Déjà Vu", "image": "deja-vu.webp" }
+        ]
+      },
+      {
+        "name": "2",
+        "difficulty": "Media",
+        "perks": [
+          { "name": "Empatía Compartida", "image": "kindred.webp" },
+          { "name": "Vínculo", "image": "bond.webp" },
+          { "name": "Alerta", "image": "alert.webp" },
+          { "name": "Déjà Vu", "image": "deja-vu.webp" }
+        ]
+      },
+      {
+        "name": "3",
+        "difficulty": "Difícil",
+        "perks": [
+          { "name": "Empatía Compartida", "image": "kindred.webp" },
+          { "name": "Vínculo", "image": "bond.webp" },
+          { "name": "Alerta", "image": "alert.webp" },
+          { "name": "Déjà Vu", "image": "deja-vu.webp" }
+        ]
+      }
+    ]
+  },
+  "Saboteador": {
+    "image": "/Images/Roles/Saboteador.png",
+    "variants": [
+      {
+        "name": "1",
+        "difficulty": "Fácil",
+        "perks": [
+          { "name": "Saboteador", "image": "saboteur.webp" },
+          { "name": "Colapso", "image": "breakdown.webp" },
+          { "name": "Rebeldía", "image": "boil-over.webp" },
+          { "name": "Jugador de Fondo", "image": "background-player.webp" }
+        ]
+      },
+      {
+        "name": "2",
+        "difficulty": "Media",
+        "perks": [
+          { "name": "Saboteador", "image": "saboteur.webp" },
+          { "name": "Colapso", "image": "breakdown.webp" },
+          { "name": "Rebeldía", "image": "boil-over.webp" },
+          { "name": "Jugador de Fondo", "image": "background-player.webp" }
+        ]
+      },
+      {
+        "name": "3",
+        "difficulty": "Difícil",
+        "perks": [
+          { "name": "Saboteador", "image": "saboteur.webp" },
+          { "name": "Colapso", "image": "breakdown.webp" },
+          { "name": "Rebeldía", "image": "boil-over.webp" },
+          { "name": "Jugador de Fondo", "image": "background-player.webp" }
+        ]
+      }
+    ]
+  },
+  "Tanque": {
+    "image": "/Images/Roles/Tanque.png",
+    "variants": [
+      {
+        "name": "1",
+        "difficulty": "Fácil",
+        "perks": [
+          { "name": "Fuera de Registro", "image": "off-the-record.webp" },
+          { "name": "Golpe Decisivo", "image": "decisive-strike.webp" },
+          { "name": "Esfuerzo Final", "image": "dead-hard.webp" },
+          { "name": "Irrompible", "image": "unbreakable.webp" }
+        ]
+      },
+      {
+        "name": "2",
+        "difficulty": "Media",
+        "perks": [
+          { "name": "Fuera de Registro", "image": "off-the-record.webp" },
+          { "name": "Golpe Decisivo", "image": "decisive-strike.webp" },
+          { "name": "Esfuerzo Final", "image": "dead-hard.webp" },
+          { "name": "Irrompible", "image": "unbreakable.webp" }
+        ]
+      },
+      {
+        "name": "3",
+        "difficulty": "Difícil",
+        "perks": [
+          { "name": "Fuera de Registro", "image": "off-the-record.webp" },
+          { "name": "Golpe Decisivo", "image": "decisive-strike.webp" },
+          { "name": "Esfuerzo Final", "image": "dead-hard.webp" },
+          { "name": "Irrompible", "image": "unbreakable.webp" }
+        ]
+      }
+    ]
+  },
+  "Clutch": {
+    "image": "/Images/Roles/EndGame.png",
+    "variants": [
+      {
+        "name": "1",
+        "difficulty": "Fácil",
+        "perks": [
+          { "name": "Adrenalina", "image": "adrenaline.webp" },
+          { "name": "Esperanza", "image": "hope.webp" },
+          { "name": "¡Despierta!", "image": "wake-up.webp" },
+          { "name": "Resiliencia", "image": "resilience.webp" }
+        ]
+      },
+      {
+        "name": "2",
+        "difficulty": "Media",
+        "perks": [
+          { "name": "Adrenalina", "image": "adrenaline.webp" },
+          { "name": "Esperanza", "image": "hope.webp" },
+          { "name": "¡Despierta!", "image": "wake-up.webp" },
           { "name": "Resiliencia", "image": "resilience.webp" }
         ]
       },
@@ -61,10 +341,220 @@
         "name": "3",
         "difficulty": "Difícil",
         "perks": [
-          { "name": "Hiperconcentración", "image": "hyperfocus.webp" },
-          { "name": "Vigilancia", "image": "stake-out.webp" },
-          { "name": "Fecha Límite", "image": "deadline.webp" },
-          { "name": "Hecho para Durar", "image": "built-to-last.webp" }
+          { "name": "Adrenalina", "image": "adrenaline.webp" },
+          { "name": "Esperanza", "image": "hope.webp" },
+          { "name": "¡Despierta!", "image": "wake-up.webp" },
+          { "name": "Resiliencia", "image": "resilience.webp" }
+        ]
+      }
+    ]
+  },
+  "Troll / Meme": {
+    "image": "/Images/Roles/TrollMeme.png",
+    "variants": [
+      {
+        "name": "1",
+        "difficulty": "Fácil",
+        "perks": [
+          { "name": "De Frente", "image": "head-on.webp" },
+          { "name": "Mina Explosiva", "image": "blast-mine.webp" },
+          { "name": "Bomba de Luz", "image": "flashbang.webp" },
+          { "name": "Giro Argumental", "image": "plot-twist.webp" }
+        ]
+      },
+      {
+        "name": "2",
+        "difficulty": "Media",
+        "perks": [
+          { "name": "De Frente", "image": "head-on.webp" },
+          { "name": "Mina Explosiva", "image": "blast-mine.webp" },
+          { "name": "Bomba de Luz", "image": "flashbang.webp" },
+          { "name": "Giro Argumental", "image": "plot-twist.webp" }
+        ]
+      },
+      {
+        "name": "3",
+        "difficulty": "Difícil",
+        "perks": [
+          { "name": "De Frente", "image": "head-on.webp" },
+          { "name": "Mina Explosiva", "image": "blast-mine.webp" },
+          { "name": "Bomba de Luz", "image": "flashbang.webp" },
+          { "name": "Giro Argumental", "image": "plot-twist.webp" }
+        ]
+      }
+    ]
+  },
+  "Maestro de Bendiciones": {
+    "image": "/Images/Roles/Totems.png",
+    "variants": [
+      {
+        "name": "1",
+        "difficulty": "Fácil",
+        "perks": [
+          { "name": "Bendición: Círculo de Sanación", "image": "boon-circle-of-healing.webp" },
+          { "name": "Bendición: Paso Sombrío", "image": "boon-shadow-step.webp" },
+          { "name": "Bendición: Exponencial", "image": "boon-exponential.webp" },
+          { "name": "Bendición: Teoría Oscura", "image": "boon-dark-theory.webp" }
+        ]
+      },
+      {
+        "name": "2",
+        "difficulty": "Media",
+        "perks": [
+          { "name": "Bendición: Círculo de Sanación", "image": "boon-circle-of-healing.webp" },
+          { "name": "Bendición: Paso Sombrío", "image": "boon-shadow-step.webp" },
+          { "name": "Bendición: Exponencial", "image": "boon-exponential.webp" },
+          { "name": "Bendición: Teoría Oscura", "image": "boon-dark-theory.webp" }
+        ]
+      },
+      {
+        "name": "3",
+        "difficulty": "Difícil",
+        "perks": [
+          { "name": "Bendición: Círculo de Sanación", "image": "boon-circle-of-healing.webp" },
+          { "name": "Bendición: Paso Sombrío", "image": "boon-shadow-step.webp" },
+          { "name": "Bendición: Exponencial", "image": "boon-exponential.webp" },
+          { "name": "Bendición: Teoría Oscura", "image": "boon-dark-theory.webp" }
+        ]
+      }
+    ]
+  },
+  "Velocista": {
+    "image": "/Images/Roles/Velocista.png",
+    "variants": [
+      {
+        "name": "1",
+        "difficulty": "Fácil",
+        "perks": [
+          { "name": "Sprint", "image": "sprint-burst.webp" },
+          { "name": "Concentración", "image": "fixated.webp" },
+          { "name": "Hecho para Esto", "image": "made-for-this.webp" },
+          { "name": "Esperanza", "image": "hope.webp" }
+        ]
+      },
+      {
+        "name": "2",
+        "difficulty": "Media",
+        "perks": [
+          { "name": "Sprint", "image": "sprint-burst.webp" },
+          { "name": "Concentración", "image": "fixated.webp" },
+          { "name": "Hecho para Esto", "image": "made-for-this.webp" },
+          { "name": "Esperanza", "image": "hope.webp" }
+        ]
+      },
+      {
+        "name": "3",
+        "difficulty": "Difícil",
+        "perks": [
+          { "name": "Sprint", "image": "sprint-burst.webp" },
+          { "name": "Concentración", "image": "fixated.webp" },
+          { "name": "Hecho para Esto", "image": "made-for-this.webp" },
+          { "name": "Esperanza", "image": "hope.webp" }
+        ]
+      }
+    ]
+  },
+  "Anti-Killer": {
+    "image": "/Images/Roles/Antikiller.png",
+    "variants": [
+      {
+        "name": "1",
+        "difficulty": "Fácil",
+        "perks": [
+          { "name": "Ventanas de Oportunidad", "image": "windows-of-opportunity.webp" },
+          { "name": "Golpe Decisivo", "image": "decisive-strike.webp" },
+          { "name": "Fuera de Registro", "image": "off-the-record.webp" },
+          { "name": "Liberación", "image": "deliverance.webp" }
+        ]
+      },
+      {
+        "name": "2",
+        "difficulty": "Media",
+        "perks": [
+          { "name": "Ventanas de Oportunidad", "image": "windows-of-opportunity.webp" },
+          { "name": "Golpe Decisivo", "image": "decisive-strike.webp" },
+          { "name": "Fuera de Registro", "image": "off-the-record.webp" },
+          { "name": "Liberación", "image": "deliverance.webp" }
+        ]
+      },
+      {
+        "name": "3",
+        "difficulty": "Difícil",
+        "perks": [
+          { "name": "Ventanas de Oportunidad", "image": "windows-of-opportunity.webp" },
+          { "name": "Golpe Decisivo", "image": "decisive-strike.webp" },
+          { "name": "Fuera de Registro", "image": "off-the-record.webp" },
+          { "name": "Liberación", "image": "deliverance.webp" }
+        ]
+      }
+    ]
+  },
+  "SoloQ Carry": {
+    "image": "/Images/Roles/SoloQ.png",
+    "variants": [
+      {
+        "name": "1",
+        "difficulty": "Fácil",
+        "perks": [
+          { "name": "Empatía Compartida", "image": "kindred.webp" },
+          { "name": "Ventanas de Oportunidad", "image": "windows-of-opportunity.webp" },
+          { "name": "Adrenalina", "image": "adrenaline.webp" },
+          { "name": "Fuera de Registro", "image": "off-the-record.webp" }
+        ]
+      },
+      {
+        "name": "2",
+        "difficulty": "Media",
+        "perks": [
+          { "name": "Empatía Compartida", "image": "kindred.webp" },
+          { "name": "Ventanas de Oportunidad", "image": "windows-of-opportunity.webp" },
+          { "name": "Adrenalina", "image": "adrenaline.webp" },
+          { "name": "Fuera de Registro", "image": "off-the-record.webp" }
+        ]
+      },
+      {
+        "name": "3",
+        "difficulty": "Difícil",
+        "perks": [
+          { "name": "Empatía Compartida", "image": "kindred.webp" },
+          { "name": "Ventanas de Oportunidad", "image": "windows-of-opportunity.webp" },
+          { "name": "Adrenalina", "image": "adrenaline.webp" },
+          { "name": "Fuera de Registro", "image": "off-the-record.webp" }
+        ]
+      }
+    ]
+  },
+  "Me la Pela": {
+    "image": "/Images/Roles/MeLaPela.png",
+    "variants": [
+      {
+        "name": "1",
+        "difficulty": "Fácil",
+        "perks": [
+          { "name": "Sin Miedo", "image": "no-mither.webp" },
+          { "name": "Autocuración", "image": "self-care.webp" },
+          { "name": "Compañero de Escena", "image": "scene-partner.webp" },
+          { "name": "Giro Argumental", "image": "plot-twist.webp" }
+        ]
+      },
+      {
+        "name": "2",
+        "difficulty": "Media",
+        "perks": [
+          { "name": "Sin Miedo", "image": "no-mither.webp" },
+          { "name": "Autocuración", "image": "self-care.webp" },
+          { "name": "Compañero de Escena", "image": "scene-partner.webp" },
+          { "name": "Giro Argumental", "image": "plot-twist.webp" }
+        ]
+      },
+      {
+        "name": "3",
+        "difficulty": "Difícil",
+        "perks": [
+          { "name": "Sin Miedo", "image": "no-mither.webp" },
+          { "name": "Autocuración", "image": "self-care.webp" },
+          { "name": "Compañero de Escena", "image": "scene-partner.webp" },
+          { "name": "Giro Argumental", "image": "plot-twist.webp" }
         ]
       }
     ]
@@ -78,7 +568,7 @@
         "perks": [
           { "name": "Vínculo", "image": "bond.webp" },
           { "name": "Alerta", "image": "alert.webp" },
-          { "name": "Afinidad", "image": "kindred.webp" },
+          { "name": "Empatía Compartida", "image": "kindred.webp" },
           { "name": "Ventanas de Oportunidad", "image": "windows-of-opportunity.webp" }
         ]
       },
@@ -98,78 +588,43 @@
         "perks": [
           { "name": "Enfoque Interno", "image": "inner-focus.webp" },
           { "name": "Alerta", "image": "alert.webp" },
-          { "name": "Estallido de Velocidad", "image": "sprint-burst.webp" },
+          { "name": "Sprint", "image": "sprint-burst.webp" },
           { "name": "Adrenalina", "image": "adrenaline.webp" }
         ]
       }
     ]
   },
-  "Anti-Túnel": {
-    "image": "/Images/Roles/Tanque.png",
+  "Protector": {
+    "image": "/Images/Roles/Rescatista.png",
     "variants": [
       {
         "name": "1",
         "difficulty": "Fácil",
         "perks": [
-          { "name": "Fuera de Registro", "image": "off-the-record.webp" },
-          { "name": "Afinidad", "image": "kindred.webp" },
-          { "name": "Resiliencia", "image": "resilience.webp" },
-          { "name": "Estallido de Velocidad", "image": "sprint-burst.webp" }
+          { "name": "Guardián", "image": "babysitter.webp" },
+          { "name": "Lo Lograremos", "image": "well-make-it.webp" },
+          { "name": "Tiempo Prestado", "image": "borrowed-time.webp" },
+          { "name": "Empatía Compartida", "image": "kindred.webp" }
         ]
       },
       {
         "name": "2",
         "difficulty": "Media",
         "perks": [
-          { "name": "Fuera de Registro", "image": "off-the-record.webp" },
-          { "name": "Golpe Decisivo", "image": "decisive-strike.webp" },
-          { "name": "Hecho para Esto", "image": "made-for-this.webp" },
-          { "name": "Resiliencia", "image": "resilience.webp" }
+          { "name": "Fuga", "image": "breakout.webp" },
+          { "name": "Lo Lograremos", "image": "well-make-it.webp" },
+          { "name": "Tiempo Prestado", "image": "borrowed-time.webp" },
+          { "name": "Jugador de Fondo", "image": "background-player.webp" }
         ]
       },
       {
         "name": "3",
         "difficulty": "Difícil",
         "perks": [
-          { "name": "Fuera de Registro", "image": "off-the-record.webp" },
-          { "name": "Golpe Decisivo", "image": "decisive-strike.webp" },
-          { "name": "Golpe Mortal", "image": "dead-hard.webp" },
-          { "name": "Inquebrantable", "image": "unbreakable.webp" }
-        ]
-      }
-    ]
-  },
-  "Recolector": {
-    "image": "/Images/Roles/Comodin.png",
-    "variants": [
-      {
-        "name": "1",
-        "difficulty": "Fácil",
-        "perks": [
-          { "name": "Instinto de Saqueador", "image": "plunderers-instinct.webp" },
-          { "name": "Tasación", "image": "appraisal.webp" },
-          { "name": "Afinidad", "image": "kindred.webp" },
-          { "name": "Resiliencia", "image": "resilience.webp" }
-        ]
-      },
-      {
-        "name": "2",
-        "difficulty": "Media",
-        "perks": [
-          { "name": "Instinto de Saqueador", "image": "plunderers-instinct.webp" },
-          { "name": "Tasación", "image": "appraisal.webp" },
-          { "name": "As Bajo la Manga", "image": "ace-in-the-hole.webp" },
-          { "name": "Resiliencia", "image": "resilience.webp" }
-        ]
-      },
-      {
-        "name": "3",
-        "difficulty": "Difícil",
-        "perks": [
-          { "name": "Tasación", "image": "appraisal.webp" },
-          { "name": "As Bajo la Manga", "image": "ace-in-the-hole.webp" },
-          { "name": "Carroñero", "image": "scavenger.webp" },
-          { "name": "Instinto de Saqueador", "image": "plunderers-instinct.webp" }
+          { "name": "Temple de Hombre", "image": "mettle-of-man.webp" },
+          { "name": "Fuga", "image": "breakout.webp" },
+          { "name": "Jugador de Fondo", "image": "background-player.webp" },
+          { "name": "Fuera de Registro", "image": "off-the-record.webp" }
         ]
       }
     ]

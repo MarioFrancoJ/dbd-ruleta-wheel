@@ -1,6 +1,6 @@
 const STORAGE_KEY = "dbd-wheels-config";
 const VERSION_KEY = "dbd-wheels-version";
-const CURRENT_VERSION = "3.4"; // Renamed roles wheels: Roles Libres and Roles Predeterminados
+const CURRENT_VERSION = "3.6"; // Added all 18 roles with complete data from Excel
 
 export function loadWheels() {
   try {

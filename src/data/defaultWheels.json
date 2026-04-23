@@ -160,11 +160,24 @@
       "#92400e"
     ],
     "options": [
-      "Runner",
+      "Ambulancia",
       "Reparador",
+      "Rescatista",
+      "Cegador",
+      "Sigiloso",
+      "Loopero",
+      "Estratega",
+      "Saboteador",
+      "Tanque",
+      "Clutch",
+      "Troll / Meme",
+      "Maestro de Bendiciones",
+      "Velocista",
+      "Anti-Killer",
+      "SoloQ Carry",
+      "Me la Pela",
       "Explorador",
-      "Anti-Túnel",
-      "Recolector"
+      "Protector"
     ]
   },
 
