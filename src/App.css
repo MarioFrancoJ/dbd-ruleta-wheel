@@ -766,7 +766,7 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto auto auto;
-  gap: 24px;
+  gap: 20px;
   padding: 32px;
   width: 100%;
   max-width: 900px;
@@ -776,8 +776,9 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 .roles-v2-result__title {
   grid-column: 1;
   grid-row: 1;
-  font-size: 42px;
+  font-size: 32px;
   font-weight: 900;
+  font-family: Impact, 'Arial Black', sans-serif;
   color: #f8fafc;
   margin: 0;
   text-align: left;
@@ -863,34 +864,48 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
   grid-column: 1 / -1;
   grid-row: 3;
   display: flex;
-  flex-direction: column;
-  gap: 8px;
+  flex-direction: row;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
   text-align: center;
   color: #e2e8f0;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
-}
-
-.roles-v2-result__perk-row {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
   text-transform: capitalize;
 }
 
-.roles-v2-result__variant {
-  grid-column: 1;
+.roles-v2-result__perk-names span {
+  white-space: nowrap;
+}
+
+.roles-v2-result__perk-names span:not(:last-child)::after {
+  content: " - ";
+  margin-left: 12px;
+}
+
+.roles-v2-result__bottom {
+  grid-column: 1 / -1;
   grid-row: 4;
-  text-align: left;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.roles-v2-result__variant {
+  text-align: center;
   padding: 16px 24px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   border: 2px solid rgba(255, 255, 255, 0.2);
+  flex: 1;
 }
 
 .roles-v2-result__variant strong {
   display: block;
-  font-size: 18px;
+  font-size: 16px;
   color: #cbd5e1;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -899,25 +914,26 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 }
 
 .roles-v2-result__variant p {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
   color: #f8fafc;
   margin: 0;
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 .roles-v2-result__difficulty {
-  grid-column: 2;
-  grid-row: 4;
-  text-align: right;
+  text-align: center;
   padding: 16px 24px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   border: 2px solid rgba(255, 255, 255, 0.2);
+  flex: 1;
 }
 
 .roles-v2-result__difficulty strong {
   display: block;
-  font-size: 18px;
+  font-size: 16px;
   color: #cbd5e1;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -926,10 +942,12 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 }
 
 .roles-v2-result__difficulty p {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
   color: #f8fafc;
   margin: 0;
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 @keyframes rolesV2FadeIn {

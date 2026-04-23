@@ -262,24 +262,21 @@ export default function WheelCard({
                 </div>
                 
                 <div className="roles-v2-result__perk-names">
-                  <div className="roles-v2-result__perk-row">
-                    {result.perks && result.perks[0] && <span>{result.perks[0].name}</span>}
-                    {result.perks && result.perks[1] && <span> - {result.perks[1].name}</span>}
-                  </div>
-                  <div className="roles-v2-result__perk-row">
-                    {result.perks && result.perks[2] && <span>{result.perks[2].name}</span>}
-                    {result.perks && result.perks[3] && <span> - {result.perks[3].name}</span>}
-                  </div>
+                  {result.perks && result.perks.map((perk, index) => (
+                    <span key={index}>{perk.name}</span>
+                  ))}
                 </div>
                 
-                <div className="roles-v2-result__variant">
-                  <strong>VARIANTE</strong>
-                  <p>{result.variant} - {result.difficulty}</p>
-                </div>
-                
-                <div className="roles-v2-result__difficulty">
-                  <strong>DIFICULTAD</strong>
-                  <p>{result.difficulty}</p>
+                <div className="roles-v2-result__bottom">
+                  <div className="roles-v2-result__variant">
+                    <strong>VARIANTE</strong>
+                    <p>{result.variant}</p>
+                  </div>
+                  
+                  <div className="roles-v2-result__difficulty">
+                    <strong>DIFICULTAD</strong>
+                    <p>{result.difficulty}</p>
+                  </div>
                 </div>
               </div>
             ) : (
