@@ -414,7 +414,7 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 
 .stream-page {
   min-height: 100vh;
-  background: #000000;
+  background: radial-gradient(circle at top, #000000 0%, #000000 45%, #000000 100%);
   padding: 24px;
 }
 
@@ -445,6 +445,8 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
   justify-content: center;
   align-items: center;
   min-height: calc(100vh - 120px);
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .wheel-card--stream {
@@ -479,59 +481,12 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
   }
 }
 
-.stream-page__content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
-
-.wheel-card--stream .wheel-card__winner-text {
-  font-size: 40px;
-}
-
-.stream-page {
-  min-height: 100vh;
-  background: #000000;
-  padding: 24px;
-}
-
-.stream-page__topbar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-}
-
-.stream-page__topbar label {
-  font-weight: 700;
-  color: #e5e7eb;
-}
-
-.stream-page__topbar select {
-  padding: 10px 14px;
-  border-radius: 10px;
-  border: 1px solid #374151;
-  background: #0f172a;
-  color: white;
-  font: inherit;
-}
-
-.stream-page__content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: calc(100vh - 120px);
-}
-
 .wheel-card--stream {
-  background: transparent;
-  border: none;
-  box-shadow: none;
-  padding: 0;
+  background: rgba(0, 0, 0, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
 }
 
 .wheel-card--stream .wheel-card__header {
@@ -540,27 +495,27 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 }
 
 .wheel-card--stream .wheel-card__header h2 {
-  font-size: 2rem;
+  font-size: 1.35rem;
 }
 
 .wheel-card--stream .spin-wheel-wrapper {
-  width: 700px;
-  height: 700px;
+  width: 650px;
+  height: 650px;
 }
 
 .wheel-card--stream .wheel-card__winner-text {
-  font-size: 40px;
+  font-size: 50px;
 }
 
 .wheel-card--stream .wheel-card__winner-image {
-  width: 400px;
-  height: 400px;
+  width: 220px;
+  height: 220px;
 }
 
 @media (max-width: 768px) {
   .wheel-card--stream .spin-wheel-wrapper {
-    width: 360px;
-    height: 360px;
+    width: 400px;
+    height: 400px;
   }
 }
 
@@ -967,45 +922,40 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
   }
 }
 
-/* Stream mode adjustments for rolesV2 */
+/* Stream mode adjustments for rolesV2 - same as clean mode */
 .wheel-card--stream .roles-v2-result {
-  max-width: 1200px;
-  gap: 32px;
-  padding: 48px;
+  max-width: 900px;
+  gap: 16px;
+  padding: 32px;
 }
 
 .wheel-card--stream .roles-v2-result__title {
-  font-size: 56px;
+  font-size: 36px;
 }
 
 .wheel-card--stream .roles-v2-result__image {
-  width: 280px;
-  height: 280px;
+  width: 200px;
+  height: 200px;
 }
 
 .wheel-card--stream .roles-v2-result__perks {
-  min-height: 450px;
-  padding: 80px 0;
+  min-height: 280px;
+  padding: 0;
 }
 
 .wheel-card--stream .roles-v2-result__perk-icon {
-  width: 180px;
-  height: 180px;
+  width: 140px;
+  height: 140px;
 }
 
 .wheel-card--stream .roles-v2-result__perk-names {
+  font-size: 14px;
+}
+
+.wheel-card--stream .roles-v2-result__label {
+  font-size: 16px;
+}
+
+.wheel-card--stream .roles-v2-result__value {
   font-size: 20px;
-}
-
-.wheel-card--stream .roles-v2-result__variant strong,
-.wheel-card--stream .roles-v2-result__difficulty strong {
-  font-size: 22px;
-}
-
-.wheel-card--stream .roles-v2-result__variant p {
-  font-size: 28px;
-}
-
-.wheel-card--stream .roles-v2-result__difficulty p {
-  font-size: 28px;
 }
