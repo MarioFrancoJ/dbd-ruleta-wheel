@@ -508,8 +508,8 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 }
 
 .wheel-card--stream .wheel-card__winner-image {
-  width: 220px;
-  height: 220px;
+  width: 350px;
+  height: 350px;
 }
 
 @media (max-width: 768px) {
@@ -520,8 +520,8 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 }
 
 .wheel-card__winner-image {
-  width: 220px;
-  height: 220px;
+  width: 350px;
+  height: 350px;
   object-fit: contain;
   border-radius: 8px;
   animation: winnerImagePop 0.7s ease-in-out forwards;
