@@ -1,6 +1,6 @@
 const STORAGE_KEY = "dbd-wheels-config";
 const VERSION_KEY = "dbd-wheels-version";
-const CURRENT_VERSION = "3.0"; // Added rolesV2 wheel with variant system
+const CURRENT_VERSION = "3.1"; // Replaced hardcore-items with all survivor perks wheel
 
 export function loadWheels() {
   try {
