@@ -138,7 +138,8 @@ export default function WheelCard({
     // El puntero está a la izquierda (270°)
     // Necesitamos rotar para que el centro del segmento ganador quede en el puntero
     const segmentCenter = winnerIndex * anglePerSegment + anglePerSegment / 2;
-    const targetAngle = (segmentCenter - 270 + 360) % 360;
+    // Para alinear el segmento con el puntero a 270°, rotamos: 270 - segmentCenter
+    const targetAngle = (270 - segmentCenter + 360) % 360;
 
     // Normalizamos la rotación actual para evitar acumulación infinita
     const currentNormalized = rotation % 360;
