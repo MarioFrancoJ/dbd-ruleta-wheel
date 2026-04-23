@@ -4,7 +4,8 @@
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
   background:
     radial-gradient(circle at top, #000000 0%, #000000 45%, #000000 100%);
   color: #f9fafb;
@@ -29,6 +30,7 @@ input {
 .app__header h1 {
   margin-bottom: 8px;
   font-size: 2rem;
+  font-weight: 700;
 }
 
 .app__header p {
@@ -43,7 +45,7 @@ input {
   cursor: pointer;
   background: #A50419;
   color: white;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .app__header button.theme-toggle {
@@ -72,6 +74,7 @@ input {
   margin-bottom: 18px;
   text-align: center;
   font-size: 1.2rem;
+  font-weight: 700;
 }
 
 .wheel-card__title-input {
@@ -80,7 +83,7 @@ input {
   margin-bottom: 18px;
   text-align: center;
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: 700;
   background: transparent;
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -777,8 +780,8 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
   grid-column: 1;
   grid-row: 1;
   font-size: 32px;
-  font-weight: 900;
-  font-family: Impact, 'Arial Black', sans-serif;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
   color: #f8fafc;
   margin: 0;
   text-align: left;
