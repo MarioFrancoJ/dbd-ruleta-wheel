@@ -628,5 +628,180 @@
         ]
       }
     ]
+  },
+  "Recolector": {
+    "image": "/Images/Roles/Comodin.png",
+    "variants": [
+      {
+        "name": "1",
+        "difficulty": "Fácil",
+        "perks": [
+          { "name": "Instinto de Saqueador", "image": "plunderers-instinct.webp" },
+          { "name": "Tasación", "image": "appraisal.webp" },
+          { "name": "Empatía Compartida", "image": "kindred.webp" },
+          { "name": "Resiliencia", "image": "resilience.webp" }
+        ]
+      },
+      {
+        "name": "2",
+        "difficulty": "Media",
+        "perks": [
+          { "name": "Tasación", "image": "appraisal.webp" },
+          { "name": "As Bajo la Manga", "image": "ace-in-the-hole.webp" },
+          { "name": "Instinto de Saqueador", "image": "plunderers-instinct.webp" },
+          { "name": "Resiliencia", "image": "resilience.webp" }
+        ]
+      },
+      {
+        "name": "3",
+        "difficulty": "Difícil",
+        "perks": [
+          { "name": "Carroñero", "image": "scavenger.webp" },
+          { "name": "Instinto de Saqueador", "image": "plunderers-instinct.webp" },
+          { "name": "As Bajo la Manga", "image": "ace-in-the-hole.webp" },
+          { "name": "Tasación", "image": "appraisal.webp" }
+        ]
+      }
+    ]
+  },
+  "Anti-slug": {
+    "image": "/Images/Roles/Tanque.png",
+    "variants": [
+      {
+        "name": "1",
+        "difficulty": "Fácil",
+        "perks": [
+          { "name": "Inquebrantable", "image": "unbreakable.webp" },
+          { "name": "Tenacidad", "image": "tenacity.webp" },
+          { "name": "Empatía Compartida", "image": "kindred.webp" },
+          { "name": "Resiliencia", "image": "resilience.webp" }
+        ]
+      },
+      {
+        "name": "2",
+        "difficulty": "Media",
+        "perks": [
+          { "name": "Tenacidad", "image": "tenacity.webp" },
+          { "name": "Inquebrantable", "image": "unbreakable.webp" },
+          { "name": "Voltereta", "image": "flip-flop.webp" },
+          { "name": "Rebeldía", "image": "boil-over.webp" }
+        ]
+      },
+      {
+        "name": "3",
+        "difficulty": "Difícil",
+        "perks": [
+          { "name": "Voltereta", "image": "flip-flop.webp" },
+          { "name": "Inquebrantable", "image": "unbreakable.webp" },
+          { "name": "Tenacidad", "image": "tenacity.webp" },
+          { "name": "Rebeldía", "image": "boil-over.webp" }
+        ]
+      }
+    ]
+  },
+  "Líder": {
+    "image": "/Images/Roles/Estratega.png",
+    "variants": [
+      {
+        "name": "1",
+        "difficulty": "Fácil",
+        "perks": [
+          { "name": "Líder", "image": "leader.webp" },
+          { "name": "Demuéstralo", "image": "prove-thyself.webp" },
+          { "name": "Empatía Compartida", "image": "kindred.webp" },
+          { "name": "Vínculo", "image": "bond.webp" }
+        ]
+      },
+      {
+        "name": "2",
+        "difficulty": "Media",
+        "perks": [
+          { "name": "Demuéstralo", "image": "prove-thyself.webp" },
+          { "name": "Líder", "image": "leader.webp" },
+          { "name": "Vínculo", "image": "bond.webp" },
+          { "name": "Lo Lograremos", "image": "well-make-it.webp" }
+        ]
+      },
+      {
+        "name": "3",
+        "difficulty": "Difícil",
+        "perks": [
+          { "name": "Trabajo en Equipo: Poder de Dos", "image": "teamwork-power-of-two.webp" },
+          { "name": "Demuéstralo", "image": "prove-thyself.webp" },
+          { "name": "Líder", "image": "leader.webp" },
+          { "name": "Vínculo", "image": "bond.webp" }
+        ]
+      }
+    ]
+  },
+  "Controlador": {
+    "image": "/Images/Roles/Estratega.png",
+    "variants": [
+      {
+        "name": "1",
+        "difficulty": "Fácil",
+        "perks": [
+          { "name": "Alerta", "image": "alert.webp" },
+          { "name": "Empatía Compartida", "image": "kindred.webp" },
+          { "name": "Vínculo", "image": "bond.webp" },
+          { "name": "Déjà Vu", "image": "deja-vu.webp" }
+        ]
+      },
+      {
+        "name": "2",
+        "difficulty": "Media",
+        "perks": [
+          { "name": "Empatía Compartida", "image": "kindred.webp" },
+          { "name": "Alerta", "image": "alert.webp" },
+          { "name": "Ventanas de Oportunidad", "image": "windows-of-opportunity.webp" },
+          { "name": "Vínculo", "image": "bond.webp" }
+        ]
+      },
+      {
+        "name": "3",
+        "difficulty": "Difícil",
+        "perks": [
+          { "name": "Ventanas de Oportunidad", "image": "windows-of-opportunity.webp" },
+          { "name": "Empatía Compartida", "image": "kindred.webp" },
+          { "name": "Alerta", "image": "alert.webp" },
+          { "name": "Enfoque Interno", "image": "inner-focus.webp" }
+        ]
+      }
+    ]
+  },
+  "Especialista en Objetivos": {
+    "image": "/Images/Roles/Reparador.png",
+    "variants": [
+      {
+        "name": "1",
+        "difficulty": "Fácil",
+        "perks": [
+          { "name": "Déjà Vu", "image": "deja-vu.webp" },
+          { "name": "Demuéstralo", "image": "prove-thyself.webp" },
+          { "name": "Resiliencia", "image": "resilience.webp" },
+          { "name": "Empatía Compartida", "image": "kindred.webp" }
+        ]
+      },
+      {
+        "name": "2",
+        "difficulty": "Media",
+        "perks": [
+          { "name": "Resiliencia", "image": "resilience.webp" },
+          { "name": "Déjà Vu", "image": "deja-vu.webp" },
+          { "name": "Demuéstralo", "image": "prove-thyself.webp" },
+          { "name": "Hiperconcentración", "image": "hyperfocus.webp" }
+        ]
+      },
+      {
+        "name": "3",
+        "difficulty": "Difícil",
+        "perks": [
+          { "name": "Especialista", "image": "specialist.webp" },
+          { "name": "Resiliencia", "image": "resilience.webp" },
+          { "name": "Déjà Vu", "image": "deja-vu.webp" },
+          { "name": "Hiperconcentración", "image": "hyperfocus.webp" }
+        ]
+      }
+    ]
   }
 }

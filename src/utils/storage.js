@@ -1,6 +1,6 @@
 const STORAGE_KEY = "dbd-wheels-config";
 const VERSION_KEY = "dbd-wheels-version";
-const CURRENT_VERSION = "3.6"; // Added all 18 roles with complete data from Excel
+const CURRENT_VERSION = "3.7"; // Added 6 new roles: Recolector, Anti-slug, Líder, Controlador, Especialista en Objetivos (total 24 roles)
 
 export function loadWheels() {
   try {
