@@ -811,8 +811,8 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 30px 0;
-  min-height: 300px;
+  padding: 10px 0;
+  min-height: 280px;
 }
 
 .roles-v2-result__perk-icon {

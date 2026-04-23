@@ -7,7 +7,7 @@
         "difficulty": "Fácil",
         "perks": [
           { "name": "Conocimiento en Botánica", "image": "botany-knowledge.webp" },
-          { "name": "Lo Lograremos", "image": "we-ll-make-it.webp" },
+          { "name": "Lo Lograremos", "image": "well-make-it.webp" },
           { "name": "Conexión Empática", "image": "empathic-connection.webp" },
           { "name": "Medidas Desesperadas", "image": "desperate-measures.webp" }
         ]
@@ -17,7 +17,7 @@
         "difficulty": "Media",
         "perks": [
           { "name": "Conocimiento en Botánica", "image": "botany-knowledge.webp" },
-          { "name": "Lo Lograremos", "image": "we-ll-make-it.webp" },
+          { "name": "Lo Lograremos", "image": "well-make-it.webp" },
           { "name": "Conexión Empática", "image": "empathic-connection.webp" },
           { "name": "Medidas Desesperadas", "image": "desperate-measures.webp" }
         ]
@@ -27,7 +27,7 @@
         "difficulty": "Difícil",
         "perks": [
           { "name": "Conocimiento en Botánica", "image": "botany-knowledge.webp" },
-          { "name": "Lo Lograremos", "image": "we-ll-make-it.webp" },
+          { "name": "Lo Lograremos", "image": "well-make-it.webp" },
           { "name": "Conexión Empática", "image": "empathic-connection.webp" },
           { "name": "Medidas Desesperadas", "image": "desperate-measures.webp" }
         ]
@@ -77,7 +77,7 @@
         "difficulty": "Fácil",
         "perks": [
           { "name": "Tiempo Prestado", "image": "borrowed-time.webp" },
-          { "name": "Lo Lograremos", "image": "we-ll-make-it.webp" },
+          { "name": "Lo Lograremos", "image": "well-make-it.webp" },
           { "name": "Fuera de Registro", "image": "off-the-record.webp" },
           { "name": "Guardián", "image": "guardian.webp" }
         ]
@@ -87,7 +87,7 @@
         "difficulty": "Media",
         "perks": [
           { "name": "Tiempo Prestado", "image": "borrowed-time.webp" },
-          { "name": "Lo Lograremos", "image": "we-ll-make-it.webp" },
+          { "name": "Lo Lograremos", "image": "well-make-it.webp" },
           { "name": "Fuera de Registro", "image": "off-the-record.webp" },
           { "name": "Guardián", "image": "guardian.webp" }
         ]
@@ -97,7 +97,7 @@
         "difficulty": "Difícil",
         "perks": [
           { "name": "Tiempo Prestado", "image": "borrowed-time.webp" },
-          { "name": "Lo Lograremos", "image": "we-ll-make-it.webp" },
+          { "name": "Lo Lograremos", "image": "well-make-it.webp" },
           { "name": "Fuera de Registro", "image": "off-the-record.webp" },
           { "name": "Guardián", "image": "guardian.webp" }
         ]
@@ -560,3 +560,4 @@
     ]
   }
 }
+
