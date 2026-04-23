@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import SpinWheel from "./SpinWheel";
+import rolesData from "../data/rolesData.json";
 
 export default function WheelCard({
   wheel,
@@ -149,7 +150,31 @@ export default function WheelCard({
     startTicking(wheel.spinDuration, rotation, finalRotation);
 
     setTimeout(() => {
-      onSpin(wheel.id, winnerIndex);
+      // Lógica especial para rolesV2: seleccionar variante aleatoria
+      if (wheel.id === "rolesV2") {
+        const roleName = wheel.options[winnerIndex];
+        const roleData = rolesData[roleName];
+        
+        if (roleData && roleData.variants) {
+          const randomVariant = roleData.variants[Math.floor(Math.random() * roleData.variants.length)];
+          
+          // Crear objeto de resultado con toda la información
+          const resultData = {
+            roleName: roleName,
+            roleImage: roleData.image,
+            variant: randomVariant.name,
+            difficulty: randomVariant.difficulty,
+            perks: randomVariant.perks
+          };
+          
+          onSpin(wheel.id, winnerIndex, resultData);
+        } else {
+          onSpin(wheel.id, winnerIndex);
+        }
+      } else {
+        onSpin(wheel.id, winnerIndex);
+      }
+      
       setIsSpinning(false);
       stopTicking();
       playWinner();
@@ -159,10 +184,21 @@ export default function WheelCard({
 
   // Extraer label e imagen del resultado de forma segura
   const result = wheel.result;
-  const resultLabel = result
-    ? (typeof result === "object" ? result.label : result)
-    : null;
-  const resultImage = result && typeof result === "object" ? result.image : null;
+  
+  // Determinar si es rolesV2 y tiene datos especiales
+  const isRolesV2 = wheel.id === "rolesV2" && result && typeof result === "object" && result.roleName;
+  
+  let resultLabel, resultImage;
+  
+  if (isRolesV2) {
+    resultLabel = result.roleName;
+    resultImage = result.roleImage;
+  } else {
+    resultLabel = result
+      ? (typeof result === "object" ? result.label : result)
+      : null;
+    resultImage = result && typeof result === "object" ? result.image : null;
+  }
 
   const cleanClass = cleanMode ? " wheel-card--clean" : "";
   const streamClass = streamMode ? " wheel-card--stream" : "";
@@ -200,18 +236,69 @@ export default function WheelCard({
 
         {showWinnerOverlay && (
           <div className="wheel-card__winner-overlay">
-            {resultImage && (
-              <img
-                key={resultImage}
-                src={resultImage}
-                alt={resultLabel}
-                className="wheel-card__winner-image"
-              />
-            )}
-            {resultLabel && (
-              <strong className="wheel-card__winner-text">
-                {resultLabel}
-              </strong>
+            {wheel.id === "rolesV2" && isRolesV2 ? (
+              // Diseño especial para rolesV2
+              <div className="roles-v2-result">
+                <h2 className="roles-v2-result__title">{result.roleName}</h2>
+                
+                {resultImage && (
+                  <img
+                    src={resultImage}
+                    alt={result.roleName}
+                    className="roles-v2-result__image"
+                  />
+                )}
+                
+                <div className="roles-v2-result__perks">
+                  {result.perks && result.perks.map((perk, index) => (
+                    <img
+                      key={index}
+                      src={`/Images/Perks/${perk.image}`}
+                      alt={perk.name}
+                      className="roles-v2-result__perk-icon"
+                      title={perk.name}
+                    />
+                  ))}
+                </div>
+                
+                <div className="roles-v2-result__perk-names">
+                  <div className="roles-v2-result__perk-row">
+                    {result.perks && result.perks[0] && <span>{result.perks[0].name}</span>}
+                    {result.perks && result.perks[1] && <span> - {result.perks[1].name}</span>}
+                  </div>
+                  <div className="roles-v2-result__perk-row">
+                    {result.perks && result.perks[2] && <span>{result.perks[2].name}</span>}
+                    {result.perks && result.perks[3] && <span> - {result.perks[3].name}</span>}
+                  </div>
+                </div>
+                
+                <div className="roles-v2-result__variant">
+                  <strong>VARIANTE</strong>
+                  <p>{result.variant} - {result.difficulty}</p>
+                </div>
+                
+                <div className="roles-v2-result__difficulty">
+                  <strong>DIFICULTAD</strong>
+                  <p>{result.difficulty}</p>
+                </div>
+              </div>
+            ) : (
+              // Diseño normal para otras ruletas
+              <>
+                {resultImage && (
+                  <img
+                    key={resultImage}
+                    src={resultImage}
+                    alt={resultLabel}
+                    className="wheel-card__winner-image"
+                  />
+                )}
+                {resultLabel && (
+                  <strong className="wheel-card__winner-text">
+                    {resultLabel}
+                  </strong>
+                )}
+              </>
             )}
           </div>
         )}

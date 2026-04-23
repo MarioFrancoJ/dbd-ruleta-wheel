@@ -148,6 +148,37 @@
   },
 
   {
+    "id": "rolesV2",
+    "title": "Roles",
+    "spinDuration": 15,
+    "colors": [
+      "#b91c1c",
+      "#1f2937",
+      "#7c3aed",
+      "#0f766e",
+      "#1d4ed8",
+      "#92400e"
+    ],
+    "options": [
+      "Ambulancia",
+      "Reparador",
+      "Rescatista",
+      "Cegador",
+      "Sigiloso",
+      "Loopero",
+      "Estratega",
+      "Saboteador",
+      "Tanque (Anti-túnel)",
+      "Clutch (Endgame)",
+      "Troll / Meme",
+      "Maestro de bendiciones",
+      "Velocista",
+      "Anti-Killer",
+      "SoloQ Carry"
+    ]
+  },
+
+  {
     "id": "items",
     "title": "Ruleta de Items",
     "spinDuration": 15,

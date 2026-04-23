@@ -50,10 +50,10 @@ export default function App() {
     );
   }
 
-  function handleSpin(id, winnerIndex) {
+  function handleSpin(id, winnerIndex, customResult) {
     updateWheel(id, (wheel) => ({
       ...wheel,
-      result: wheel.options[winnerIndex] || "",
+      result: customResult || wheel.options[winnerIndex] || "",
     }));
   }
 

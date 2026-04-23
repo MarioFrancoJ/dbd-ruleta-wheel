@@ -1,6 +1,6 @@
 const STORAGE_KEY = "dbd-wheels-config";
 const VERSION_KEY = "dbd-wheels-version";
-const CURRENT_VERSION = "2.9"; // Remove hardcore-roles, 15s spin, items colors, button updates
+const CURRENT_VERSION = "3.0"; // Added rolesV2 wheel with variant system
 
 export function loadWheels() {
   try {

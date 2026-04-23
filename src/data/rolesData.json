@@ -1,0 +1,527 @@
+{
+  "Ambulancia": {
+    "image": "/Images/Roles/Ambulancia.png",
+    "variants": [
+      {
+        "name": "Variante 1",
+        "difficulty": "Fácil",
+        "perks": [
+          { "name": "botany-knowledge", "image": "botany-knowledge.webp" },
+          { "name": "empathy", "image": "empathy.webp" },
+          { "name": "we-ll-make-it", "image": "we-ll-make-it.webp" },
+          { "name": "desperate-measures", "image": "desperate-measures.webp" }
+        ]
+      },
+      {
+        "name": "Variante 2",
+        "difficulty": "Media",
+        "perks": [
+          { "name": "autodidact", "image": "autodidact.webp" },
+          { "name": "solidarity", "image": "solidarity.webp" },
+          { "name": "renewal", "image": "renewal.webp" },
+          { "name": "resurgence", "image": "resurgence.webp" }
+        ]
+      },
+      {
+        "name": "Variante 3",
+        "difficulty": "Difícil",
+        "perks": [
+          { "name": "empathic-connection", "image": "empathic-connection.webp" },
+          { "name": "reactive-healing", "image": "reactive-healing.png" },
+          { "name": "bite-the-bullet", "image": "bite-the-bullet.webp" },
+          { "name": "inner-strength", "image": "inner-strength.webp" }
+        ]
+      }
+    ]
+  },
+  "Reparador": {
+    "image": "/Images/Roles/Reparador.png",
+    "variants": [
+      {
+        "name": "Variante 1",
+        "difficulty": "Fácil",
+        "perks": [
+          { "name": "prove-thyself", "image": "prove-thyself.webp" },
+          { "name": "resilience", "image": "resilience.webp" },
+          { "name": "spine-chill", "image": "spine-chill.webp" },
+          { "name": "deja-vu", "image": "deja-vu.webp" }
+        ]
+      },
+      {
+        "name": "Variante 2",
+        "difficulty": "Media",
+        "perks": [
+          { "name": "stake-out", "image": "stake-out.webp" },
+          { "name": "fast-track", "image": "fast-track.webp" },
+          { "name": "built-to-last", "image": "built-to-last.webp" },
+          { "name": "streetwise", "image": "streetwise.webp" }
+        ]
+      },
+      {
+        "name": "Variante 3",
+        "difficulty": "Difícil",
+        "perks": [
+          { "name": "technician", "image": "technician.webp" },
+          { "name": "repressed-alliance", "image": "repressed-alliance.webp" },
+          { "name": "blast-mine", "image": "blast-mine.webp" },
+          { "name": "wiretap", "image": "wiretap.webp" }
+        ]
+      }
+    ]
+  },
+  "Rescatista": {
+    "image": "/Images/Roles/Rescatista.png",
+    "variants": [
+      {
+        "name": "Variante 1",
+        "difficulty": "Fácil",
+        "perks": [
+          { "name": "borrowed-time", "image": "borrowed-time.webp" },
+          { "name": "kindred", "image": "kindred.webp" },
+          { "name": "we-ll-make-it", "image": "we-ll-make-it.webp" },
+          { "name": "guardian", "image": "guardian.webp" }
+        ]
+      },
+      {
+        "name": "Variante 2",
+        "difficulty": "Media",
+        "perks": [
+          { "name": "breakout", "image": "breakout.webp" },
+          { "name": "saboteur", "image": "saboteur.webp" },
+          { "name": "flip-flop", "image": "flip-flop.webp" },
+          { "name": "power-struggle", "image": "power-struggle.webp" }
+        ]
+      },
+      {
+        "name": "Variante 3",
+        "difficulty": "Difícil",
+        "perks": [
+          { "name": "deliverance", "image": "deliverance.webp" },
+          { "name": "slippery-meat", "image": "slippery-meat.webp" },
+          { "name": "up-the-ante", "image": "up-the-ante.webp" },
+          { "name": "luck", "image": "luck.webp" }
+        ]
+      }
+    ]
+  },
+  "Cegador": {
+    "image": "/Images/Roles/Cegador.png",
+    "variants": [
+      {
+        "name": "Variante 1",
+        "difficulty": "Fácil",
+        "perks": [
+          { "name": "flashbang", "image": "flashbang.webp" },
+          { "name": "residual-manifest", "image": "residual-manifest.webp" },
+          { "name": "built-to-last", "image": "built-to-last.webp" },
+          { "name": "streetwise", "image": "streetwise.webp" }
+        ]
+      },
+      {
+        "name": "Variante 2",
+        "difficulty": "Media",
+        "perks": [
+          { "name": "blast-mine", "image": "blast-mine.webp" },
+          { "name": "head-on", "image": "head-on.webp" },
+          { "name": "quick-and-quiet", "image": "quick-and-quiet.webp" },
+          { "name": "deception", "image": "deception.webp" }
+        ]
+      },
+      {
+        "name": "Variante 3",
+        "difficulty": "Difícil",
+        "perks": [
+          { "name": "background-player", "image": "background-player.webp" },
+          { "name": "breakout", "image": "breakout.webp" },
+          { "name": "empathy", "image": "empathy.webp" },
+          { "name": "bond", "image": "bond.webp" }
+        ]
+      }
+    ]
+  },
+  "Sigiloso": {
+    "image": "/Images/Roles/Sigilo.png",
+    "variants": [
+      {
+        "name": "Variante 1",
+        "difficulty": "Fácil",
+        "perks": [
+          { "name": "urban-evasion", "image": "urban-evasion.webp" },
+          { "name": "iron-will", "image": "iron-will.webp" },
+          { "name": "calm-spirit", "image": "calm-spirit.webp" },
+          { "name": "lightweight", "image": "lightweight.webp" }
+        ]
+      },
+      {
+        "name": "Variante 2",
+        "difficulty": "Media",
+        "perks": [
+          { "name": "distortion", "image": "distortion.webp" },
+          { "name": "off-the-record", "image": "off-the-record.webp" },
+          { "name": "shadow-step", "image": "boon-shadow-step.webp" },
+          { "name": "quick-and-quiet", "image": "quick-and-quiet.webp" }
+        ]
+      },
+      {
+        "name": "Variante 3",
+        "difficulty": "Difícil",
+        "perks": [
+          { "name": "dance-with-me", "image": "dance-with-me.webp" },
+          { "name": "deception", "image": "deception.webp" },
+          { "name": "diversion", "image": "diversion.webp" },
+          { "name": "red-herring", "image": "red-herring.webp" }
+        ]
+      }
+    ]
+  },
+  "Loopero": {
+    "image": "/Images/Roles/Loopero.png",
+    "variants": [
+      {
+        "name": "Variante 1",
+        "difficulty": "Fácil",
+        "perks": [
+          { "name": "windows-of-opportunity", "image": "windows-of-opportunity.webp" },
+          { "name": "lithe", "image": "lithe.webp" },
+          { "name": "resilience", "image": "resilience.webp" },
+          { "name": "spine-chill", "image": "spine-chill.webp" }
+        ]
+      },
+      {
+        "name": "Variante 2",
+        "difficulty": "Media",
+        "perks": [
+          { "name": "balanced-landing", "image": "balanced-landing.webp" },
+          { "name": "smash-hit", "image": "smash-hit.webp" },
+          { "name": "any-means-necessary", "image": "any-means-necessary.webp" },
+          { "name": "power-of-two", "image": "power-of-two.webp" }
+        ]
+      },
+      {
+        "name": "Variante 3",
+        "difficulty": "Difícil",
+        "perks": [
+          { "name": "dramaturgy", "image": "dramaturgy.webp" },
+          { "name": "scene-partner", "image": "scene-partner.webp" },
+          { "name": "plot-twist", "image": "plot-twist.webp" },
+          { "name": "cut-loose", "image": "cut-loose.webp" }
+        ]
+      }
+    ]
+  },
+  "Estratega": {
+    "image": "/Images/Roles/Estratega.png",
+    "variants": [
+      {
+        "name": "Variante 1",
+        "difficulty": "Fácil",
+        "perks": [
+          { "name": "bond", "image": "bond.webp" },
+          { "name": "kindred", "image": "kindred.webp" },
+          { "name": "open-handed", "image": "open-handed.webp" },
+          { "name": "better-together", "image": "better-together.webp" }
+        ]
+      },
+      {
+        "name": "Variante 2",
+        "difficulty": "Media",
+        "perks": [
+          { "name": "detective-s-hunch", "image": "detective-s-hunch.webp" },
+          { "name": "counterforce", "image": "counterforce.webp" },
+          { "name": "inner-strength", "image": "inner-strength.webp" },
+          { "name": "small-game", "image": "small-game.webp" }
+        ]
+      },
+      {
+        "name": "Variante 3",
+        "difficulty": "Difícil",
+        "perks": [
+          { "name": "object-of-obsession", "image": "object-of-obsession.webp" },
+          { "name": "sole-survivor", "image": "sole-survivor.webp" },
+          { "name": "dark-sense", "image": "dark-sense.webp" },
+          { "name": "premonition", "image": "premonition.webp" }
+        ]
+      }
+    ]
+  },
+  "Saboteador": {
+    "image": "/Images/Roles/Saboteador.png",
+    "variants": [
+      {
+        "name": "Variante 1",
+        "difficulty": "Fácil",
+        "perks": [
+          { "name": "saboteur", "image": "saboteur.webp" },
+          { "name": "breakout", "image": "breakout.webp" },
+          { "name": "empathy", "image": "empathy.webp" },
+          { "name": "breakdown", "image": "breakdown.webp" }
+        ]
+      },
+      {
+        "name": "Variante 2",
+        "difficulty": "Media",
+        "perks": [
+          { "name": "flip-flop", "image": "flip-flop.webp" },
+          { "name": "power-struggle", "image": "power-struggle.webp" },
+          { "name": "tenacity", "image": "tenacity.webp" },
+          { "name": "unbreakable", "image": "unbreakable.webp" }
+        ]
+      },
+      {
+        "name": "Variante 3",
+        "difficulty": "Difícil",
+        "perks": [
+          { "name": "boil-over", "image": "boil-over.webp" },
+          { "name": "exponential", "image": "boon-exponential.webp" },
+          { "name": "soul-guard", "image": "soul-guard.webp" },
+          { "name": "no-mither", "image": "no-mither.webp" }
+        ]
+      }
+    ]
+  },
+  "Tanque (Anti-túnel)": {
+    "image": "/Images/Roles/Tanque.png",
+    "variants": [
+      {
+        "name": "Variante 1",
+        "difficulty": "Fácil",
+        "perks": [
+          { "name": "decisive-strike", "image": "decisive-strike.webp" },
+          { "name": "off-the-record", "image": "off-the-record.webp" },
+          { "name": "dead-hard", "image": "dead-hard.webp" },
+          { "name": "unbreakable", "image": "unbreakable.webp" }
+        ]
+      },
+      {
+        "name": "Variante 2",
+        "difficulty": "Media",
+        "perks": [
+          { "name": "soul-guard", "image": "soul-guard.webp" },
+          { "name": "for-the-people", "image": "for-the-people.webp" },
+          { "name": "buckle-up", "image": "buckle-up.webp" },
+          { "name": "mettle-of-man", "image": "mettle-of-man.webp" }
+        ]
+      },
+      {
+        "name": "Variante 3",
+        "difficulty": "Difícil",
+        "perks": [
+          { "name": "no-mither", "image": "no-mither.webp" },
+          { "name": "tenacity", "image": "tenacity.webp" },
+          { "name": "flip-flop", "image": "flip-flop.webp" },
+          { "name": "power-struggle", "image": "power-struggle.webp" }
+        ]
+      }
+    ]
+  },
+  "Clutch (Endgame)": {
+    "image": "/Images/Roles/EndGame.png",
+    "variants": [
+      {
+        "name": "Variante 1",
+        "difficulty": "Fácil",
+        "perks": [
+          { "name": "adrenaline", "image": "adrenaline.webp" },
+          { "name": "hope", "image": "hope.webp" },
+          { "name": "wake-up", "image": "wake-up.webp" },
+          { "name": "resilience", "image": "resilience.webp" }
+        ]
+      },
+      {
+        "name": "Variante 2",
+        "difficulty": "Media",
+        "perks": [
+          { "name": "sole-survivor", "image": "sole-survivor.webp" },
+          { "name": "left-behind", "image": "left-behind.webp" },
+          { "name": "clairvoyance", "image": "clairvoyance.webp" },
+          { "name": "dark-sense", "image": "dark-sense.webp" }
+        ]
+      },
+      {
+        "name": "Variante 3",
+        "difficulty": "Difícil",
+        "perks": [
+          { "name": "no-one-left-behind", "image": "no-one-left-behind.webp" },
+          { "name": "blood-pact", "image": "blood-pact.webp" },
+          { "name": "better-than-new", "image": "better-than-new.webp" },
+          { "name": "renewal", "image": "renewal.webp" }
+        ]
+      }
+    ]
+  },
+  "Troll / Meme": {
+    "image": "/Images/Roles/TrollMeme.png",
+    "variants": [
+      {
+        "name": "Variante 1",
+        "difficulty": "Fácil",
+        "perks": [
+          { "name": "head-on", "image": "head-on.webp" },
+          { "name": "quick-and-quiet", "image": "quick-and-quiet.webp" },
+          { "name": "deception", "image": "deception.webp" },
+          { "name": "diversion", "image": "diversion.webp" }
+        ]
+      },
+      {
+        "name": "Variante 2",
+        "difficulty": "Media",
+        "perks": [
+          { "name": "pebble", "image": "diversion.webp" },
+          { "name": "red-herring", "image": "red-herring.webp" },
+          { "name": "flashbang", "image": "flashbang.webp" },
+          { "name": "blast-mine", "image": "blast-mine.webp" }
+        ]
+      },
+      {
+        "name": "Variante 3",
+        "difficulty": "Difícil",
+        "perks": [
+          { "name": "no-mither", "image": "no-mither.webp" },
+          { "name": "self-care", "image": "self-care.webp" },
+          { "name": "inner-healing", "image": "inner-strength.webp" },
+          { "name": "solidarity", "image": "solidarity.webp" }
+        ]
+      }
+    ]
+  },
+  "Maestro de bendiciones": {
+    "image": "/Images/Roles/Totems.png",
+    "variants": [
+      {
+        "name": "Variante 1",
+        "difficulty": "Fácil",
+        "perks": [
+          { "name": "circle-of-healing", "image": "boon-circle-of-healing.webp" },
+          { "name": "shadow-step", "image": "boon-shadow-step.webp" },
+          { "name": "exponential", "image": "boon-exponential.webp" },
+          { "name": "dark-theory", "image": "boon-dark-theory.webp" }
+        ]
+      },
+      {
+        "name": "Variante 2",
+        "difficulty": "Media",
+        "perks": [
+          { "name": "counterforce", "image": "counterforce.webp" },
+          { "name": "inner-strength", "image": "inner-strength.webp" },
+          { "name": "detective-s-hunch", "image": "detective-s-hunch.webp" },
+          { "name": "small-game", "image": "small-game.webp" }
+        ]
+      },
+      {
+        "name": "Variante 3",
+        "difficulty": "Difícil",
+        "perks": [
+          { "name": "overzealous", "image": "overzealous.webp" },
+          { "name": "clairvoyance", "image": "clairvoyance.webp" },
+          { "name": "visionary", "image": "visionary.webp" },
+          { "name": "illumination", "image": "boon-illumination.webp" }
+        ]
+      }
+    ]
+  },
+  "Velocista": {
+    "image": "/Images/Roles/Velocista.png",
+    "variants": [
+      {
+        "name": "Variante 1",
+        "difficulty": "Fácil",
+        "perks": [
+          { "name": "sprint-burst", "image": "sprint-burst.webp" },
+          { "name": "overcome", "image": "overcome.webp" },
+          { "name": "lithe", "image": "lithe.webp" },
+          { "name": "balanced-landing", "image": "balanced-landing.webp" }
+        ]
+      },
+      {
+        "name": "Variante 2",
+        "difficulty": "Media",
+        "perks": [
+          { "name": "smash-hit", "image": "smash-hit.webp" },
+          { "name": "head-on", "image": "head-on.webp" },
+          { "name": "background-player", "image": "background-player.webp" },
+          { "name": "made-for-this", "image": "made-for-this.webp" }
+        ]
+      },
+      {
+        "name": "Variante 3",
+        "difficulty": "Difícil",
+        "perks": [
+          { "name": "hope", "image": "hope.webp" },
+          { "name": "adrenaline", "image": "adrenaline.webp" },
+          { "name": "blood-rush", "image": "blood-rush.webp" },
+          { "name": "dark-theory", "image": "boon-dark-theory.webp" }
+        ]
+      }
+    ]
+  },
+  "Anti-Killer": {
+    "image": "/Images/Roles/Antikiller.png",
+    "variants": [
+      {
+        "name": "Variante 1",
+        "difficulty": "Fácil",
+        "perks": [
+          { "name": "decisive-strike", "image": "decisive-strike.webp" },
+          { "name": "dead-hard", "image": "dead-hard.webp" },
+          { "name": "borrowed-time", "image": "borrowed-time.webp" },
+          { "name": "unbreakable", "image": "unbreakable.webp" }
+        ]
+      },
+      {
+        "name": "Variante 2",
+        "difficulty": "Media",
+        "perks": [
+          { "name": "power-struggle", "image": "power-struggle.webp" },
+          { "name": "flip-flop", "image": "flip-flop.webp" },
+          { "name": "saboteur", "image": "saboteur.webp" },
+          { "name": "breakout", "image": "breakout.webp" }
+        ]
+      },
+      {
+        "name": "Variante 3",
+        "difficulty": "Difícil",
+        "perks": [
+          { "name": "object-of-obsession", "image": "object-of-obsession.webp" },
+          { "name": "no-mither", "image": "no-mither.webp" },
+          { "name": "mettle-of-man", "image": "mettle-of-man.webp" },
+          { "name": "for-the-people", "image": "for-the-people.webp" }
+        ]
+      }
+    ]
+  },
+  "SoloQ Carry": {
+    "image": "/Images/Roles/SoloQ.png",
+    "variants": [
+      {
+        "name": "Variante 1",
+        "difficulty": "Fácil",
+        "perks": [
+          { "name": "kindred", "image": "kindred.webp" },
+          { "name": "bond", "image": "bond.webp" },
+          { "name": "prove-thyself", "image": "prove-thyself.webp" },
+          { "name": "we-ll-make-it", "image": "we-ll-make-it.webp" }
+        ]
+      },
+      {
+        "name": "Variante 2",
+        "difficulty": "Media",
+        "perks": [
+          { "name": "aftercare", "image": "aftercare.webp" },
+          { "name": "empathy", "image": "empathy.webp" },
+          { "name": "better-together", "image": "better-together.webp" },
+          { "name": "open-handed", "image": "open-handed.webp" }
+        ]
+      },
+      {
+        "name": "Variante 3",
+        "difficulty": "Difícil",
+        "perks": [
+          { "name": "leader", "image": "leader.webp" },
+          { "name": "vigil", "image": "vigil.webp" },
+          { "name": "streetwise", "image": "streetwise.webp" },
+          { "name": "better-than-new", "image": "better-than-new.webp" }
+        ]
+      }
+    ]
+  }
+}
