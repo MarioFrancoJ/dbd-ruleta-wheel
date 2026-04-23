@@ -1,6 +1,6 @@
 const STORAGE_KEY = "dbd-wheels-config";
 const VERSION_KEY = "dbd-wheels-version";
-const CURRENT_VERSION = "3.7"; // Added 6 new roles: Recolector, Anti-slug, Líder, Controlador, Especialista en Objetivos (total 24 roles)
+const CURRENT_VERSION = "3.8"; // Translated all perk names in hardcore-items wheel to Spanish
 
 export function loadWheels() {
   try {
