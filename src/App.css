@@ -808,7 +808,7 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
   align-items: center;
   position: relative;
   padding: 60px 0;
-  min-height: 400px;
+  min-height: 350px;
 }
 
 .roles-v2-result__perk-icon {
@@ -826,29 +826,37 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
   transform: scale(1.1);
 }
 
-/* Posicionamiento en forma de rombo/diamante */
+/* Posicionamiento en forma de rombo con sobreposición */
+/* Perk 1: Arriba centro */
 .roles-v2-result__perk-icon:nth-child(1) {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 4;
 }
 
+/* Perk 2: Izquierda - su esquina superior derecha toca el centro del perk superior */
 .roles-v2-result__perk-icon:nth-child(2) {
   top: 50%;
-  left: 10%;
-  transform: translateY(-50%);
+  left: 50%;
+  transform: translate(-100%, -50%);
+  z-index: 3;
 }
 
+/* Perk 3: Abajo centro - sus esquinas superiores tocan los centros de izquierda y derecha */
 .roles-v2-result__perk-icon:nth-child(3) {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 2;
 }
 
+/* Perk 4: Derecha - su esquina superior izquierda toca el centro del perk superior */
 .roles-v2-result__perk-icon:nth-child(4) {
   top: 50%;
-  right: 10%;
+  left: 50%;
   transform: translateY(-50%);
+  z-index: 3;
 }
 
 .roles-v2-result__perk-names {
@@ -972,7 +980,7 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 }
 
 .wheel-card--stream .roles-v2-result__perks {
-  min-height: 500px;
+  min-height: 450px;
   padding: 80px 0;
 }
 
