@@ -241,14 +241,6 @@ export default function WheelCard({
               <div className="roles-v2-result">
                 <h2 className="roles-v2-result__title">{result.roleName}</h2>
                 
-                {resultImage && (
-                  <img
-                    src={resultImage}
-                    alt={result.roleName}
-                    className="roles-v2-result__image"
-                  />
-                )}
-                
                 <div className="roles-v2-result__perks">
                   {result.perks && result.perks.map((perk, index) => (
                     <img

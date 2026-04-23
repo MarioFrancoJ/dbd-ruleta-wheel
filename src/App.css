@@ -767,7 +767,7 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 
 .roles-v2-result {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: auto auto auto auto;
   gap: 16px;
   padding: 32px;
@@ -779,18 +779,16 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 .roles-v2-result__title {
   grid-column: 1;
   grid-row: 1;
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 700;
   font-family: 'Montserrat', sans-serif;
   color: #f8fafc;
   margin: 0;
-  text-align: left;
+  text-align: center;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   animation: rolesV2TextFade 0.7s ease-in-out forwards;
-  display: flex;
-  align-items: center;
 }
 
 .roles-v2-result__image {
@@ -805,7 +803,7 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 }
 
 .roles-v2-result__perks {
-  grid-column: 1 / -1;
+  grid-column: 1;
   grid-row: 2;
   display: flex;
   justify-content: center;
@@ -813,7 +811,7 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
   position: relative;
   padding: 0;
   min-height: 280px;
-  margin-top: -20px;
+  margin-top: 0;
 }
 
 .roles-v2-result__perk-icon {
@@ -865,7 +863,7 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 }
 
 .roles-v2-result__perk-names {
-  grid-column: 1 / -1;
+  grid-column: 1;
   grid-row: 3;
   display: flex;
   flex-direction: row;
@@ -889,7 +887,7 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 }
 
 .roles-v2-result__bottom {
-  grid-column: 1 / -1;
+  grid-column: 1;
   grid-row: 4;
   display: flex;
   justify-content: center;
