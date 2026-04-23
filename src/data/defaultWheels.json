@@ -118,7 +118,7 @@
 
   {
     "id": "roles",
-    "title": "Ruleta de Roles",
+    "title": "Roles Libres",
     "spinDuration": 13,
     "colors": [
       "#b91c1c",
@@ -149,7 +149,7 @@
 
   {
     "id": "rolesV2",
-    "title": "Roles",
+    "title": "Roles Predeterminados",
     "spinDuration": 13,
     "colors": [
       "#b91c1c",
