@@ -32,6 +32,37 @@ export default function App() {
     return localStorage.getItem('dbd-theme') || 'dark';
   });
 
+  // Sincronización entre ventanas del navegador
+  useEffect(() => {
+    const handleStorageChange = (e) => {
+      // Solo reaccionar a cambios en la configuración de ruletas
+      if (e.key === 'dbd-wheels-config' && e.newValue) {
+        try {
+          const newWheels = JSON.parse(e.newValue);
+          setWheels(withInitialResult(newWheels));
+        } catch (error) {
+          console.error('Error parsing wheels from storage:', error);
+        }
+      }
+      
+      // Sincronizar selección de ruleta en modo limpio
+      if (e.key === 'dbd-selected-wheel' && e.newValue) {
+        setSelectedCleanWheelId(e.newValue);
+      }
+      
+      // Sincronizar modo limpio
+      if (e.key === 'dbd-clean-mode' && e.newValue !== null) {
+        setCleanMode(e.newValue === 'true');
+      }
+    };
+
+    window.addEventListener('storage', handleStorageChange);
+    
+    return () => {
+      window.removeEventListener('storage', handleStorageChange);
+    };
+  }, []);
+
   useEffect(() => {
     saveWheels(wheels);
   }, [wheels]);
@@ -40,6 +71,16 @@ export default function App() {
     localStorage.setItem('dbd-theme', theme);
     document.body.className = theme === 'light' ? 'theme-light' : 'theme-dark';
   }, [theme]);
+
+  // Guardar selección de ruleta para sincronización
+  useEffect(() => {
+    localStorage.setItem('dbd-selected-wheel', selectedCleanWheelId);
+  }, [selectedCleanWheelId]);
+
+  // Guardar modo limpio para sincronización
+  useEffect(() => {
+    localStorage.setItem('dbd-clean-mode', cleanMode.toString());
+  }, [cleanMode]);
 
   function updateWheel(id, updater) {
     setWheels((current) =>
