@@ -134,12 +134,7 @@ export default function WheelCard({
   }
 
   function handleSpin() {
-    // Si está girando, cancelar el giro
-    if (isSpinning) {
-      cancelSpin();
-      return;
-    }
-    
+    if (isSpinning) return;
     if (!wheel.options.length) return;
     setShowWinnerOverlay(false);
 
