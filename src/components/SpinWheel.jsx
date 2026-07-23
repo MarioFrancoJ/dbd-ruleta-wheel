@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo, useRef, useImperativeHandle, forwardRef } from "react";
 
 const FALLBACK_COLORS = [
   "#b91c1c",
@@ -42,7 +42,30 @@ function truncateText(text, maxLength = 14) {
   return `${text.slice(0, maxLength - 2)}..`;
 }
 
-export default function SpinWheel({ options, rotation, spinDuration, colors = [] }) {
+// Obtiene los grados actuales del transform computado del elemento
+function getCurrentRotationDeg(el) {
+  const style = window.getComputedStyle(el);
+  const matrix = style.transform;
+  if (!matrix || matrix === "none") return 0;
+  const values = matrix.match(/matrix\((.+)\)/);
+  if (!values) return 0;
+  const parts = values[1].split(", ");
+  const a = parseFloat(parts[0]);
+  const b = parseFloat(parts[1]);
+  return Math.round(Math.atan2(b, a) * (180 / Math.PI));
+}
+
+const SpinWheel = forwardRef(function SpinWheel({ options, rotation, spinDuration, colors = [], frozen = false, frozenRotation = 0 }, ref) {
+  const wheelRef = useRef(null);
+
+  // Exponer el método para leer la rotación actual mid-flight
+  useImperativeHandle(ref, () => ({
+    getCurrentDeg: () => {
+      if (!wheelRef.current) return 0;
+      return getCurrentRotationDeg(wheelRef.current);
+    }
+  }));
+
   const palette = colors.length ? colors : FALLBACK_COLORS;
 
   const segments = useMemo(() => {
@@ -84,11 +107,12 @@ export default function SpinWheel({ options, rotation, spinDuration, colors = []
     <div className="spin-wheel-wrapper">
       <div className="spin-wheel-pointer" />
       <div
+        ref={wheelRef}
         className="spin-wheel"
-        style={{
-          transform: `rotate(${rotation}deg)`,
-          transitionDuration: `${spinDuration}s`,
-        }}
+        style={frozen
+          ? { transform: `rotate(${frozenRotation}deg)`, transitionDuration: "0s" }
+          : { transform: `rotate(${rotation}deg)`, transitionDuration: `${spinDuration}s` }
+        }
       >
         <svg
           viewBox="0 0 400 400"
@@ -126,4 +150,6 @@ export default function SpinWheel({ options, rotation, spinDuration, colors = []
       </div>
     </div>
   );
-}
+});
+
+export default SpinWheel;

@@ -20,9 +20,12 @@ export default function WheelCard({
   const [isSpinning, setIsSpinning] = useState(false);
   const [rotation, setRotation] = useState(0);
   const [showWinnerOverlay, setShowWinnerOverlay] = useState(false);
+  const [frozen, setFrozen] = useState(false);
+  const [frozenRotation, setFrozenRotation] = useState(0);
   const tickIntervalRef = useRef(null);
   const currentSegmentRef = useRef(-1);
   const spinTimeoutRef = useRef(null);
+  const spinWheelRef = useRef(null);
 
   useEffect(() => {
     return () => {
@@ -137,6 +140,7 @@ export default function WheelCard({
     if (isSpinning) return;
     if (!wheel.options.length) return;
     setShowWinnerOverlay(false);
+    setFrozen(false);
 
     const winnerIndex = Math.floor(Math.random() * wheel.options.length);
     const anglePerSegment = 360 / wheel.options.length;
@@ -191,19 +195,22 @@ export default function WheelCard({
   }
 
   function cancelSpin() {
-    // Cancelar el timeout
+    // Leer la rotación actual mid-flight desde el DOM
+    const currentDeg = spinWheelRef.current
+      ? spinWheelRef.current.getCurrentDeg()
+      : 0;
+
+    // Cancelar el timeout y el ticking
     if (spinTimeoutRef.current) {
       clearTimeout(spinTimeoutRef.current);
       spinTimeoutRef.current = null;
     }
-    
-    // Detener el ticking
     stopTicking();
-    
-    // Resetear la rotación a 0
-    setRotation(0);
-    
-    // Resetear el estado
+
+    // Congelar la ruleta en la posición actual sin transición
+    setFrozenRotation(currentDeg);
+    setFrozen(true);
+    setRotation(currentDeg);
     setIsSpinning(false);
     setShowWinnerOverlay(false);
   }
@@ -254,10 +261,13 @@ export default function WheelCard({
         onClick={(e) => { e.preventDefault(); e.currentTarget.blur(); handleSpin(); }}
       >
         <SpinWheel
+          ref={spinWheelRef}
           options={wheel.options}
           rotation={rotation}
           spinDuration={wheel.spinDuration}
           colors={wheel.colors}
+          frozen={frozen}
+          frozenRotation={frozenRotation}
         />
 
         {showWinnerOverlay && (
