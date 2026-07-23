@@ -187,6 +187,33 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
   background: #2563eb;
 }
 
+.wheel-card__stop-btn {
+  background: #d97706 !important;
+  color: white;
+}
+
+.wheel-card__stop-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.wheel-card__stream-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.wheel-card__stream-controls .wheel-card__stop-btn {
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #d97706;
+  color: white;
+}
+
 .wheel-card__buttons button:disabled,
 .wheel-card__option-row button:disabled,
 .wheel-card__add:disabled {

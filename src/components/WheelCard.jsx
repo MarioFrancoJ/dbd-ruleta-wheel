@@ -347,7 +347,26 @@ export default function WheelCard({
             >
               Random
             </button>
+            <button
+              className="wheel-card__stop-btn"
+              onClick={cancelSpin}
+              disabled={!isSpinning}
+            >
+              ⏹ Detener
+            </button>
           </div>
+        </div>
+      )}
+
+      {streamMode && (
+        <div className="wheel-card__stream-controls">
+          <button
+            className="wheel-card__stop-btn"
+            onClick={cancelSpin}
+            disabled={!isSpinning}
+          >
+            ⏹ Detener
+          </button>
         </div>
       )}
 
