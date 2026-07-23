@@ -48,7 +48,9 @@
       { "label": "Sabuesa", "image": "/Images/Killers/K38_TheHoundmaster_Portrait.webp" },
       { "label": "Ghoul", "image": "/Images/Killers/K39_TheGhoul_Portrait.webp" },
       { "label": "Animatrónico", "image": "/Images/Killers/K40_TheAnimatronic_Portrait.webp" },
-      { "label": "Krasue", "image": "/Images/Killers/K41_TheKrasue_Portrait.webp" }
+      { "label": "Krasue", "image": "/Images/Killers/K41_TheKrasue_Portrait.webp" },
+      { "label": "The First", "image": "/Images/Killers/K42_TheFirst_Portrait.webp" },
+      { "label": "Jason", "image": "/Images/Killers/K43_Jason.png" }
     ]
   },
 

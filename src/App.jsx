@@ -100,7 +100,7 @@ export default function App() {
 
   function handleDurationChange(id, value) {
     const safeValue = Number.isFinite(value)
-      ? Math.max(1, Math.min(20, value))
+      ? Math.max(1, Math.min(120, value))
       : 4;
 
     updateWheel(id, (wheel) => ({

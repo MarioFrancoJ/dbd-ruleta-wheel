@@ -22,12 +22,17 @@ export default function WheelCard({
   const [showWinnerOverlay, setShowWinnerOverlay] = useState(false);
   const tickIntervalRef = useRef(null);
   const currentSegmentRef = useRef(-1);
+  const spinTimeoutRef = useRef(null);
 
   useEffect(() => {
     return () => {
       if (tickIntervalRef.current) {
         cancelAnimationFrame(tickIntervalRef.current);
         tickIntervalRef.current = null;
+      }
+      if (spinTimeoutRef.current) {
+        clearTimeout(spinTimeoutRef.current);
+        spinTimeoutRef.current = null;
       }
     };
   }, []);
@@ -129,7 +134,13 @@ export default function WheelCard({
   }
 
   function handleSpin() {
-    if (!wheel.options.length || isSpinning) return;
+    // Si está girando, cancelar el giro
+    if (isSpinning) {
+      cancelSpin();
+      return;
+    }
+    
+    if (!wheel.options.length) return;
     setShowWinnerOverlay(false);
 
     const winnerIndex = Math.floor(Math.random() * wheel.options.length);
@@ -150,7 +161,7 @@ export default function WheelCard({
     setRotation(finalRotation);
     startTicking(wheel.spinDuration, rotation, finalRotation);
 
-    setTimeout(() => {
+    spinTimeoutRef.current = setTimeout(() => {
       // Lógica especial para rolesV2: seleccionar variante aleatoria
       if (wheel.id === "rolesV2") {
         const roleName = wheel.options[winnerIndex];
@@ -180,7 +191,26 @@ export default function WheelCard({
       stopTicking();
       playWinner();
       setShowWinnerOverlay(true);
+      spinTimeoutRef.current = null;
     }, wheel.spinDuration * 1000);
+  }
+
+  function cancelSpin() {
+    // Cancelar el timeout
+    if (spinTimeoutRef.current) {
+      clearTimeout(spinTimeoutRef.current);
+      spinTimeoutRef.current = null;
+    }
+    
+    // Detener el ticking
+    stopTicking();
+    
+    // Resetear la rotación a 0
+    setRotation(0);
+    
+    // Resetear el estado
+    setIsSpinning(false);
+    setShowWinnerOverlay(false);
   }
 
   // Extraer label e imagen del resultado de forma segura
@@ -305,7 +335,7 @@ export default function WheelCard({
             <input
               type="number"
               min="1"
-              max="20"
+              max="120"
               value={wheel.spinDuration}
               onChange={(e) => onDurationChange(wheel.id, Number(e.target.value))}
             />
