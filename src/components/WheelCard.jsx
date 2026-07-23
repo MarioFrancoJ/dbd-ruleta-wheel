@@ -120,7 +120,6 @@ export default function WheelCard({
   }
 
   function handleSpin() {
-    if (isSpinning) return;
     if (!wheel.options.length) return;
 
     setShowWinnerOverlay(false);
@@ -134,6 +133,12 @@ export default function WheelCard({
     const endRot = startRot - startNorm + 360 * 8 + targetAngle;
 
     currentSegmentRef.current = getCurrentSegmentAtPointer(startRot, wheel.options.length);
+
+    // Si ya estaba girando, cancelar el RAF anterior antes de iniciar uno nuevo
+    if (rafRef.current) {
+      cancelAnimationFrame(rafRef.current);
+      rafRef.current = null;
+    }
 
     spinStateRef.current = {
       startRot,

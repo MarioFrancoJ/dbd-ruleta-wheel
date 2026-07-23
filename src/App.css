@@ -188,7 +188,7 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 }
 
 .wheel-card__stop-btn {
-  background: #d97706 !important;
+  background: #374151 !important;
   color: white;
 }
 
@@ -210,7 +210,7 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  background: #d97706;
+  background: #374151;
   color: white;
 }
 
