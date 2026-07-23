@@ -20,24 +20,15 @@ export default function WheelCard({
   const [isSpinning, setIsSpinning] = useState(false);
   const [rotation, setRotation] = useState(0);
   const [showWinnerOverlay, setShowWinnerOverlay] = useState(false);
-  const [frozen, setFrozen] = useState(false);
-  const [frozenRotation, setFrozenRotation] = useState(0);
-  const tickIntervalRef = useRef(null);
+
+  // Refs para controlar la animación RAF
+  const rafRef = useRef(null);
+  const spinStateRef = useRef(null); // { startTime, startRot, endRot, duration, winnerIndex }
+  const currentRotRef = useRef(0);  // rotación actual tracked en tiempo real
   const currentSegmentRef = useRef(-1);
-  const spinTimeoutRef = useRef(null);
-  const spinWheelRef = useRef(null);
 
   useEffect(() => {
-    return () => {
-      if (tickIntervalRef.current) {
-        cancelAnimationFrame(tickIntervalRef.current);
-        tickIntervalRef.current = null;
-      }
-      if (spinTimeoutRef.current) {
-        clearTimeout(spinTimeoutRef.current);
-        spinTimeoutRef.current = null;
-      }
-    };
+    return () => { if (rafRef.current) cancelAnimationFrame(rafRef.current); };
   }, []);
 
   function playTick() {
@@ -52,165 +43,128 @@ export default function WheelCard({
     audio.play().catch(() => {});
   }
 
-  function getCurrentSegmentAtPointer(currentRotation, totalSegments) {
+  function getCurrentSegmentAtPointer(rot, totalSegments) {
     if (totalSegments === 0) return -1;
-    
-    // Normalizar la rotación actual a 0-360
-    const normalizedRotation = ((currentRotation % 360) + 360) % 360;
-    
-    // El puntero está a 270° (izquierda)
-    // Calcular qué segmento está bajo el puntero
-    const pointerAngle = 270;
+    const norm = ((rot % 360) + 360) % 360;
     const anglePerSegment = 360 / totalSegments;
-    
-    // Ajustar por la rotación de la ruleta
-    const effectiveAngle = (pointerAngle - normalizedRotation + 360) % 360;
-    
-    // Calcular el índice del segmento
-    const segmentIndex = Math.floor(effectiveAngle / anglePerSegment) % totalSegments;
-    
-    return segmentIndex;
+    const effectiveAngle = (270 - norm + 360) % 360;
+    return Math.floor(effectiveAngle / anglePerSegment) % totalSegments;
   }
 
-  function startTicking(duration, startRotation, endRotation) {
-    const startTime = Date.now();
-    const totalDuration = duration * 1000;
-    const rotationDiff = endRotation - startRotation;
-    
-    // Inicializar con el segmento actual
-    const initialSegment = getCurrentSegmentAtPointer(startRotation, wheel.options.length);
-    currentSegmentRef.current = initialSegment;
-
-    // Implementación precisa de cubic-bezier(0.17, 0.67, 0.2, 1)
-    function cubicBezier(t) {
-      const p0 = 0;
-      const p1 = 0.17;
-      const p2 = 0.2;
-      const p3 = 1;
-      
-      // Resolver para x usando Newton-Raphson
-      let x = t;
-      for (let i = 0; i < 8; i++) {
-        const z = 3 * (1 - x) * (1 - x) * x * p1 + 3 * (1 - x) * x * x * p2 + x * x * x - t;
-        if (Math.abs(z) < 1e-3) break;
-        const d = 3 * (1 - x) * (1 - x) * p1 + 6 * (1 - x) * x * (p2 - p1) + 3 * x * x * (1 - p2);
-        if (Math.abs(d) < 1e-6) break;
-        x = x - z / d;
-      }
-      
-      // Calcular y usando el x encontrado
-      const y = 3 * (1 - x) * (1 - x) * x * 0.67 + 3 * (1 - x) * x * x * 1 + x * x * x;
-      return y;
+  // cubic-bezier(0.17, 0.67, 0.2, 1)
+  function cubicBezier(t) {
+    const p1 = 0.17, p2 = 0.2;
+    let x = t;
+    for (let i = 0; i < 8; i++) {
+      const z = 3*(1-x)*(1-x)*x*p1 + 3*(1-x)*x*x*p2 + x*x*x - t;
+      if (Math.abs(z) < 1e-3) break;
+      const d = 3*(1-x)*(1-x)*p1 + 6*(1-x)*x*(p2-p1) + 3*x*x*(1-p2);
+      if (Math.abs(d) < 1e-6) break;
+      x = x - z/d;
     }
-
-    function checkSegment() {
-      const elapsed = Date.now() - startTime;
-      if (elapsed >= totalDuration) {
-        tickIntervalRef.current = null;
-        return;
-      }
-
-      // Calcular la rotación actual basada en el progreso con easing correcto
-      const progress = elapsed / totalDuration;
-      const easeProgress = cubicBezier(progress);
-      
-      const currentRotation = startRotation + (rotationDiff * easeProgress);
-      const currentSegment = getCurrentSegmentAtPointer(currentRotation, wheel.options.length);
-      
-      if (currentSegment !== currentSegmentRef.current && currentSegment !== -1) {
-        currentSegmentRef.current = currentSegment;
-        playTick();
-      }
-
-      tickIntervalRef.current = requestAnimationFrame(checkSegment);
-    }
-
-    checkSegment();
+    return 3*(1-x)*(1-x)*x*0.67 + 3*(1-x)*x*x*1 + x*x*x;
   }
 
-  function stopTicking() {
-    if (tickIntervalRef.current) {
-      cancelAnimationFrame(tickIntervalRef.current);
-      tickIntervalRef.current = null;
+  function animate(timestamp) {
+    const state = spinStateRef.current;
+    if (!state) return;
+
+    const elapsed = timestamp - state.startTime;
+    const progress = Math.min(elapsed / state.duration, 1);
+    const eased = cubicBezier(progress);
+    const currentRot = state.startRot + (state.endRot - state.startRot) * eased;
+
+    // Actualizar rotación en tiempo real
+    currentRotRef.current = currentRot;
+    setRotation(currentRot);
+
+    // Tick de audio
+    const seg = getCurrentSegmentAtPointer(currentRot, wheel.options.length);
+    if (seg !== currentSegmentRef.current && seg !== -1) {
+      currentSegmentRef.current = seg;
+      playTick();
     }
-    currentSegmentRef.current = -1;
+
+    if (progress < 1) {
+      rafRef.current = requestAnimationFrame(animate);
+    } else {
+      // Animación terminada naturalmente
+      rafRef.current = null;
+      spinStateRef.current = null;
+      setIsSpinning(false);
+      finishSpin(state.winnerIndex);
+    }
+  }
+
+  function finishSpin(winnerIndex) {
+    if (wheel.id === "rolesV2") {
+      const roleName = wheel.options[winnerIndex];
+      const roleData = rolesData[roleName];
+      if (roleData && roleData.variants) {
+        const randomVariant = roleData.variants[Math.floor(Math.random() * roleData.variants.length)];
+        onSpin(wheel.id, winnerIndex, {
+          roleName,
+          roleImage: roleData.image,
+          variant: randomVariant.name,
+          difficulty: randomVariant.difficulty,
+          perks: randomVariant.perks,
+        });
+      } else {
+        onSpin(wheel.id, winnerIndex);
+      }
+    } else {
+      onSpin(wheel.id, winnerIndex);
+    }
+    playWinner();
+    setShowWinnerOverlay(true);
   }
 
   function handleSpin() {
     if (isSpinning) return;
     if (!wheel.options.length) return;
+
     setShowWinnerOverlay(false);
-    setFrozen(false);
 
     const winnerIndex = Math.floor(Math.random() * wheel.options.length);
     const anglePerSegment = 360 / wheel.options.length;
-
-    // El puntero está a la izquierda (270°)
-    // Necesitamos rotar para que el centro del segmento ganador quede en el puntero
     const segmentCenter = winnerIndex * anglePerSegment + anglePerSegment / 2;
-    // Para alinear el segmento con el puntero a 270°, rotamos: 270 - segmentCenter
     const targetAngle = (270 - segmentCenter + 360) % 360;
+    const startRot = currentRotRef.current;
+    const startNorm = startRot % 360;
+    const endRot = startRot - startNorm + 360 * 8 + targetAngle;
 
-    // Normalizamos la rotación actual para evitar acumulación infinita
-    const currentNormalized = rotation % 360;
-    const extraSpins = 360 * 8;
-    const finalRotation = rotation - currentNormalized + extraSpins + targetAngle;
+    currentSegmentRef.current = getCurrentSegmentAtPointer(startRot, wheel.options.length);
+
+    spinStateRef.current = {
+      startRot,
+      endRot,
+      duration: wheel.spinDuration * 1000,
+      winnerIndex,
+      startTime: null,
+    };
 
     setIsSpinning(true);
-    setRotation(finalRotation);
-    startTicking(wheel.spinDuration, rotation, finalRotation);
 
-    spinTimeoutRef.current = setTimeout(() => {
-      // Lógica especial para rolesV2: seleccionar variante aleatoria
-      if (wheel.id === "rolesV2") {
-        const roleName = wheel.options[winnerIndex];
-        const roleData = rolesData[roleName];
-        
-        if (roleData && roleData.variants) {
-          const randomVariant = roleData.variants[Math.floor(Math.random() * roleData.variants.length)];
-          
-          // Crear objeto de resultado con toda la información
-          const resultData = {
-            roleName: roleName,
-            roleImage: roleData.image,
-            variant: randomVariant.name,
-            difficulty: randomVariant.difficulty,
-            perks: randomVariant.perks
-          };
-          
-          onSpin(wheel.id, winnerIndex, resultData);
-        } else {
-          onSpin(wheel.id, winnerIndex);
-        }
-      } else {
-        onSpin(wheel.id, winnerIndex);
-      }
-      
-      setIsSpinning(false);
-      stopTicking();
-      playWinner();
-      setShowWinnerOverlay(true);
-      spinTimeoutRef.current = null;
-    }, wheel.spinDuration * 1000);
+    // Iniciamos en el primer frame para capturar el timestamp real
+    rafRef.current = requestAnimationFrame((ts) => {
+      spinStateRef.current.startTime = ts;
+      animate(ts);
+    });
   }
 
   function cancelSpin() {
-    // Leer la rotación actual mid-flight desde el DOM
-    const currentDeg = spinWheelRef.current
-      ? spinWheelRef.current.getCurrentDeg()
-      : 0;
+    if (!isSpinning) return;
 
-    // Cancelar el timeout y el ticking
-    if (spinTimeoutRef.current) {
-      clearTimeout(spinTimeoutRef.current);
-      spinTimeoutRef.current = null;
+    // Cancelar el RAF inmediatamente
+    if (rafRef.current) {
+      cancelAnimationFrame(rafRef.current);
+      rafRef.current = null;
     }
-    stopTicking();
+    spinStateRef.current = null;
+    currentSegmentRef.current = -1;
 
-    // Congelar la ruleta en la posición actual sin transición
-    setFrozenRotation(currentDeg);
-    setFrozen(true);
-    setRotation(currentDeg);
+    // La ruleta se queda exactamente donde está (currentRotRef ya tiene el valor actual)
+    setRotation(currentRotRef.current);
     setIsSpinning(false);
     setShowWinnerOverlay(false);
   }
@@ -261,13 +215,10 @@ export default function WheelCard({
         onClick={(e) => { e.preventDefault(); e.currentTarget.blur(); handleSpin(); }}
       >
         <SpinWheel
-          ref={spinWheelRef}
           options={wheel.options}
           rotation={rotation}
           spinDuration={wheel.spinDuration}
           colors={wheel.colors}
-          frozen={frozen}
-          frozenRotation={frozenRotation}
         />
 
         {showWinnerOverlay && (
