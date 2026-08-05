@@ -355,27 +355,6 @@ export default function WheelCard({
             />
           </label>
 
-          {isKillers && (
-            <div className="elimination-toggle">
-              <label className="elimination-toggle__label">
-                <input
-                  type="checkbox"
-                  checked={eliminationMode}
-                  onChange={(e) => setEliminationMode(e.target.checked)}
-                />
-                <span>Modo Eliminación</span>
-              </label>
-              {eliminationMode && (
-                <button
-                  className="elimination-toggle__reset"
-                  onClick={() => setUsedIndices([])}
-                >
-                  🔄 Reiniciar selección
-                </button>
-              )}
-            </div>
-          )}
-
           {allUsed && (
             <div className="elimination-message">
               Todos los killers ya fueron utilizados. Reinicia la ruleta.
@@ -396,6 +375,26 @@ export default function WheelCard({
             >
               ⏹ Detener
             </button>
+            {isKillers && (
+              <>
+                <select
+                  className="wheel-card__mode-select"
+                  value={eliminationMode ? "elimination" : "classic"}
+                  onChange={(e) => setEliminationMode(e.target.value === "elimination")}
+                >
+                  <option value="classic">Clásico</option>
+                  <option value="elimination">Eliminación</option>
+                </select>
+                {eliminationMode && (
+                  <button
+                    className="elimination-toggle__reset"
+                    onClick={() => setUsedIndices([])}
+                  >
+                    🔄 Reiniciar
+                  </button>
+                )}
+              </>
+            )}
           </div>
         </div>
       )}
