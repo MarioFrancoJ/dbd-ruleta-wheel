@@ -377,14 +377,18 @@ export default function WheelCard({
             </button>
             {isKillers && (
               <>
-                <select
-                  className="wheel-card__mode-select"
-                  value={eliminationMode ? "elimination" : "classic"}
-                  onChange={(e) => setEliminationMode(e.target.value === "elimination")}
-                >
-                  <option value="classic">Clásico</option>
-                  <option value="elimination">Eliminación</option>
-                </select>
+                <div className="mode-toggle">
+                  <span className={`mode-toggle__label ${!eliminationMode ? 'mode-toggle__label--active' : ''}`}>Clásico</span>
+                  <button
+                    type="button"
+                    className={`mode-toggle__switch ${eliminationMode ? 'mode-toggle__switch--on' : ''}`}
+                    onClick={() => setEliminationMode(!eliminationMode)}
+                    aria-label="Cambiar modo"
+                  >
+                    <span className="mode-toggle__knob" />
+                  </button>
+                  <span className={`mode-toggle__label ${eliminationMode ? 'mode-toggle__label--active' : ''}`}>Eliminación</span>
+                </div>
                 {eliminationMode && (
                   <button
                     className="elimination-toggle__reset"

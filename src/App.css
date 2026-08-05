@@ -990,16 +990,53 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 
 /* ===== MODO ELIMINACIÓN ===== */
 
-.wheel-card__mode-select {
-  padding: 10px 14px;
-  border-radius: 10px;
-  border: 1px solid #374151;
-  background: #0f172a;
-  color: white;
-  font: inherit;
-  font-weight: 700;
-  font-size: 13px;
+.mode-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mode-toggle__label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+  transition: color 0.2s;
+  user-select: none;
+}
+
+.mode-toggle__label--active {
+  color: #f9fafb;
+}
+
+.mode-toggle__switch {
+  position: relative;
+  width: 40px;
+  height: 22px;
+  border-radius: 11px;
+  border: none;
+  background: #374151;
   cursor: pointer;
+  padding: 0;
+  transition: background 0.2s;
+}
+
+.mode-toggle__switch--on {
+  background: #dc2626;
+}
+
+.mode-toggle__knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #f9fafb;
+  transition: transform 0.2s;
+}
+
+.mode-toggle__switch--on .mode-toggle__knob {
+  transform: translateX(18px);
 }
 
 .elimination-toggle__reset {
