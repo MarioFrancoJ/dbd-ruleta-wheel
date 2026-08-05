@@ -2,6 +2,19 @@ import { useEffect, useRef, useState } from "react";
 import SpinWheel from "./SpinWheel";
 import rolesData from "../data/rolesData.json";
 
+const ELIMINATION_STORAGE_KEY = "dbd-elimination-used";
+
+function loadEliminationState() {
+  try {
+    const raw = localStorage.getItem(ELIMINATION_STORAGE_KEY);
+    return raw ? JSON.parse(raw) : {};
+  } catch { return {}; }
+}
+
+function saveEliminationState(state) {
+  localStorage.setItem(ELIMINATION_STORAGE_KEY, JSON.stringify(state));
+}
+
 export default function WheelCard({
   wheel,
   onSpin,
@@ -21,10 +34,31 @@ export default function WheelCard({
   const [rotation, setRotation] = useState(0);
   const [showWinnerOverlay, setShowWinnerOverlay] = useState(false);
 
+  // === Modo Eliminación (solo para killers) ===
+  const isKillers = wheel.id === "killers";
+  const [eliminationMode, setEliminationMode] = useState(() => {
+    if (!isKillers) return false;
+    const saved = loadEliminationState();
+    return saved.enabled || false;
+  });
+  const [usedIndices, setUsedIndices] = useState(() => {
+    if (!isKillers) return [];
+    const saved = loadEliminationState();
+    return saved.used || [];
+  });
+
+  // Persistir cambios en eliminación
+  useEffect(() => {
+    if (!isKillers) return;
+    saveEliminationState({ enabled: eliminationMode, used: usedIndices });
+  }, [eliminationMode, usedIndices, isKillers]);
+
+  const allUsed = isKillers && eliminationMode && usedIndices.length >= wheel.options.length;
+
   // Refs para controlar la animación RAF
   const rafRef = useRef(null);
-  const spinStateRef = useRef(null); // { startTime, startRot, endRot, duration, winnerIndex }
-  const currentRotRef = useRef(0);  // rotación actual tracked en tiempo real
+  const spinStateRef = useRef(null);
+  const currentRotRef = useRef(0);
   const currentSegmentRef = useRef(-1);
 
   useEffect(() => {
@@ -97,6 +131,11 @@ export default function WheelCard({
   }
 
   function finishSpin(winnerIndex) {
+    // Modo eliminación: marcar killer como usado
+    if (isKillers && eliminationMode && !usedIndices.includes(winnerIndex)) {
+      setUsedIndices(prev => [...prev, winnerIndex]);
+    }
+
     if (wheel.id === "rolesV2") {
       const roleName = wheel.options[winnerIndex];
       const roleData = rolesData[roleName];
@@ -122,9 +161,22 @@ export default function WheelCard({
   function handleSpin() {
     if (!wheel.options.length) return;
 
+    // Si modo eliminación activo y todos usados, no girar
+    if (allUsed) return;
+
     setShowWinnerOverlay(false);
 
-    const winnerIndex = Math.floor(Math.random() * wheel.options.length);
+    // Seleccionar ganador: si modo eliminación, solo entre disponibles
+    let winnerIndex;
+    if (isKillers && eliminationMode) {
+      const availableIndices = wheel.options
+        .map((_, i) => i)
+        .filter(i => !usedIndices.includes(i));
+      if (availableIndices.length === 0) return;
+      winnerIndex = availableIndices[Math.floor(Math.random() * availableIndices.length)];
+    } else {
+      winnerIndex = Math.floor(Math.random() * wheel.options.length);
+    }
     const anglePerSegment = 360 / wheel.options.length;
     const segmentCenter = winnerIndex * anglePerSegment + anglePerSegment / 2;
     const targetAngle = (270 - segmentCenter + 360) % 360;
@@ -217,13 +269,14 @@ export default function WheelCard({
         className={`${visualClass} wheel-card__visual--clickable`}
         tabIndex={-1}
         onMouseDown={(e) => { e.preventDefault(); e.currentTarget.blur(); }}
-        onClick={(e) => { e.preventDefault(); e.currentTarget.blur(); handleSpin(); }}
+        onClick={(e) => { e.preventDefault(); e.currentTarget.blur(); if (!allUsed) handleSpin(); }}
       >
         <SpinWheel
           options={wheel.options}
           rotation={rotation}
           spinDuration={wheel.spinDuration}
           colors={wheel.colors}
+          usedIndices={isKillers && eliminationMode ? usedIndices : []}
         />
 
         {showWinnerOverlay && (
@@ -301,6 +354,34 @@ export default function WheelCard({
               onChange={(e) => onDurationChange(wheel.id, Number(e.target.value))}
             />
           </label>
+
+          {isKillers && (
+            <div className="elimination-toggle">
+              <label className="elimination-toggle__label">
+                <input
+                  type="checkbox"
+                  checked={eliminationMode}
+                  onChange={(e) => setEliminationMode(e.target.checked)}
+                />
+                <span>Modo Eliminación</span>
+              </label>
+              {eliminationMode && (
+                <button
+                  className="elimination-toggle__reset"
+                  onClick={() => setUsedIndices([])}
+                >
+                  🔄 Reiniciar selección
+                </button>
+              )}
+            </div>
+          )}
+
+          {allUsed && (
+            <div className="elimination-message">
+              Todos los killers ya fueron utilizados. Reinicia la ruleta.
+            </div>
+          )}
+
           <div className="wheel-card__buttons">
             <button
               onClick={() => onShuffle(wheel.id)}

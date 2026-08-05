@@ -43,8 +43,9 @@ function truncateText(text, maxLength = 14) {
 }
 
 // Sin CSS transition — la rotación se controla 100% desde JS via requestAnimationFrame
-const SpinWheel = forwardRef(function SpinWheel({ options, rotation, colors = [] }, ref) {
+const SpinWheel = forwardRef(function SpinWheel({ options, rotation, colors = [], usedIndices = [] }, ref) {
   const palette = colors.length ? colors : FALLBACK_COLORS;
+  const usedSet = useMemo(() => new Set(usedIndices), [usedIndices]);
 
   const segments = useMemo(() => {
     if (!options.length) return [];
@@ -98,9 +99,9 @@ const SpinWheel = forwardRef(function SpinWheel({ options, rotation, colors = []
           <circle cx="200" cy="200" r="190" fill="#000000" stroke="#e5e7eb" strokeWidth="6" />
 
           {segments.map((seg) => (
-            <g key={seg.index}>
+            <g key={seg.index} style={usedSet.has(seg.index) ? { opacity: 0.4, filter: "grayscale(1)" } : undefined}>
               {/* Segmento */}
-              <path d={seg.path} fill={seg.color} stroke="#111827" strokeWidth="2" />
+              <path d={seg.path} fill={usedSet.has(seg.index) ? "#4b5563" : seg.color} stroke="#111827" strokeWidth="2" />
 
               {/* Texto */}
               <text
