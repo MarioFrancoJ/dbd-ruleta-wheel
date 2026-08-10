@@ -101,7 +101,7 @@ const SpinWheel = forwardRef(function SpinWheel({ options, rotation, colors = []
           {segments.map((seg) => (
             <g key={seg.index} style={usedSet.has(seg.index) ? { opacity: 0.4, filter: "grayscale(1)" } : undefined}>
               {/* Segmento */}
-              <path d={seg.path} fill={usedSet.has(seg.index) ? "#4b5563" : seg.color} stroke="#111827" strokeWidth="2" />
+              <path d={seg.path} fill={usedSet.has(seg.index) ? "#4b5563" : seg.color} stroke="#111827" strokeWidth="0.5" />
 
               {/* Texto */}
               <text
@@ -120,7 +120,7 @@ const SpinWheel = forwardRef(function SpinWheel({ options, rotation, colors = []
             </g>
           ))}
 
-          <circle cx="200" cy="200" r="38" fill="#111827" stroke="#f9fafb" strokeWidth="4" />
+          <circle cx="200" cy="200" r="24" fill="#111827" stroke="none" strokeWidth="0" />
         </svg>
       </div>
     </div>
