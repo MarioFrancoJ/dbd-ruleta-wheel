@@ -1,4 +1,4 @@
-import { useMemo, forwardRef } from "react";
+import { useMemo, forwardRef, useId } from "react";
 
 const FALLBACK_COLORS = [
   "#b91c1c",
@@ -46,6 +46,7 @@ function truncateText(text, maxLength = 14) {
 const SpinWheel = forwardRef(function SpinWheel({ options, rotation, colors = [], usedIndices = [], activeSegment = -1 }, ref) {
   const palette = colors.length ? colors : FALLBACK_COLORS;
   const usedSet = useMemo(() => new Set(usedIndices), [usedIndices]);
+  const clipId = useId();
 
   // Obtener la imagen del segmento activo para el centro
   const activeOption = activeSegment >= 0 && activeSegment < options.length ? options[activeSegment] : null;
@@ -129,7 +130,7 @@ const SpinWheel = forwardRef(function SpinWheel({ options, rotation, colors = []
 
           {/* Centro con imagen o círculo oscuro */}
           <defs>
-            <clipPath id="center-clip">
+            <clipPath id={clipId}>
               <circle cx="200" cy="200" r="24" />
             </clipPath>
           </defs>
@@ -141,7 +142,7 @@ const SpinWheel = forwardRef(function SpinWheel({ options, rotation, colors = []
               y="176"
               width="48"
               height="48"
-              clipPath="url(#center-clip)"
+              clipPath={`url(#${clipId})`}
               preserveAspectRatio="xMidYMid slice"
               style={{ transform: `rotate(${-rotation}deg)`, transformOrigin: '200px 200px' }}
             />
