@@ -1,4 +1,4 @@
-import { useMemo, forwardRef, useId } from "react";
+import { useMemo, forwardRef } from "react";
 
 const FALLBACK_COLORS = [
   "#b91c1c",
@@ -43,14 +43,9 @@ function truncateText(text, maxLength = 14) {
 }
 
 // Sin CSS transition — la rotación se controla 100% desde JS via requestAnimationFrame
-const SpinWheel = forwardRef(function SpinWheel({ options, rotation, colors = [], usedIndices = [], activeSegment = -1 }, ref) {
+const SpinWheel = forwardRef(function SpinWheel({ options, rotation, colors = [], usedIndices = [] }, ref) {
   const palette = colors.length ? colors : FALLBACK_COLORS;
   const usedSet = useMemo(() => new Set(usedIndices), [usedIndices]);
-  const clipId = useId();
-
-  // Obtener la imagen del segmento activo para el centro
-  const activeOption = activeSegment >= 0 && activeSegment < options.length ? options[activeSegment] : null;
-  const centerImage = activeOption && typeof activeOption === "object" ? activeOption.image : null;
 
   const segments = useMemo(() => {
     if (!options.length) return [];
@@ -128,25 +123,7 @@ const SpinWheel = forwardRef(function SpinWheel({ options, rotation, colors = []
           {/* Borde circular exterior por encima de los segmentos */}
           <circle cx="200" cy="200" r="190" fill="none" stroke="#6b7280" strokeWidth="4" />
 
-          {/* Centro con imagen o círculo oscuro */}
-          <defs>
-            <clipPath id={clipId}>
-              <circle cx="200" cy="200" r="24" />
-            </clipPath>
-          </defs>
           <circle cx="200" cy="200" r="24" fill="#111827" stroke="none" strokeWidth="0" />
-          {centerImage && (
-            <image
-              href={centerImage}
-              x="176"
-              y="176"
-              width="48"
-              height="48"
-              clipPath={`url(#${clipId})`}
-              preserveAspectRatio="xMidYMid slice"
-              style={{ transform: `rotate(${-rotation}deg)`, transformOrigin: '200px 200px' }}
-            />
-          )}
         </svg>
       </div>
     </div>
