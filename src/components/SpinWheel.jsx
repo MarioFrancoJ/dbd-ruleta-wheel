@@ -96,7 +96,7 @@ const SpinWheel = forwardRef(function SpinWheel({ options, rotation, colors = []
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
         >
-          <circle cx="200" cy="200" r="190" fill="#000000" stroke="#e5e7eb" strokeWidth="6" />
+          <circle cx="200" cy="200" r="190" fill="#000000" stroke="none" strokeWidth="0" />
 
           {segments.map((seg) => (
             <g key={seg.index} style={usedSet.has(seg.index) ? { opacity: 0.4, filter: "grayscale(1)" } : undefined}>
