@@ -69,7 +69,7 @@ const SpinWheel = forwardRef(function SpinWheel({ options, rotation, colors = []
         imageSrc,
         hasImage,
         color: palette[index % palette.length],
-        path: describeArcPath(200, 200, 180, startAngle, endAngle),
+        path: describeArcPath(200, 200, 190, startAngle, endAngle),
         txtX: txtPos.x,
         txtY: txtPos.y,
         imgX: imgPos?.x,
