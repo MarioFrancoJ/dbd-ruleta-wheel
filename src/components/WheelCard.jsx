@@ -394,7 +394,7 @@ export default function WheelCard({
                     className="elimination-toggle__reset"
                     onClick={() => setUsedIndices([])}
                   >
-                    🔄 Reiniciar
+                    ↻ Reiniciar
                   </button>
                 )}
               </>
