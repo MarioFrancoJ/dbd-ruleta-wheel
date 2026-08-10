@@ -33,6 +33,7 @@ export default function WheelCard({
   const [isSpinning, setIsSpinning] = useState(false);
   const [rotation, setRotation] = useState(0);
   const [showWinnerOverlay, setShowWinnerOverlay] = useState(false);
+  const [activeSegment, setActiveSegment] = useState(-1);
 
   // === Modo Eliminación (solo para killers) ===
   const isKillers = wheel.id === "killers";
@@ -116,6 +117,7 @@ export default function WheelCard({
     const seg = getCurrentSegmentAtPointer(currentRot, wheel.options.length);
     if (seg !== currentSegmentRef.current && seg !== -1) {
       currentSegmentRef.current = seg;
+      setActiveSegment(seg);
       playTick();
     }
 
@@ -277,6 +279,7 @@ export default function WheelCard({
           spinDuration={wheel.spinDuration}
           colors={wheel.colors}
           usedIndices={isKillers && eliminationMode ? usedIndices : []}
+          activeSegment={activeSegment}
         />
 
         {showWinnerOverlay && (
