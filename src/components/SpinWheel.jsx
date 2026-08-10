@@ -108,7 +108,7 @@ const SpinWheel = forwardRef(function SpinWheel({ options, rotation, colors = []
                 x={seg.txtX}
                 y={seg.txtY}
                 fill="#ffffff"
-                fontSize={options.length > 30 ? "9" : "11"}
+                fontSize={options.length > 30 ? "11" : "14"}
                 fontWeight="700"
                 textAnchor="middle"
                 dominantBaseline="middle"
