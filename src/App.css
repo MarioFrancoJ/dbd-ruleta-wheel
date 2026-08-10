@@ -321,7 +321,24 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
   display: flex;
   gap: 12px;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
+}
+
+.app__header-label {
+  font-weight: 700;
+  font-size: 18px;
+  color: #e5e7eb;
+}
+
+.app__header-select {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #374151;
+  background: #0f172a;
+  color: white;
+  font: inherit;
+  font-size: 18px;
 }
 
 .wheel-card__visual {

@@ -207,37 +207,30 @@ export default function App() {
             Restaurar ruletas por defecto
           </button>
 
+          {cleanMode && (
+            <>
+              <label htmlFor="clean-wheel-select" className="app__header-label">
+                Ruleta visible:
+              </label>
+              <select
+                id="clean-wheel-select"
+                className="app__header-select"
+                value={selectedCleanWheelId}
+                onChange={(e) => setSelectedCleanWheelId(e.target.value)}
+              >
+                {wheels.map((wheel) => (
+                  <option key={wheel.id} value={wheel.id}>
+                    {wheel.title}
+                  </option>
+                ))}
+              </select>
+            </>
+          )}
+
           <button className="theme-toggle" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
             {theme === 'dark' ? '☀️' : '🌙'}
           </button>
         </div>
-
-        {cleanMode && (
-          <div className="app__clean-selector">
-            <label htmlFor="clean-wheel-select">
-              Ruleta visible:
-            </label>
-
-            <select
-              id="clean-wheel-select"
-              value={selectedCleanWheelId}
-              onChange={(e) =>
-                setSelectedCleanWheelId(
-                  e.target.value
-                )
-              }
-            >
-              {wheels.map((wheel) => (
-                <option
-                  key={wheel.id}
-                  value={wheel.id}
-                >
-                  {wheel.title}
-                </option>
-              ))}
-            </select>
-          </div>
-        )}
       </header>
 
       <main
