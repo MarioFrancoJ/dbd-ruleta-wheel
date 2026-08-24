@@ -270,7 +270,7 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
   padding: 0;
   border: none;
   border-radius: 8px;
-  background: #16a34a;
+  background: #15803d;
   color: #ffffff;
   cursor: pointer;
   transition: color 0.15s ease, background 0.15s ease;
@@ -287,7 +287,7 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 }
 
 .wheel-card__visibility-toggle--hidden:hover {
-  background: #16a34a;
+  background: #15803d;
   color: #ffffff;
 }
 

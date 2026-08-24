@@ -2,17 +2,17 @@ import { useEffect, useRef, useState } from "react";
 import SpinWheel from "./SpinWheel";
 import rolesData from "../data/rolesData.json";
 
-const ELIMINATION_STORAGE_KEY = "dbd-elimination-used";
+const ELIMINATION_STORAGE_KEY = "dbd-elimination";
 
-function loadEliminationState() {
+function loadEliminationState(wheelId) {
   try {
-    const raw = localStorage.getItem(ELIMINATION_STORAGE_KEY);
+    const raw = localStorage.getItem(`${ELIMINATION_STORAGE_KEY}-${wheelId}`);
     return raw ? JSON.parse(raw) : {};
   } catch { return {}; }
 }
 
-function saveEliminationState(state) {
-  localStorage.setItem(ELIMINATION_STORAGE_KEY, JSON.stringify(state));
+function saveEliminationState(wheelId, state) {
+  localStorage.setItem(`${ELIMINATION_STORAGE_KEY}-${wheelId}`, JSON.stringify(state));
 }
 
 export default function WheelCard({
@@ -36,26 +36,22 @@ export default function WheelCard({
   const [showEliminationModal, setShowEliminationModal] = useState(false);
   const [lastWinnerIndex, setLastWinnerIndex] = useState(null);
 
-  // === Modo Eliminación (solo para killers) ===
-  const isKillers = wheel.id === "killers";
+  // === Modo Eliminación (todas las ruletas) ===
   const [eliminationMode, setEliminationMode] = useState(() => {
-    if (!isKillers) return false;
-    const saved = loadEliminationState();
+    const saved = loadEliminationState(wheel.id);
     return saved.enabled || false;
   });
   const [usedIndices, setUsedIndices] = useState(() => {
-    if (!isKillers) return [];
-    const saved = loadEliminationState();
+    const saved = loadEliminationState(wheel.id);
     return saved.used || [];
   });
 
   // Persistir cambios en eliminación
   useEffect(() => {
-    if (!isKillers) return;
-    saveEliminationState({ enabled: eliminationMode, used: usedIndices });
-  }, [eliminationMode, usedIndices, isKillers]);
+    saveEliminationState(wheel.id, { enabled: eliminationMode, used: usedIndices });
+  }, [eliminationMode, usedIndices, wheel.id]);
 
-  const allUsed = isKillers && eliminationMode && usedIndices.length >= wheel.options.length;
+  const allUsed = eliminationMode && usedIndices.length >= wheel.options.length;
 
   // Refs para controlar la animación RAF
   const rafRef = useRef(null);
@@ -154,8 +150,8 @@ export default function WheelCard({
     playWinner();
     setShowWinnerOverlay(true);
 
-    // En modo Eliminación, mostrar modal de Ganó/Perdió en vez de eliminar automáticamente
-    if (isKillers && eliminationMode) {
+    // En modo Eliminación, mostrar modal de Ganó/Perdió
+    if (eliminationMode) {
       setLastWinnerIndex(winnerIndex);
       setShowEliminationModal(true);
     }
@@ -181,7 +177,7 @@ export default function WheelCard({
 
     // Seleccionar ganador: si modo eliminación, solo entre disponibles
     let winnerIndex;
-    if (isKillers && eliminationMode) {
+    if (eliminationMode) {
       const availableIndices = wheel.options
         .map((_, i) => i)
         .filter(i => !usedIndices.includes(i));
@@ -289,7 +285,7 @@ export default function WheelCard({
           rotation={rotation}
           spinDuration={wheel.spinDuration}
           colors={wheel.colors}
-          usedIndices={isKillers && eliminationMode ? usedIndices : []}
+          usedIndices={eliminationMode ? usedIndices : []}
         />
 
         {showWinnerOverlay && (
@@ -409,29 +405,25 @@ export default function WheelCard({
             >
               ⏹ Detener
             </button>
-            {isKillers && (
-              <>
-                <div className="mode-toggle">
-                  <span className={`mode-toggle__label ${!eliminationMode ? 'mode-toggle__label--active' : ''}`}>Clásico</span>
-                  <button
-                    type="button"
-                    className={`mode-toggle__switch ${eliminationMode ? 'mode-toggle__switch--on' : ''}`}
-                    onClick={() => setEliminationMode(!eliminationMode)}
-                    aria-label="Cambiar modo"
-                  >
-                    <span className="mode-toggle__knob" />
-                  </button>
-                  <span className={`mode-toggle__label ${eliminationMode ? 'mode-toggle__label--active' : ''}`}>Eliminación</span>
-                </div>
-                {eliminationMode && (
-                  <button
-                    className="elimination-toggle__reset"
-                    onClick={() => setUsedIndices([])}
-                  >
-                    ↻ Restaurar eliminados
-                  </button>
-                )}
-              </>
+            <div className="mode-toggle">
+              <span className={`mode-toggle__label ${!eliminationMode ? 'mode-toggle__label--active' : ''}`}>Clásico</span>
+              <button
+                type="button"
+                className={`mode-toggle__switch ${eliminationMode ? 'mode-toggle__switch--on' : ''}`}
+                onClick={() => setEliminationMode(!eliminationMode)}
+                aria-label="Cambiar modo"
+              >
+                <span className="mode-toggle__knob" />
+              </button>
+              <span className={`mode-toggle__label ${eliminationMode ? 'mode-toggle__label--active' : ''}`}>Eliminación</span>
+            </div>
+            {eliminationMode && (
+              <button
+                className="elimination-toggle__reset"
+                onClick={() => setUsedIndices([])}
+              >
+                ↻ Restaurar eliminados
+              </button>
             )}
           </div>
         </div>
@@ -460,7 +452,7 @@ export default function WheelCard({
             <h3>Opciones</h3>
             {wheel.options.map((option, index) => {
               const optionLabel = typeof option === "object" ? option.label : option;
-              const isHidden = isKillers && usedIndices.includes(index);
+              const isHidden = usedIndices.includes(index);
               return (
                 <div key={`${wheel.id}-${index}`} className={`wheel-card__option-row${isHidden ? ' wheel-card__option-row--hidden' : ''}`}>
                   <input
@@ -469,8 +461,7 @@ export default function WheelCard({
                     onChange={(e) => onOptionChange(wheel.id, index, e.target.value)}
                     placeholder={`Opción ${index + 1}`}
                   />
-                  {isKillers && (
-                    <button
+                  <button
                       className={`wheel-card__visibility-toggle${isHidden ? ' wheel-card__visibility-toggle--hidden' : ''}`}
                       onClick={() => {
                         if (isHidden) {
@@ -483,19 +474,18 @@ export default function WheelCard({
                       title={isHidden ? 'Mostrar en ruleta' : 'Ocultar de ruleta'}
                     >
                       {isHidden ? (
-                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94"/>
-                          <path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"/>
-                          <line x1="1" y1="1" x2="23" y2="23"/>
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M3.53 2.47a.75.75 0 0 0-1.06 1.06l18 18a.75.75 0 1 0 1.06-1.06l-18-18ZM22.676 12.553a11.249 11.249 0 0 1-2.631 3.655l-1.068-1.067A9.75 9.75 0 0 0 21.253 12.5a9.752 9.752 0 0 0-14.4-5.647l-1.1-1.1A11.25 11.25 0 0 1 22.676 11.447a.75.75 0 0 1 0 1.106Z"/>
+                          <path d="M15.75 12a3.75 3.75 0 0 1-3.526 3.742l-4.044-4.044A3.75 3.75 0 0 1 12 8.25a3.75 3.75 0 0 1 3.75 3.75ZM12.747 15.713l-3.46-3.46A3.75 3.75 0 0 0 12 15.75c.258 0 .509-.013.747-.037Z"/>
+                          <path d="M6.75 12c0-.584.088-1.148.252-1.678L4.867 8.197A11.244 11.244 0 0 0 1.324 11.447a.75.75 0 0 0 0 1.106A11.252 11.252 0 0 0 12 18.75c1.293 0 2.538-.218 3.697-.622l-1.834-1.834A5.75 5.75 0 0 1 6.75 12Z"/>
                         </svg>
                       ) : (
-                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                          <circle cx="12" cy="12" r="3"/>
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M12 15.75A3.75 3.75 0 1 0 12 8.25a3.75 3.75 0 0 0 0 7.5Z"/>
+                          <path fillRule="evenodd" d="M1.324 11.447C2.81 8.473 7.028 5.25 12 5.25c4.97 0 9.19 3.223 10.676 6.197a.75.75 0 0 1 0 1.106C21.19 15.527 16.97 18.75 12 18.75c-4.97 0-9.19-3.223-10.676-6.197a.75.75 0 0 1 0-1.106ZM12 16.5a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Z" clipRule="evenodd"/>
                         </svg>
                       )}
                     </button>
-                  )}
                   <button onClick={() => onRemoveOption(wheel.id, index)}>✕</button>
                 </div>
               );
