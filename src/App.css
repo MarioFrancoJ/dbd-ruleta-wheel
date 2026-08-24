@@ -248,7 +248,7 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
   margin-bottom: 10px;
 }
 
-.wheel-card__option-row button {
+.wheel-card__option-row button:not(.wheel-card__visibility-toggle) {
   background: #7f1d1d;
   color: white;
 }
@@ -277,7 +277,8 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 }
 
 .wheel-card__visibility-toggle:hover {
-  background: #15803d;
+  background: #dc2626;
+  color: #ffffff;
 }
 
 .wheel-card__visibility-toggle--hidden {
@@ -286,8 +287,8 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 }
 
 .wheel-card__visibility-toggle--hidden:hover {
-  background: #6b7280;
-  color: #d1d5db;
+  background: #16a34a;
+  color: #ffffff;
 }
 
 .wheel-card__add {
