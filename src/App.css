@@ -245,6 +245,7 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 12px 30px;
+  align-items: start;
 }
 
 .wheel-card--clean .wheel-card__options h3 {
@@ -257,6 +258,7 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 
 .wheel-card--clean .wheel-card__option-row {
   margin-bottom: 0;
+  height: auto;
 }
 
 .wheel-card__option-row {
