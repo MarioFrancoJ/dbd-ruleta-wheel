@@ -492,7 +492,7 @@ export default function WheelCard({
               );
             })}
             <button className="wheel-card__add" onClick={() => onAddOption(wheel.id)}>
-              Agregar opción
+              + Agregar opción
             </button>
           </div>
         </>
