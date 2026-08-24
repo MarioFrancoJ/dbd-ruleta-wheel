@@ -241,6 +241,24 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
   margin-top: 0;
 }
 
+.wheel-card--clean .wheel-card__options {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.wheel-card--clean .wheel-card__options h3 {
+  grid-column: 1 / -1;
+}
+
+.wheel-card--clean .wheel-card__options .wheel-card__add {
+  grid-column: 1 / -1;
+}
+
+.wheel-card--clean .wheel-card__option-row {
+  margin-bottom: 0;
+}
+
 .wheel-card__option-row {
   display: grid;
   grid-template-columns: 1fr auto auto;
