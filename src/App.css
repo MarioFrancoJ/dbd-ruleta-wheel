@@ -1114,3 +1114,91 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
   font-size: 14px;
   text-align: center;
 }
+
+/* ===== MODAL ELIMINACIÓN (Ganó/Perdió) ===== */
+
+.elimination-modal {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 16px;
+  backdrop-filter: blur(4px);
+}
+
+.elimination-modal__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 32px 40px;
+  background: #1f2937;
+  border: 2px solid #374151;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.elimination-modal__question {
+  font-size: 22px;
+  font-weight: 700;
+  color: #f9fafb;
+  margin: 0;
+}
+
+.elimination-modal__buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.elimination-modal__btn {
+  padding: 12px 28px;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.elimination-modal__btn:hover {
+  transform: scale(1.05);
+}
+
+.elimination-modal__btn:active {
+  transform: scale(0.97);
+}
+
+.elimination-modal__btn--win {
+  background: #16a34a;
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(22, 163, 74, 0.4);
+}
+
+.elimination-modal__btn--win:hover {
+  background: #15803d;
+  box-shadow: 0 6px 20px rgba(22, 163, 74, 0.5);
+}
+
+.elimination-modal__btn--lose {
+  background: #dc2626;
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(220, 38, 38, 0.4);
+}
+
+.elimination-modal__btn--lose:hover {
+  background: #b91c1c;
+  box-shadow: 0 6px 20px rgba(220, 38, 38, 0.5);
+}
+
+/* Light theme */
+.theme-light .elimination-modal__content {
+  background: #ffffff;
+  border-color: #e2e8f0;
+}
+
+.theme-light .elimination-modal__question {
+  color: #0f172a;
+}

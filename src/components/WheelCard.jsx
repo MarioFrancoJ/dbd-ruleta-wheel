@@ -33,6 +33,8 @@ export default function WheelCard({
   const [isSpinning, setIsSpinning] = useState(false);
   const [rotation, setRotation] = useState(0);
   const [showWinnerOverlay, setShowWinnerOverlay] = useState(false);
+  const [showEliminationModal, setShowEliminationModal] = useState(false);
+  const [lastWinnerIndex, setLastWinnerIndex] = useState(null);
 
   // === Modo Eliminación (solo para killers) ===
   const isKillers = wheel.id === "killers";
@@ -131,11 +133,6 @@ export default function WheelCard({
   }
 
   function finishSpin(winnerIndex) {
-    // Modo eliminación: marcar killer como usado
-    if (isKillers && eliminationMode && !usedIndices.includes(winnerIndex)) {
-      setUsedIndices(prev => [...prev, winnerIndex]);
-    }
-
     if (wheel.id === "rolesV2") {
       const roleName = wheel.options[winnerIndex];
       const roleData = rolesData[roleName];
@@ -156,6 +153,21 @@ export default function WheelCard({
     }
     playWinner();
     setShowWinnerOverlay(true);
+
+    // En modo Eliminación, mostrar modal de Ganó/Perdió en vez de eliminar automáticamente
+    if (isKillers && eliminationMode) {
+      setLastWinnerIndex(winnerIndex);
+      setShowEliminationModal(true);
+    }
+  }
+
+  function handleEliminationChoice() {
+    // Sea Ganó o Perdió, eliminar el killer de la sesión
+    if (lastWinnerIndex !== null && !usedIndices.includes(lastWinnerIndex)) {
+      setUsedIndices(prev => [...prev, lastWinnerIndex]);
+    }
+    setShowEliminationModal(false);
+    setLastWinnerIndex(null);
   }
 
   function handleSpin() {
@@ -269,7 +281,7 @@ export default function WheelCard({
         className={`${visualClass} wheel-card__visual--clickable`}
         tabIndex={-1}
         onMouseDown={(e) => { e.preventDefault(); e.currentTarget.blur(); }}
-        onClick={(e) => { e.preventDefault(); e.currentTarget.blur(); if (!allUsed) handleSpin(); }}
+        onClick={(e) => { e.preventDefault(); e.currentTarget.blur(); if (!allUsed && !showEliminationModal) handleSpin(); }}
       >
         <SpinWheel
           options={wheel.options}
@@ -340,6 +352,28 @@ export default function WheelCard({
             )}
           </div>
         )}
+
+        {showEliminationModal && (
+          <div className="elimination-modal">
+            <div className="elimination-modal__content">
+              <p className="elimination-modal__question">¿Resultado de la partida?</p>
+              <div className="elimination-modal__buttons">
+                <button
+                  className="elimination-modal__btn elimination-modal__btn--win"
+                  onClick={handleEliminationChoice}
+                >
+                  ✅ Ganó
+                </button>
+                <button
+                  className="elimination-modal__btn elimination-modal__btn--lose"
+                  onClick={handleEliminationChoice}
+                >
+                  ❌ Perdió
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
 
       {!streamMode && (
@@ -394,7 +428,7 @@ export default function WheelCard({
                     className="elimination-toggle__reset"
                     onClick={() => setUsedIndices([])}
                   >
-                    ↻ Reiniciar
+                    ↻ Restaurar eliminados
                   </button>
                 )}
               </>
