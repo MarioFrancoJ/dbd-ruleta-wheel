@@ -483,7 +483,7 @@ export default function WheelCard({
                       {isHidden ? '👁 Mostrar' : '🚫 Ocultar'}
                     </button>
                   )}
-                  <button onClick={() => onRemoveOption(wheel.id, index)}>Eliminar</button>
+                  <button onClick={() => onRemoveOption(wheel.id, index)}>✕</button>
                 </div>
               );
             })}
@@ -506,7 +506,7 @@ export default function WheelCard({
                   value={color}
                   onChange={(e) => onColorChange(wheel.id, index, e.target.value)}
                 />
-                <button onClick={() => onRemoveColor(wheel.id, index)}>Eliminar</button>
+                <button onClick={() => onRemoveColor(wheel.id, index)}>✕</button>
               </div>
             ))}
             <button className="wheel-card__add" onClick={() => onAddColor(wheel.id)}>
