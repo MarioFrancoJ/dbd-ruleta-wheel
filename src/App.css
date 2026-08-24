@@ -266,6 +266,12 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
   grid-template-columns: 1fr auto auto;
   gap: 10px;
   margin-bottom: 10px;
+  align-items: center;
+}
+
+.wheel-card__option-row input {
+  height: 38px;
+  box-sizing: border-box;
 }
 
 .wheel-card__option-row button:not(.wheel-card__visibility-toggle) {
