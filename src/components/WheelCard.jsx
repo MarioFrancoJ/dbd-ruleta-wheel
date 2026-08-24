@@ -161,12 +161,13 @@ export default function WheelCard({
     }
   }
 
-  function handleEliminationChoice() {
-    // Sea Ganó o Perdió, eliminar el killer de la sesión
-    if (lastWinnerIndex !== null && !usedIndices.includes(lastWinnerIndex)) {
+  function handleEliminationChoice(won) {
+    // Solo eliminar el killer si ganó la partida
+    if (won && lastWinnerIndex !== null && !usedIndices.includes(lastWinnerIndex)) {
       setUsedIndices(prev => [...prev, lastWinnerIndex]);
     }
     setShowEliminationModal(false);
+    setShowWinnerOverlay(false);
     setLastWinnerIndex(null);
   }
 
@@ -354,19 +355,19 @@ export default function WheelCard({
         )}
 
         {showEliminationModal && (
-          <div className="elimination-modal">
+          <div className="elimination-modal" onClick={(e) => e.stopPropagation()}>
             <div className="elimination-modal__content">
               <p className="elimination-modal__question">¿Resultado de la partida?</p>
               <div className="elimination-modal__buttons">
                 <button
                   className="elimination-modal__btn elimination-modal__btn--win"
-                  onClick={handleEliminationChoice}
+                  onClick={(e) => { e.stopPropagation(); handleEliminationChoice(true); }}
                 >
                   ✅ Ganó
                 </button>
                 <button
                   className="elimination-modal__btn elimination-modal__btn--lose"
-                  onClick={handleEliminationChoice}
+                  onClick={(e) => { e.stopPropagation(); handleEliminationChoice(false); }}
                 >
                   ❌ Perdió
                 </button>
