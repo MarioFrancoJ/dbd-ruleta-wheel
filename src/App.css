@@ -261,15 +261,33 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
   text-decoration: line-through;
 }
 
-.wheel-card__hide-btn {
-  background: #4b5563 !important;
-  color: white;
-  font-size: 12px;
-  padding: 6px 10px;
+.wheel-card__visibility-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #9ca3af;
+  cursor: pointer;
+  transition: color 0.15s ease, background 0.15s ease;
 }
 
-.wheel-card__hide-btn--active {
-  background: #2563eb !important;
+.wheel-card__visibility-toggle:hover {
+  background: #374151;
+  color: #f9fafb;
+}
+
+.wheel-card__visibility-toggle--hidden {
+  color: #ef4444;
+}
+
+.wheel-card__visibility-toggle--hidden:hover {
+  background: #7f1d1d;
+  color: #fca5a5;
 }
 
 .wheel-card__add {
