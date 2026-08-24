@@ -447,7 +447,11 @@ export default function WheelCard({
             <strong>Resultado:</strong>
             <p>{resultLabel || "Sin resultado todavía"}</p>
           </div>
+        </>
+      )}
 
+      {!streamMode && (
+        <>
           <div className="wheel-card__options">
             <h3>Opciones</h3>
             {wheel.options.map((option, index) => {
@@ -494,7 +498,11 @@ export default function WheelCard({
               Agregar opción
             </button>
           </div>
+        </>
+      )}
 
+      {!cleanMode && !streamMode && (
+        <>
           <div className="wheel-card__colors">
             <h3>Colores</h3>
             {(wheel.colors || []).map((color, index) => (
