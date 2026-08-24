@@ -244,7 +244,7 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 .wheel-card--clean .wheel-card__options {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 12px 30px;
+  gap: 12px 50px;
   align-items: start;
 }
 
