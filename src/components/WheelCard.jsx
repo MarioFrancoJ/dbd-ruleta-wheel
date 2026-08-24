@@ -353,29 +353,28 @@ export default function WheelCard({
             )}
           </div>
         )}
-
-        {showEliminationModal && (
-          <div className="elimination-modal" onClick={(e) => e.stopPropagation()}>
-            <div className="elimination-modal__content">
-              <p className="elimination-modal__question">¿Resultado de la partida?</p>
-              <div className="elimination-modal__buttons">
-                <button
-                  className="elimination-modal__btn elimination-modal__btn--win"
-                  onClick={(e) => { e.stopPropagation(); handleEliminationChoice(true); }}
-                >
-                  ✅ Ganó
-                </button>
-                <button
-                  className="elimination-modal__btn elimination-modal__btn--lose"
-                  onClick={(e) => { e.stopPropagation(); handleEliminationChoice(false); }}
-                >
-                  ❌ Perdió
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
+
+      {/* Modal Eliminación — fuera del visual, al lado derecho */}
+      {showEliminationModal && (
+        <div className="elimination-modal">
+          <p className="elimination-modal__question">¿Resultado de la partida?</p>
+          <div className="elimination-modal__buttons">
+            <button
+              className="elimination-modal__btn elimination-modal__btn--win"
+              onClick={() => handleEliminationChoice(true)}
+            >
+              ✅ Ganó
+            </button>
+            <button
+              className="elimination-modal__btn elimination-modal__btn--lose"
+              onClick={() => handleEliminationChoice(false)}
+            >
+              ❌ Perdió
+            </button>
+          </div>
+        </div>
+      )}
 
       {!streamMode && (
         <div className="wheel-card__controls">
