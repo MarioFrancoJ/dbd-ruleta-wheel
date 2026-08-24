@@ -243,7 +243,7 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 
 .wheel-card__option-row {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr auto auto;
   gap: 10px;
   margin-bottom: 10px;
 }
@@ -251,6 +251,25 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 .wheel-card__option-row button {
   background: #7f1d1d;
   color: white;
+}
+
+.wheel-card__option-row--hidden {
+  opacity: 0.5;
+}
+
+.wheel-card__option-row--hidden input {
+  text-decoration: line-through;
+}
+
+.wheel-card__hide-btn {
+  background: #4b5563 !important;
+  color: white;
+  font-size: 12px;
+  padding: 6px 10px;
+}
+
+.wheel-card__hide-btn--active {
+  background: #2563eb !important;
 }
 
 .wheel-card__add {

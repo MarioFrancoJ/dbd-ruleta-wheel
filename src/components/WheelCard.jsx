@@ -460,14 +460,29 @@ export default function WheelCard({
             <h3>Opciones</h3>
             {wheel.options.map((option, index) => {
               const optionLabel = typeof option === "object" ? option.label : option;
+              const isHidden = isKillers && usedIndices.includes(index);
               return (
-                <div key={`${wheel.id}-${index}`} className="wheel-card__option-row">
+                <div key={`${wheel.id}-${index}`} className={`wheel-card__option-row${isHidden ? ' wheel-card__option-row--hidden' : ''}`}>
                   <input
                     type="text"
                     value={optionLabel}
                     onChange={(e) => onOptionChange(wheel.id, index, e.target.value)}
                     placeholder={`Opción ${index + 1}`}
                   />
+                  {isKillers && (
+                    <button
+                      className={`wheel-card__hide-btn${isHidden ? ' wheel-card__hide-btn--active' : ''}`}
+                      onClick={() => {
+                        if (isHidden) {
+                          setUsedIndices(prev => prev.filter(i => i !== index));
+                        } else {
+                          setUsedIndices(prev => [...prev, index]);
+                        }
+                      }}
+                    >
+                      {isHidden ? '👁 Mostrar' : '🚫 Ocultar'}
+                    </button>
+                  )}
                   <button onClick={() => onRemoveOption(wheel.id, index)}>Eliminar</button>
                 </div>
               );
