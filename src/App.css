@@ -309,6 +309,7 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
   border-radius: 8px;
   background: #15803d;
   color: #ffffff;
+  font-size: 22px;
   cursor: pointer;
   transition: color 0.15s ease, background 0.15s ease;
 }
