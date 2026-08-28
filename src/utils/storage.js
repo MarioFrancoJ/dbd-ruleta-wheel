@@ -1,6 +1,6 @@
 const STORAGE_KEY = "dbd-wheels-config";
 const VERSION_KEY = "dbd-wheels-version";
-const CURRENT_VERSION = "3.9"; // Added Jason (K43) to killers wheel, increased max spin duration to 120s
+const CURRENT_VERSION = "4.0"; // Added Juicio (K43_TheJudgement) to killers wheel
 
 export function loadWheels() {
   try {

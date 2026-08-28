@@ -477,7 +477,16 @@ export default function WheelCard({
                       aria-label={isHidden ? 'Mostrar en ruleta' : 'Ocultar de ruleta'}
                       title={isHidden ? 'Mostrar en ruleta' : 'Ocultar de ruleta'}
                     >
-                      {isHidden ? '○' : '◉'}
+                      {isHidden ? (
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                          <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2.5"/>
+                        </svg>
+                      ) : (
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                          <circle cx="12" cy="12" r="10"/>
+                          <circle cx="12" cy="12" r="4" fill="#ffffff"/>
+                        </svg>
+                      )}
                     </button>
                   <button onClick={() => onRemoveOption(wheel.id, index)}>✖</button>
                 </div>

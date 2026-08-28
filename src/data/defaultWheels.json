@@ -50,7 +50,8 @@
       { "label": "Animatrónico", "image": "/Images/Killers/K40_TheAnimatronic_Portrait.webp" },
       { "label": "Krasue", "image": "/Images/Killers/K41_TheKrasue_Portrait.webp" },
       { "label": "The First", "image": "/Images/Killers/K42_TheFirst_Portrait.webp" },
-      { "label": "Jason", "image": "/Images/Killers/K43_Jason.png" }
+      { "label": "Jason", "image": "/Images/Killers/K43_Jason.png" },
+      { "label": "Juicio", "image": "/Images/Killers/K43_TheJudgement_Portrait.webp" }
     ]
   },
 
