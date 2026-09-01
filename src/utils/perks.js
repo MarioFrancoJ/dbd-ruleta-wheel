@@ -58,6 +58,7 @@ const ENGLISH_NAME_OVERRIDES = {
   "teamwork-power-of-two.webp": "Teamwork: Power of Two",
   "teamwork-throw-down.webp": "Teamwork: Throw Down",
   "teamwork-toughen-up.webp": "Teamwork: Toughen Up",
+  "teamwork-soft-spoken.png": "Teamwork: Soft-Spoken",
   "no-mither.webp": "No Mither",
   "wake-up.webp": "Wake Up!",
   "were-gonna-live-forever.webp": "We're Gonna Live Forever",

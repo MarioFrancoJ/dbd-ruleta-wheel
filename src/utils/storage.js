@@ -1,6 +1,6 @@
 const STORAGE_KEY = "dbd-wheels-config";
 const VERSION_KEY = "dbd-wheels-version";
-const CURRENT_VERSION = "8.0"; // Nombres en español de perks actualizados (listado del usuario)
+const CURRENT_VERSION = "9.0"; // +5 perks .png, fix cruce streetwise/urban-evasion, Malicia
 
 export function loadWheels() {
   try {
