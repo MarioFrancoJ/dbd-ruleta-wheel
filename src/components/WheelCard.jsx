@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import SpinWheel from "./SpinWheel";
 import RolesEditor from "./RolesEditor";
 import PerkSelector from "./PerkSelector";
-import { perkImageSrc } from "../utils/perks";
+import { perkImageSrc, perkEnglishName } from "../utils/perks";
 
 const ELIMINATION_STORAGE_KEY = "dbd-elimination";
 // Ícono usado por defecto para las "entradas especiales" (texto libre) que se
@@ -288,6 +288,10 @@ export default function WheelCard({
       : null;
   }
 
+  // Nombre en inglés del resultado (solo para la ruleta de perks).
+  const resultEnglish =
+    isPerksWheel && resultImage ? perkEnglishName(resultImage) : "";
+
   // Agrega una entrada especial de texto libre (con ícono genérico) a la ruleta.
   function handleAddSpecialEntry() {
     const label = window.prompt(
@@ -412,6 +416,9 @@ export default function WheelCard({
                   <strong className="wheel-card__winner-text">
                     {resultLabel}
                   </strong>
+                )}
+                {resultEnglish && (
+                  <span className="wheel-card__winner-en">{resultEnglish}</span>
                 )}
               </>
             )}
