@@ -2204,687 +2204,687 @@
     "options": [
       {
         "label": "As Bajo la Manga",
-        "image": "/Images/Perks/ace-in-the-hole.webp"
+        "image": "/Images/PerksCharacters/AceVisconti/ace-in-the-hole.webp"
       },
       {
         "label": "Adrenalina",
-        "image": "/Images/Perks/adrenaline.webp"
+        "image": "/Images/PerksCharacters/MegThomas/adrenaline.webp"
       },
       {
         "label": "Cuidados Posteriores",
-        "image": "/Images/Perks/aftercare.webp"
+        "image": "/Images/PerksCharacters/JeffJohansen/aftercare.webp"
       },
       {
         "label": "Alerta",
-        "image": "/Images/Perks/alert.webp"
+        "image": "/Images/PerksCharacters/FengMin/alert.webp"
       },
       {
         "label": "Por Cualquier Medio",
-        "image": "/Images/Perks/any-means-necessary.webp"
+        "image": "/Images/PerksCharacters/YuiKimura/any-means-necessary.webp"
       },
       {
         "label": "Un Lugar para Nosotros",
-        "image": "/Images/Perks/a-place-for-us.webp"
+        "image": "/Images/PerksCharacters/KwonTae-Young/a-place-for-us.webp"
       },
       {
         "label": "Ingenio Apocalíptico",
-        "image": "/Images/Perks/apocalyptic-ingenuity.webp"
+        "image": "/Images/PerksCharacters/RickGrimes/apocalyptic-ingenuity.webp"
       },
       {
         "label": "Tasación",
-        "image": "/Images/Perks/appraisal.webp"
+        "image": "/Images/PerksCharacters/ElodieRakoto/appraisal.webp"
       },
       {
         "label": "Autodidacta",
-        "image": "/Images/Perks/autodidact.webp"
+        "image": "/Images/PerksCharacters/AdamFrancis/autodidact.webp"
       },
       {
         "label": "Niñero",
-        "image": "/Images/Perks/babysitter.webp"
+        "image": "/Images/PerksCharacters/SteveHarrington/babysitter.webp"
       },
       {
         "label": "Jugador de Fondo",
-        "image": "/Images/Perks/background-player.webp"
+        "image": "/Images/PerksCharacters/RenatoLyra/background-player.webp"
       },
       {
         "label": "Bada Bada Boom",
-        "image": "/Images/Perks/bada-bada-boom.webp"
+        "image": "/Images/PerksCharacters/DustinHenderson/bada-bada-boom.webp"
       },
       {
         "label": "Aterrizaje Equilibrado",
-        "image": "/Images/Perks/balanced-landing.webp"
+        "image": "/Images/PerksCharacters/NeaKarlsson/balanced-landing.webp"
       },
       {
         "label": "Inspiración Bárdica",
-        "image": "/Images/Perks/bardic-inspiration.webp"
+        "image": "/Images/PerksCharacters/AestriYazar/bardic-inspiration.webp"
       },
       {
         "label": "Mejor que Nuevo",
-        "image": "/Images/Perks/better-than-new.webp"
+        "image": "/Images/PerksCharacters/RebeccaChambers/better-than-new.webp"
       },
       {
         "label": "Mejor Juntos",
-        "image": "/Images/Perks/better-together.webp"
+        "image": "/Images/PerksCharacters/NancyWheeler/better-together.webp"
       },
       {
         "label": "Muerde la Bala",
-        "image": "/Images/Perks/bite-the-bullet.webp"
+        "image": "/Images/PerksCharacters/LeonSKennedy/bite-the-bullet.webp"
       },
       {
         "label": "Mina Explosiva",
-        "image": "/Images/Perks/blast-mine.webp"
+        "image": "/Images/PerksCharacters/JillValentine/blast-mine.webp"
       },
       {
         "label": "Pacto de Sangre",
-        "image": "/Images/Perks/blood-pact.webp"
+        "image": "/Images/PerksCharacters/CherylMason/blood-pact.webp"
       },
       {
         "label": "Torrente de Sangre",
-        "image": "/Images/Perks/blood-rush.webp"
+        "image": "/Images/PerksCharacters/RenatoLyra/blood-rush.webp"
       },
       {
         "label": "Rebeldía",
-        "image": "/Images/Perks/boil-over.webp"
+        "image": "/Images/PerksCharacters/KateDenson/boil-over.webp"
       },
       {
         "label": "Vínculo",
-        "image": "/Images/Perks/bond.webp"
+        "image": "/Images/PerksCharacters/DwightFairfield/bond.webp"
       },
       {
         "label": "Bendición: Círculo de Sanación",
-        "image": "/Images/Perks/boon-circle-of-healing.webp"
+        "image": "/Images/PerksCharacters/MikaelaReid/boon-circle-of-healing.webp"
       },
       {
         "label": "Bendición: Teoría Oscura",
-        "image": "/Images/Perks/boon-dark-theory.webp"
+        "image": "/Images/PerksCharacters/YoichiAsakawa/boon-dark-theory.webp"
       },
       {
         "label": "Bendición: Exponencial",
-        "image": "/Images/Perks/boon-exponential.webp"
+        "image": "/Images/PerksCharacters/JonahVasquez/boon-exponential.webp"
       },
       {
         "label": "Bendición: Iluminación",
-        "image": "/Images/Perks/boon-illumination.webp"
+        "image": "/Images/PerksCharacters/AlanWake/boon-illumination.webp"
       },
       {
         "label": "Bendición: Paso Sombrío",
-        "image": "/Images/Perks/boon-shadow-step.webp"
+        "image": "/Images/PerksCharacters/MikaelaReid/boon-shadow-step.webp"
       },
       {
         "label": "Tiempo Prestado",
-        "image": "/Images/Perks/borrowed-time.webp"
+        "image": "/Images/PerksCharacters/BillOverbeck/borrowed-time.webp"
       },
       {
         "label": "Conocimiento en Botánica",
-        "image": "/Images/Perks/botany-knowledge.webp"
+        "image": "/Images/PerksCharacters/ClaudetteMorel/botany-knowledge.webp"
       },
       {
         "label": "Colapso",
-        "image": "/Images/Perks/breakdown.webp"
+        "image": "/Images/PerksCharacters/JeffJohansen/breakdown.webp"
       },
       {
         "label": "Fuga",
-        "image": "/Images/Perks/breakout.webp"
+        "image": "/Images/PerksCharacters/YuiKimura/breakout.webp"
       },
       {
         "label": "Abrocharse",
-        "image": "/Images/Perks/buckle-up.webp"
+        "image": "/Images/PerksCharacters/AshleyWilliams/buckle-up.webp"
       },
       {
         "label": "Hecho para Durar",
-        "image": "/Images/Perks/built-to-last.webp"
+        "image": "/Images/PerksCharacters/FelixRichter/built-to-last.webp"
       },
       {
         "label": "Espíritu Tranquilo",
-        "image": "/Images/Perks/calm-spirit.webp"
+        "image": "/Images/PerksCharacters/JakePark/calm-spirit.webp"
       },
       {
         "label": "Camaradería",
-        "image": "/Images/Perks/camaraderie.webp"
+        "image": "/Images/PerksCharacters/SteveHarrington/camaraderie.webp"
       },
       {
         "label": "Campeón de la Luz",
-        "image": "/Images/Perks/champion-of-light.webp"
+        "image": "/Images/PerksCharacters/AlanWake/champion-of-light.webp"
       },
       {
         "label": "Cambio de Planes",
-        "image": "/Images/Perks/change-of-plan.webp"
+        "image": "/Images/PerksCharacters/DustinHenderson/change-of-plan.webp"
       },
       {
         "label": "Trampa Química",
-        "image": "/Images/Perks/chemical-trap.webp"
+        "image": "/Images/PerksCharacters/EllenRipley/chemical-trap.webp"
       },
       {
         "label": "Clarividencia",
-        "image": "/Images/Perks/clairvoyance.webp"
+        "image": "/Images/PerksCharacters/MikaelaReid/clairvoyance.webp"
       },
       {
         "label": "Ruptura Limpia",
-        "image": "/Images/Perks/clean-break.webp"
+        "image": "/Images/PerksCharacters/TaurieCain/clean-break.webp"
       },
       {
         "label": "Ven a por Mí",
-        "image": "/Images/Perks/come-and-get-me.webp"
+        "image": "/Images/PerksCharacters/RickGrimes/come-and-get-me.webp"
       },
       {
         "label": "Convicción",
-        "image": "/Images/Perks/conviction.webp"
+        "image": "/Images/PerksCharacters/MichonneGrimes/conviction.webp"
       },
       {
         "label": "Acción Correctiva",
-        "image": "/Images/Perks/corrective-action.webp"
+        "image": "/Images/PerksCharacters/JonahVasquez/corrective-action.webp"
       },
       {
         "label": "Soltarse",
-        "image": "/Images/Perks/cut-loose.webp"
+        "image": "/Images/PerksCharacters/ThalitaLyra/cut-loose.webp"
       },
       {
         "label": "Baila Conmigo",
-        "image": "/Images/Perks/dance-with-me.webp"
+        "image": "/Images/PerksCharacters/KateDenson/dance-with-me.webp"
       },
       {
         "label": "Sentido Oscuro",
-        "image": "/Images/Perks/dark-sense.webp"
+        "image": "/Images/PerksCharacters/General/dark-sense.webp"
       },
       {
         "label": "Esfuerzo Final",
-        "image": "/Images/Perks/dead-hard.webp"
+        "image": "/Images/PerksCharacters/DavidKing/dead-hard.webp"
       },
       {
         "label": "Fecha Límite",
-        "image": "/Images/Perks/deadline.webp"
+        "image": "/Images/PerksCharacters/AlanWake/deadline.webp"
       },
       {
         "label": "Engaño",
-        "image": "/Images/Perks/deception.webp"
+        "image": "/Images/PerksCharacters/ElodieRakoto/deception.webp"
       },
       {
         "label": "Golpe Decisivo",
-        "image": "/Images/Perks/decisive-strike.webp"
+        "image": "/Images/PerksCharacters/LaurieStrode/decisive-strike.webp"
       },
       {
         "label": "Déjà Vu",
-        "image": "/Images/Perks/deja-vu.webp"
+        "image": "/Images/PerksCharacters/General/deja-vu.webp"
       },
       {
         "label": "Liberación",
-        "image": "/Images/Perks/deliverance.webp"
+        "image": "/Images/PerksCharacters/AdamFrancis/deliverance.webp"
       },
       {
         "label": "Medidas Desesperadas",
-        "image": "/Images/Perks/desperate-measures.webp"
+        "image": "/Images/PerksCharacters/FelixRichter/desperate-measures.webp"
       },
       {
         "label": "Corazonada del Detective",
-        "image": "/Images/Perks/detectives-hunch.webp"
+        "image": "/Images/PerksCharacters/TappDetective/detectives-hunch.webp"
       },
       {
         "label": "Distorsión",
-        "image": "/Images/Perks/distortion.webp"
+        "image": "/Images/PerksCharacters/JeffJohansen/distortion.webp"
       },
       {
         "label": "Diversión",
-        "image": "/Images/Perks/diversion.webp"
+        "image": "/Images/PerksCharacters/AdamFrancis/diversion.webp"
       },
       {
         "label": "No Hacer Daño",
-        "image": "/Images/Perks/do-no-harm.webp"
+        "image": "/Images/PerksCharacters/OrelaRose/do-no-harm.webp"
       },
       {
         "label": "Dramaturgia",
-        "image": "/Images/Perks/dramaturgy.webp"
+        "image": "/Images/PerksCharacters/NicolasCage/dramaturgy.webp"
       },
       {
         "label": "Deber de Cuidado",
-        "image": "/Images/Perks/duty-of-care.webp"
+        "image": "/Images/PerksCharacters/OrelaRose/duty-of-care.webp"
       },
       {
         "label": "Conexión Empática",
-        "image": "/Images/Perks/empathic-connection.webp"
+        "image": "/Images/PerksCharacters/YoichiAsakawa/empathic-connection.webp"
       },
       {
         "label": "Empatía",
-        "image": "/Images/Perks/empathy.webp"
+        "image": "/Images/PerksCharacters/ClaudetteMorel/empathy.webp"
       },
       {
         "label": "Percepción Extrasensorial",
-        "image": "/Images/Perks/extrasensory-perception.webp"
+        "image": "/Images/PerksCharacters/Eleven/extrasensory-perception.webp"
       },
       {
         "label": "Exultación",
-        "image": "/Images/Perks/exultation.webp"
+        "image": "/Images/PerksCharacters/TrevorBelmont/exultation.webp"
       },
       {
         "label": "Ojos de Belmont",
-        "image": "/Images/Perks/eyes-of-belmont.webp"
+        "image": "/Images/PerksCharacters/TrevorBelmont/eyes-of-belmont.webp"
       },
       {
         "label": "Vía Rápida",
-        "image": "/Images/Perks/fast-track.webp"
+        "image": "/Images/PerksCharacters/Yun-JinLee/fast-track.webp"
       },
       {
         "label": "Delicadeza",
-        "image": "/Images/Perks/finesse.webp"
+        "image": "/Images/PerksCharacters/LaraCroft/finesse.webp"
       },
       {
         "label": "Cinco Movimientos Adelante",
-        "image": "/Images/Perks/five-moves-ahead.webp"
+        "image": "/Images/PerksCharacters/KwonTae-Young/five-moves-ahead.webp"
       },
       {
         "label": "Concentración",
-        "image": "/Images/Perks/fixated.webp"
+        "image": "/Images/PerksCharacters/NancyWheeler/fixated.webp"
       },
       {
         "label": "Bomba de Luz",
-        "image": "/Images/Perks/flashbang.webp"
+        "image": "/Images/PerksCharacters/LeonSKennedy/flashbang.webp"
       },
       {
         "label": "Voltereta",
-        "image": "/Images/Perks/flip-flop.webp"
+        "image": "/Images/PerksCharacters/AshleyWilliams/flip-flop.webp"
       },
       {
         "label": "Estado de Flujo",
-        "image": "/Images/Perks/flow-state.webp"
+        "image": "/Images/PerksCharacters/KwonTae-Young/flow-state.webp"
       },
       {
         "label": "Sabio de la Niebla",
-        "image": "/Images/Perks/fogwise.webp"
+        "image": "/Images/PerksCharacters/VittorioToscano/fogwise.webp"
       },
       {
         "label": "Por la Gente",
-        "image": "/Images/Perks/for-the-people.webp"
+        "image": "/Images/PerksCharacters/ZarinaKassir/for-the-people.webp"
       },
       {
         "label": "Competencia Amistosa",
-        "image": "/Images/Perks/friendly-competition.webp"
+        "image": "/Images/PerksCharacters/ThalitaLyra/friendly-competition.webp"
       },
       {
         "label": "Notas Fantasma",
-        "image": "/Images/Perks/ghost-notes.webp"
+        "image": "/Images/PerksCharacters/VeeBoonyasak/ghost-notes.webp"
       },
       {
         "label": "Endurecido",
-        "image": "/Images/Perks/hardened.webp"
+        "image": "/Images/PerksCharacters/LaraCroft/hardened.webp"
       },
       {
         "label": "De Frente",
-        "image": "/Images/Perks/head-on.webp"
+        "image": "/Images/PerksCharacters/JaneRomero/head-on.webp"
       },
       {
         "label": "Esperanza",
-        "image": "/Images/Perks/hope.webp"
+        "image": "/Images/PerksCharacters/General/hope.webp"
       },
       {
         "label": "Hiperconcentración",
-        "image": "/Images/Perks/hyperfocus.webp"
+        "image": "/Images/PerksCharacters/RebeccaChambers/hyperfocus.webp"
       },
       {
         "label": "Enfoque Interno",
-        "image": "/Images/Perks/inner-focus.webp"
+        "image": "/Images/PerksCharacters/HaddieKaur/inner-focus.webp"
       },
       {
         "label": "Fuerza Interna",
-        "image": "/Images/Perks/inner-strength.webp"
+        "image": "/Images/PerksCharacters/NancyWheeler/inner-strength.webp"
       },
       {
         "label": "Invocación: Cuervos Traicioneros",
-        "image": "/Images/Perks/invocation-treacherous-crows.webp"
+        "image": "/Images/PerksCharacters/TaurieCain/invocation-treacherous-crows.webp"
       },
       {
         "label": "Invocación: Arañas Tejedoras",
-        "image": "/Images/Perks/invocation-weaving-spiders.webp"
+        "image": "/Images/PerksCharacters/SableWard/invocation-weaving-spiders.webp"
       },
       {
         "label": "Voluntad de Hierro",
-        "image": "/Images/Perks/iron-will.webp"
+        "image": "/Images/PerksCharacters/JakePark/iron-will.webp"
       },
       {
         "label": "Empatía Compartida",
-        "image": "/Images/Perks/kindred.webp"
+        "image": "/Images/PerksCharacters/General/kindred.webp"
       },
       {
         "label": "Última Resistencia",
-        "image": "/Images/Perks/last-stand.webp"
+        "image": "/Images/PerksCharacters/MichonneGrimes/last-stand.webp"
       },
       {
         "label": "Líder",
-        "image": "/Images/Perks/leader.webp"
+        "image": "/Images/PerksCharacters/DwightFairfield/leader.webp"
       },
       {
         "label": "Dejado Atrás",
-        "image": "/Images/Perks/left-behind.webp"
+        "image": "/Images/PerksCharacters/BillOverbeck/left-behind.webp"
       },
       {
         "label": "Pies Ligeros",
-        "image": "/Images/Perks/light-footed.webp"
+        "image": "/Images/PerksCharacters/EllenRipley/light-footed.webp"
       },
       {
         "label": "Peso Ligero",
-        "image": "/Images/Perks/lightweight.webp"
+        "image": "/Images/PerksCharacters/General/lightweight.webp"
       },
       {
         "label": "Ágil",
-        "image": "/Images/Perks/lithe.webp"
+        "image": "/Images/PerksCharacters/FengMin/lithe.webp"
       },
       {
         "label": "Perfil Bajo",
-        "image": "/Images/Perks/low-profile.webp"
+        "image": "/Images/PerksCharacters/AdaWong/low-profile.webp"
       },
       {
         "label": "Golpe de Suerte",
-        "image": "/Images/Perks/lucky-break.webp"
+        "image": "/Images/PerksCharacters/YuiKimura/lucky-break.webp"
       },
       {
         "label": "Estrella de la Suerte",
-        "image": "/Images/Perks/lucky-star.webp"
+        "image": "/Images/PerksCharacters/EllenRipley/lucky-star.webp"
       },
       {
         "label": "Hecho para Esto",
-        "image": "/Images/Perks/made-for-this.webp"
+        "image": "/Images/PerksCharacters/GabrielSoma/made-for-this.webp"
       },
       {
         "label": "Temple de Hombre",
-        "image": "/Images/Perks/mettle-of-man.webp"
+        "image": "/Images/PerksCharacters/AshleyWilliams/mettle-of-man.webp"
       },
       {
         "label": "Ilusión Reflejada",
-        "image": "/Images/Perks/mirrored-illusion.webp"
+        "image": "/Images/PerksCharacters/AestriYazar/mirrored-illusion.webp"
       },
       {
         "label": "Momento de Gloria",
-        "image": "/Images/Perks/moment-of-glory.webp"
+        "image": "/Images/PerksCharacters/TrevorBelmont/moment-of-glory.webp"
       },
       {
         "label": "Sin Miedo",
-        "image": "/Images/Perks/no-mither.webp"
+        "image": "/Images/PerksCharacters/DavidKing/no-mither.webp"
       },
       {
         "label": "Nadie se Queda Atrás",
-        "image": "/Images/Perks/no-one-left-behind.webp"
+        "image": "/Images/PerksCharacters/General/no-one-left-behind.webp"
       },
       {
         "label": "Objeto de Obsesión",
-        "image": "/Images/Perks/object-of-obsession.webp"
+        "image": "/Images/PerksCharacters/LaurieStrode/object-of-obsession.webp"
       },
       {
         "label": "Fuera de Registro",
-        "image": "/Images/Perks/off-the-record.webp"
+        "image": "/Images/PerksCharacters/ZarinaKassir/off-the-record.webp"
       },
       {
         "label": "Uno Dos Tres Cuatro",
-        "image": "/Images/Perks/one-two-three-four.webp"
+        "image": "/Images/PerksCharacters/VeeBoonyasak/one-two-three-four.webp"
       },
       {
         "label": "Mano Abierta",
-        "image": "/Images/Perks/open-handed.webp"
+        "image": "/Images/PerksCharacters/AceVisconti/open-handed.webp"
       },
       {
         "label": "Superar",
-        "image": "/Images/Perks/overcome.webp"
+        "image": "/Images/PerksCharacters/JonahVasquez/overcome.webp"
       },
       {
         "label": "Guía Parental",
-        "image": "/Images/Perks/parental-guidance.webp"
+        "image": "/Images/PerksCharacters/YoichiAsakawa/parental-guidance.webp"
       },
       {
         "label": "Farmacia",
-        "image": "/Images/Perks/pharmacy.webp"
+        "image": "/Images/PerksCharacters/QuentinSmith/pharmacy.webp"
       },
       {
         "label": "Giro Argumental",
-        "image": "/Images/Perks/plot-twist.webp"
+        "image": "/Images/PerksCharacters/NicolasCage/plot-twist.webp"
       },
       {
         "label": "Instinto Saqueador",
-        "image": "/Images/Perks/plunderers-instinct.webp"
+        "image": "/Images/PerksCharacters/General/plunderers-instinct.webp"
       },
       {
         "label": "Sereno",
-        "image": "/Images/Perks/poised.webp"
+        "image": "/Images/PerksCharacters/JaneRomero/poised.webp"
       },
       {
         "label": "Energía Potencial",
-        "image": "/Images/Perks/potential-energy.webp"
+        "image": "/Images/PerksCharacters/VittorioToscano/potential-energy.webp"
       },
       {
         "label": "Premonición",
-        "image": "/Images/Perks/premonition.webp"
+        "image": "/Images/PerksCharacters/General/premonition.webp"
       },
       {
         "label": "Demuéstralo",
-        "image": "/Images/Perks/prove-thyself.webp"
+        "image": "/Images/PerksCharacters/DwightFairfield/prove-thyself.webp"
       },
       {
         "label": "Apuesta Rápida",
-        "image": "/Images/Perks/quick-gambit.webp"
+        "image": "/Images/PerksCharacters/VittorioToscano/quick-gambit.webp"
       },
       {
         "label": "Rápido y Silencioso",
-        "image": "/Images/Perks/quick-quiet.webp"
+        "image": "/Images/PerksCharacters/MegThomas/quick-quiet.webp"
       },
       {
         "label": "Respuesta Rápida",
-        "image": "/Images/Perks/rapid-response.webp"
+        "image": "/Images/PerksCharacters/OrelaRose/rapid-response.webp"
       },
       {
         "label": "Tranquilidad",
-        "image": "/Images/Perks/reassurance.webp"
+        "image": "/Images/PerksCharacters/RebeccaChambers/reassurance.webp"
       },
       {
         "label": "Pista Falsa",
-        "image": "/Images/Perks/red-herring.webp"
+        "image": "/Images/PerksCharacters/ZarinaKassir/red-herring.webp"
       },
       {
         "label": "Alianza Reprimida",
-        "image": "/Images/Perks/repressed-alliance.webp"
+        "image": "/Images/PerksCharacters/CherylMason/repressed-alliance.webp"
       },
       {
         "label": "Manifestación Residual",
-        "image": "/Images/Perks/residual-manifest.webp"
+        "image": "/Images/PerksCharacters/HaddieKaur/residual-manifest.webp"
       },
       {
         "label": "Resiliencia",
-        "image": "/Images/Perks/resilience.webp"
+        "image": "/Images/PerksCharacters/General/resilience.webp"
       },
       {
         "label": "Resurgimiento",
-        "image": "/Images/Perks/resurgence.webp"
+        "image": "/Images/PerksCharacters/JillValentine/resurgence.webp"
       },
       {
         "label": "Vida en la Carretera",
-        "image": "/Images/Perks/road-life.webp"
+        "image": "/Images/PerksCharacters/VeeBoonyasak/road-life.webp"
       },
       {
         "label": "Espíritu Novato",
-        "image": "/Images/Perks/rookie-spirit.webp"
+        "image": "/Images/PerksCharacters/LeonSKennedy/rookie-spirit.webp"
       },
       {
         "label": "Saboteador",
-        "image": "/Images/Perks/saboteur.webp"
+        "image": "/Images/PerksCharacters/JakePark/saboteur.webp"
       },
       {
         "label": "Carroñero",
-        "image": "/Images/Perks/scavenger.webp"
+        "image": "/Images/PerksCharacters/GabrielSoma/scavenger.webp"
       },
       {
         "label": "Compañero de Escena",
-        "image": "/Images/Perks/scene-partner.webp"
+        "image": "/Images/PerksCharacters/NicolasCage/scene-partner.webp"
       },
       {
         "label": "Segundo Aliento",
-        "image": "/Images/Perks/second-wind.webp"
+        "image": "/Images/PerksCharacters/SteveHarrington/second-wind.webp"
       },
       {
         "label": "Autocuración",
-        "image": "/Images/Perks/self-care.webp"
+        "image": "/Images/PerksCharacters/ClaudetteMorel/self-care.webp"
       },
       {
         "label": "Autopreservación",
-        "image": "/Images/Perks/self-preservation.webp"
+        "image": "/Images/PerksCharacters/Yun-JinLee/self-preservation.webp"
       },
       {
         "label": "Cargar con la Carga",
-        "image": "/Images/Perks/shoulder-the-burden.webp"
+        "image": "/Images/PerksCharacters/TaurieCain/shoulder-the-burden.webp"
       },
       {
         "label": "Carne Resbaladiza",
-        "image": "/Images/Perks/slippery-meat.webp"
+        "image": "/Images/PerksCharacters/General/slippery-meat.webp"
       },
       {
         "label": "Juego Pequeño",
-        "image": "/Images/Perks/small-game.webp"
+        "image": "/Images/PerksCharacters/General/small-game.webp"
       },
       {
         "label": "Golpe Aplastante",
-        "image": "/Images/Perks/smash-hit.webp"
+        "image": "/Images/PerksCharacters/Yun-JinLee/smash-hit.webp"
       },
       {
         "label": "Único Superviviente",
-        "image": "/Images/Perks/sole-survivor.webp"
+        "image": "/Images/PerksCharacters/LaurieStrode/sole-survivor.webp"
       },
       {
         "label": "Solidaridad",
-        "image": "/Images/Perks/solidarity.webp"
+        "image": "/Images/PerksCharacters/JaneRomero/solidarity.webp"
       },
       {
         "label": "Guardián del Alma",
-        "image": "/Images/Perks/soul-guard.webp"
+        "image": "/Images/PerksCharacters/CherylMason/soul-guard.webp"
       },
       {
         "label": "Especialista",
-        "image": "/Images/Perks/specialist.webp"
+        "image": "/Images/PerksCharacters/LaraCroft/specialist.webp"
       },
       {
         "label": "Escalofrío",
-        "image": "/Images/Perks/spine-chill.webp"
+        "image": "/Images/PerksCharacters/General/spine-chill.webp"
       },
       {
         "label": "Arranque Veloz",
-        "image": "/Images/Perks/sprint-burst.webp"
+        "image": "/Images/PerksCharacters/MegThomas/sprint-burst.webp"
       },
       {
         "label": "Vigilancia",
-        "image": "/Images/Perks/stake-out.webp"
+        "image": "/Images/PerksCharacters/TappDetective/stake-out.webp"
       },
       {
         "label": "Vista Quieta",
-        "image": "/Images/Perks/still-sight.webp"
+        "image": "/Images/PerksCharacters/AestriYazar/still-sight.webp"
       },
       {
         "label": "Callejero",
-        "image": "/Images/Perks/streetwise.webp"
+        "image": "/Images/PerksCharacters/NeaKarlsson/streetwise.webp"
       },
       {
         "label": "Fuerza en las Sombras",
-        "image": "/Images/Perks/strength-in-shadows.webp"
+        "image": "/Images/PerksCharacters/SableWard/strength-in-shadows.webp"
       },
       {
         "label": "Trabajo en Equipo: Sigilo Colectivo",
-        "image": "/Images/Perks/teamwork-collective-stealth.webp"
+        "image": "/Images/PerksCharacters/RenatoLyra/teamwork-collective-stealth.webp"
       },
       {
         "label": "Trabajo en Equipo: Circuito Completo",
-        "image": "/Images/Perks/teamwork-full-circuit.webp"
+        "image": "/Images/PerksCharacters/DustinHenderson/teamwork-full-circuit.webp"
       },
       {
         "label": "Trabajo en Equipo: Poder de Dos",
-        "image": "/Images/Perks/teamwork-power-of-two.webp"
+        "image": "/Images/PerksCharacters/ThalitaLyra/teamwork-power-of-two.webp"
       },
       {
         "label": "Trabajo en Equipo: Derribar",
-        "image": "/Images/Perks/teamwork-throw-down.webp"
+        "image": "/Images/PerksCharacters/MichonneGrimes/teamwork-throw-down.webp"
       },
       {
         "label": "Trabajo en Equipo: Endurecer",
-        "image": "/Images/Perks/teamwork-toughen-up.webp"
+        "image": "/Images/PerksCharacters/RickGrimes/teamwork-toughen-up.webp"
       },
       {
         "label": "Técnico",
-        "image": "/Images/Perks/technician.webp"
+        "image": "/Images/PerksCharacters/FengMin/technician.webp"
       },
       {
         "label": "Tenacidad",
-        "image": "/Images/Perks/tenacity.webp"
+        "image": "/Images/PerksCharacters/TappDetective/tenacity.webp"
       },
       {
         "label": "Esto No Está Pasando",
-        "image": "/Images/Perks/this-is-not-happening.webp"
+        "image": "/Images/PerksCharacters/General/this-is-not-happening.webp"
       },
       {
         "label": "Solucionador de Problemas",
-        "image": "/Images/Perks/troubleshooter.webp"
+        "image": "/Images/PerksCharacters/GabrielSoma/troubleshooter.webp"
       },
       {
         "label": "Irrompible",
-        "image": "/Images/Perks/unbreakable.webp"
+        "image": "/Images/PerksCharacters/BillOverbeck/unbreakable.webp"
       },
       {
         "label": "Subir la Apuesta",
-        "image": "/Images/Perks/up-the-ante.webp"
+        "image": "/Images/PerksCharacters/AceVisconti/up-the-ante.webp"
       },
       {
         "label": "Evasión Urbana",
-        "image": "/Images/Perks/urban-evasion.webp"
+        "image": "/Images/PerksCharacters/NeaKarlsson/urban-evasion.webp"
       },
       {
         "label": "Vigilia",
-        "image": "/Images/Perks/vigil.webp"
+        "image": "/Images/PerksCharacters/QuentinSmith/vigil.webp"
       },
       {
         "label": "Visionario",
-        "image": "/Images/Perks/visionary.webp"
+        "image": "/Images/PerksCharacters/FelixRichter/visionary.webp"
       },
       {
         "label": "¡Despierta!",
-        "image": "/Images/Perks/wake-up.webp"
+        "image": "/Images/PerksCharacters/QuentinSmith/wake-up.webp"
       },
       {
         "label": "Lo Lograremos",
-        "image": "/Images/Perks/well-make-it.webp"
+        "image": "/Images/PerksCharacters/General/well-make-it.webp"
       },
       {
         "label": "Viviremos para Siempre",
-        "image": "/Images/Perks/were-gonna-live-forever.webp"
+        "image": "/Images/PerksCharacters/DavidKing/were-gonna-live-forever.webp"
       },
       {
         "label": "Te Vemos",
-        "image": "/Images/Perks/we-see-you.webp"
+        "image": "/Images/PerksCharacters/Eleven/we-see-you.webp"
       },
       {
         "label": "Malvado",
-        "image": "/Images/Perks/wicked.webp"
+        "image": "/Images/PerksCharacters/SableWard/wicked.webp"
       },
       {
         "label": "Ventanas de Oportunidad",
-        "image": "/Images/Perks/windows-of-opportunity.webp"
+        "image": "/Images/PerksCharacters/KateDenson/windows-of-opportunity.webp"
       },
       {
         "label": "Escucha Telefónica",
-        "image": "/Images/Perks/wiretap.webp"
+        "image": "/Images/PerksCharacters/AdaWong/wiretap.webp"
       },
       {
         "label": "Cross Examination",
-        "image": "/Images/Perks/Cross_Examination.webp"
+        "image": "/Images/PerksCharacters/ShaneWiigwaas/Cross_Examination.webp"
       },
       {
         "label": "Lend A Hand",
-        "image": "/Images/Perks/Lend_A_Hand.webp"
+        "image": "/Images/PerksCharacters/ShaneWiigwaas/Lend_A_Hand.webp"
       },
       {
         "label": "Wide Open Throttle",
-        "image": "/Images/Perks/Wide_Open_Throttle.webp"
+        "image": "/Images/PerksCharacters/ShaneWiigwaas/Wide_Open_Throttle.webp"
       },
       {
         "label": "Boon: Steadfast",
-        "image": "/Images/Perks/Boon_Steadfast.webp"
+        "image": "/Images/PerksCharacters/AuroraStardotter/Boon_Steadfast.webp"
       },
       {
         "label": "Fruits Of Your Labor",
-        "image": "/Images/Perks/Fruits_Of_Your_Labor.webp"
+        "image": "/Images/PerksCharacters/AuroraStardotter/Fruits_Of_Your_Labor.webp"
       },
       {
         "label": "Salvation's Cry",
-        "image": "/Images/Perks/Salvations_Cry.webp"
+        "image": "/Images/PerksCharacters/AuroraStardotter/Salvations_Cry.webp"
       }
     ]
   },

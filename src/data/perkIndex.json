@@ -1,0 +1,686 @@
+{
+  "ace-in-the-hole.webp": {
+    "character": "Ace Visconti",
+    "folder": "AceVisconti"
+  },
+  "open-handed.webp": {
+    "character": "Ace Visconti",
+    "folder": "AceVisconti"
+  },
+  "up-the-ante.webp": {
+    "character": "Ace Visconti",
+    "folder": "AceVisconti"
+  },
+  "low-profile.webp": {
+    "character": "Ada Wong",
+    "folder": "AdaWong"
+  },
+  "wiretap.webp": {
+    "character": "Ada Wong",
+    "folder": "AdaWong"
+  },
+  "autodidact.webp": {
+    "character": "Adam Francis",
+    "folder": "AdamFrancis"
+  },
+  "deliverance.webp": {
+    "character": "Adam Francis",
+    "folder": "AdamFrancis"
+  },
+  "diversion.webp": {
+    "character": "Adam Francis",
+    "folder": "AdamFrancis"
+  },
+  "bardic-inspiration.webp": {
+    "character": "Aestri Yazar",
+    "folder": "AestriYazar"
+  },
+  "mirrored-illusion.webp": {
+    "character": "Aestri Yazar",
+    "folder": "AestriYazar"
+  },
+  "still-sight.webp": {
+    "character": "Aestri Yazar",
+    "folder": "AestriYazar"
+  },
+  "boon-illumination.webp": {
+    "character": "Alan Wake",
+    "folder": "AlanWake"
+  },
+  "champion-of-light.webp": {
+    "character": "Alan Wake",
+    "folder": "AlanWake"
+  },
+  "deadline.webp": {
+    "character": "Alan Wake",
+    "folder": "AlanWake"
+  },
+  "buckle-up.webp": {
+    "character": "Ashley Williams",
+    "folder": "AshleyWilliams"
+  },
+  "flip-flop.webp": {
+    "character": "Ashley Williams",
+    "folder": "AshleyWilliams"
+  },
+  "mettle-of-man.webp": {
+    "character": "Ashley Williams",
+    "folder": "AshleyWilliams"
+  },
+  "Boon_Steadfast.webp": {
+    "character": "Aurora Stardotter",
+    "folder": "AuroraStardotter"
+  },
+  "Fruits_Of_Your_Labor.webp": {
+    "character": "Aurora Stardotter",
+    "folder": "AuroraStardotter"
+  },
+  "Salvations_Cry.webp": {
+    "character": "Aurora Stardotter",
+    "folder": "AuroraStardotter"
+  },
+  "borrowed-time.webp": {
+    "character": "Bill Overbeck",
+    "folder": "BillOverbeck"
+  },
+  "left-behind.webp": {
+    "character": "Bill Overbeck",
+    "folder": "BillOverbeck"
+  },
+  "unbreakable.webp": {
+    "character": "Bill Overbeck",
+    "folder": "BillOverbeck"
+  },
+  "blood-pact.webp": {
+    "character": "Cheryl Mason",
+    "folder": "CherylMason"
+  },
+  "repressed-alliance.webp": {
+    "character": "Cheryl Mason",
+    "folder": "CherylMason"
+  },
+  "soul-guard.webp": {
+    "character": "Cheryl Mason",
+    "folder": "CherylMason"
+  },
+  "botany-knowledge.webp": {
+    "character": "Claudette Morel",
+    "folder": "ClaudetteMorel"
+  },
+  "empathy.webp": {
+    "character": "Claudette Morel",
+    "folder": "ClaudetteMorel"
+  },
+  "self-care.webp": {
+    "character": "Claudette Morel",
+    "folder": "ClaudetteMorel"
+  },
+  "dead-hard.webp": {
+    "character": "David King",
+    "folder": "DavidKing"
+  },
+  "no-mither.webp": {
+    "character": "David King",
+    "folder": "DavidKing"
+  },
+  "were-gonna-live-forever.webp": {
+    "character": "David King",
+    "folder": "DavidKing"
+  },
+  "bada-bada-boom.webp": {
+    "character": "Dustin Henderson",
+    "folder": "DustinHenderson"
+  },
+  "change-of-plan.webp": {
+    "character": "Dustin Henderson",
+    "folder": "DustinHenderson"
+  },
+  "teamwork-full-circuit.webp": {
+    "character": "Dustin Henderson",
+    "folder": "DustinHenderson"
+  },
+  "bond.webp": {
+    "character": "Dwight Fairfield",
+    "folder": "DwightFairfield"
+  },
+  "leader.webp": {
+    "character": "Dwight Fairfield",
+    "folder": "DwightFairfield"
+  },
+  "prove-thyself.webp": {
+    "character": "Dwight Fairfield",
+    "folder": "DwightFairfield"
+  },
+  "extrasensory-perception.webp": {
+    "character": "Once",
+    "folder": "Eleven"
+  },
+  "we-see-you.webp": {
+    "character": "Once",
+    "folder": "Eleven"
+  },
+  "chemical-trap.webp": {
+    "character": "Ellen Ripley",
+    "folder": "EllenRipley"
+  },
+  "light-footed.webp": {
+    "character": "Ellen Ripley",
+    "folder": "EllenRipley"
+  },
+  "lucky-star.webp": {
+    "character": "Ellen Ripley",
+    "folder": "EllenRipley"
+  },
+  "appraisal.webp": {
+    "character": "Elodie Rakoto",
+    "folder": "ElodieRakoto"
+  },
+  "deception.webp": {
+    "character": "Elodie Rakoto",
+    "folder": "ElodieRakoto"
+  },
+  "built-to-last.webp": {
+    "character": "Felix Richter",
+    "folder": "FelixRichter"
+  },
+  "desperate-measures.webp": {
+    "character": "Felix Richter",
+    "folder": "FelixRichter"
+  },
+  "visionary.webp": {
+    "character": "Felix Richter",
+    "folder": "FelixRichter"
+  },
+  "alert.webp": {
+    "character": "Feng Min",
+    "folder": "FengMin"
+  },
+  "lithe.webp": {
+    "character": "Feng Min",
+    "folder": "FengMin"
+  },
+  "technician.webp": {
+    "character": "Feng Min",
+    "folder": "FengMin"
+  },
+  "made-for-this.webp": {
+    "character": "Gabriel Soma",
+    "folder": "GabrielSoma"
+  },
+  "scavenger.webp": {
+    "character": "Gabriel Soma",
+    "folder": "GabrielSoma"
+  },
+  "troubleshooter.webp": {
+    "character": "Gabriel Soma",
+    "folder": "GabrielSoma"
+  },
+  "dark-sense.webp": {
+    "character": "General",
+    "folder": "General"
+  },
+  "deja-vu.webp": {
+    "character": "General",
+    "folder": "General"
+  },
+  "hope.webp": {
+    "character": "General",
+    "folder": "General"
+  },
+  "kindred.webp": {
+    "character": "General",
+    "folder": "General"
+  },
+  "lightweight.webp": {
+    "character": "General",
+    "folder": "General"
+  },
+  "no-one-left-behind.webp": {
+    "character": "General",
+    "folder": "General"
+  },
+  "plunderers-instinct.webp": {
+    "character": "General",
+    "folder": "General"
+  },
+  "premonition.webp": {
+    "character": "General",
+    "folder": "General"
+  },
+  "resilience.webp": {
+    "character": "General",
+    "folder": "General"
+  },
+  "slippery-meat.webp": {
+    "character": "General",
+    "folder": "General"
+  },
+  "small-game.webp": {
+    "character": "General",
+    "folder": "General"
+  },
+  "spine-chill.webp": {
+    "character": "General",
+    "folder": "General"
+  },
+  "this-is-not-happening.webp": {
+    "character": "General",
+    "folder": "General"
+  },
+  "well-make-it.webp": {
+    "character": "General",
+    "folder": "General"
+  },
+  "inner-focus.webp": {
+    "character": "Haddie Kaur",
+    "folder": "HaddieKaur"
+  },
+  "residual-manifest.webp": {
+    "character": "Haddie Kaur",
+    "folder": "HaddieKaur"
+  },
+  "calm-spirit.webp": {
+    "character": "Jake Park",
+    "folder": "JakePark"
+  },
+  "iron-will.webp": {
+    "character": "Jake Park",
+    "folder": "JakePark"
+  },
+  "saboteur.webp": {
+    "character": "Jake Park",
+    "folder": "JakePark"
+  },
+  "head-on.webp": {
+    "character": "Jane Romero",
+    "folder": "JaneRomero"
+  },
+  "poised.webp": {
+    "character": "Jane Romero",
+    "folder": "JaneRomero"
+  },
+  "solidarity.webp": {
+    "character": "Jane Romero",
+    "folder": "JaneRomero"
+  },
+  "aftercare.webp": {
+    "character": "Jeff Johansen",
+    "folder": "JeffJohansen"
+  },
+  "breakdown.webp": {
+    "character": "Jeff Johansen",
+    "folder": "JeffJohansen"
+  },
+  "distortion.webp": {
+    "character": "Jeff Johansen",
+    "folder": "JeffJohansen"
+  },
+  "blast-mine.webp": {
+    "character": "Jill Valentine",
+    "folder": "JillValentine"
+  },
+  "resurgence.webp": {
+    "character": "Jill Valentine",
+    "folder": "JillValentine"
+  },
+  "boon-exponential.webp": {
+    "character": "Jonah Vasquez",
+    "folder": "JonahVasquez"
+  },
+  "corrective-action.webp": {
+    "character": "Jonah Vasquez",
+    "folder": "JonahVasquez"
+  },
+  "overcome.webp": {
+    "character": "Jonah Vasquez",
+    "folder": "JonahVasquez"
+  },
+  "boil-over.webp": {
+    "character": "Kate Denson",
+    "folder": "KateDenson"
+  },
+  "dance-with-me.webp": {
+    "character": "Kate Denson",
+    "folder": "KateDenson"
+  },
+  "windows-of-opportunity.webp": {
+    "character": "Kate Denson",
+    "folder": "KateDenson"
+  },
+  "a-place-for-us.webp": {
+    "character": "Kwon Tae Young",
+    "folder": "KwonTae-Young"
+  },
+  "five-moves-ahead.webp": {
+    "character": "Kwon Tae Young",
+    "folder": "KwonTae-Young"
+  },
+  "flow-state.webp": {
+    "character": "Kwon Tae Young",
+    "folder": "KwonTae-Young"
+  },
+  "finesse.webp": {
+    "character": "Lara Croft",
+    "folder": "LaraCroft"
+  },
+  "hardened.webp": {
+    "character": "Lara Croft",
+    "folder": "LaraCroft"
+  },
+  "specialist.webp": {
+    "character": "Lara Croft",
+    "folder": "LaraCroft"
+  },
+  "decisive-strike.webp": {
+    "character": "Laurie Strode",
+    "folder": "LaurieStrode"
+  },
+  "object-of-obsession.webp": {
+    "character": "Laurie Strode",
+    "folder": "LaurieStrode"
+  },
+  "sole-survivor.webp": {
+    "character": "Laurie Strode",
+    "folder": "LaurieStrode"
+  },
+  "bite-the-bullet.webp": {
+    "character": "Leon SKennedy",
+    "folder": "LeonSKennedy"
+  },
+  "flashbang.webp": {
+    "character": "Leon SKennedy",
+    "folder": "LeonSKennedy"
+  },
+  "rookie-spirit.webp": {
+    "character": "Leon SKennedy",
+    "folder": "LeonSKennedy"
+  },
+  "adrenaline.webp": {
+    "character": "Meg Thomas",
+    "folder": "MegThomas"
+  },
+  "quick-quiet.webp": {
+    "character": "Meg Thomas",
+    "folder": "MegThomas"
+  },
+  "sprint-burst.webp": {
+    "character": "Meg Thomas",
+    "folder": "MegThomas"
+  },
+  "conviction.webp": {
+    "character": "Michonne Grimes",
+    "folder": "MichonneGrimes"
+  },
+  "last-stand.webp": {
+    "character": "Michonne Grimes",
+    "folder": "MichonneGrimes"
+  },
+  "teamwork-throw-down.webp": {
+    "character": "Michonne Grimes",
+    "folder": "MichonneGrimes"
+  },
+  "boon-circle-of-healing.webp": {
+    "character": "Mikaela Reid",
+    "folder": "MikaelaReid"
+  },
+  "boon-shadow-step.webp": {
+    "character": "Mikaela Reid",
+    "folder": "MikaelaReid"
+  },
+  "clairvoyance.webp": {
+    "character": "Mikaela Reid",
+    "folder": "MikaelaReid"
+  },
+  "better-together.webp": {
+    "character": "Nancy Wheeler",
+    "folder": "NancyWheeler"
+  },
+  "fixated.webp": {
+    "character": "Nancy Wheeler",
+    "folder": "NancyWheeler"
+  },
+  "inner-strength.webp": {
+    "character": "Nancy Wheeler",
+    "folder": "NancyWheeler"
+  },
+  "balanced-landing.webp": {
+    "character": "Nea Karlsson",
+    "folder": "NeaKarlsson"
+  },
+  "streetwise.webp": {
+    "character": "Nea Karlsson",
+    "folder": "NeaKarlsson"
+  },
+  "urban-evasion.webp": {
+    "character": "Nea Karlsson",
+    "folder": "NeaKarlsson"
+  },
+  "dramaturgy.webp": {
+    "character": "Nicolas Cage",
+    "folder": "NicolasCage"
+  },
+  "plot-twist.webp": {
+    "character": "Nicolas Cage",
+    "folder": "NicolasCage"
+  },
+  "scene-partner.webp": {
+    "character": "Nicolas Cage",
+    "folder": "NicolasCage"
+  },
+  "do-no-harm.webp": {
+    "character": "Orella Rose",
+    "folder": "OrelaRose"
+  },
+  "duty-of-care.webp": {
+    "character": "Orella Rose",
+    "folder": "OrelaRose"
+  },
+  "rapid-response.webp": {
+    "character": "Orella Rose",
+    "folder": "OrelaRose"
+  },
+  "pharmacy.webp": {
+    "character": "Quentin Smith",
+    "folder": "QuentinSmith"
+  },
+  "vigil.webp": {
+    "character": "Quentin Smith",
+    "folder": "QuentinSmith"
+  },
+  "wake-up.webp": {
+    "character": "Quentin Smith",
+    "folder": "QuentinSmith"
+  },
+  "better-than-new.webp": {
+    "character": "Rebecca Chambers",
+    "folder": "RebeccaChambers"
+  },
+  "hyperfocus.webp": {
+    "character": "Rebecca Chambers",
+    "folder": "RebeccaChambers"
+  },
+  "reassurance.webp": {
+    "character": "Rebecca Chambers",
+    "folder": "RebeccaChambers"
+  },
+  "background-player.webp": {
+    "character": "Renato Lyra",
+    "folder": "RenatoLyra"
+  },
+  "blood-rush.webp": {
+    "character": "Renato Lyra",
+    "folder": "RenatoLyra"
+  },
+  "teamwork-collective-stealth.webp": {
+    "character": "Renato Lyra",
+    "folder": "RenatoLyra"
+  },
+  "apocalyptic-ingenuity.webp": {
+    "character": "Rick Grimes",
+    "folder": "RickGrimes"
+  },
+  "come-and-get-me.webp": {
+    "character": "Rick Grimes",
+    "folder": "RickGrimes"
+  },
+  "teamwork-toughen-up.webp": {
+    "character": "Rick Grimes",
+    "folder": "RickGrimes"
+  },
+  "invocation-weaving-spiders.webp": {
+    "character": "Sable Ward",
+    "folder": "SableWard"
+  },
+  "strength-in-shadows.webp": {
+    "character": "Sable Ward",
+    "folder": "SableWard"
+  },
+  "wicked.webp": {
+    "character": "Sable Ward",
+    "folder": "SableWard"
+  },
+  "Cross_Examination.webp": {
+    "character": "Shane Wiigwaas",
+    "folder": "ShaneWiigwaas"
+  },
+  "Lend_A_Hand.webp": {
+    "character": "Shane Wiigwaas",
+    "folder": "ShaneWiigwaas"
+  },
+  "Wide_Open_Throttle.webp": {
+    "character": "Shane Wiigwaas",
+    "folder": "ShaneWiigwaas"
+  },
+  "babysitter.webp": {
+    "character": "Steve Harrington",
+    "folder": "SteveHarrington"
+  },
+  "camaraderie.webp": {
+    "character": "Steve Harrington",
+    "folder": "SteveHarrington"
+  },
+  "second-wind.webp": {
+    "character": "Steve Harrington",
+    "folder": "SteveHarrington"
+  },
+  "detectives-hunch.webp": {
+    "character": "Detective Tapp",
+    "folder": "TappDetective"
+  },
+  "stake-out.webp": {
+    "character": "Detective Tapp",
+    "folder": "TappDetective"
+  },
+  "tenacity.webp": {
+    "character": "Detective Tapp",
+    "folder": "TappDetective"
+  },
+  "clean-break.webp": {
+    "character": "Taurie Cain",
+    "folder": "TaurieCain"
+  },
+  "invocation-treacherous-crows.webp": {
+    "character": "Taurie Cain",
+    "folder": "TaurieCain"
+  },
+  "shoulder-the-burden.webp": {
+    "character": "Taurie Cain",
+    "folder": "TaurieCain"
+  },
+  "cut-loose.webp": {
+    "character": "Thalita Lyra",
+    "folder": "ThalitaLyra"
+  },
+  "friendly-competition.webp": {
+    "character": "Thalita Lyra",
+    "folder": "ThalitaLyra"
+  },
+  "teamwork-power-of-two.webp": {
+    "character": "Thalita Lyra",
+    "folder": "ThalitaLyra"
+  },
+  "exultation.webp": {
+    "character": "Trevor Belmont",
+    "folder": "TrevorBelmont"
+  },
+  "eyes-of-belmont.webp": {
+    "character": "Trevor Belmont",
+    "folder": "TrevorBelmont"
+  },
+  "moment-of-glory.webp": {
+    "character": "Trevor Belmont",
+    "folder": "TrevorBelmont"
+  },
+  "ghost-notes.webp": {
+    "character": "Vee Boonyasak",
+    "folder": "VeeBoonyasak"
+  },
+  "one-two-three-four.webp": {
+    "character": "Vee Boonyasak",
+    "folder": "VeeBoonyasak"
+  },
+  "road-life.webp": {
+    "character": "Vee Boonyasak",
+    "folder": "VeeBoonyasak"
+  },
+  "fogwise.webp": {
+    "character": "Vittorio Toscano",
+    "folder": "VittorioToscano"
+  },
+  "potential-energy.webp": {
+    "character": "Vittorio Toscano",
+    "folder": "VittorioToscano"
+  },
+  "quick-gambit.webp": {
+    "character": "Vittorio Toscano",
+    "folder": "VittorioToscano"
+  },
+  "boon-dark-theory.webp": {
+    "character": "Yoichi Asakawa",
+    "folder": "YoichiAsakawa"
+  },
+  "empathic-connection.webp": {
+    "character": "Yoichi Asakawa",
+    "folder": "YoichiAsakawa"
+  },
+  "parental-guidance.webp": {
+    "character": "Yoichi Asakawa",
+    "folder": "YoichiAsakawa"
+  },
+  "any-means-necessary.webp": {
+    "character": "Yui Kimura",
+    "folder": "YuiKimura"
+  },
+  "breakout.webp": {
+    "character": "Yui Kimura",
+    "folder": "YuiKimura"
+  },
+  "lucky-break.webp": {
+    "character": "Yui Kimura",
+    "folder": "YuiKimura"
+  },
+  "fast-track.webp": {
+    "character": "Yun Jin Lee",
+    "folder": "Yun-JinLee"
+  },
+  "self-preservation.webp": {
+    "character": "Yun Jin Lee",
+    "folder": "Yun-JinLee"
+  },
+  "smash-hit.webp": {
+    "character": "Yun Jin Lee",
+    "folder": "Yun-JinLee"
+  },
+  "for-the-people.webp": {
+    "character": "Zarina Kassir",
+    "folder": "ZarinaKassir"
+  },
+  "off-the-record.webp": {
+    "character": "Zarina Kassir",
+    "folder": "ZarinaKassir"
+  },
+  "red-herring.webp": {
+    "character": "Zarina Kassir",
+    "folder": "ZarinaKassir"
+  }
+}
