@@ -1,6 +1,6 @@
 const STORAGE_KEY = "dbd-wheels-config";
 const VERSION_KEY = "dbd-wheels-version";
-const CURRENT_VERSION = "10.0"; // Fix imagen de Juicio (K44_TheJudgment) + botones seleccionar/deseleccionar todo
+const CURRENT_VERSION = "11.0"; // Jason ahora usa K43_TheJason_Portrait.webp (eliminado .png)
 
 export function loadWheels() {
   try {
