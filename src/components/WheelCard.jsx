@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import SpinWheel from "./SpinWheel";
 import RolesEditor from "./RolesEditor";
 import PerkSelector from "./PerkSelector";
-import { perkImageSrc, perkEnglishName } from "../utils/perks";
+import { perkImageSrc, perkEnglishName, isCatalogPerk } from "../utils/perks";
 
 const ELIMINATION_STORAGE_KEY = "dbd-elimination";
 // Ícono usado por defecto para las "entradas especiales" (texto libre) que se
@@ -36,6 +36,7 @@ export default function WheelCard({
   onRolesChange,
   onShowPerksChange,
   onAddOptions,
+  onSetOptions,
   onResetWheel,
   hasDefault = false,
   cleanMode = false,
@@ -304,13 +305,25 @@ export default function WheelCard({
     }
   }
 
-  // Confirma la selección del catálogo de perks y las agrega a la ruleta.
+  // Perks del catálogo que ya están en la ruleta (para mostrarlas marcadas).
+  const catalogSelectedPerks = isPerksWheel
+    ? wheel.options
+        .filter((o) => o && typeof o === "object" && isCatalogPerk(o.image))
+        .map((o) => ({ name: o.label, image: o.image.split("/").pop() }))
+    : [];
+
+  // Confirma la selección del catálogo: reemplaza las perks del catálogo por las
+  // marcadas, conservando las entradas especiales/manuales (no del catálogo).
   function handleConfirmPerkCatalog(perks) {
-    const newOptions = perks.map((p) => ({
+    const nonCatalog = wheel.options.filter(
+      (o) => !(o && typeof o === "object" && isCatalogPerk(o.image))
+    );
+    const selected = perks.map((p) => ({
       label: p.name,
       image: perkImageSrc(p.image),
     }));
-    if (onAddOptions) onAddOptions(wheel.id, newOptions);
+    // Mantener primero las del catálogo (en el orden elegido) y luego las manuales.
+    if (onSetOptions) onSetOptions(wheel.id, [...selected, ...nonCatalog]);
     setShowPerkCatalog(false);
   }
 
@@ -569,7 +582,7 @@ export default function WheelCard({
                   className="wheel-card__catalog-btn"
                   onClick={() => setShowPerkCatalog(true)}
                 >
-                  + Agregar desde catálogo
+                  Catálogo de perks
                 </button>
               )}
               <button
@@ -655,10 +668,10 @@ export default function WheelCard({
 
       {showPerkCatalog && (
         <PerkSelector
-          selectedPerks={[]}
+          selectedPerks={catalogSelectedPerks}
           maxPerks={null}
-          title="Agregar perks desde el catálogo"
-          confirmLabel="Agregar a la ruleta"
+          title="Perks de la ruleta (marca o desmarca)"
+          confirmLabel="Guardar cambios"
           onConfirm={handleConfirmPerkCatalog}
           onClose={() => setShowPerkCatalog(false)}
         />

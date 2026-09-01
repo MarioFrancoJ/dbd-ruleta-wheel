@@ -26,6 +26,12 @@ function toFileName(imagePath) {
   return parts[parts.length - 1];
 }
 
+// Indica si un archivo/ruta corresponde a una perk del catálogo (está indexada).
+export function isCatalogPerk(imageOrFile) {
+  const file = toFileName(imageOrFile);
+  return Boolean(perkIndex[file]);
+}
+
 // Devuelve el personaje (superviviente) dueño de una perk a partir del nombre
 // de archivo de su imagen. "General" para perks base/comunes, "" si se desconoce.
 export function perkCharacter(fileName) {
