@@ -1,5 +1,48 @@
 :root {
   color-scheme: dark;
+
+  /* ===== ESCALA TIPOGRÁFICA UNIFICADA =====
+     Única fuente de verdad para todos los tamaños de texto de la app.
+     Escala permitida: 12 / 14 / 16 / 20 / 24 / 32 px */
+  --fs-12: 12px;
+  --fs-14: 14px;
+  --fs-16: 16px;
+  --fs-20: 20px;
+  --fs-24: 24px;
+  --fs-32: 32px;
+
+  /* Pesos de fuente */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* ===== TOKENS SEMÁNTICOS (jerarquía) =====
+     Úsense estos en lugar de valores sueltos. */
+
+  /* H1 principal */
+  --type-h1-size: var(--fs-32);
+  --type-h1-weight: var(--fw-bold);
+
+  /* Títulos de sección (Resultado, Opciones, Roles y versiones...) */
+  --type-section-size: var(--fs-20);
+  --type-section-weight: var(--fw-bold);
+
+  /* Labels (Tiempo de giro, Modo, Mostrar perks...) */
+  --type-label-size: var(--fs-14);
+  --type-label-weight: var(--fw-medium);
+
+  /* Opciones y nombres (Killers, Survivors, Roles...) */
+  --type-option-size: var(--fs-16);
+  --type-option-weight: var(--fw-medium);
+
+  /* Texto secundario (Sin resultado, cantidad de versiones, ayudas) */
+  --type-secondary-size: var(--fs-14);
+  --type-secondary-weight: var(--fw-regular);
+
+  /* Botones (Random, Detener, Restablecer, Crear rol...) */
+  --type-button-size: var(--fs-16);
+  --type-button-weight: var(--fw-semibold);
 }
 
 html,
