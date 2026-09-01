@@ -1468,6 +1468,42 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
   font-size: 11px;
 }
 
+.perk-selector__bulk {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.perk-selector__bulk-btn {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: rgba(148, 163, 184, 0.12);
+  color: #e2e8f0;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.perk-selector__bulk-btn:hover {
+  background: rgba(148, 163, 184, 0.25);
+}
+
+.perk-selector__bulk-hint {
+  font-size: 12px;
+  color: #94a3b8;
+  font-style: italic;
+}
+
+.theme-light .perk-selector__bulk-btn {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+  color: #0f172a;
+}
+
 .perk-selector__search {
   flex: 0 0 auto;
   padding: 10px 14px;

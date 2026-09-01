@@ -69,6 +69,27 @@ export default function CatalogSelector({
     });
   }
 
+  // Selecciona todos los resultados visibles (respeta el límite si lo hay).
+  function selectAllVisible() {
+    setSelection((prev) => {
+      const next = new Set(prev);
+      for (const it of results) {
+        if (hasLimit && next.size >= maxItems) break;
+        next.add(it.value);
+      }
+      return next;
+    });
+  }
+
+  // Deselecciona todos los resultados visibles.
+  function deselectAllVisible() {
+    setSelection((prev) => {
+      const next = new Set(prev);
+      for (const it of results) next.delete(it.value);
+      return next;
+    });
+  }
+
   const selectedItems = [...selection]
     .map((v) => byValue.get(v))
     .filter(Boolean);
@@ -119,6 +140,28 @@ export default function CatalogSelector({
           onChange={(e) => setQuery(e.target.value)}
           autoFocus
         />
+
+        <div className="perk-selector__bulk">
+          <button
+            type="button"
+            className="perk-selector__bulk-btn"
+            onClick={selectAllVisible}
+          >
+            Seleccionar todo
+          </button>
+          <button
+            type="button"
+            className="perk-selector__bulk-btn"
+            onClick={deselectAllVisible}
+          >
+            Deseleccionar todo
+          </button>
+          {query.trim() && (
+            <span className="perk-selector__bulk-hint">
+              (aplica a los resultados de la búsqueda)
+            </span>
+          )}
+        </div>
 
         <div className="perk-selector__grid">
           {results.map((item) => {

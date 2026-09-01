@@ -1,6 +1,6 @@
 const STORAGE_KEY = "dbd-wheels-config";
 const VERSION_KEY = "dbd-wheels-version";
-const CURRENT_VERSION = "9.0"; // +5 perks .png, fix cruce streetwise/urban-evasion, Malicia
+const CURRENT_VERSION = "10.0"; // Fix imagen de Juicio (K44_TheJudgment) + botones seleccionar/deseleccionar todo
 
 export function loadWheels() {
   try {
