@@ -7,7 +7,7 @@ import { perkImageSrc } from "../utils/perks";
 const ELIMINATION_STORAGE_KEY = "dbd-elimination";
 // Ícono usado por defecto para las "entradas especiales" (texto libre) que se
 // agregan manualmente a cualquier ruleta (p. ej. Comodín, Slot Vacío, 0 Perks).
-const SPECIAL_ENTRY_ICON = "/Images/Perks/Random_Icon_Perk.webp";
+const SPECIAL_ENTRY_ICON = "/Images/PerksCharacters/_Especiales/Random_Icon_Perk.webp";
 const PERKS_WHEEL_ID = "perks-survivors";
 
 function loadEliminationState(wheelId) {
@@ -276,7 +276,14 @@ export default function WheelCard({
     resultLabel = result
       ? (typeof result === "object" ? result.label : result)
       : null;
-    resultImage = result && typeof result === "object" ? result.image : null;
+    const rawImage = result && typeof result === "object" ? result.image : null;
+    // En la ruleta de perks resolvemos la ruta vía el índice de PerksCharacters
+    // (compatibilidad con rutas antiguas "/Images/Perks/xxx.webp").
+    resultImage = rawImage
+      ? isPerksWheel
+        ? perkImageSrc(rawImage)
+        : rawImage
+      : null;
   }
 
   // Agrega una entrada especial de texto libre (con ícono genérico) a la ruleta.
