@@ -262,6 +262,12 @@ export default function App() {
     });
   }
 
+  // Reemplaza por completo el array de opciones de una ruleta.
+  function handleSetOptions(id, nextOptions) {
+    if (!Array.isArray(nextOptions)) return;
+    updateWheel(id, (wheel) => ({ ...wheel, options: nextOptions }));
+  }
+
   function handleRemoveOption(id, index) {
     updateWheel(id, (wheel) => ({
       ...wheel,
@@ -412,6 +418,7 @@ export default function App() {
               onRolesChange={handleRolesChange}
               onShowPerksChange={handleShowPerksChange}
               onAddOptions={handleAddOptions}
+              onSetOptions={handleSetOptions}
               onResetWheel={handleResetWheel}
               hasDefault={defaultWheels.some((w) => w.id === wheel.id)}
               cleanMode={cleanMode}
