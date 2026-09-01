@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import SpinWheel from "./SpinWheel";
 import RolesEditor from "./RolesEditor";
-import PerkSelector from "./PerkSelector";
-import { perkImageSrc, perkEnglishName, isCatalogPerk } from "../utils/perks";
+import CatalogSelector from "./CatalogSelector";
+import { perkImageSrc, perkEnglishName } from "../utils/perks";
+import { catalogForWheel, optionCatalogValue } from "../utils/catalogs";
 
 const ELIMINATION_STORAGE_KEY = "dbd-elimination";
 // Ícono usado por defecto para las "entradas especiales" (texto libre) que se
@@ -44,10 +45,13 @@ export default function WheelCard({
   const isRolesWheel = wheel.type === "roles";
   const isPerksWheel = wheel.id === PERKS_WHEEL_ID;
   const showPerks = wheel.showPerks !== false;
+  // Catálogo asociado a esta ruleta (perks, killers o survivors), o null.
+  const catalog = catalogForWheel(wheel.id);
+  const hasCatalog = Array.isArray(catalog) && catalog.length > 0;
   // Buscador para filtrar la lista de opciones existente (mostrar/ocultar rápido)
   const [optionQuery, setOptionQuery] = useState("");
-  // Modal del catálogo de perks (solo ruleta de perks)
-  const [showPerkCatalog, setShowPerkCatalog] = useState(false);
+  // Modal del catálogo (ruletas con catálogo: perks, killers, survivors)
+  const [showCatalog, setShowCatalog] = useState(false);
   const [isSpinning, setIsSpinning] = useState(false);
   const [rotation, setRotation] = useState(0);
   const [showWinnerOverlay, setShowWinnerOverlay] = useState(false);
@@ -305,26 +309,29 @@ export default function WheelCard({
     }
   }
 
-  // Perks del catálogo que ya están en la ruleta (para mostrarlas marcadas).
-  const catalogSelectedPerks = isPerksWheel
+  // Valores del catálogo que ya están en la ruleta (para mostrarlos marcados).
+  const catalogSelectedValues = hasCatalog
     ? wheel.options
-        .filter((o) => o && typeof o === "object" && isCatalogPerk(o.image))
-        .map((o) => ({ name: o.label, image: o.image.split("/").pop() }))
+        .map((o) => optionCatalogValue(wheel.id, o))
+        .filter((v) => v !== null)
     : [];
 
-  // Confirma la selección del catálogo: reemplaza las perks del catálogo por las
-  // marcadas, conservando las entradas especiales/manuales (no del catálogo).
-  function handleConfirmPerkCatalog(perks) {
+  // Confirma la selección del catálogo: reemplaza los items del catálogo por los
+  // marcados, conservando las entradas especiales/manuales (no del catálogo).
+  function handleConfirmCatalog(selectedValues) {
+    if (!hasCatalog) return;
+    const byValue = new Map(catalog.map((it) => [it.value, it]));
+    // Opciones actuales que NO son del catálogo (entradas especiales/manuales)
     const nonCatalog = wheel.options.filter(
-      (o) => !(o && typeof o === "object" && isCatalogPerk(o.image))
+      (o) => optionCatalogValue(wheel.id, o) === null
     );
-    const selected = perks.map((p) => ({
-      label: p.name,
-      image: perkImageSrc(p.image),
-    }));
-    // Mantener primero las del catálogo (en el orden elegido) y luego las manuales.
+    // Nuevas opciones del catálogo (en el orden elegido)
+    const selected = selectedValues
+      .map((v) => byValue.get(v))
+      .filter(Boolean)
+      .map((it) => ({ label: it.name, image: it.src }));
     if (onSetOptions) onSetOptions(wheel.id, [...selected, ...nonCatalog]);
-    setShowPerkCatalog(false);
+    setShowCatalog(false);
   }
 
   // Filtro del buscador de opciones: normaliza sin acentos.
@@ -576,13 +583,13 @@ export default function WheelCard({
                 value={optionQuery}
                 onChange={(e) => setOptionQuery(e.target.value)}
               />
-              {isPerksWheel && (
+              {hasCatalog && (
                 <button
                   type="button"
                   className="wheel-card__catalog-btn"
-                  onClick={() => setShowPerkCatalog(true)}
+                  onClick={() => setShowCatalog(true)}
                 >
-                  Catálogo de perks
+                  {isPerksWheel ? "Catálogo de perks" : "Catálogo"}
                 </button>
               )}
               <button
@@ -666,14 +673,24 @@ export default function WheelCard({
         </>
       )}
 
-      {showPerkCatalog && (
-        <PerkSelector
-          selectedPerks={catalogSelectedPerks}
-          maxPerks={null}
-          title="Perks de la ruleta (marca o desmarca)"
+      {showCatalog && hasCatalog && (
+        <CatalogSelector
+          catalog={catalog}
+          selectedValues={catalogSelectedValues}
+          maxItems={null}
+          showCharacter={isPerksWheel}
+          showEnglish={isPerksWheel}
+          title={
+            isPerksWheel
+              ? "Perks de la ruleta (marca o desmarca)"
+              : `${wheel.title} (marca o desmarca)`
+          }
           confirmLabel="Guardar cambios"
-          onConfirm={handleConfirmPerkCatalog}
-          onClose={() => setShowPerkCatalog(false)}
+          searchPlaceholder={
+            isPerksWheel ? "Buscar por perk o personaje..." : "Buscar..."
+          }
+          onConfirm={handleConfirmCatalog}
+          onClose={() => setShowCatalog(false)}
         />
       )}
     </div>
