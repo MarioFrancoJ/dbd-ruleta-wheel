@@ -1,6 +1,7 @@
 import { useState } from "react";
-import PerkSelector from "./PerkSelector";
-import { perkImageSrc } from "../utils/perks";
+import CatalogSelector from "./CatalogSelector";
+import { perkImageSrc, MAX_PERKS_PER_VERSION } from "../utils/perks";
+import { PERKS_CATALOG } from "../utils/catalogs";
 
 const DIFFICULTIES = ["Fácil", "Media", "Difícil"];
 
@@ -102,15 +103,25 @@ export default function RolesEditor({ roles = {}, options = [], onChange }) {
     commit(nextRoles);
   }
 
-  function confirmPerks(perks) {
+  // El CatalogSelector trabaja con `value` (nombre de archivo). Convertimos de
+  // vuelta a { name, image } usando el catálogo global de perks.
+  function confirmPerks(selectedValues) {
     if (!perkEditor) return;
+    const byValue = new Map(PERKS_CATALOG.map((it) => [it.value, it]));
+    const perks = selectedValues
+      .map((v) => byValue.get(v))
+      .filter(Boolean)
+      .map((it) => ({ name: it.name, image: it.value }));
     updateVersion(perkEditor.roleName, perkEditor.variantIndex, { perks });
     setPerkEditor(null);
   }
 
-  const currentEditorPerks =
+  const currentEditorValues =
     perkEditor && roles[perkEditor.roleName]
-      ? roles[perkEditor.roleName].variants[perkEditor.variantIndex]?.perks || []
+      ? (
+          roles[perkEditor.roleName].variants[perkEditor.variantIndex]?.perks ||
+          []
+        ).map((p) => p.image)
       : [];
 
   return (
@@ -262,8 +273,15 @@ export default function RolesEditor({ roles = {}, options = [], onChange }) {
       </div>
 
       {perkEditor && (
-        <PerkSelector
-          selectedPerks={currentEditorPerks}
+        <CatalogSelector
+          catalog={PERKS_CATALOG}
+          selectedValues={currentEditorValues}
+          maxItems={MAX_PERKS_PER_VERSION}
+          showCharacter
+          showEnglish
+          title="Seleccionar perks"
+          confirmLabel="Confirmar"
+          searchPlaceholder="Buscar por perk o personaje..."
           onConfirm={confirmPerks}
           onClose={() => setPerkEditor(null)}
         />
