@@ -1676,3 +1676,43 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
   border-color: #cbd5e1;
   color: #0f172a;
 }
+
+
+
+/* ===== NOMBRE EN INGLÉS (ruleta de perks) ===== */
+
+/* En el buscador: bajo el nombre en español */
+.perk-selector__item-en {
+  font-size: 10px;
+  color: #cbd5e1;
+  opacity: 0.75;
+  font-style: italic;
+}
+
+.perk-selector__item--selected .perk-selector__item-en {
+  color: #e9d5ff;
+  opacity: 0.9;
+}
+
+.theme-light .perk-selector__item-en {
+  color: #64748b;
+}
+
+/* En el resultado de la ruleta: bajo el nombre grande */
+.wheel-card__winner-en {
+  display: block;
+  margin-top: 6px;
+  font-size: 1rem;
+  font-style: italic;
+  color: #e5e7eb;
+  opacity: 0.8;
+  text-align: center;
+}
+
+.wheel-card--clean .wheel-card__winner-en {
+  font-size: 1.4rem;
+}
+
+.theme-light .wheel-card__winner-en {
+  color: #334155;
+}

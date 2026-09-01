@@ -104,6 +104,9 @@ export default function PerkSelector({
               >
                 <img src={perkImageSrc(perk.image)} alt={perk.name} />
                 <span>{perk.name}</span>
+                {perk.english && (
+                  <span className="perk-selector__item-en">{perk.english}</span>
+                )}
                 <span className="perk-selector__item-char">({character})</span>
               </button>
             );

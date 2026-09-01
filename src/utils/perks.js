@@ -34,6 +34,60 @@ export function perkCharacter(fileName) {
   return entry ? entry.character : "";
 }
 
+// Palabras que van en minúscula dentro del nombre en inglés (salvo la primera).
+const ENGLISH_LOWERCASE_WORDS = new Set([
+  "of", "the", "a", "an", "and", "in", "to", "for", "on", "with", "your",
+]);
+
+// Excepciones para nombres en inglés que el slug no reconstruye bien
+// (apóstrofes, dos puntos, mayúsculas especiales, etc.).
+const ENGLISH_NAME_OVERRIDES = {
+  "salvations-cry.webp": "Salvation's Cry",
+  "Salvations_Cry.webp": "Salvation's Cry",
+  "boon-steadfast.webp": "Boon: Steadfast",
+  "Boon_Steadfast.webp": "Boon: Steadfast",
+  "boon-circle-of-healing.webp": "Boon: Circle of Healing",
+  "boon-dark-theory.webp": "Boon: Dark Theory",
+  "boon-exponential.webp": "Boon: Exponential",
+  "boon-illumination.webp": "Boon: Illumination",
+  "boon-shadow-step.webp": "Boon: Shadow Step",
+  "invocation-treacherous-crows.webp": "Invocation: Treacherous Crows",
+  "invocation-weaving-spiders.webp": "Invocation: Weaving Spiders",
+  "teamwork-collective-stealth.webp": "Teamwork: Collective Stealth",
+  "teamwork-full-circuit.webp": "Teamwork: Full Circuit",
+  "teamwork-power-of-two.webp": "Teamwork: Power of Two",
+  "teamwork-throw-down.webp": "Teamwork: Throw Down",
+  "teamwork-toughen-up.webp": "Teamwork: Toughen Up",
+  "no-mither.webp": "No Mither",
+  "wake-up.webp": "Wake Up!",
+  "were-gonna-live-forever.webp": "We're Gonna Live Forever",
+  "well-make-it.webp": "We'll Make It",
+  "detectives-hunch.webp": "Detective's Hunch",
+  "plunderers-instinct.webp": "Plunderer's Instinct",
+  "deja-vu.webp": "Déjà Vu",
+  "come-and-get-me.webp": "Come and Get Me",
+  "eyes-of-belmont.webp": "Eyes of Belmont",
+  "a-place-for-us.webp": "A Place for Us",
+};
+
+// Devuelve el nombre en inglés de una perk a partir del nombre de archivo.
+// Usa el slug del archivo (que corresponde al nombre oficial en inglés) y una
+// tabla de excepciones para apóstrofes, dos puntos y acentos.
+export function perkEnglishName(fileName) {
+  const file = toFileName(fileName);
+  if (!file) return "";
+  if (ENGLISH_NAME_OVERRIDES[file]) return ENGLISH_NAME_OVERRIDES[file];
+  const base = file.replace(/\.webp$/i, "");
+  return base
+    .split(/[-_]/)
+    .map((word, i) => {
+      const lw = word.toLowerCase();
+      if (i > 0 && ENGLISH_LOWERCASE_WORDS.has(lw)) return lw;
+      return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+    })
+    .join(" ");
+}
+
 // Devuelve la ruta pública completa de la imagen de una perk. Acepta tanto un
 // nombre de archivo ("xxx.webp") como una ruta antigua ("/Images/Perks/xxx.webp")
 // y la resuelve a la ubicación real en PerksCharacters/{personaje}/.
@@ -62,7 +116,12 @@ export const GLOBAL_PERKS = (() => {
     .map((opt) => {
       const name = typeof opt === "object" ? opt.label : String(opt);
       const image = typeof opt === "object" ? toFileName(opt.image) : "";
-      return { name, image, character: perkCharacter(image) || "General" };
+      return {
+        name,
+        image,
+        character: perkCharacter(image) || "General",
+        english: perkEnglishName(image),
+      };
     })
     .filter((p) => p.name);
 })();
@@ -78,10 +137,11 @@ function normalize(str) {
 export function searchPerks(query) {
   const q = normalize(query).trim();
   if (!q) return GLOBAL_PERKS;
-  // Coincide por nombre de la perk o por el personaje asociado
+  // Coincide por nombre (español), nombre en inglés o personaje asociado
   return GLOBAL_PERKS.filter(
     (p) =>
       normalize(p.name).includes(q) ||
+      normalize(p.english).includes(q) ||
       normalize(p.character).includes(q)
   );
 }
