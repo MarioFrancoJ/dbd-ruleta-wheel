@@ -1,6 +1,6 @@
 const STORAGE_KEY = "dbd-wheels-config";
 const VERSION_KEY = "dbd-wheels-version";
-const CURRENT_VERSION = "7.0"; // Ruleta 'custom' genérica + editor de opciones (catálogo/especiales)
+const CURRENT_VERSION = "8.0"; // Nombres en español de perks actualizados (listado del usuario)
 
 export function loadWheels() {
   try {
