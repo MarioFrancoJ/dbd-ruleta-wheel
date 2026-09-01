@@ -461,7 +461,7 @@
             "difficulty": "Fácil",
             "perks": [
               {
-                "name": "Conocimiento en Botánica",
+                "name": "Conocimientos de Botánica",
                 "image": "botany-knowledge.webp"
               },
               {
@@ -469,7 +469,7 @@
                 "image": "well-make-it.webp"
               },
               {
-                "name": "Conexión Empática",
+                "name": "Conexión Empatica",
                 "image": "empathic-connection.webp"
               },
               {
@@ -483,7 +483,7 @@
             "difficulty": "Media",
             "perks": [
               {
-                "name": "Conocimiento en Botánica",
+                "name": "Conocimientos de Botánica",
                 "image": "botany-knowledge.webp"
               },
               {
@@ -491,7 +491,7 @@
                 "image": "well-make-it.webp"
               },
               {
-                "name": "Conexión Empática",
+                "name": "Conexión Empatica",
                 "image": "empathic-connection.webp"
               },
               {
@@ -505,7 +505,7 @@
             "difficulty": "Difícil",
             "perks": [
               {
-                "name": "Conocimiento en Botánica",
+                "name": "Conocimientos de Botánica",
                 "image": "botany-knowledge.webp"
               },
               {
@@ -513,7 +513,7 @@
                 "image": "well-make-it.webp"
               },
               {
-                "name": "Conexión Empática",
+                "name": "Conexión Empatica",
                 "image": "empathic-connection.webp"
               },
               {
@@ -532,7 +532,7 @@
             "difficulty": "Fácil",
             "perks": [
               {
-                "name": "Demuéstralo",
+                "name": "Demuestra lo que Vales",
                 "image": "prove-thyself.webp"
               },
               {
@@ -540,11 +540,11 @@
                 "image": "hyperfocus.webp"
               },
               {
-                "name": "Vigilancia",
+                "name": "Corazonada",
                 "image": "stake-out.webp"
               },
               {
-                "name": "Hecho para Durar",
+                "name": "Construcción Duradera",
                 "image": "built-to-last.webp"
               }
             ]
@@ -554,7 +554,7 @@
             "difficulty": "Media",
             "perks": [
               {
-                "name": "Demuéstralo",
+                "name": "Demuestra lo que Vales",
                 "image": "prove-thyself.webp"
               },
               {
@@ -562,11 +562,11 @@
                 "image": "hyperfocus.webp"
               },
               {
-                "name": "Vigilancia",
+                "name": "Corazonada",
                 "image": "stake-out.webp"
               },
               {
-                "name": "Hecho para Durar",
+                "name": "Construcción Duradera",
                 "image": "built-to-last.webp"
               }
             ]
@@ -576,7 +576,7 @@
             "difficulty": "Difícil",
             "perks": [
               {
-                "name": "Demuéstralo",
+                "name": "Demuestra lo que Vales",
                 "image": "prove-thyself.webp"
               },
               {
@@ -584,11 +584,11 @@
                 "image": "hyperfocus.webp"
               },
               {
-                "name": "Vigilancia",
+                "name": "Corazonada",
                 "image": "stake-out.webp"
               },
               {
-                "name": "Hecho para Durar",
+                "name": "Construcción Duradera",
                 "image": "built-to-last.webp"
               }
             ]
@@ -611,11 +611,11 @@
                 "image": "well-make-it.webp"
               },
               {
-                "name": "Fuera de Registro",
+                "name": "Extraoficial",
                 "image": "off-the-record.webp"
               },
               {
-                "name": "Niñero",
+                "name": "Canguro",
                 "image": "babysitter.webp"
               }
             ]
@@ -633,11 +633,11 @@
                 "image": "well-make-it.webp"
               },
               {
-                "name": "Fuera de Registro",
+                "name": "Extraoficial",
                 "image": "off-the-record.webp"
               },
               {
-                "name": "Niñero",
+                "name": "Canguro",
                 "image": "babysitter.webp"
               }
             ]
@@ -655,11 +655,11 @@
                 "image": "well-make-it.webp"
               },
               {
-                "name": "Fuera de Registro",
+                "name": "Extraoficial",
                 "image": "off-the-record.webp"
               },
               {
-                "name": "Niñero",
+                "name": "Canguro",
                 "image": "babysitter.webp"
               }
             ]
@@ -674,11 +674,11 @@
             "difficulty": "Fácil",
             "perks": [
               {
-                "name": "Bomba de Luz",
+                "name": "Granada Aturdidora",
                 "image": "flashbang.webp"
               },
               {
-                "name": "Jugador de Fondo",
+                "name": "Personaje Secundario",
                 "image": "background-player.webp"
               },
               {
@@ -696,11 +696,11 @@
             "difficulty": "Media",
             "perks": [
               {
-                "name": "Bomba de Luz",
+                "name": "Granada Aturdidora",
                 "image": "flashbang.webp"
               },
               {
-                "name": "Jugador de Fondo",
+                "name": "Personaje Secundario",
                 "image": "background-player.webp"
               },
               {
@@ -718,11 +718,11 @@
             "difficulty": "Difícil",
             "perks": [
               {
-                "name": "Bomba de Luz",
+                "name": "Granada Aturdidora",
                 "image": "flashbang.webp"
               },
               {
-                "name": "Jugador de Fondo",
+                "name": "Personaje Secundario",
                 "image": "background-player.webp"
               },
               {
@@ -745,7 +745,7 @@
             "difficulty": "Fácil",
             "perks": [
               {
-                "name": "Evasión Urbana",
+                "name": "Con Calle",
                 "image": "urban-evasion.webp"
               },
               {
@@ -767,7 +767,7 @@
             "difficulty": "Media",
             "perks": [
               {
-                "name": "Evasión Urbana",
+                "name": "Con Calle",
                 "image": "urban-evasion.webp"
               },
               {
@@ -789,7 +789,7 @@
             "difficulty": "Difícil",
             "perks": [
               {
-                "name": "Evasión Urbana",
+                "name": "Con Calle",
                 "image": "urban-evasion.webp"
               },
               {
@@ -816,11 +816,11 @@
             "difficulty": "Fácil",
             "perks": [
               {
-                "name": "Ventanas de Oportunidad",
+                "name": "Oportunidades",
                 "image": "windows-of-opportunity.webp"
               },
               {
-                "name": "Ágil",
+                "name": "Agilidad",
                 "image": "lithe.webp"
               },
               {
@@ -828,7 +828,7 @@
                 "image": "resilience.webp"
               },
               {
-                "name": "Esfuerzo Final",
+                "name": "Chungo",
                 "image": "dead-hard.webp"
               }
             ]
@@ -838,11 +838,11 @@
             "difficulty": "Media",
             "perks": [
               {
-                "name": "Ventanas de Oportunidad",
+                "name": "Oportunidades",
                 "image": "windows-of-opportunity.webp"
               },
               {
-                "name": "Ágil",
+                "name": "Agilidad",
                 "image": "lithe.webp"
               },
               {
@@ -850,7 +850,7 @@
                 "image": "resilience.webp"
               },
               {
-                "name": "Esfuerzo Final",
+                "name": "Chungo",
                 "image": "dead-hard.webp"
               }
             ]
@@ -860,11 +860,11 @@
             "difficulty": "Difícil",
             "perks": [
               {
-                "name": "Ventanas de Oportunidad",
+                "name": "Oportunidades",
                 "image": "windows-of-opportunity.webp"
               },
               {
-                "name": "Ágil",
+                "name": "Agilidad",
                 "image": "lithe.webp"
               },
               {
@@ -872,7 +872,7 @@
                 "image": "resilience.webp"
               },
               {
-                "name": "Esfuerzo Final",
+                "name": "Chungo",
                 "image": "dead-hard.webp"
               }
             ]
@@ -958,19 +958,19 @@
             "difficulty": "Fácil",
             "perks": [
               {
-                "name": "Saboteador",
+                "name": "Sabotaje",
                 "image": "saboteur.webp"
               },
               {
-                "name": "Colapso",
+                "name": "Ruptura",
                 "image": "breakdown.webp"
               },
               {
-                "name": "Rebeldía",
+                "name": "Arrebato",
                 "image": "boil-over.webp"
               },
               {
-                "name": "Jugador de Fondo",
+                "name": "Personaje Secundario",
                 "image": "background-player.webp"
               }
             ]
@@ -980,19 +980,19 @@
             "difficulty": "Media",
             "perks": [
               {
-                "name": "Saboteador",
+                "name": "Sabotaje",
                 "image": "saboteur.webp"
               },
               {
-                "name": "Colapso",
+                "name": "Ruptura",
                 "image": "breakdown.webp"
               },
               {
-                "name": "Rebeldía",
+                "name": "Arrebato",
                 "image": "boil-over.webp"
               },
               {
-                "name": "Jugador de Fondo",
+                "name": "Personaje Secundario",
                 "image": "background-player.webp"
               }
             ]
@@ -1002,19 +1002,19 @@
             "difficulty": "Difícil",
             "perks": [
               {
-                "name": "Saboteador",
+                "name": "Sabotaje",
                 "image": "saboteur.webp"
               },
               {
-                "name": "Colapso",
+                "name": "Ruptura",
                 "image": "breakdown.webp"
               },
               {
-                "name": "Rebeldía",
+                "name": "Arrebato",
                 "image": "boil-over.webp"
               },
               {
-                "name": "Jugador de Fondo",
+                "name": "Personaje Secundario",
                 "image": "background-player.webp"
               }
             ]
@@ -1029,19 +1029,19 @@
             "difficulty": "Fácil",
             "perks": [
               {
-                "name": "Fuera de Registro",
+                "name": "Extraoficial",
                 "image": "off-the-record.webp"
               },
               {
-                "name": "Golpe Decisivo",
+                "name": "Golpe decisivo",
                 "image": "decisive-strike.webp"
               },
               {
-                "name": "Esfuerzo Final",
+                "name": "Chungo",
                 "image": "dead-hard.webp"
               },
               {
-                "name": "Irrompible",
+                "name": "Inquebrantable",
                 "image": "unbreakable.webp"
               }
             ]
@@ -1051,19 +1051,19 @@
             "difficulty": "Media",
             "perks": [
               {
-                "name": "Fuera de Registro",
+                "name": "Extraoficial",
                 "image": "off-the-record.webp"
               },
               {
-                "name": "Golpe Decisivo",
+                "name": "Golpe decisivo",
                 "image": "decisive-strike.webp"
               },
               {
-                "name": "Esfuerzo Final",
+                "name": "Chungo",
                 "image": "dead-hard.webp"
               },
               {
-                "name": "Irrompible",
+                "name": "Inquebrantable",
                 "image": "unbreakable.webp"
               }
             ]
@@ -1073,19 +1073,19 @@
             "difficulty": "Difícil",
             "perks": [
               {
-                "name": "Fuera de Registro",
+                "name": "Extraoficial",
                 "image": "off-the-record.webp"
               },
               {
-                "name": "Golpe Decisivo",
+                "name": "Golpe decisivo",
                 "image": "decisive-strike.webp"
               },
               {
-                "name": "Esfuerzo Final",
+                "name": "Chungo",
                 "image": "dead-hard.webp"
               },
               {
-                "name": "Irrompible",
+                "name": "Inquebrantable",
                 "image": "unbreakable.webp"
               }
             ]
@@ -1175,11 +1175,11 @@
                 "image": "head-on.webp"
               },
               {
-                "name": "Mina Explosiva",
+                "name": "Mina explosiva",
                 "image": "blast-mine.webp"
               },
               {
-                "name": "Bomba de Luz",
+                "name": "Granada Aturdidora",
                 "image": "flashbang.webp"
               },
               {
@@ -1197,11 +1197,11 @@
                 "image": "head-on.webp"
               },
               {
-                "name": "Mina Explosiva",
+                "name": "Mina explosiva",
                 "image": "blast-mine.webp"
               },
               {
-                "name": "Bomba de Luz",
+                "name": "Granada Aturdidora",
                 "image": "flashbang.webp"
               },
               {
@@ -1219,11 +1219,11 @@
                 "image": "head-on.webp"
               },
               {
-                "name": "Mina Explosiva",
+                "name": "Mina explosiva",
                 "image": "blast-mine.webp"
               },
               {
-                "name": "Bomba de Luz",
+                "name": "Granada Aturdidora",
                 "image": "flashbang.webp"
               },
               {
@@ -1242,7 +1242,7 @@
             "difficulty": "Fácil",
             "perks": [
               {
-                "name": "Bendición: Círculo de Sanación",
+                "name": "Bendición: Círculo de Curación",
                 "image": "boon-circle-of-healing.webp"
               },
               {
@@ -1264,7 +1264,7 @@
             "difficulty": "Media",
             "perks": [
               {
-                "name": "Bendición: Círculo de Sanación",
+                "name": "Bendición: Círculo de Curación",
                 "image": "boon-circle-of-healing.webp"
               },
               {
@@ -1286,7 +1286,7 @@
             "difficulty": "Difícil",
             "perks": [
               {
-                "name": "Bendición: Círculo de Sanación",
+                "name": "Bendición: Círculo de Curación",
                 "image": "boon-circle-of-healing.webp"
               },
               {
@@ -1313,15 +1313,15 @@
             "difficulty": "Fácil",
             "perks": [
               {
-                "name": "Arranque Veloz",
+                "name": "Esprint",
                 "image": "sprint-burst.webp"
               },
               {
-                "name": "Concentración",
+                "name": "Fijación",
                 "image": "fixated.webp"
               },
               {
-                "name": "Hecho para Esto",
+                "name": "Nacido para Esto",
                 "image": "made-for-this.webp"
               },
               {
@@ -1335,15 +1335,15 @@
             "difficulty": "Media",
             "perks": [
               {
-                "name": "Arranque Veloz",
+                "name": "Esprint",
                 "image": "sprint-burst.webp"
               },
               {
-                "name": "Concentración",
+                "name": "Fijación",
                 "image": "fixated.webp"
               },
               {
-                "name": "Hecho para Esto",
+                "name": "Nacido para Esto",
                 "image": "made-for-this.webp"
               },
               {
@@ -1357,15 +1357,15 @@
             "difficulty": "Difícil",
             "perks": [
               {
-                "name": "Arranque Veloz",
+                "name": "Esprint",
                 "image": "sprint-burst.webp"
               },
               {
-                "name": "Concentración",
+                "name": "Fijación",
                 "image": "fixated.webp"
               },
               {
-                "name": "Hecho para Esto",
+                "name": "Nacido para Esto",
                 "image": "made-for-this.webp"
               },
               {
@@ -1384,15 +1384,15 @@
             "difficulty": "Fácil",
             "perks": [
               {
-                "name": "Ventanas de Oportunidad",
+                "name": "Oportunidades",
                 "image": "windows-of-opportunity.webp"
               },
               {
-                "name": "Golpe Decisivo",
+                "name": "Golpe decisivo",
                 "image": "decisive-strike.webp"
               },
               {
-                "name": "Fuera de Registro",
+                "name": "Extraoficial",
                 "image": "off-the-record.webp"
               },
               {
@@ -1406,15 +1406,15 @@
             "difficulty": "Media",
             "perks": [
               {
-                "name": "Ventanas de Oportunidad",
+                "name": "Oportunidades",
                 "image": "windows-of-opportunity.webp"
               },
               {
-                "name": "Golpe Decisivo",
+                "name": "Golpe decisivo",
                 "image": "decisive-strike.webp"
               },
               {
-                "name": "Fuera de Registro",
+                "name": "Extraoficial",
                 "image": "off-the-record.webp"
               },
               {
@@ -1428,15 +1428,15 @@
             "difficulty": "Difícil",
             "perks": [
               {
-                "name": "Ventanas de Oportunidad",
+                "name": "Oportunidades",
                 "image": "windows-of-opportunity.webp"
               },
               {
-                "name": "Golpe Decisivo",
+                "name": "Golpe decisivo",
                 "image": "decisive-strike.webp"
               },
               {
-                "name": "Fuera de Registro",
+                "name": "Extraoficial",
                 "image": "off-the-record.webp"
               },
               {
@@ -1459,7 +1459,7 @@
                 "image": "kindred.webp"
               },
               {
-                "name": "Ventanas de Oportunidad",
+                "name": "Oportunidades",
                 "image": "windows-of-opportunity.webp"
               },
               {
@@ -1467,7 +1467,7 @@
                 "image": "adrenaline.webp"
               },
               {
-                "name": "Fuera de Registro",
+                "name": "Extraoficial",
                 "image": "off-the-record.webp"
               }
             ]
@@ -1481,7 +1481,7 @@
                 "image": "kindred.webp"
               },
               {
-                "name": "Ventanas de Oportunidad",
+                "name": "Oportunidades",
                 "image": "windows-of-opportunity.webp"
               },
               {
@@ -1489,7 +1489,7 @@
                 "image": "adrenaline.webp"
               },
               {
-                "name": "Fuera de Registro",
+                "name": "Extraoficial",
                 "image": "off-the-record.webp"
               }
             ]
@@ -1503,7 +1503,7 @@
                 "image": "kindred.webp"
               },
               {
-                "name": "Ventanas de Oportunidad",
+                "name": "Oportunidades",
                 "image": "windows-of-opportunity.webp"
               },
               {
@@ -1511,7 +1511,7 @@
                 "image": "adrenaline.webp"
               },
               {
-                "name": "Fuera de Registro",
+                "name": "Extraoficial",
                 "image": "off-the-record.webp"
               }
             ]
@@ -1526,7 +1526,7 @@
             "difficulty": "Fácil",
             "perks": [
               {
-                "name": "Sin Miedo",
+                "name": "Me La Pela",
                 "image": "no-mither.webp"
               },
               {
@@ -1534,7 +1534,7 @@
                 "image": "self-care.webp"
               },
               {
-                "name": "Compañero de Escena",
+                "name": "Compa de Escena",
                 "image": "scene-partner.webp"
               },
               {
@@ -1548,7 +1548,7 @@
             "difficulty": "Media",
             "perks": [
               {
-                "name": "Sin Miedo",
+                "name": "Me La Pela",
                 "image": "no-mither.webp"
               },
               {
@@ -1556,7 +1556,7 @@
                 "image": "self-care.webp"
               },
               {
-                "name": "Compañero de Escena",
+                "name": "Compa de Escena",
                 "image": "scene-partner.webp"
               },
               {
@@ -1570,7 +1570,7 @@
             "difficulty": "Difícil",
             "perks": [
               {
-                "name": "Sin Miedo",
+                "name": "Me La Pela",
                 "image": "no-mither.webp"
               },
               {
@@ -1578,7 +1578,7 @@
                 "image": "self-care.webp"
               },
               {
-                "name": "Compañero de Escena",
+                "name": "Compa de Escena",
                 "image": "scene-partner.webp"
               },
               {
@@ -1609,7 +1609,7 @@
                 "image": "kindred.webp"
               },
               {
-                "name": "Ventanas de Oportunidad",
+                "name": "Oportunidades",
                 "image": "windows-of-opportunity.webp"
               }
             ]
@@ -1623,7 +1623,7 @@
                 "image": "lucky-star.webp"
               },
               {
-                "name": "Enfoque Interno",
+                "name": "Concentración Interna",
                 "image": "inner-focus.webp"
               },
               {
@@ -1631,7 +1631,7 @@
                 "image": "bond.webp"
               },
               {
-                "name": "Ventanas de Oportunidad",
+                "name": "Oportunidades",
                 "image": "windows-of-opportunity.webp"
               }
             ]
@@ -1641,7 +1641,7 @@
             "difficulty": "Difícil",
             "perks": [
               {
-                "name": "Enfoque Interno",
+                "name": "Concentración Interna",
                 "image": "inner-focus.webp"
               },
               {
@@ -1649,7 +1649,7 @@
                 "image": "alert.webp"
               },
               {
-                "name": "Arranque Veloz",
+                "name": "Esprint",
                 "image": "sprint-burst.webp"
               },
               {
@@ -1668,7 +1668,7 @@
             "difficulty": "Fácil",
             "perks": [
               {
-                "name": "Niñero",
+                "name": "Canguro",
                 "image": "babysitter.webp"
               },
               {
@@ -1702,7 +1702,7 @@
                 "image": "borrowed-time.webp"
               },
               {
-                "name": "Jugador de Fondo",
+                "name": "Personaje Secundario",
                 "image": "background-player.webp"
               }
             ]
@@ -1712,7 +1712,7 @@
             "difficulty": "Difícil",
             "perks": [
               {
-                "name": "Temple de Hombre",
+                "name": "El Temple del Hombre",
                 "image": "mettle-of-man.webp"
               },
               {
@@ -1720,11 +1720,11 @@
                 "image": "breakout.webp"
               },
               {
-                "name": "Jugador de Fondo",
+                "name": "Personaje Secundario",
                 "image": "background-player.webp"
               },
               {
-                "name": "Fuera de Registro",
+                "name": "Extraoficial",
                 "image": "off-the-record.webp"
               }
             ]
@@ -1743,7 +1743,7 @@
                 "image": "plunderers-instinct.webp"
               },
               {
-                "name": "Tasación",
+                "name": "Evaluación",
                 "image": "appraisal.webp"
               },
               {
@@ -1761,11 +1761,11 @@
             "difficulty": "Media",
             "perks": [
               {
-                "name": "Tasación",
+                "name": "Evaluación",
                 "image": "appraisal.webp"
               },
               {
-                "name": "As Bajo la Manga",
+                "name": "As en la manga",
                 "image": "ace-in-the-hole.webp"
               },
               {
@@ -1783,7 +1783,7 @@
             "difficulty": "Difícil",
             "perks": [
               {
-                "name": "Carroñero",
+                "name": "Chatarrero",
                 "image": "scavenger.webp"
               },
               {
@@ -1791,11 +1791,11 @@
                 "image": "plunderers-instinct.webp"
               },
               {
-                "name": "As Bajo la Manga",
+                "name": "As en la manga",
                 "image": "ace-in-the-hole.webp"
               },
               {
-                "name": "Tasación",
+                "name": "Evaluación",
                 "image": "appraisal.webp"
               }
             ]
@@ -1810,7 +1810,7 @@
             "difficulty": "Fácil",
             "perks": [
               {
-                "name": "Irrompible",
+                "name": "Inquebrantable",
                 "image": "unbreakable.webp"
               },
               {
@@ -1836,15 +1836,15 @@
                 "image": "tenacity.webp"
               },
               {
-                "name": "Irrompible",
+                "name": "Inquebrantable",
                 "image": "unbreakable.webp"
               },
               {
-                "name": "Voltereta",
+                "name": "Hasta Otra",
                 "image": "flip-flop.webp"
               },
               {
-                "name": "Rebeldía",
+                "name": "Arrebato",
                 "image": "boil-over.webp"
               }
             ]
@@ -1854,11 +1854,11 @@
             "difficulty": "Difícil",
             "perks": [
               {
-                "name": "Voltereta",
+                "name": "Hasta Otra",
                 "image": "flip-flop.webp"
               },
               {
-                "name": "Irrompible",
+                "name": "Inquebrantable",
                 "image": "unbreakable.webp"
               },
               {
@@ -1866,7 +1866,7 @@
                 "image": "tenacity.webp"
               },
               {
-                "name": "Rebeldía",
+                "name": "Arrebato",
                 "image": "boil-over.webp"
               }
             ]
@@ -1885,7 +1885,7 @@
                 "image": "leader.webp"
               },
               {
-                "name": "Demuéstralo",
+                "name": "Demuestra lo que Vales",
                 "image": "prove-thyself.webp"
               },
               {
@@ -1903,7 +1903,7 @@
             "difficulty": "Media",
             "perks": [
               {
-                "name": "Demuéstralo",
+                "name": "Demuestra lo que Vales",
                 "image": "prove-thyself.webp"
               },
               {
@@ -1925,11 +1925,11 @@
             "difficulty": "Difícil",
             "perks": [
               {
-                "name": "Trabajo en Equipo: Poder de Dos",
+                "name": "El Poder de Dos",
                 "image": "teamwork-power-of-two.webp"
               },
               {
-                "name": "Demuéstralo",
+                "name": "Demuestra lo que Vales",
                 "image": "prove-thyself.webp"
               },
               {
@@ -1982,7 +1982,7 @@
                 "image": "alert.webp"
               },
               {
-                "name": "Ventanas de Oportunidad",
+                "name": "Oportunidades",
                 "image": "windows-of-opportunity.webp"
               },
               {
@@ -1996,7 +1996,7 @@
             "difficulty": "Difícil",
             "perks": [
               {
-                "name": "Ventanas de Oportunidad",
+                "name": "Oportunidades",
                 "image": "windows-of-opportunity.webp"
               },
               {
@@ -2008,7 +2008,7 @@
                 "image": "alert.webp"
               },
               {
-                "name": "Enfoque Interno",
+                "name": "Concentración Interna",
                 "image": "inner-focus.webp"
               }
             ]
@@ -2027,7 +2027,7 @@
                 "image": "deja-vu.webp"
               },
               {
-                "name": "Demuéstralo",
+                "name": "Demuestra lo que Vales",
                 "image": "prove-thyself.webp"
               },
               {
@@ -2053,7 +2053,7 @@
                 "image": "deja-vu.webp"
               },
               {
-                "name": "Demuéstralo",
+                "name": "Demuestra lo que Vales",
                 "image": "prove-thyself.webp"
               },
               {
@@ -2203,7 +2203,7 @@
     ],
     "options": [
       {
-        "label": "As Bajo la Manga",
+        "label": "As en la manga",
         "image": "/Images/PerksCharacters/AceVisconti/ace-in-the-hole.webp"
       },
       {
@@ -2211,7 +2211,7 @@
         "image": "/Images/PerksCharacters/MegThomas/adrenaline.webp"
       },
       {
-        "label": "Cuidados Posteriores",
+        "label": "Postratamiento",
         "image": "/Images/PerksCharacters/JeffJohansen/aftercare.webp"
       },
       {
@@ -2219,7 +2219,7 @@
         "image": "/Images/PerksCharacters/FengMin/alert.webp"
       },
       {
-        "label": "Por Cualquier Medio",
+        "label": "Cueste lo que Cueste",
         "image": "/Images/PerksCharacters/YuiKimura/any-means-necessary.webp"
       },
       {
@@ -2231,7 +2231,7 @@
         "image": "/Images/PerksCharacters/RickGrimes/apocalyptic-ingenuity.webp"
       },
       {
-        "label": "Tasación",
+        "label": "Evaluación",
         "image": "/Images/PerksCharacters/ElodieRakoto/appraisal.webp"
       },
       {
@@ -2239,11 +2239,11 @@
         "image": "/Images/PerksCharacters/AdamFrancis/autodidact.webp"
       },
       {
-        "label": "Niñero",
+        "label": "Canguro",
         "image": "/Images/PerksCharacters/SteveHarrington/babysitter.webp"
       },
       {
-        "label": "Jugador de Fondo",
+        "label": "Personaje Secundario",
         "image": "/Images/PerksCharacters/RenatoLyra/background-player.webp"
       },
       {
@@ -2251,7 +2251,7 @@
         "image": "/Images/PerksCharacters/DustinHenderson/bada-bada-boom.webp"
       },
       {
-        "label": "Aterrizaje Equilibrado",
+        "label": "Caída Equilibrada",
         "image": "/Images/PerksCharacters/NeaKarlsson/balanced-landing.webp"
       },
       {
@@ -2267,11 +2267,11 @@
         "image": "/Images/PerksCharacters/NancyWheeler/better-together.webp"
       },
       {
-        "label": "Muerde la Bala",
+        "label": "De Tripas Corazón",
         "image": "/Images/PerksCharacters/LeonSKennedy/bite-the-bullet.webp"
       },
       {
-        "label": "Mina Explosiva",
+        "label": "Mina explosiva",
         "image": "/Images/PerksCharacters/JillValentine/blast-mine.webp"
       },
       {
@@ -2279,11 +2279,11 @@
         "image": "/Images/PerksCharacters/CherylMason/blood-pact.webp"
       },
       {
-        "label": "Torrente de Sangre",
+        "label": "Impulso Sangriento",
         "image": "/Images/PerksCharacters/RenatoLyra/blood-rush.webp"
       },
       {
-        "label": "Rebeldía",
+        "label": "Arrebato",
         "image": "/Images/PerksCharacters/KateDenson/boil-over.webp"
       },
       {
@@ -2291,7 +2291,7 @@
         "image": "/Images/PerksCharacters/DwightFairfield/bond.webp"
       },
       {
-        "label": "Bendición: Círculo de Sanación",
+        "label": "Bendición: Círculo de Curación",
         "image": "/Images/PerksCharacters/MikaelaReid/boon-circle-of-healing.webp"
       },
       {
@@ -2315,11 +2315,11 @@
         "image": "/Images/PerksCharacters/BillOverbeck/borrowed-time.webp"
       },
       {
-        "label": "Conocimiento en Botánica",
+        "label": "Conocimientos de Botánica",
         "image": "/Images/PerksCharacters/ClaudetteMorel/botany-knowledge.webp"
       },
       {
-        "label": "Colapso",
+        "label": "Ruptura",
         "image": "/Images/PerksCharacters/JeffJohansen/breakdown.webp"
       },
       {
@@ -2327,15 +2327,15 @@
         "image": "/Images/PerksCharacters/YuiKimura/breakout.webp"
       },
       {
-        "label": "Abrocharse",
+        "label": "Sujétate",
         "image": "/Images/PerksCharacters/AshleyWilliams/buckle-up.webp"
       },
       {
-        "label": "Hecho para Durar",
+        "label": "Construcción Duradera",
         "image": "/Images/PerksCharacters/FelixRichter/built-to-last.webp"
       },
       {
-        "label": "Espíritu Tranquilo",
+        "label": "Espíritu Calmado",
         "image": "/Images/PerksCharacters/JakePark/calm-spirit.webp"
       },
       {
@@ -2371,11 +2371,11 @@
         "image": "/Images/PerksCharacters/MichonneGrimes/conviction.webp"
       },
       {
-        "label": "Acción Correctiva",
+        "label": "Medida Correctiva",
         "image": "/Images/PerksCharacters/JonahVasquez/corrective-action.webp"
       },
       {
-        "label": "Soltarse",
+        "label": "Suéltate",
         "image": "/Images/PerksCharacters/ThalitaLyra/cut-loose.webp"
       },
       {
@@ -2387,7 +2387,7 @@
         "image": "/Images/PerksCharacters/General/dark-sense.webp"
       },
       {
-        "label": "Esfuerzo Final",
+        "label": "Chungo",
         "image": "/Images/PerksCharacters/DavidKing/dead-hard.webp"
       },
       {
@@ -2399,7 +2399,7 @@
         "image": "/Images/PerksCharacters/ElodieRakoto/deception.webp"
       },
       {
-        "label": "Golpe Decisivo",
+        "label": "Golpe decisivo",
         "image": "/Images/PerksCharacters/LaurieStrode/decisive-strike.webp"
       },
       {
@@ -2415,7 +2415,7 @@
         "image": "/Images/PerksCharacters/FelixRichter/desperate-measures.webp"
       },
       {
-        "label": "Corazonada del Detective",
+        "label": "Bajo Vigilancia",
         "image": "/Images/PerksCharacters/TappDetective/detectives-hunch.webp"
       },
       {
@@ -2423,7 +2423,7 @@
         "image": "/Images/PerksCharacters/JeffJohansen/distortion.webp"
       },
       {
-        "label": "Diversión",
+        "label": "Distracción",
         "image": "/Images/PerksCharacters/AdamFrancis/diversion.webp"
       },
       {
@@ -2439,7 +2439,7 @@
         "image": "/Images/PerksCharacters/OrelaRose/duty-of-care.webp"
       },
       {
-        "label": "Conexión Empática",
+        "label": "Conexión Empatica",
         "image": "/Images/PerksCharacters/YoichiAsakawa/empathic-connection.webp"
       },
       {
@@ -2459,35 +2459,35 @@
         "image": "/Images/PerksCharacters/TrevorBelmont/eyes-of-belmont.webp"
       },
       {
-        "label": "Vía Rápida",
+        "label": "Primera Línea",
         "image": "/Images/PerksCharacters/Yun-JinLee/fast-track.webp"
       },
       {
-        "label": "Delicadeza",
+        "label": "Elegancia",
         "image": "/Images/PerksCharacters/LaraCroft/finesse.webp"
       },
       {
-        "label": "Cinco Movimientos Adelante",
+        "label": "Cinco Pasos",
         "image": "/Images/PerksCharacters/KwonTae-Young/five-moves-ahead.webp"
       },
       {
-        "label": "Concentración",
+        "label": "Fijación",
         "image": "/Images/PerksCharacters/NancyWheeler/fixated.webp"
       },
       {
-        "label": "Bomba de Luz",
+        "label": "Granada Aturdidora",
         "image": "/Images/PerksCharacters/LeonSKennedy/flashbang.webp"
       },
       {
-        "label": "Voltereta",
+        "label": "Hasta Otra",
         "image": "/Images/PerksCharacters/AshleyWilliams/flip-flop.webp"
       },
       {
-        "label": "Estado de Flujo",
+        "label": "Estado Fluido",
         "image": "/Images/PerksCharacters/KwonTae-Young/flow-state.webp"
       },
       {
-        "label": "Sabio de la Niebla",
+        "label": "Conocimiento de la Niebla",
         "image": "/Images/PerksCharacters/VittorioToscano/fogwise.webp"
       },
       {
@@ -2503,7 +2503,7 @@
         "image": "/Images/PerksCharacters/VeeBoonyasak/ghost-notes.webp"
       },
       {
-        "label": "Endurecido",
+        "label": "Endurecida",
         "image": "/Images/PerksCharacters/LaraCroft/hardened.webp"
       },
       {
@@ -2519,11 +2519,11 @@
         "image": "/Images/PerksCharacters/RebeccaChambers/hyperfocus.webp"
       },
       {
-        "label": "Enfoque Interno",
+        "label": "Concentración Interna",
         "image": "/Images/PerksCharacters/HaddieKaur/inner-focus.webp"
       },
       {
-        "label": "Fuerza Interna",
+        "label": "Fuerza Interior",
         "image": "/Images/PerksCharacters/NancyWheeler/inner-strength.webp"
       },
       {
@@ -2551,11 +2551,11 @@
         "image": "/Images/PerksCharacters/DwightFairfield/leader.webp"
       },
       {
-        "label": "Dejado Atrás",
+        "label": "Abandonado a tu Suerte",
         "image": "/Images/PerksCharacters/BillOverbeck/left-behind.webp"
       },
       {
-        "label": "Pies Ligeros",
+        "label": "Ágil",
         "image": "/Images/PerksCharacters/EllenRipley/light-footed.webp"
       },
       {
@@ -2563,7 +2563,7 @@
         "image": "/Images/PerksCharacters/General/lightweight.webp"
       },
       {
-        "label": "Ágil",
+        "label": "Agilidad",
         "image": "/Images/PerksCharacters/FengMin/lithe.webp"
       },
       {
@@ -2579,11 +2579,11 @@
         "image": "/Images/PerksCharacters/EllenRipley/lucky-star.webp"
       },
       {
-        "label": "Hecho para Esto",
+        "label": "Nacido para Esto",
         "image": "/Images/PerksCharacters/GabrielSoma/made-for-this.webp"
       },
       {
-        "label": "Temple de Hombre",
+        "label": "El Temple del Hombre",
         "image": "/Images/PerksCharacters/AshleyWilliams/mettle-of-man.webp"
       },
       {
@@ -2595,7 +2595,7 @@
         "image": "/Images/PerksCharacters/TrevorBelmont/moment-of-glory.webp"
       },
       {
-        "label": "Sin Miedo",
+        "label": "Me La Pela",
         "image": "/Images/PerksCharacters/DavidKing/no-mither.webp"
       },
       {
@@ -2607,7 +2607,7 @@
         "image": "/Images/PerksCharacters/LaurieStrode/object-of-obsession.webp"
       },
       {
-        "label": "Fuera de Registro",
+        "label": "Extraoficial",
         "image": "/Images/PerksCharacters/ZarinaKassir/off-the-record.webp"
       },
       {
@@ -2615,15 +2615,15 @@
         "image": "/Images/PerksCharacters/VeeBoonyasak/one-two-three-four.webp"
       },
       {
-        "label": "Mano Abierta",
+        "label": "A Mano Descubierta",
         "image": "/Images/PerksCharacters/AceVisconti/open-handed.webp"
       },
       {
-        "label": "Superar",
+        "label": "Sobreponerse",
         "image": "/Images/PerksCharacters/JonahVasquez/overcome.webp"
       },
       {
-        "label": "Guía Parental",
+        "label": "Consejo Paterno",
         "image": "/Images/PerksCharacters/YoichiAsakawa/parental-guidance.webp"
       },
       {
@@ -2639,7 +2639,7 @@
         "image": "/Images/PerksCharacters/General/plunderers-instinct.webp"
       },
       {
-        "label": "Sereno",
+        "label": "Serenidad",
         "image": "/Images/PerksCharacters/JaneRomero/poised.webp"
       },
       {
@@ -2651,15 +2651,15 @@
         "image": "/Images/PerksCharacters/General/premonition.webp"
       },
       {
-        "label": "Demuéstralo",
+        "label": "Demuestra lo que Vales",
         "image": "/Images/PerksCharacters/DwightFairfield/prove-thyself.webp"
       },
       {
-        "label": "Apuesta Rápida",
+        "label": "Táctica Rápida",
         "image": "/Images/PerksCharacters/VittorioToscano/quick-gambit.webp"
       },
       {
-        "label": "Rápido y Silencioso",
+        "label": "Velocidad Silenciosa",
         "image": "/Images/PerksCharacters/MegThomas/quick-quiet.webp"
       },
       {
@@ -2667,15 +2667,15 @@
         "image": "/Images/PerksCharacters/OrelaRose/rapid-response.webp"
       },
       {
-        "label": "Tranquilidad",
+        "label": "Consuelo",
         "image": "/Images/PerksCharacters/RebeccaChambers/reassurance.webp"
       },
       {
-        "label": "Pista Falsa",
+        "label": "Bulo",
         "image": "/Images/PerksCharacters/ZarinaKassir/red-herring.webp"
       },
       {
-        "label": "Alianza Reprimida",
+        "label": "Supresión de Alianza",
         "image": "/Images/PerksCharacters/CherylMason/repressed-alliance.webp"
       },
       {
@@ -2695,19 +2695,19 @@
         "image": "/Images/PerksCharacters/VeeBoonyasak/road-life.webp"
       },
       {
-        "label": "Espíritu Novato",
+        "label": "Espíritu de Novato",
         "image": "/Images/PerksCharacters/LeonSKennedy/rookie-spirit.webp"
       },
       {
-        "label": "Saboteador",
+        "label": "Sabotaje",
         "image": "/Images/PerksCharacters/JakePark/saboteur.webp"
       },
       {
-        "label": "Carroñero",
+        "label": "Chatarrero",
         "image": "/Images/PerksCharacters/GabrielSoma/scavenger.webp"
       },
       {
-        "label": "Compañero de Escena",
+        "label": "Compa de Escena",
         "image": "/Images/PerksCharacters/NicolasCage/scene-partner.webp"
       },
       {
@@ -2719,7 +2719,7 @@
         "image": "/Images/PerksCharacters/ClaudetteMorel/self-care.webp"
       },
       {
-        "label": "Autopreservación",
+        "label": "Autoconservación",
         "image": "/Images/PerksCharacters/Yun-JinLee/self-preservation.webp"
       },
       {
@@ -2735,11 +2735,11 @@
         "image": "/Images/PerksCharacters/General/small-game.webp"
       },
       {
-        "label": "Golpe Aplastante",
+        "label": "Éxito Aplastante",
         "image": "/Images/PerksCharacters/Yun-JinLee/smash-hit.webp"
       },
       {
-        "label": "Único Superviviente",
+        "label": "Solo Quedo Yo",
         "image": "/Images/PerksCharacters/LaurieStrode/sole-survivor.webp"
       },
       {
@@ -2747,7 +2747,7 @@
         "image": "/Images/PerksCharacters/JaneRomero/solidarity.webp"
       },
       {
-        "label": "Guardián del Alma",
+        "label": "Salvaguarda de Alma",
         "image": "/Images/PerksCharacters/CherylMason/soul-guard.webp"
       },
       {
@@ -2759,27 +2759,27 @@
         "image": "/Images/PerksCharacters/General/spine-chill.webp"
       },
       {
-        "label": "Arranque Veloz",
+        "label": "Esprint",
         "image": "/Images/PerksCharacters/MegThomas/sprint-burst.webp"
       },
       {
-        "label": "Vigilancia",
+        "label": "Corazonada",
         "image": "/Images/PerksCharacters/TappDetective/stake-out.webp"
       },
       {
-        "label": "Vista Quieta",
+        "label": "Mirada Fija",
         "image": "/Images/PerksCharacters/AestriYazar/still-sight.webp"
       },
       {
-        "label": "Callejero",
+        "label": "Evasión Urbana",
         "image": "/Images/PerksCharacters/NeaKarlsson/streetwise.webp"
       },
       {
-        "label": "Fuerza en las Sombras",
+        "label": "Fuerza de las Sombras",
         "image": "/Images/PerksCharacters/SableWard/strength-in-shadows.webp"
       },
       {
-        "label": "Trabajo en Equipo: Sigilo Colectivo",
+        "label": "Sigilo Colectivo",
         "image": "/Images/PerksCharacters/RenatoLyra/teamwork-collective-stealth.webp"
       },
       {
@@ -2787,7 +2787,7 @@
         "image": "/Images/PerksCharacters/DustinHenderson/teamwork-full-circuit.webp"
       },
       {
-        "label": "Trabajo en Equipo: Poder de Dos",
+        "label": "El Poder de Dos",
         "image": "/Images/PerksCharacters/ThalitaLyra/teamwork-power-of-two.webp"
       },
       {
@@ -2799,7 +2799,7 @@
         "image": "/Images/PerksCharacters/RickGrimes/teamwork-toughen-up.webp"
       },
       {
-        "label": "Técnico",
+        "label": "Pericia Técnica",
         "image": "/Images/PerksCharacters/FengMin/technician.webp"
       },
       {
@@ -2815,15 +2815,15 @@
         "image": "/Images/PerksCharacters/GabrielSoma/troubleshooter.webp"
       },
       {
-        "label": "Irrompible",
+        "label": "Inquebrantable",
         "image": "/Images/PerksCharacters/BillOverbeck/unbreakable.webp"
       },
       {
-        "label": "Subir la Apuesta",
+        "label": "Subir las Apuestas",
         "image": "/Images/PerksCharacters/AceVisconti/up-the-ante.webp"
       },
       {
-        "label": "Evasión Urbana",
+        "label": "Con Calle",
         "image": "/Images/PerksCharacters/NeaKarlsson/urban-evasion.webp"
       },
       {
@@ -2831,7 +2831,7 @@
         "image": "/Images/PerksCharacters/QuentinSmith/vigil.webp"
       },
       {
-        "label": "Visionario",
+        "label": "Visión de Futuro",
         "image": "/Images/PerksCharacters/FelixRichter/visionary.webp"
       },
       {
@@ -2843,23 +2843,23 @@
         "image": "/Images/PerksCharacters/General/well-make-it.webp"
       },
       {
-        "label": "Viviremos para Siempre",
+        "label": "Vamos a Vivir para Siempre",
         "image": "/Images/PerksCharacters/DavidKing/were-gonna-live-forever.webp"
       },
       {
-        "label": "Te Vemos",
+        "label": "Te veo",
         "image": "/Images/PerksCharacters/Eleven/we-see-you.webp"
       },
       {
-        "label": "Malvado",
+        "label": "Malicia (Sable)",
         "image": "/Images/PerksCharacters/SableWard/wicked.webp"
       },
       {
-        "label": "Ventanas de Oportunidad",
+        "label": "Oportunidades",
         "image": "/Images/PerksCharacters/KateDenson/windows-of-opportunity.webp"
       },
       {
-        "label": "Escucha Telefónica",
+        "label": "Sistema de Espionaje",
         "image": "/Images/PerksCharacters/AdaWong/wiretap.webp"
       },
       {
