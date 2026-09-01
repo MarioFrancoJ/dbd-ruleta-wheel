@@ -31,7 +31,6 @@ export default function WheelCard({
   onRolesChange,
   onShowPerksChange,
   cleanMode = false,
-  streamMode = false,
 }) {
   const isRolesWheel = wheel.type === "roles";
   const showPerks = wheel.showPerks !== false;
@@ -270,15 +269,14 @@ export default function WheelCard({
   }
 
   const cleanClass = cleanMode ? " wheel-card--clean" : "";
-  const streamClass = streamMode ? " wheel-card--stream" : "";
   const visualClass = showWinnerOverlay
     ? "wheel-card__visual wheel-card__visual--winner"
     : "wheel-card__visual";
 
   return (
-    <div className={`wheel-card${cleanClass}${streamClass}`}>
+    <div className={`wheel-card${cleanClass}`}>
       <div className="wheel-card__header">
-        {!cleanMode && !streamMode ? (
+        {!cleanMode ? (
           <input
             className="wheel-card__title-input"
             type="text"
@@ -390,8 +388,7 @@ export default function WheelCard({
         </div>
       )}
 
-      {!streamMode && (
-        <div className="wheel-card__controls">
+      <div className="wheel-card__controls">
           <label>
             Tiempo de giro (segundos)
             <input
@@ -458,22 +455,9 @@ export default function WheelCard({
               </div>
             )}
           </div>
-        </div>
-      )}
+      </div>
 
-      {streamMode && (
-        <div className="wheel-card__stream-controls">
-          <button
-            className="wheel-card__stop-btn"
-            onClick={cancelSpin}
-            disabled={!isSpinning}
-          >
-            ⏹ Detener
-          </button>
-        </div>
-      )}
-
-      {!cleanMode && !streamMode && (
+      {!cleanMode && (
         <>
           <div className="wheel-card__result">
             <strong>Resultado:</strong>
@@ -482,7 +466,7 @@ export default function WheelCard({
         </>
       )}
 
-      {!streamMode && isRolesWheel && (
+      {isRolesWheel && (
         <RolesEditor
           roles={wheel.roles || {}}
           options={wheel.options}
@@ -492,7 +476,7 @@ export default function WheelCard({
         />
       )}
 
-      {!streamMode && !isRolesWheel && (
+      {!isRolesWheel && (
         <>
           <div className="wheel-card__options">
             <h3>Opciones</h3>
@@ -541,7 +525,7 @@ export default function WheelCard({
         </>
       )}
 
-      {!cleanMode && !streamMode && (
+      {!cleanMode && (
         <>
           <div className="wheel-card__colors">
             <h3>Colores</h3>

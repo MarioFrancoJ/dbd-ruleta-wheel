@@ -269,18 +269,14 @@ export default function App() {
     <div className="app">
       <header className="app__header">
         <h1>DBD Roulette Manager</h1>
-        <p>
-          Administra y gira tus ruletas personalizadas de Dead by
-          Daylight.
-        </p>
 
         <div className="app__header-buttons">
           <button onClick={() => setCleanMode((prev) => !prev)}>
-            {cleanMode ? "Volver al editor" : "Modo ruleta limpia"}
+            {cleanMode ? "Editar" : "Proyectar"}
           </button>
 
           <button onClick={handleResetAll}>
-            Restaurar ruletas por defecto
+            Por defecto
           </button>
 
           {cleanMode && (
