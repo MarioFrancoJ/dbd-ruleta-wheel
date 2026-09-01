@@ -15,6 +15,10 @@
     "character": "Ada Wong",
     "folder": "AdaWong"
   },
+  "reactive-healing.png": {
+    "character": "Ada Wong",
+    "folder": "AdaWong"
+  },
   "wiretap.webp": {
     "character": "Ada Wong",
     "folder": "AdaWong"
@@ -155,6 +159,10 @@
     "character": "Once",
     "folder": "Eleven"
   },
+  "teamwork-soft-spoken.png": {
+    "character": "Once",
+    "folder": "Eleven"
+  },
   "we-see-you.webp": {
     "character": "Once",
     "folder": "Eleven"
@@ -176,6 +184,10 @@
     "folder": "ElodieRakoto"
   },
   "deception.webp": {
+    "character": "Elodie Rakoto",
+    "folder": "ElodieRakoto"
+  },
+  "power-struggle.png": {
     "character": "Elodie Rakoto",
     "folder": "ElodieRakoto"
   },
@@ -275,6 +287,10 @@
     "character": "Haddie Kaur",
     "folder": "HaddieKaur"
   },
+  "overzealous.png": {
+    "character": "Haddie Kaur",
+    "folder": "HaddieKaur"
+  },
   "residual-manifest.webp": {
     "character": "Haddie Kaur",
     "folder": "HaddieKaur"
@@ -316,6 +332,10 @@
     "folder": "JeffJohansen"
   },
   "blast-mine.webp": {
+    "character": "Jill Valentine",
+    "folder": "JillValentine"
+  },
+  "counterforce.png": {
     "character": "Jill Valentine",
     "folder": "JillValentine"
   },

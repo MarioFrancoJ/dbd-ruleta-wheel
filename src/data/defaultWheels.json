@@ -745,7 +745,7 @@
             "difficulty": "Fácil",
             "perks": [
               {
-                "name": "Con Calle",
+                "name": "Evasión Urbana",
                 "image": "urban-evasion.webp"
               },
               {
@@ -767,7 +767,7 @@
             "difficulty": "Media",
             "perks": [
               {
-                "name": "Con Calle",
+                "name": "Evasión Urbana",
                 "image": "urban-evasion.webp"
               },
               {
@@ -789,7 +789,7 @@
             "difficulty": "Difícil",
             "perks": [
               {
-                "name": "Con Calle",
+                "name": "Evasión Urbana",
                 "image": "urban-evasion.webp"
               },
               {
@@ -2771,7 +2771,7 @@
         "image": "/Images/PerksCharacters/AestriYazar/still-sight.webp"
       },
       {
-        "label": "Evasión Urbana",
+        "label": "Con Calle",
         "image": "/Images/PerksCharacters/NeaKarlsson/streetwise.webp"
       },
       {
@@ -2823,7 +2823,7 @@
         "image": "/Images/PerksCharacters/AceVisconti/up-the-ante.webp"
       },
       {
-        "label": "Con Calle",
+        "label": "Evasión Urbana",
         "image": "/Images/PerksCharacters/NeaKarlsson/urban-evasion.webp"
       },
       {
@@ -2851,7 +2851,7 @@
         "image": "/Images/PerksCharacters/Eleven/we-see-you.webp"
       },
       {
-        "label": "Malicia (Sable)",
+        "label": "Malicia",
         "image": "/Images/PerksCharacters/SableWard/wicked.webp"
       },
       {
@@ -2885,6 +2885,26 @@
       {
         "label": "Salvation's Cry",
         "image": "/Images/PerksCharacters/AuroraStardotter/Salvations_Cry.webp"
+      },
+      {
+        "label": "Lucha Intensa",
+        "image": "/Images/PerksCharacters/ElodieRakoto/power-struggle.png"
+      },
+      {
+        "label": "Contrafuerza",
+        "image": "/Images/PerksCharacters/JillValentine/counterforce.png"
+      },
+      {
+        "label": "Pasión",
+        "image": "/Images/PerksCharacters/HaddieKaur/overzealous.png"
+      },
+      {
+        "label": "Curación Reactiva",
+        "image": "/Images/PerksCharacters/AdaWong/reactive-healing.png"
+      },
+      {
+        "label": "Trabajo en Equipo: Voz Suave",
+        "image": "/Images/PerksCharacters/Eleven/teamwork-soft-spoken.png"
       }
     ]
   },

@@ -41,7 +41,7 @@ for (const dir of dirs) {
   const character = OVERRIDES[dir] || prettify(dir);
   const files = fs
     .readdirSync(path.join(PERKS_DIR, dir))
-    .filter((f) => f.toLowerCase().endsWith(".webp"));
+    .filter((f) => /\.(webp|png)$/i.test(f));
   for (const file of files) {
     if (index[file]) {
       console.warn(
