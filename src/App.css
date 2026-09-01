@@ -164,6 +164,14 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
   flex-wrap: wrap;
 }
 
+.wheel-card__toggles {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 12px;
+}
+
 .wheel-card__buttons button,
 .wheel-card__add,
 .wheel-card__option-row button {
