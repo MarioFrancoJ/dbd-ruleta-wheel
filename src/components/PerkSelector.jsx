@@ -3,8 +3,20 @@ import { searchPerks, perkImageSrc, MAX_PERKS_PER_VERSION } from "../utils/perks
 
 // Modal para seleccionar perks del listado global.
 // selectedPerks: array de { name, image } (image = nombre de archivo)
+// maxPerks: número máximo de perks seleccionables. Usar null para sin límite
+//   (por ejemplo al agregar perks a la ruleta de perks).
+// title: título del modal.
+// confirmLabel: texto del botón de confirmar.
 // onConfirm(newPerks) / onClose()
-export default function PerkSelector({ selectedPerks = [], onConfirm, onClose }) {
+export default function PerkSelector({
+  selectedPerks = [],
+  maxPerks = MAX_PERKS_PER_VERSION,
+  title = "Seleccionar perks",
+  confirmLabel = "Confirmar",
+  onConfirm,
+  onClose,
+}) {
+  const hasLimit = maxPerks !== null && maxPerks !== undefined && Number.isFinite(maxPerks);
   const [query, setQuery] = useState("");
   const [selection, setSelection] = useState(() =>
     selectedPerks.map((p) => ({ name: p.name, image: p.image }))
@@ -18,7 +30,7 @@ export default function PerkSelector({ selectedPerks = [], onConfirm, onClose })
     [selection]
   );
 
-  const isFull = selection.length >= MAX_PERKS_PER_VERSION;
+  const isFull = hasLimit && selection.length >= maxPerks;
 
   function togglePerk(perk) {
     setSelection((prev) => {
@@ -26,7 +38,7 @@ export default function PerkSelector({ selectedPerks = [], onConfirm, onClose })
       if (exists) {
         return prev.filter((p) => p.image !== perk.image);
       }
-      if (prev.length >= MAX_PERKS_PER_VERSION) return prev;
+      if (hasLimit && prev.length >= maxPerks) return prev;
       return [...prev, { name: perk.name, image: perk.image }];
     });
   }
@@ -35,9 +47,9 @@ export default function PerkSelector({ selectedPerks = [], onConfirm, onClose })
     <div className="perk-selector__backdrop" onClick={onClose}>
       <div className="perk-selector" onClick={(e) => e.stopPropagation()}>
         <div className="perk-selector__header">
-          <h3>Seleccionar perks</h3>
+          <h3>{title}</h3>
           <span className="perk-selector__counter">
-            {selection.length}/{MAX_PERKS_PER_VERSION}
+            {hasLimit ? `${selection.length}/${maxPerks}` : selection.length}
           </span>
           <button className="perk-selector__close" onClick={onClose} aria-label="Cerrar">
             ✖
@@ -109,7 +121,7 @@ export default function PerkSelector({ selectedPerks = [], onConfirm, onClose })
             className="perk-selector__confirm"
             onClick={() => onConfirm(selection)}
           >
-            Confirmar
+            {confirmLabel}
           </button>
         </div>
       </div>

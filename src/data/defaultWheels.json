@@ -2914,5 +2914,24 @@
       "No puedes dejar de moverte más de 5 segundos",
       "Modo traidor"
     ]
+  },
+  {
+    "id": "custom",
+    "title": "Ruleta Personalizada",
+    "spinDuration": 13,
+    "colors": [
+      "#b91c1c",
+      "#1f2937",
+      "#7c3aed",
+      "#0f766e",
+      "#1d4ed8",
+      "#92400e"
+    ],
+    "options": [
+      "Opción 1",
+      "Opción 2",
+      "Opción 3",
+      "Opción 4"
+    ]
   }
 ]

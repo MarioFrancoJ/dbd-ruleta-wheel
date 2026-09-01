@@ -1,9 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import SpinWheel from "./SpinWheel";
 import RolesEditor from "./RolesEditor";
+import PerkSelector from "./PerkSelector";
 import { perkImageSrc } from "../utils/perks";
 
 const ELIMINATION_STORAGE_KEY = "dbd-elimination";
+// Ícono usado por defecto para las "entradas especiales" (texto libre) que se
+// agregan manualmente a cualquier ruleta (p. ej. Comodín, Slot Vacío, 0 Perks).
+const SPECIAL_ENTRY_ICON = "/Images/Perks/Random_Icon_Perk.webp";
+const PERKS_WHEEL_ID = "perks-survivors";
 
 function loadEliminationState(wheelId) {
   try {
@@ -30,10 +35,16 @@ export default function WheelCard({
   onTitleChange,
   onRolesChange,
   onShowPerksChange,
+  onAddOptions,
   cleanMode = false,
 }) {
   const isRolesWheel = wheel.type === "roles";
+  const isPerksWheel = wheel.id === PERKS_WHEEL_ID;
   const showPerks = wheel.showPerks !== false;
+  // Buscador para filtrar la lista de opciones existente (mostrar/ocultar rápido)
+  const [optionQuery, setOptionQuery] = useState("");
+  // Modal del catálogo de perks (solo ruleta de perks)
+  const [showPerkCatalog, setShowPerkCatalog] = useState(false);
   const [isSpinning, setIsSpinning] = useState(false);
   const [rotation, setRotation] = useState(0);
   const [showWinnerOverlay, setShowWinnerOverlay] = useState(false);
@@ -268,6 +279,38 @@ export default function WheelCard({
     resultImage = result && typeof result === "object" ? result.image : null;
   }
 
+  // Agrega una entrada especial de texto libre (con ícono genérico) a la ruleta.
+  function handleAddSpecialEntry() {
+    const label = window.prompt(
+      "Nombre de la entrada especial (ej: Comodín, Slot Vacío, 0 Perks):"
+    );
+    const trimmed = (label || "").trim();
+    if (!trimmed) return;
+    if (onAddOptions) {
+      onAddOptions(wheel.id, [{ label: trimmed, image: SPECIAL_ENTRY_ICON }]);
+    }
+  }
+
+  // Confirma la selección del catálogo de perks y las agrega a la ruleta.
+  function handleConfirmPerkCatalog(perks) {
+    const newOptions = perks.map((p) => ({
+      label: p.name,
+      image: perkImageSrc(p.image),
+    }));
+    if (onAddOptions) onAddOptions(wheel.id, newOptions);
+    setShowPerkCatalog(false);
+  }
+
+  // Filtro del buscador de opciones: normaliza sin acentos.
+  const normalizeText = (s) =>
+    (s || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  const optionMatches = (option) => {
+    const q = normalizeText(optionQuery).trim();
+    if (!q) return true;
+    const label = typeof option === "object" ? option.label : option;
+    return normalizeText(label).includes(q);
+  };
+
   const cleanClass = cleanMode ? " wheel-card--clean" : "";
   const visualClass = showWinnerOverlay
     ? "wheel-card__visual wheel-card__visual--winner"
@@ -480,9 +523,37 @@ export default function WheelCard({
         <>
           <div className="wheel-card__options">
             <h3>Opciones</h3>
+
+            <div className="wheel-card__options-toolbar">
+              <input
+                type="text"
+                className="wheel-card__options-search"
+                placeholder="Buscar opción para mostrar/ocultar..."
+                value={optionQuery}
+                onChange={(e) => setOptionQuery(e.target.value)}
+              />
+              {isPerksWheel && (
+                <button
+                  type="button"
+                  className="wheel-card__catalog-btn"
+                  onClick={() => setShowPerkCatalog(true)}
+                >
+                  + Agregar desde catálogo
+                </button>
+              )}
+              <button
+                type="button"
+                className="wheel-card__special-btn"
+                onClick={handleAddSpecialEntry}
+              >
+                + Entrada especial
+              </button>
+            </div>
+
             {wheel.options.map((option, index) => {
               const optionLabel = typeof option === "object" ? option.label : option;
               const isHidden = usedIndices.includes(index);
+              if (!optionMatches(option)) return null;
               return (
                 <div key={`${wheel.id}-${index}`} className={`wheel-card__option-row${isHidden ? ' wheel-card__option-row--hidden' : ''}`}>
                   <input
@@ -549,6 +620,17 @@ export default function WheelCard({
             </button>
           </div>
         </>
+      )}
+
+      {showPerkCatalog && (
+        <PerkSelector
+          selectedPerks={[]}
+          maxPerks={null}
+          title="Agregar perks desde el catálogo"
+          confirmLabel="Agregar a la ruleta"
+          onConfirm={handleConfirmPerkCatalog}
+          onClose={() => setShowPerkCatalog(false)}
+        />
       )}
     </div>
   );

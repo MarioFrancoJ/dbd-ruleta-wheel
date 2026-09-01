@@ -1,6 +1,6 @@
 const STORAGE_KEY = "dbd-wheels-config";
 const VERSION_KEY = "dbd-wheels-version";
-const CURRENT_VERSION = "6.0"; // Ruleta perks-survivors (id renombrado) + perks de Shane y Aurora
+const CURRENT_VERSION = "7.0"; // Ruleta 'custom' genérica + editor de opciones (catálogo/especiales)
 
 export function loadWheels() {
   try {
