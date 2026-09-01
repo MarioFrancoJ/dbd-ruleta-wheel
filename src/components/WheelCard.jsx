@@ -36,6 +36,8 @@ export default function WheelCard({
   onRolesChange,
   onShowPerksChange,
   onAddOptions,
+  onResetWheel,
+  hasDefault = false,
   cleanMode = false,
 }) {
   const isRolesWheel = wheel.type === "roles";
@@ -470,6 +472,21 @@ export default function WheelCard({
             >
               ⏹ Detener
             </button>
+            {hasDefault && onResetWheel && (
+              <button
+                className="wheel-card__reset-btn"
+                onClick={() => {
+                  const ok = window.confirm(
+                    `¿Restablecer las opciones de "${wheel.title}" a las de por defecto? Se perderán los cambios hechos en sus opciones.`
+                  );
+                  if (ok) onResetWheel(wheel.id);
+                }}
+                disabled={isSpinning}
+                title="Restablecer las opciones de esta ruleta a las de por defecto"
+              >
+                ↺ Restablecer
+              </button>
+            )}
             <div className="mode-toggle">
               <span className={`mode-toggle__label ${!eliminationMode ? 'mode-toggle__label--active' : ''}`}>Clásico</span>
               <button

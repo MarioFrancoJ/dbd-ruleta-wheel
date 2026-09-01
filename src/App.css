@@ -194,6 +194,20 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
   cursor: not-allowed;
 }
 
+.wheel-card__reset-btn {
+  background: #b45309 !important;
+  color: white;
+}
+
+.wheel-card__reset-btn:hover:not(:disabled) {
+  background: #92400e !important;
+}
+
+.wheel-card__reset-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
 .wheel-card__buttons button:disabled,
 .wheel-card__option-row button:disabled,
 .wheel-card__add:disabled {

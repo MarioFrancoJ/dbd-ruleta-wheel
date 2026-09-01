@@ -325,6 +325,19 @@ export default function App() {
     setWheels(withInitialResult(defaultWheels));
   }
 
+  // Restablece SOLO una ruleta a sus opciones por defecto (útil si el usuario
+  // borró/editó opciones y quiere recuperarlas). Conserva su título, colores y
+  // duración personalizados; restablece options (y roles, si es de tipo roles).
+  function handleResetWheel(id) {
+    const def = defaultWheels.find((w) => w.id === id);
+    if (!def) return;
+    updateWheel(id, (wheel) => ({
+      ...wheel,
+      options: def.options,
+      ...(def.type === "roles" ? { roles: def.roles } : {}),
+    }));
+  }
+
   return (
     <div className="app">
       <header className="app__header">
@@ -399,6 +412,8 @@ export default function App() {
               onRolesChange={handleRolesChange}
               onShowPerksChange={handleShowPerksChange}
               onAddOptions={handleAddOptions}
+              onResetWheel={handleResetWheel}
+              hasDefault={defaultWheels.some((w) => w.id === wheel.id)}
               cleanMode={cleanMode}
             />
           ))}
