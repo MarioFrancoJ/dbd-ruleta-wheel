@@ -1598,3 +1598,67 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
   background: #f8fafc;
   color: #334155;
 }
+
+
+
+/* ===== TOOLBAR DE OPCIONES (buscador + botones) ===== */
+
+.wheel-card__options-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+  align-items: center;
+}
+
+.wheel-card__options-search {
+  flex: 1 1 200px;
+  min-width: 160px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: #0f172a;
+  color: #f8fafc;
+  font-size: 14px;
+}
+
+.wheel-card__catalog-btn,
+.wheel-card__special-btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.wheel-card__catalog-btn {
+  background: #7c3aed;
+  color: #fff;
+}
+
+.wheel-card__catalog-btn:hover {
+  background: #6d28d9;
+}
+
+.wheel-card__special-btn {
+  background: #0f766e;
+  color: #fff;
+}
+
+.wheel-card__special-btn:hover {
+  background: #0d5f58;
+}
+
+/* Modo ruleta limpia: la toolbar ocupa toda la fila del grid de opciones */
+.wheel-card--clean .wheel-card__options-toolbar {
+  grid-column: 1 / -1;
+}
+
+/* Tema claro */
+.theme-light .wheel-card__options-search {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  color: #0f172a;
+}

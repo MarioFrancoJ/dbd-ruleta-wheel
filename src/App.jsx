@@ -25,6 +25,15 @@ function withInitialResult(wheels) {
 // híbrido de una sola ruleta "roles" con versiones y perks embebidos.
 // Si la config ya está migrada, la devuelve tal cual.
 // Migra la ruleta de perks: renombra el id antiguo "hardcore-items" al nuevo
+// Asegura que la ruleta genérica "custom" exista (al final) en la config.
+function ensureCustomWheel(wheels) {
+  if (!Array.isArray(wheels)) return wheels;
+  if (wheels.some((w) => w.id === "custom")) return wheels;
+  const defaultCustom = defaultWheels.find((w) => w.id === "custom");
+  if (!defaultCustom) return wheels;
+  return [...wheels, { ...defaultCustom, result: "" }];
+}
+
 // "perks-survivors" y asegura que estén las perks nuevas (Shane/Aurora).
 function migratePerksWheel(wheels) {
   if (!Array.isArray(wheels)) return wheels;
@@ -34,7 +43,7 @@ function migratePerksWheel(wheels) {
     ? new Set(defaultPerks.options.map((o) => o.image))
     : new Set();
 
-  return wheels.map((w) => {
+  const renamed = wheels.map((w) => {
     if (w.id !== "perks-survivors" && w.id !== "hardcore-items") return w;
 
     // Renombrar id si venía del antiguo
@@ -57,6 +66,8 @@ function migratePerksWheel(wheels) {
     }
     return next;
   });
+
+  return ensureCustomWheel(renamed);
 }
 
 function migrateWheels(saved) {
@@ -237,6 +248,20 @@ export default function App() {
     }));
   }
 
+  // Agrega múltiples opciones (objetos { label, image } o strings) a una ruleta,
+  // evitando duplicados por imagen (o por label si no tienen imagen).
+  function handleAddOptions(id, newOptions) {
+    if (!Array.isArray(newOptions) || newOptions.length === 0) return;
+    updateWheel(id, (wheel) => {
+      const keyOf = (o) =>
+        o && typeof o === "object" ? o.image || o.label : String(o);
+      const existing = new Set(wheel.options.map(keyOf));
+      const toAdd = newOptions.filter((o) => !existing.has(keyOf(o)));
+      if (toAdd.length === 0) return wheel;
+      return { ...wheel, options: [...wheel.options, ...toAdd] };
+    });
+  }
+
   function handleRemoveOption(id, index) {
     updateWheel(id, (wheel) => ({
       ...wheel,
@@ -373,6 +398,7 @@ export default function App() {
               onTitleChange={handleTitleChange}
               onRolesChange={handleRolesChange}
               onShowPerksChange={handleShowPerksChange}
+              onAddOptions={handleAddOptions}
               cleanMode={cleanMode}
             />
           ))}
