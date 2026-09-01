@@ -1,0 +1,53 @@
+import defaultWheels from "../data/defaultWheels.json";
+
+// El listado global de perks se toma de la ruleta "Perks" (id: hardcore-items).
+// Cada perk en esa ruleta es { label, image } donde image es una ruta tipo
+// "/Images/Perks/xxx.webp". En rolesData/versiones se guarda como
+// { name, image } donde image es solo el nombre de archivo ("xxx.webp").
+// Estas utilidades normalizan entre ambos formatos.
+
+const PERKS_WHEEL_ID = "hardcore-items";
+
+function toFileName(imagePath) {
+  if (!imagePath) return "";
+  // Acepta "/Images/Perks/xxx.webp" o "xxx.webp"
+  const parts = imagePath.split("/");
+  return parts[parts.length - 1];
+}
+
+// Lista global de perks: [{ name, image }] donde image es el nombre de archivo.
+export const GLOBAL_PERKS = (() => {
+  const wheel = defaultWheels.find((w) => w.id === PERKS_WHEEL_ID);
+  if (!wheel || !Array.isArray(wheel.options)) return [];
+  return wheel.options
+    .map((opt) => {
+      const name = typeof opt === "object" ? opt.label : String(opt);
+      const image = typeof opt === "object" ? toFileName(opt.image) : "";
+      return { name, image };
+    })
+    .filter((p) => p.name);
+})();
+
+// Devuelve la ruta pública completa de la imagen de un perk a partir del
+// nombre de archivo guardado en las versiones.
+export function perkImageSrc(fileName) {
+  if (!fileName) return "";
+  if (fileName.startsWith("/")) return fileName;
+  return `/Images/Perks/${fileName}`;
+}
+
+// Busca perks del listado global por texto (case-insensitive, sin acentos).
+function normalize(str) {
+  return (str || "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+}
+
+export function searchPerks(query) {
+  const q = normalize(query).trim();
+  if (!q) return GLOBAL_PERKS;
+  return GLOBAL_PERKS.filter((p) => normalize(p.name).includes(q));
+}
+
+export const MAX_PERKS_PER_VERSION = 4;

@@ -5,6 +5,54 @@ import WheelCard from "./components/WheelCard";
 import { loadWheels } from "./utils/storage";
 import "./App.css";
 
+function migrateWheels(saved) {
+  if (!Array.isArray(saved)) return saved;
+  const hasHybrid = saved.some((w) => w.id === "roles" && w.type === "roles");
+  if (hasHybrid) return saved;
+
+  const defaultRoles = defaultWheels.find(
+    (w) => w.id === "roles" && w.type === "roles"
+  );
+  const oldRolesV2 = saved.find((w) => w.id === "rolesV2");
+  const oldRoles = saved.find((w) => w.id === "roles");
+  const base = defaultRoles || {
+    id: "roles",
+    title: "Roles",
+    type: "roles",
+    showPerks: true,
+    spinDuration: 13,
+    colors: [],
+    options: [],
+    roles: {},
+  };
+  const hybrid = {
+    ...base,
+    spinDuration:
+      (oldRolesV2 && oldRolesV2.spinDuration) ||
+      (oldRoles && oldRoles.spinDuration) ||
+      base.spinDuration,
+    colors:
+      (oldRolesV2 && oldRolesV2.colors) ||
+      (oldRoles && oldRoles.colors) ||
+      base.colors,
+    result: "",
+  };
+  const result = [];
+  let inserted = false;
+  for (const w of saved) {
+    if (w.id === "roles" || w.id === "rolesV2") {
+      if (!inserted) {
+        result.push(hybrid);
+        inserted = true;
+      }
+      continue;
+    }
+    result.push(w);
+  }
+  if (!inserted) result.push(hybrid);
+  return result;
+}
+
 function withInitialResult(wheels) {
   return wheels.map((wheel) => ({
     ...wheel,
@@ -25,7 +73,9 @@ export default function StreamView() {
   
   const [wheels] = useState(() => {
     const saved = loadWheels();
-    return saved ? withInitialResult(saved) : withInitialResult(defaultWheels);
+    return saved
+      ? withInitialResult(migrateWheels(saved))
+      : withInitialResult(defaultWheels);
   });
 
   const [selectedWheelId, setSelectedWheelId] = useState(() => {

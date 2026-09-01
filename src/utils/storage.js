@@ -1,6 +1,6 @@
 const STORAGE_KEY = "dbd-wheels-config";
 const VERSION_KEY = "dbd-wheels-version";
-const CURRENT_VERSION = "4.0"; // Added Juicio (K43_TheJudgement) to killers wheel
+const CURRENT_VERSION = "5.0"; // Ruleta híbrida de Roles (fusión Roles Libres + Predeterminados)
 
 export function loadWheels() {
   try {
