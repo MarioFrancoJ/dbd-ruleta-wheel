@@ -256,6 +256,10 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
   grid-column: 4;
 }
 
+.wheel-card--clean .wheel-card__options .wheel-card__add-row {
+  grid-column: 1 / -1;
+}
+
 .wheel-card--clean .wheel-card__option-row {
   margin-bottom: 0;
   height: auto;
@@ -1715,6 +1719,20 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 
 .wheel-card__special-btn:hover {
   background: #0d5f58;
+}
+
+/* Fila con los dos botones de agregar (Agregar opción + Entrada especial) */
+.wheel-card__add-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.wheel-card__add-row .wheel-card__add {
+  flex: 1;
+  width: auto;
+  margin-top: 0;
+  font-size: 14px;
 }
 
 /* Modo ruleta limpia: la toolbar ocupa toda la fila del grid de opciones */

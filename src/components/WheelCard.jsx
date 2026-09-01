@@ -595,13 +595,6 @@ export default function WheelCard({
                   {isPerksWheel ? "Catálogo de perks" : "Catálogo"}
                 </button>
               )}
-              <button
-                type="button"
-                className="wheel-card__special-btn"
-                onClick={handleAddSpecialEntry}
-              >
-                + Entrada especial
-              </button>
             </div>
 
             {wheel.options.map((option, index) => {
@@ -643,9 +636,18 @@ export default function WheelCard({
                 </div>
               );
             })}
-            <button className="wheel-card__add" onClick={() => onAddOption(wheel.id)}>
-              + Agregar opción
-            </button>
+            <div className="wheel-card__add-row">
+              <button className="wheel-card__add" onClick={() => onAddOption(wheel.id)}>
+                + Agregar opción
+              </button>
+              <button
+                type="button"
+                className="wheel-card__add wheel-card__special-btn"
+                onClick={handleAddSpecialEntry}
+              >
+                + Entrada especial
+              </button>
+            </div>
           </div>
         </>
       )}
