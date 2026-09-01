@@ -8,53 +8,184 @@
       "#A60D0D"
     ],
     "options": [
-      { "label": "Trampero", "image": "/Images/Killers/K01_TheTrapper_Portrait.webp" },
-      { "label": "Espectro", "image": "/Images/Killers/K02_TheWraith_Portrait.webp" },
-      { "label": "Pueblerino", "image": "/Images/Killers/K03_TheHillbilly_Portrait.webp" },
-      { "label": "Enfermera", "image": "/Images/Killers/K04_TheNurse_Portrait.webp" },
-      { "label": "Michael Myers", "image": "/Images/Killers/K05_TheShape_Portrait.webp" },
-      { "label": "Bruja", "image": "/Images/Killers/K06_TheHag_Portrait.webp" },
-      { "label": "Doctor", "image": "/Images/Killers/K07_TheDoctor_Portrait.webp" },
-      { "label": "Cazadora", "image": "/Images/Killers/K08_TheHuntress_Portrait.webp" },
-      { "label": "Buba", "image": "/Images/Killers/K09_TheCannibal_Portrait.webp" },
-      { "label": "Freddy Kruger", "image": "/Images/Killers/K10_TheNightmare_Portrait.webp" },
-      { "label": "Cerda", "image": "/Images/Killers/K11_ThePig_Portrait.webp" },
-      { "label": "Payaso", "image": "/Images/Killers/K12_TheClown_Portrait.webp" },
-      { "label": "Espíritu", "image": "/Images/Killers/K13_TheSpirit_Portrait.webp" },
-      { "label": "Legion", "image": "/Images/Killers/K14_TheLegion_Portrait.webp" },
-      { "label": "Plaga", "image": "/Images/Killers/K15_ThePlague_Portrait.webp" },
-      { "label": "Ghost Face", "image": "/Images/Killers/K16_TheGhostFace_Portrait.webp" },
-      { "label": "Demogorgon", "image": "/Images/Killers/K17_TheDemogorgon_Portrait.webp" },
-      { "label": "Oni", "image": "/Images/Killers/K18_TheOni_Portrait.webp" },
-      { "label": "Arponero", "image": "/Images/Killers/K19_TheDeathslinger_Portrait.webp" },
-      { "label": "Pyramid Head", "image": "/Images/Killers/K20_TheExecutioner_Portrait.webp" },
-      { "label": "Deterioro", "image": "/Images/Killers/K21_TheBlight_Portrait.webp" },
-      { "label": "Gemelos", "image": "/Images/Killers/K22_TheTwins_Portrait.webp" },
-      { "label": "Embaucador", "image": "/Images/Killers/K23_TheTrickster_Portrait.webp" },
-      { "label": "Nemesis", "image": "/Images/Killers/K24_TheNemesis_Portrait.webp" },
-      { "label": "Cenobita", "image": "/Images/Killers/K25_TheCenobite_Portrait.webp" },
-      { "label": "Artista", "image": "/Images/Killers/K26_TheArtist_Portrait.webp" },
-      { "label": "Onryo", "image": "/Images/Killers/K27_TheOnryo_Portrait.webp" },
-      { "label": "Draga", "image": "/Images/Killers/K28_TheDredge_Portrait.webp" },
-      { "label": "Wesker", "image": "/Images/Killers/K29_TheMastermind_Portrait.webp" },
-      { "label": "Caballero", "image": "/Images/Killers/K30_TheKnight_Portrait.webp" },
-      { "label": "Comerciante", "image": "/Images/Killers/K31_TheSkullMerchant_Portrait.webp" },
-      { "label": "Singularidad", "image": "/Images/Killers/K32_TheSingularity_Portrait.webp" },
-      { "label": "Alien", "image": "/Images/Killers/K33_TheXenomorph_Portrait.webp" },
-      { "label": "Chucky", "image": "/Images/Killers/K34_TheGoodGuy_Portrait.webp" },
-      { "label": "Desconocido", "image": "/Images/Killers/K35_TheUnknown_Portrait.webp" },
-      { "label": "Liche", "image": "/Images/Killers/K36_TheLich_Portrait.webp" },
-      { "label": "Drácula", "image": "/Images/Killers/K37_TheDarkLord_Portrait.webp" },
-      { "label": "Sabuesa", "image": "/Images/Killers/K38_TheHoundmaster_Portrait.webp" },
-      { "label": "Ghoul", "image": "/Images/Killers/K39_TheGhoul_Portrait.webp" },
-      { "label": "Animatrónico", "image": "/Images/Killers/K40_TheAnimatronic_Portrait.webp" },
-      { "label": "Krasue", "image": "/Images/Killers/K41_TheKrasue_Portrait.webp" },
-      { "label": "The First", "image": "/Images/Killers/K42_TheFirst_Portrait.webp" },
-      { "label": "Jason", "image": "/Images/Killers/K43_Jason.png" },
-      { "label": "Juicio", "image": "/Images/Killers/K43_TheJudgement_Portrait.webp" }
+      {
+        "label": "Trampero",
+        "image": "/Images/Killers/K01_TheTrapper_Portrait.webp"
+      },
+      {
+        "label": "Espectro",
+        "image": "/Images/Killers/K02_TheWraith_Portrait.webp"
+      },
+      {
+        "label": "Pueblerino",
+        "image": "/Images/Killers/K03_TheHillbilly_Portrait.webp"
+      },
+      {
+        "label": "Enfermera",
+        "image": "/Images/Killers/K04_TheNurse_Portrait.webp"
+      },
+      {
+        "label": "Michael Myers",
+        "image": "/Images/Killers/K05_TheShape_Portrait.webp"
+      },
+      {
+        "label": "Bruja",
+        "image": "/Images/Killers/K06_TheHag_Portrait.webp"
+      },
+      {
+        "label": "Doctor",
+        "image": "/Images/Killers/K07_TheDoctor_Portrait.webp"
+      },
+      {
+        "label": "Cazadora",
+        "image": "/Images/Killers/K08_TheHuntress_Portrait.webp"
+      },
+      {
+        "label": "Buba",
+        "image": "/Images/Killers/K09_TheCannibal_Portrait.webp"
+      },
+      {
+        "label": "Freddy Kruger",
+        "image": "/Images/Killers/K10_TheNightmare_Portrait.webp"
+      },
+      {
+        "label": "Cerda",
+        "image": "/Images/Killers/K11_ThePig_Portrait.webp"
+      },
+      {
+        "label": "Payaso",
+        "image": "/Images/Killers/K12_TheClown_Portrait.webp"
+      },
+      {
+        "label": "Espíritu",
+        "image": "/Images/Killers/K13_TheSpirit_Portrait.webp"
+      },
+      {
+        "label": "Legion",
+        "image": "/Images/Killers/K14_TheLegion_Portrait.webp"
+      },
+      {
+        "label": "Plaga",
+        "image": "/Images/Killers/K15_ThePlague_Portrait.webp"
+      },
+      {
+        "label": "Ghost Face",
+        "image": "/Images/Killers/K16_TheGhostFace_Portrait.webp"
+      },
+      {
+        "label": "Demogorgon",
+        "image": "/Images/Killers/K17_TheDemogorgon_Portrait.webp"
+      },
+      {
+        "label": "Oni",
+        "image": "/Images/Killers/K18_TheOni_Portrait.webp"
+      },
+      {
+        "label": "Arponero",
+        "image": "/Images/Killers/K19_TheDeathslinger_Portrait.webp"
+      },
+      {
+        "label": "Pyramid Head",
+        "image": "/Images/Killers/K20_TheExecutioner_Portrait.webp"
+      },
+      {
+        "label": "Deterioro",
+        "image": "/Images/Killers/K21_TheBlight_Portrait.webp"
+      },
+      {
+        "label": "Gemelos",
+        "image": "/Images/Killers/K22_TheTwins_Portrait.webp"
+      },
+      {
+        "label": "Embaucador",
+        "image": "/Images/Killers/K23_TheTrickster_Portrait.webp"
+      },
+      {
+        "label": "Nemesis",
+        "image": "/Images/Killers/K24_TheNemesis_Portrait.webp"
+      },
+      {
+        "label": "Cenobita",
+        "image": "/Images/Killers/K25_TheCenobite_Portrait.webp"
+      },
+      {
+        "label": "Artista",
+        "image": "/Images/Killers/K26_TheArtist_Portrait.webp"
+      },
+      {
+        "label": "Onryo",
+        "image": "/Images/Killers/K27_TheOnryo_Portrait.webp"
+      },
+      {
+        "label": "Draga",
+        "image": "/Images/Killers/K28_TheDredge_Portrait.webp"
+      },
+      {
+        "label": "Wesker",
+        "image": "/Images/Killers/K29_TheMastermind_Portrait.webp"
+      },
+      {
+        "label": "Caballero",
+        "image": "/Images/Killers/K30_TheKnight_Portrait.webp"
+      },
+      {
+        "label": "Comerciante",
+        "image": "/Images/Killers/K31_TheSkullMerchant_Portrait.webp"
+      },
+      {
+        "label": "Singularidad",
+        "image": "/Images/Killers/K32_TheSingularity_Portrait.webp"
+      },
+      {
+        "label": "Alien",
+        "image": "/Images/Killers/K33_TheXenomorph_Portrait.webp"
+      },
+      {
+        "label": "Chucky",
+        "image": "/Images/Killers/K34_TheGoodGuy_Portrait.webp"
+      },
+      {
+        "label": "Desconocido",
+        "image": "/Images/Killers/K35_TheUnknown_Portrait.webp"
+      },
+      {
+        "label": "Liche",
+        "image": "/Images/Killers/K36_TheLich_Portrait.webp"
+      },
+      {
+        "label": "Drácula",
+        "image": "/Images/Killers/K37_TheDarkLord_Portrait.webp"
+      },
+      {
+        "label": "Sabuesa",
+        "image": "/Images/Killers/K38_TheHoundmaster_Portrait.webp"
+      },
+      {
+        "label": "Ghoul",
+        "image": "/Images/Killers/K39_TheGhoul_Portrait.webp"
+      },
+      {
+        "label": "Animatrónico",
+        "image": "/Images/Killers/K40_TheAnimatronic_Portrait.webp"
+      },
+      {
+        "label": "Krasue",
+        "image": "/Images/Killers/K41_TheKrasue_Portrait.webp"
+      },
+      {
+        "label": "The First",
+        "image": "/Images/Killers/K42_TheFirst_Portrait.webp"
+      },
+      {
+        "label": "Jason",
+        "image": "/Images/Killers/K43_Jason.png"
+      },
+      {
+        "label": "Juicio",
+        "image": "/Images/Killers/K43_TheJudgement_Portrait.webp"
+      }
     ]
   },
-
   {
     "id": "survivors",
     "title": "Ruleta de Supervivientes",
@@ -64,95 +195,221 @@
       "#03588C"
     ],
     "options": [
-      { "label": "Dwight Fairfield", "image": "/Images/Survivors/S01_DwightFairfield_Portrait.webp" },
-      { "label": "Meg Thomas", "image": "/Images/Survivors/S02_MegThomas_Portrait.webp" },
-      { "label": "Claudette Morel", "image": "/Images/Survivors/S03_ClaudetteMorel_Portrait.webp" },
-      { "label": "Jake Park", "image": "/Images/Survivors/S04_JakePark_Portrait.webp" },
-      { "label": "Nea Karlsson", "image": "/Images/Survivors/S05_NeaKarlsson_Portrait.webp" },
-      { "label": "Bill Overbeck", "image": "/Images/Survivors/S08_BillOverbeck_Portrait.webp" },
-      { "label": "Laurie Strode", "image": "/Images/Survivors/S06_LaurieStrode_Portrait.webp" },
-      { "label": "Ace Visconti", "image": "/Images/Survivors/S07_AceVisconti_Portrait.webp" },
-      { "label": "Feng Min", "image": "/Images/Survivors/S09_FengMin_Portrait.webp" },
-      { "label": "David King", "image": "/Images/Survivors/S10_DavidKing_Portrait.webp" },
-      { "label": "Quentin Smith", "image": "/Images/Survivors/S11_QuentinSmith_Portrait.webp" },
-      { "label": "Detective Tapp", "image": "/Images/Survivors/S12_DavidTapp_Portrait.webp" },
-      { "label": "Kate Denson", "image": "/Images/Survivors/S13_KateDenson_Portrait.webp" },
-      { "label": "Adam Francis", "image": "/Images/Survivors/S14_AdamFrancis_Portrait.webp" },
-      { "label": "Jeff Johansen", "image": "/Images/Survivors/S15_JeffJohansen_Portrait.webp" },
-      { "label": "Jane Romero", "image": "/Images/Survivors/S16_JaneRomero_Portrait.webp" },
-      { "label": "Ashley Williams", "image": "/Images/Survivors/S17_AshWilliams_Portrait.webp" },
-      { "label": "Nancy Wheeler", "image": "/Images/Survivors/S18_NancyWheeler_Portrait.webp" },
-      { "label": "Steve Harrington", "image": "/Images/Survivors/S19_SteveHarrington_Portrait.webp" },
-      { "label": "Yui Kimura", "image": "/Images/Survivors/S20_YuiKimura_Portrait.webp" },
-      { "label": "Zarina Kassir", "image": "/Images/Survivors/S21_ZarinaKassir_Portrait.webp" },
-      { "label": "Cheryl Mason", "image": "/Images/Survivors/S22_CherylMason_Portrait.webp" },
-      { "label": "Felix Richter", "image": "/Images/Survivors/S23_FelixRichter_Portrait.webp" },
-      { "label": "Élodie Rakoto", "image": "/Images/Survivors/S24_ElodieRakoto_Portrait.webp" },
-      { "label": "Yun-Jin Lee", "image": "/Images/Survivors/S25_YunJinLee_Portrait.webp" },
-      { "label": "Jill Valentine", "image": "/Images/Survivors/S26_JillValentine_Portrait.webp" },
-      { "label": "Leon S. Kennedy", "image": "/Images/Survivors/S27_LeonScottKennedy_Portrait.webp" },
-      { "label": "Mikaela Reid", "image": "/Images/Survivors/S28_MikaelaReid_Portrait.webp" },
-      { "label": "Jonah Vasquez", "image": "/Images/Survivors/S29_JonahVasquez_Portrait.webp" },
-      { "label": "Yoichi Asakawa", "image": "/Images/Survivors/S30_YoichiAsakawa_Portrait.webp" },
-      { "label": "Haddie Kaur", "image": "/Images/Survivors/S31_HaddieKaur_Portrait.webp" },
-      { "label": "Ada Wong", "image": "/Images/Survivors/S32_AdaWong_Portrait.webp" },
-      { "label": "Rebecca Chambers", "image": "/Images/Survivors/S33_RebeccaChambers_Portrait.webp" },
-      { "label": "Vittorio Toscano", "image": "/Images/Survivors/S34_VittorioToscano_Portrait.webp" },
-      { "label": "Thalita Lyra", "image": "/Images/Survivors/S35_ThalitaLyra_Portrait.webp" },
-      { "label": "Renato Lyra", "image": "/Images/Survivors/S36_RenatoLyra_Portrait.webp" },
-      { "label": "Gabriel Soma", "image": "/Images/Survivors/S37_GabrielSoma_Portrait.webp" },
-      { "label": "Nicolas Cage", "image": "/Images/Survivors/S38_NicolasCage_Portrait.webp" },
-      { "label": "Ellen Ripley", "image": "/Images/Survivors/S39_EllenRipley_Portrait.webp" },
-      { "label": "Alan Wake", "image": "/Images/Survivors/S40_AlanWake_Portrait.webp" },
-      { "label": "Sable Ward", "image": "/Images/Survivors/S41_SableWard_Portrait.webp" },
-      { "label": "Aestri Yazar", "image": "/Images/Survivors/S42_TheTroupe_Portrait.webp" },
-      { "label": "Lara Croft", "image": "/Images/Survivors/S43_LaraCroft_Portrait.webp" },
-      { "label": "Trevor Belmont", "image": "/Images/Survivors/S44_TrevorBelmont_Portrait.webp" },
-      { "label": "Taurie Cain", "image": "/Images/Survivors/S45_TaurieCain_Portrait.webp" },
-      { "label": "Orella Rose", "image": "/Images/Survivors/S46_OrelaRose_Portrait.webp" },
-      { "label": "Rick Grimes", "image": "/Images/Survivors/S47_RickGrimes_Portrait.webp" },
-      { "label": "Michonne Grimes", "image": "/Images/Survivors/S48_MichonneGrimes_Portrait.webp" },
-      { "label": "Vee Boonyasak", "image": "/Images/Survivors/S49_VeeBoonyasak_Portrait.webp" },
-      { "label": "Dustin Henderson", "image": "/Images/Survivors/S50_DustinHenderson_Portrait.webp" },
-      { "label": "Once", "image": "/Images/Survivors/S51_Eleven_Portrait.webp" },
-      { "label": "Kwon Tae-Young", "image": "/Images/Survivors/S52_KwonTaeYoung_Portrait.webp" }
+      {
+        "label": "Dwight Fairfield",
+        "image": "/Images/Survivors/S01_DwightFairfield_Portrait.webp"
+      },
+      {
+        "label": "Meg Thomas",
+        "image": "/Images/Survivors/S02_MegThomas_Portrait.webp"
+      },
+      {
+        "label": "Claudette Morel",
+        "image": "/Images/Survivors/S03_ClaudetteMorel_Portrait.webp"
+      },
+      {
+        "label": "Jake Park",
+        "image": "/Images/Survivors/S04_JakePark_Portrait.webp"
+      },
+      {
+        "label": "Nea Karlsson",
+        "image": "/Images/Survivors/S05_NeaKarlsson_Portrait.webp"
+      },
+      {
+        "label": "Bill Overbeck",
+        "image": "/Images/Survivors/S08_BillOverbeck_Portrait.webp"
+      },
+      {
+        "label": "Laurie Strode",
+        "image": "/Images/Survivors/S06_LaurieStrode_Portrait.webp"
+      },
+      {
+        "label": "Ace Visconti",
+        "image": "/Images/Survivors/S07_AceVisconti_Portrait.webp"
+      },
+      {
+        "label": "Feng Min",
+        "image": "/Images/Survivors/S09_FengMin_Portrait.webp"
+      },
+      {
+        "label": "David King",
+        "image": "/Images/Survivors/S10_DavidKing_Portrait.webp"
+      },
+      {
+        "label": "Quentin Smith",
+        "image": "/Images/Survivors/S11_QuentinSmith_Portrait.webp"
+      },
+      {
+        "label": "Detective Tapp",
+        "image": "/Images/Survivors/S12_DavidTapp_Portrait.webp"
+      },
+      {
+        "label": "Kate Denson",
+        "image": "/Images/Survivors/S13_KateDenson_Portrait.webp"
+      },
+      {
+        "label": "Adam Francis",
+        "image": "/Images/Survivors/S14_AdamFrancis_Portrait.webp"
+      },
+      {
+        "label": "Jeff Johansen",
+        "image": "/Images/Survivors/S15_JeffJohansen_Portrait.webp"
+      },
+      {
+        "label": "Jane Romero",
+        "image": "/Images/Survivors/S16_JaneRomero_Portrait.webp"
+      },
+      {
+        "label": "Ashley Williams",
+        "image": "/Images/Survivors/S17_AshWilliams_Portrait.webp"
+      },
+      {
+        "label": "Nancy Wheeler",
+        "image": "/Images/Survivors/S18_NancyWheeler_Portrait.webp"
+      },
+      {
+        "label": "Steve Harrington",
+        "image": "/Images/Survivors/S19_SteveHarrington_Portrait.webp"
+      },
+      {
+        "label": "Yui Kimura",
+        "image": "/Images/Survivors/S20_YuiKimura_Portrait.webp"
+      },
+      {
+        "label": "Zarina Kassir",
+        "image": "/Images/Survivors/S21_ZarinaKassir_Portrait.webp"
+      },
+      {
+        "label": "Cheryl Mason",
+        "image": "/Images/Survivors/S22_CherylMason_Portrait.webp"
+      },
+      {
+        "label": "Felix Richter",
+        "image": "/Images/Survivors/S23_FelixRichter_Portrait.webp"
+      },
+      {
+        "label": "Élodie Rakoto",
+        "image": "/Images/Survivors/S24_ElodieRakoto_Portrait.webp"
+      },
+      {
+        "label": "Yun-Jin Lee",
+        "image": "/Images/Survivors/S25_YunJinLee_Portrait.webp"
+      },
+      {
+        "label": "Jill Valentine",
+        "image": "/Images/Survivors/S26_JillValentine_Portrait.webp"
+      },
+      {
+        "label": "Leon S. Kennedy",
+        "image": "/Images/Survivors/S27_LeonScottKennedy_Portrait.webp"
+      },
+      {
+        "label": "Mikaela Reid",
+        "image": "/Images/Survivors/S28_MikaelaReid_Portrait.webp"
+      },
+      {
+        "label": "Jonah Vasquez",
+        "image": "/Images/Survivors/S29_JonahVasquez_Portrait.webp"
+      },
+      {
+        "label": "Yoichi Asakawa",
+        "image": "/Images/Survivors/S30_YoichiAsakawa_Portrait.webp"
+      },
+      {
+        "label": "Haddie Kaur",
+        "image": "/Images/Survivors/S31_HaddieKaur_Portrait.webp"
+      },
+      {
+        "label": "Ada Wong",
+        "image": "/Images/Survivors/S32_AdaWong_Portrait.webp"
+      },
+      {
+        "label": "Rebecca Chambers",
+        "image": "/Images/Survivors/S33_RebeccaChambers_Portrait.webp"
+      },
+      {
+        "label": "Vittorio Toscano",
+        "image": "/Images/Survivors/S34_VittorioToscano_Portrait.webp"
+      },
+      {
+        "label": "Thalita Lyra",
+        "image": "/Images/Survivors/S35_ThalitaLyra_Portrait.webp"
+      },
+      {
+        "label": "Renato Lyra",
+        "image": "/Images/Survivors/S36_RenatoLyra_Portrait.webp"
+      },
+      {
+        "label": "Gabriel Soma",
+        "image": "/Images/Survivors/S37_GabrielSoma_Portrait.webp"
+      },
+      {
+        "label": "Nicolas Cage",
+        "image": "/Images/Survivors/S38_NicolasCage_Portrait.webp"
+      },
+      {
+        "label": "Ellen Ripley",
+        "image": "/Images/Survivors/S39_EllenRipley_Portrait.webp"
+      },
+      {
+        "label": "Alan Wake",
+        "image": "/Images/Survivors/S40_AlanWake_Portrait.webp"
+      },
+      {
+        "label": "Sable Ward",
+        "image": "/Images/Survivors/S41_SableWard_Portrait.webp"
+      },
+      {
+        "label": "Aestri Yazar",
+        "image": "/Images/Survivors/S42_TheTroupe_Portrait.webp"
+      },
+      {
+        "label": "Lara Croft",
+        "image": "/Images/Survivors/S43_LaraCroft_Portrait.webp"
+      },
+      {
+        "label": "Trevor Belmont",
+        "image": "/Images/Survivors/S44_TrevorBelmont_Portrait.webp"
+      },
+      {
+        "label": "Taurie Cain",
+        "image": "/Images/Survivors/S45_TaurieCain_Portrait.webp"
+      },
+      {
+        "label": "Orella Rose",
+        "image": "/Images/Survivors/S46_OrelaRose_Portrait.webp"
+      },
+      {
+        "label": "Rick Grimes",
+        "image": "/Images/Survivors/S47_RickGrimes_Portrait.webp"
+      },
+      {
+        "label": "Michonne Grimes",
+        "image": "/Images/Survivors/S48_MichonneGrimes_Portrait.webp"
+      },
+      {
+        "label": "Vee Boonyasak",
+        "image": "/Images/Survivors/S49_VeeBoonyasak_Portrait.webp"
+      },
+      {
+        "label": "Dustin Henderson",
+        "image": "/Images/Survivors/S50_DustinHenderson_Portrait.webp"
+      },
+      {
+        "label": "Once",
+        "image": "/Images/Survivors/S51_Eleven_Portrait.webp"
+      },
+      {
+        "label": "Kwon Tae-Young",
+        "image": "/Images/Survivors/S52_KwonTaeYoung_Portrait.webp"
+      }
     ]
   },
-
   {
     "id": "roles",
-    "title": "Roles Libres",
-    "spinDuration": 13,
-    "colors": [
-      "#b91c1c",
-      "#1f2937",
-      "#7c3aed",
-      "#0f766e",
-      "#1d4ed8",
-      "#92400e"
-    ],
-    "options": [
-      { "label": "Ambulancia", "image": "/Images/Roles/Ambulancia.png" },
-      { "label": "Reparador", "image": "/Images/Roles/Reparador.png" },
-      { "label": "Rescatista", "image": "/Images/Roles/Rescatista.png" },
-      { "label": "Cegador", "image": "/Images/Roles/Cegador.png" },
-      { "label": "Sigiloso", "image": "/Images/Roles/Sigilo.png" },
-      { "label": "Loopero", "image": "/Images/Roles/Loopero.png" },
-      { "label": "Estratega", "image": "/Images/Roles/Estratega.png" },
-      { "label": "Saboteador", "image": "/Images/Roles/Saboteador.png" },
-      { "label": "Tanque (Anti-túnel)", "image": "/Images/Roles/Tanque.png" },
-      { "label": "Clutch (Endgame)", "image": "/Images/Roles/EndGame.png" },
-      { "label": "Troll / Meme", "image": "/Images/Roles/TrollMeme.png" },
-      { "label": "Maestro de bendiciones", "image": "/Images/Roles/Totems.png" },
-      { "label": "Velocista", "image": "/Images/Roles/Velocista.png" },
-      { "label": "Anti-Killer", "image": "/Images/Roles/Antikiller.png" },
-      { "label": "SoloQ Carry", "image": "/Images/Roles/SoloQ.png" }
-    ]
-  },
-
-  {
-    "id": "rolesV2",
-    "title": "Roles Predeterminados",
+    "title": "Roles",
+    "type": "roles",
+    "showPerks": true,
     "spinDuration": 13,
     "colors": [
       "#b91c1c",
@@ -186,9 +443,1643 @@
       "Líder",
       "Controlador",
       "Especialista en Objetivos"
-    ]
+    ],
+    "roles": {
+      "Ambulancia": {
+        "image": "/Images/Roles/Ambulancia.png",
+        "variants": [
+          {
+            "name": "1",
+            "difficulty": "Fácil",
+            "perks": [
+              {
+                "name": "Conocimiento en Botánica",
+                "image": "botany-knowledge.webp"
+              },
+              {
+                "name": "Lo Lograremos",
+                "image": "well-make-it.webp"
+              },
+              {
+                "name": "Conexión Empática",
+                "image": "empathic-connection.webp"
+              },
+              {
+                "name": "Medidas Desesperadas",
+                "image": "desperate-measures.webp"
+              }
+            ]
+          },
+          {
+            "name": "2",
+            "difficulty": "Media",
+            "perks": [
+              {
+                "name": "Conocimiento en Botánica",
+                "image": "botany-knowledge.webp"
+              },
+              {
+                "name": "Lo Lograremos",
+                "image": "well-make-it.webp"
+              },
+              {
+                "name": "Conexión Empática",
+                "image": "empathic-connection.webp"
+              },
+              {
+                "name": "Medidas Desesperadas",
+                "image": "desperate-measures.webp"
+              }
+            ]
+          },
+          {
+            "name": "3",
+            "difficulty": "Difícil",
+            "perks": [
+              {
+                "name": "Conocimiento en Botánica",
+                "image": "botany-knowledge.webp"
+              },
+              {
+                "name": "Lo Lograremos",
+                "image": "well-make-it.webp"
+              },
+              {
+                "name": "Conexión Empática",
+                "image": "empathic-connection.webp"
+              },
+              {
+                "name": "Medidas Desesperadas",
+                "image": "desperate-measures.webp"
+              }
+            ]
+          }
+        ]
+      },
+      "Reparador": {
+        "image": "/Images/Roles/Reparador.png",
+        "variants": [
+          {
+            "name": "1",
+            "difficulty": "Fácil",
+            "perks": [
+              {
+                "name": "Demuéstralo",
+                "image": "prove-thyself.webp"
+              },
+              {
+                "name": "Hiperconcentración",
+                "image": "hyperfocus.webp"
+              },
+              {
+                "name": "Vigilancia",
+                "image": "stake-out.webp"
+              },
+              {
+                "name": "Hecho para Durar",
+                "image": "built-to-last.webp"
+              }
+            ]
+          },
+          {
+            "name": "2",
+            "difficulty": "Media",
+            "perks": [
+              {
+                "name": "Demuéstralo",
+                "image": "prove-thyself.webp"
+              },
+              {
+                "name": "Hiperconcentración",
+                "image": "hyperfocus.webp"
+              },
+              {
+                "name": "Vigilancia",
+                "image": "stake-out.webp"
+              },
+              {
+                "name": "Hecho para Durar",
+                "image": "built-to-last.webp"
+              }
+            ]
+          },
+          {
+            "name": "3",
+            "difficulty": "Difícil",
+            "perks": [
+              {
+                "name": "Demuéstralo",
+                "image": "prove-thyself.webp"
+              },
+              {
+                "name": "Hiperconcentración",
+                "image": "hyperfocus.webp"
+              },
+              {
+                "name": "Vigilancia",
+                "image": "stake-out.webp"
+              },
+              {
+                "name": "Hecho para Durar",
+                "image": "built-to-last.webp"
+              }
+            ]
+          }
+        ]
+      },
+      "Rescatista": {
+        "image": "/Images/Roles/Rescatista.png",
+        "variants": [
+          {
+            "name": "1",
+            "difficulty": "Fácil",
+            "perks": [
+              {
+                "name": "Tiempo Prestado",
+                "image": "borrowed-time.webp"
+              },
+              {
+                "name": "Lo Lograremos",
+                "image": "well-make-it.webp"
+              },
+              {
+                "name": "Fuera de Registro",
+                "image": "off-the-record.webp"
+              },
+              {
+                "name": "Niñero",
+                "image": "babysitter.webp"
+              }
+            ]
+          },
+          {
+            "name": "2",
+            "difficulty": "Media",
+            "perks": [
+              {
+                "name": "Tiempo Prestado",
+                "image": "borrowed-time.webp"
+              },
+              {
+                "name": "Lo Lograremos",
+                "image": "well-make-it.webp"
+              },
+              {
+                "name": "Fuera de Registro",
+                "image": "off-the-record.webp"
+              },
+              {
+                "name": "Niñero",
+                "image": "babysitter.webp"
+              }
+            ]
+          },
+          {
+            "name": "3",
+            "difficulty": "Difícil",
+            "perks": [
+              {
+                "name": "Tiempo Prestado",
+                "image": "borrowed-time.webp"
+              },
+              {
+                "name": "Lo Lograremos",
+                "image": "well-make-it.webp"
+              },
+              {
+                "name": "Fuera de Registro",
+                "image": "off-the-record.webp"
+              },
+              {
+                "name": "Niñero",
+                "image": "babysitter.webp"
+              }
+            ]
+          }
+        ]
+      },
+      "Cegador": {
+        "image": "/Images/Roles/Cegador.png",
+        "variants": [
+          {
+            "name": "1",
+            "difficulty": "Fácil",
+            "perks": [
+              {
+                "name": "Bomba de Luz",
+                "image": "flashbang.webp"
+              },
+              {
+                "name": "Jugador de Fondo",
+                "image": "background-player.webp"
+              },
+              {
+                "name": "Campeón de la Luz",
+                "image": "champion-of-light.webp"
+              },
+              {
+                "name": "Manifestación Residual",
+                "image": "residual-manifest.webp"
+              }
+            ]
+          },
+          {
+            "name": "2",
+            "difficulty": "Media",
+            "perks": [
+              {
+                "name": "Bomba de Luz",
+                "image": "flashbang.webp"
+              },
+              {
+                "name": "Jugador de Fondo",
+                "image": "background-player.webp"
+              },
+              {
+                "name": "Campeón de la Luz",
+                "image": "champion-of-light.webp"
+              },
+              {
+                "name": "Manifestación Residual",
+                "image": "residual-manifest.webp"
+              }
+            ]
+          },
+          {
+            "name": "3",
+            "difficulty": "Difícil",
+            "perks": [
+              {
+                "name": "Bomba de Luz",
+                "image": "flashbang.webp"
+              },
+              {
+                "name": "Jugador de Fondo",
+                "image": "background-player.webp"
+              },
+              {
+                "name": "Campeón de la Luz",
+                "image": "champion-of-light.webp"
+              },
+              {
+                "name": "Manifestación Residual",
+                "image": "residual-manifest.webp"
+              }
+            ]
+          }
+        ]
+      },
+      "Sigiloso": {
+        "image": "/Images/Roles/Sigilo.png",
+        "variants": [
+          {
+            "name": "1",
+            "difficulty": "Fácil",
+            "perks": [
+              {
+                "name": "Evasión Urbana",
+                "image": "urban-evasion.webp"
+              },
+              {
+                "name": "Voluntad de Hierro",
+                "image": "iron-will.webp"
+              },
+              {
+                "name": "Distorsión",
+                "image": "distortion.webp"
+              },
+              {
+                "name": "Peso Ligero",
+                "image": "lightweight.webp"
+              }
+            ]
+          },
+          {
+            "name": "2",
+            "difficulty": "Media",
+            "perks": [
+              {
+                "name": "Evasión Urbana",
+                "image": "urban-evasion.webp"
+              },
+              {
+                "name": "Voluntad de Hierro",
+                "image": "iron-will.webp"
+              },
+              {
+                "name": "Distorsión",
+                "image": "distortion.webp"
+              },
+              {
+                "name": "Peso Ligero",
+                "image": "lightweight.webp"
+              }
+            ]
+          },
+          {
+            "name": "3",
+            "difficulty": "Difícil",
+            "perks": [
+              {
+                "name": "Evasión Urbana",
+                "image": "urban-evasion.webp"
+              },
+              {
+                "name": "Voluntad de Hierro",
+                "image": "iron-will.webp"
+              },
+              {
+                "name": "Distorsión",
+                "image": "distortion.webp"
+              },
+              {
+                "name": "Peso Ligero",
+                "image": "lightweight.webp"
+              }
+            ]
+          }
+        ]
+      },
+      "Loopero": {
+        "image": "/Images/Roles/Loopero.png",
+        "variants": [
+          {
+            "name": "1",
+            "difficulty": "Fácil",
+            "perks": [
+              {
+                "name": "Ventanas de Oportunidad",
+                "image": "windows-of-opportunity.webp"
+              },
+              {
+                "name": "Ágil",
+                "image": "lithe.webp"
+              },
+              {
+                "name": "Resiliencia",
+                "image": "resilience.webp"
+              },
+              {
+                "name": "Esfuerzo Final",
+                "image": "dead-hard.webp"
+              }
+            ]
+          },
+          {
+            "name": "2",
+            "difficulty": "Media",
+            "perks": [
+              {
+                "name": "Ventanas de Oportunidad",
+                "image": "windows-of-opportunity.webp"
+              },
+              {
+                "name": "Ágil",
+                "image": "lithe.webp"
+              },
+              {
+                "name": "Resiliencia",
+                "image": "resilience.webp"
+              },
+              {
+                "name": "Esfuerzo Final",
+                "image": "dead-hard.webp"
+              }
+            ]
+          },
+          {
+            "name": "3",
+            "difficulty": "Difícil",
+            "perks": [
+              {
+                "name": "Ventanas de Oportunidad",
+                "image": "windows-of-opportunity.webp"
+              },
+              {
+                "name": "Ágil",
+                "image": "lithe.webp"
+              },
+              {
+                "name": "Resiliencia",
+                "image": "resilience.webp"
+              },
+              {
+                "name": "Esfuerzo Final",
+                "image": "dead-hard.webp"
+              }
+            ]
+          }
+        ]
+      },
+      "Estratega": {
+        "image": "/Images/Roles/Estratega.png",
+        "variants": [
+          {
+            "name": "1",
+            "difficulty": "Fácil",
+            "perks": [
+              {
+                "name": "Empatía Compartida",
+                "image": "kindred.webp"
+              },
+              {
+                "name": "Vínculo",
+                "image": "bond.webp"
+              },
+              {
+                "name": "Alerta",
+                "image": "alert.webp"
+              },
+              {
+                "name": "Déjà Vu",
+                "image": "deja-vu.webp"
+              }
+            ]
+          },
+          {
+            "name": "2",
+            "difficulty": "Media",
+            "perks": [
+              {
+                "name": "Empatía Compartida",
+                "image": "kindred.webp"
+              },
+              {
+                "name": "Vínculo",
+                "image": "bond.webp"
+              },
+              {
+                "name": "Alerta",
+                "image": "alert.webp"
+              },
+              {
+                "name": "Déjà Vu",
+                "image": "deja-vu.webp"
+              }
+            ]
+          },
+          {
+            "name": "3",
+            "difficulty": "Difícil",
+            "perks": [
+              {
+                "name": "Empatía Compartida",
+                "image": "kindred.webp"
+              },
+              {
+                "name": "Vínculo",
+                "image": "bond.webp"
+              },
+              {
+                "name": "Alerta",
+                "image": "alert.webp"
+              },
+              {
+                "name": "Déjà Vu",
+                "image": "deja-vu.webp"
+              }
+            ]
+          }
+        ]
+      },
+      "Saboteador": {
+        "image": "/Images/Roles/Saboteador.png",
+        "variants": [
+          {
+            "name": "1",
+            "difficulty": "Fácil",
+            "perks": [
+              {
+                "name": "Saboteador",
+                "image": "saboteur.webp"
+              },
+              {
+                "name": "Colapso",
+                "image": "breakdown.webp"
+              },
+              {
+                "name": "Rebeldía",
+                "image": "boil-over.webp"
+              },
+              {
+                "name": "Jugador de Fondo",
+                "image": "background-player.webp"
+              }
+            ]
+          },
+          {
+            "name": "2",
+            "difficulty": "Media",
+            "perks": [
+              {
+                "name": "Saboteador",
+                "image": "saboteur.webp"
+              },
+              {
+                "name": "Colapso",
+                "image": "breakdown.webp"
+              },
+              {
+                "name": "Rebeldía",
+                "image": "boil-over.webp"
+              },
+              {
+                "name": "Jugador de Fondo",
+                "image": "background-player.webp"
+              }
+            ]
+          },
+          {
+            "name": "3",
+            "difficulty": "Difícil",
+            "perks": [
+              {
+                "name": "Saboteador",
+                "image": "saboteur.webp"
+              },
+              {
+                "name": "Colapso",
+                "image": "breakdown.webp"
+              },
+              {
+                "name": "Rebeldía",
+                "image": "boil-over.webp"
+              },
+              {
+                "name": "Jugador de Fondo",
+                "image": "background-player.webp"
+              }
+            ]
+          }
+        ]
+      },
+      "Tanque": {
+        "image": "/Images/Roles/Tanque.png",
+        "variants": [
+          {
+            "name": "1",
+            "difficulty": "Fácil",
+            "perks": [
+              {
+                "name": "Fuera de Registro",
+                "image": "off-the-record.webp"
+              },
+              {
+                "name": "Golpe Decisivo",
+                "image": "decisive-strike.webp"
+              },
+              {
+                "name": "Esfuerzo Final",
+                "image": "dead-hard.webp"
+              },
+              {
+                "name": "Irrompible",
+                "image": "unbreakable.webp"
+              }
+            ]
+          },
+          {
+            "name": "2",
+            "difficulty": "Media",
+            "perks": [
+              {
+                "name": "Fuera de Registro",
+                "image": "off-the-record.webp"
+              },
+              {
+                "name": "Golpe Decisivo",
+                "image": "decisive-strike.webp"
+              },
+              {
+                "name": "Esfuerzo Final",
+                "image": "dead-hard.webp"
+              },
+              {
+                "name": "Irrompible",
+                "image": "unbreakable.webp"
+              }
+            ]
+          },
+          {
+            "name": "3",
+            "difficulty": "Difícil",
+            "perks": [
+              {
+                "name": "Fuera de Registro",
+                "image": "off-the-record.webp"
+              },
+              {
+                "name": "Golpe Decisivo",
+                "image": "decisive-strike.webp"
+              },
+              {
+                "name": "Esfuerzo Final",
+                "image": "dead-hard.webp"
+              },
+              {
+                "name": "Irrompible",
+                "image": "unbreakable.webp"
+              }
+            ]
+          }
+        ]
+      },
+      "Clutch": {
+        "image": "/Images/Roles/EndGame.png",
+        "variants": [
+          {
+            "name": "1",
+            "difficulty": "Fácil",
+            "perks": [
+              {
+                "name": "Adrenalina",
+                "image": "adrenaline.webp"
+              },
+              {
+                "name": "Esperanza",
+                "image": "hope.webp"
+              },
+              {
+                "name": "¡Despierta!",
+                "image": "wake-up.webp"
+              },
+              {
+                "name": "Resiliencia",
+                "image": "resilience.webp"
+              }
+            ]
+          },
+          {
+            "name": "2",
+            "difficulty": "Media",
+            "perks": [
+              {
+                "name": "Adrenalina",
+                "image": "adrenaline.webp"
+              },
+              {
+                "name": "Esperanza",
+                "image": "hope.webp"
+              },
+              {
+                "name": "¡Despierta!",
+                "image": "wake-up.webp"
+              },
+              {
+                "name": "Resiliencia",
+                "image": "resilience.webp"
+              }
+            ]
+          },
+          {
+            "name": "3",
+            "difficulty": "Difícil",
+            "perks": [
+              {
+                "name": "Adrenalina",
+                "image": "adrenaline.webp"
+              },
+              {
+                "name": "Esperanza",
+                "image": "hope.webp"
+              },
+              {
+                "name": "¡Despierta!",
+                "image": "wake-up.webp"
+              },
+              {
+                "name": "Resiliencia",
+                "image": "resilience.webp"
+              }
+            ]
+          }
+        ]
+      },
+      "Troll / Meme": {
+        "image": "/Images/Roles/TrollMeme.png",
+        "variants": [
+          {
+            "name": "1",
+            "difficulty": "Fácil",
+            "perks": [
+              {
+                "name": "De Frente",
+                "image": "head-on.webp"
+              },
+              {
+                "name": "Mina Explosiva",
+                "image": "blast-mine.webp"
+              },
+              {
+                "name": "Bomba de Luz",
+                "image": "flashbang.webp"
+              },
+              {
+                "name": "Giro Argumental",
+                "image": "plot-twist.webp"
+              }
+            ]
+          },
+          {
+            "name": "2",
+            "difficulty": "Media",
+            "perks": [
+              {
+                "name": "De Frente",
+                "image": "head-on.webp"
+              },
+              {
+                "name": "Mina Explosiva",
+                "image": "blast-mine.webp"
+              },
+              {
+                "name": "Bomba de Luz",
+                "image": "flashbang.webp"
+              },
+              {
+                "name": "Giro Argumental",
+                "image": "plot-twist.webp"
+              }
+            ]
+          },
+          {
+            "name": "3",
+            "difficulty": "Difícil",
+            "perks": [
+              {
+                "name": "De Frente",
+                "image": "head-on.webp"
+              },
+              {
+                "name": "Mina Explosiva",
+                "image": "blast-mine.webp"
+              },
+              {
+                "name": "Bomba de Luz",
+                "image": "flashbang.webp"
+              },
+              {
+                "name": "Giro Argumental",
+                "image": "plot-twist.webp"
+              }
+            ]
+          }
+        ]
+      },
+      "Maestro de Bendiciones": {
+        "image": "/Images/Roles/Totems.png",
+        "variants": [
+          {
+            "name": "1",
+            "difficulty": "Fácil",
+            "perks": [
+              {
+                "name": "Bendición: Círculo de Sanación",
+                "image": "boon-circle-of-healing.webp"
+              },
+              {
+                "name": "Bendición: Paso Sombrío",
+                "image": "boon-shadow-step.webp"
+              },
+              {
+                "name": "Bendición: Exponencial",
+                "image": "boon-exponential.webp"
+              },
+              {
+                "name": "Bendición: Teoría Oscura",
+                "image": "boon-dark-theory.webp"
+              }
+            ]
+          },
+          {
+            "name": "2",
+            "difficulty": "Media",
+            "perks": [
+              {
+                "name": "Bendición: Círculo de Sanación",
+                "image": "boon-circle-of-healing.webp"
+              },
+              {
+                "name": "Bendición: Paso Sombrío",
+                "image": "boon-shadow-step.webp"
+              },
+              {
+                "name": "Bendición: Exponencial",
+                "image": "boon-exponential.webp"
+              },
+              {
+                "name": "Bendición: Teoría Oscura",
+                "image": "boon-dark-theory.webp"
+              }
+            ]
+          },
+          {
+            "name": "3",
+            "difficulty": "Difícil",
+            "perks": [
+              {
+                "name": "Bendición: Círculo de Sanación",
+                "image": "boon-circle-of-healing.webp"
+              },
+              {
+                "name": "Bendición: Paso Sombrío",
+                "image": "boon-shadow-step.webp"
+              },
+              {
+                "name": "Bendición: Exponencial",
+                "image": "boon-exponential.webp"
+              },
+              {
+                "name": "Bendición: Teoría Oscura",
+                "image": "boon-dark-theory.webp"
+              }
+            ]
+          }
+        ]
+      },
+      "Velocista": {
+        "image": "/Images/Roles/Velocista.png",
+        "variants": [
+          {
+            "name": "1",
+            "difficulty": "Fácil",
+            "perks": [
+              {
+                "name": "Arranque Veloz",
+                "image": "sprint-burst.webp"
+              },
+              {
+                "name": "Concentración",
+                "image": "fixated.webp"
+              },
+              {
+                "name": "Hecho para Esto",
+                "image": "made-for-this.webp"
+              },
+              {
+                "name": "Esperanza",
+                "image": "hope.webp"
+              }
+            ]
+          },
+          {
+            "name": "2",
+            "difficulty": "Media",
+            "perks": [
+              {
+                "name": "Arranque Veloz",
+                "image": "sprint-burst.webp"
+              },
+              {
+                "name": "Concentración",
+                "image": "fixated.webp"
+              },
+              {
+                "name": "Hecho para Esto",
+                "image": "made-for-this.webp"
+              },
+              {
+                "name": "Esperanza",
+                "image": "hope.webp"
+              }
+            ]
+          },
+          {
+            "name": "3",
+            "difficulty": "Difícil",
+            "perks": [
+              {
+                "name": "Arranque Veloz",
+                "image": "sprint-burst.webp"
+              },
+              {
+                "name": "Concentración",
+                "image": "fixated.webp"
+              },
+              {
+                "name": "Hecho para Esto",
+                "image": "made-for-this.webp"
+              },
+              {
+                "name": "Esperanza",
+                "image": "hope.webp"
+              }
+            ]
+          }
+        ]
+      },
+      "Anti-Killer": {
+        "image": "/Images/Roles/Antikiller.png",
+        "variants": [
+          {
+            "name": "1",
+            "difficulty": "Fácil",
+            "perks": [
+              {
+                "name": "Ventanas de Oportunidad",
+                "image": "windows-of-opportunity.webp"
+              },
+              {
+                "name": "Golpe Decisivo",
+                "image": "decisive-strike.webp"
+              },
+              {
+                "name": "Fuera de Registro",
+                "image": "off-the-record.webp"
+              },
+              {
+                "name": "Liberación",
+                "image": "deliverance.webp"
+              }
+            ]
+          },
+          {
+            "name": "2",
+            "difficulty": "Media",
+            "perks": [
+              {
+                "name": "Ventanas de Oportunidad",
+                "image": "windows-of-opportunity.webp"
+              },
+              {
+                "name": "Golpe Decisivo",
+                "image": "decisive-strike.webp"
+              },
+              {
+                "name": "Fuera de Registro",
+                "image": "off-the-record.webp"
+              },
+              {
+                "name": "Liberación",
+                "image": "deliverance.webp"
+              }
+            ]
+          },
+          {
+            "name": "3",
+            "difficulty": "Difícil",
+            "perks": [
+              {
+                "name": "Ventanas de Oportunidad",
+                "image": "windows-of-opportunity.webp"
+              },
+              {
+                "name": "Golpe Decisivo",
+                "image": "decisive-strike.webp"
+              },
+              {
+                "name": "Fuera de Registro",
+                "image": "off-the-record.webp"
+              },
+              {
+                "name": "Liberación",
+                "image": "deliverance.webp"
+              }
+            ]
+          }
+        ]
+      },
+      "SoloQ Carry": {
+        "image": "/Images/Roles/SoloQ.png",
+        "variants": [
+          {
+            "name": "1",
+            "difficulty": "Fácil",
+            "perks": [
+              {
+                "name": "Empatía Compartida",
+                "image": "kindred.webp"
+              },
+              {
+                "name": "Ventanas de Oportunidad",
+                "image": "windows-of-opportunity.webp"
+              },
+              {
+                "name": "Adrenalina",
+                "image": "adrenaline.webp"
+              },
+              {
+                "name": "Fuera de Registro",
+                "image": "off-the-record.webp"
+              }
+            ]
+          },
+          {
+            "name": "2",
+            "difficulty": "Media",
+            "perks": [
+              {
+                "name": "Empatía Compartida",
+                "image": "kindred.webp"
+              },
+              {
+                "name": "Ventanas de Oportunidad",
+                "image": "windows-of-opportunity.webp"
+              },
+              {
+                "name": "Adrenalina",
+                "image": "adrenaline.webp"
+              },
+              {
+                "name": "Fuera de Registro",
+                "image": "off-the-record.webp"
+              }
+            ]
+          },
+          {
+            "name": "3",
+            "difficulty": "Difícil",
+            "perks": [
+              {
+                "name": "Empatía Compartida",
+                "image": "kindred.webp"
+              },
+              {
+                "name": "Ventanas de Oportunidad",
+                "image": "windows-of-opportunity.webp"
+              },
+              {
+                "name": "Adrenalina",
+                "image": "adrenaline.webp"
+              },
+              {
+                "name": "Fuera de Registro",
+                "image": "off-the-record.webp"
+              }
+            ]
+          }
+        ]
+      },
+      "Me la Pela": {
+        "image": "/Images/Roles/MeLaPela.png",
+        "variants": [
+          {
+            "name": "1",
+            "difficulty": "Fácil",
+            "perks": [
+              {
+                "name": "Sin Miedo",
+                "image": "no-mither.webp"
+              },
+              {
+                "name": "Autocuración",
+                "image": "self-care.webp"
+              },
+              {
+                "name": "Compañero de Escena",
+                "image": "scene-partner.webp"
+              },
+              {
+                "name": "Giro Argumental",
+                "image": "plot-twist.webp"
+              }
+            ]
+          },
+          {
+            "name": "2",
+            "difficulty": "Media",
+            "perks": [
+              {
+                "name": "Sin Miedo",
+                "image": "no-mither.webp"
+              },
+              {
+                "name": "Autocuración",
+                "image": "self-care.webp"
+              },
+              {
+                "name": "Compañero de Escena",
+                "image": "scene-partner.webp"
+              },
+              {
+                "name": "Giro Argumental",
+                "image": "plot-twist.webp"
+              }
+            ]
+          },
+          {
+            "name": "3",
+            "difficulty": "Difícil",
+            "perks": [
+              {
+                "name": "Sin Miedo",
+                "image": "no-mither.webp"
+              },
+              {
+                "name": "Autocuración",
+                "image": "self-care.webp"
+              },
+              {
+                "name": "Compañero de Escena",
+                "image": "scene-partner.webp"
+              },
+              {
+                "name": "Giro Argumental",
+                "image": "plot-twist.webp"
+              }
+            ]
+          }
+        ]
+      },
+      "Explorador": {
+        "image": "/Images/Roles/Estratega.png",
+        "variants": [
+          {
+            "name": "1",
+            "difficulty": "Fácil",
+            "perks": [
+              {
+                "name": "Vínculo",
+                "image": "bond.webp"
+              },
+              {
+                "name": "Alerta",
+                "image": "alert.webp"
+              },
+              {
+                "name": "Empatía Compartida",
+                "image": "kindred.webp"
+              },
+              {
+                "name": "Ventanas de Oportunidad",
+                "image": "windows-of-opportunity.webp"
+              }
+            ]
+          },
+          {
+            "name": "2",
+            "difficulty": "Media",
+            "perks": [
+              {
+                "name": "Estrella de la Suerte",
+                "image": "lucky-star.webp"
+              },
+              {
+                "name": "Enfoque Interno",
+                "image": "inner-focus.webp"
+              },
+              {
+                "name": "Vínculo",
+                "image": "bond.webp"
+              },
+              {
+                "name": "Ventanas de Oportunidad",
+                "image": "windows-of-opportunity.webp"
+              }
+            ]
+          },
+          {
+            "name": "3",
+            "difficulty": "Difícil",
+            "perks": [
+              {
+                "name": "Enfoque Interno",
+                "image": "inner-focus.webp"
+              },
+              {
+                "name": "Alerta",
+                "image": "alert.webp"
+              },
+              {
+                "name": "Arranque Veloz",
+                "image": "sprint-burst.webp"
+              },
+              {
+                "name": "Adrenalina",
+                "image": "adrenaline.webp"
+              }
+            ]
+          }
+        ]
+      },
+      "Protector": {
+        "image": "/Images/Roles/Rescatista.png",
+        "variants": [
+          {
+            "name": "1",
+            "difficulty": "Fácil",
+            "perks": [
+              {
+                "name": "Niñero",
+                "image": "babysitter.webp"
+              },
+              {
+                "name": "Lo Lograremos",
+                "image": "well-make-it.webp"
+              },
+              {
+                "name": "Tiempo Prestado",
+                "image": "borrowed-time.webp"
+              },
+              {
+                "name": "Empatía Compartida",
+                "image": "kindred.webp"
+              }
+            ]
+          },
+          {
+            "name": "2",
+            "difficulty": "Media",
+            "perks": [
+              {
+                "name": "Fuga",
+                "image": "breakout.webp"
+              },
+              {
+                "name": "Lo Lograremos",
+                "image": "well-make-it.webp"
+              },
+              {
+                "name": "Tiempo Prestado",
+                "image": "borrowed-time.webp"
+              },
+              {
+                "name": "Jugador de Fondo",
+                "image": "background-player.webp"
+              }
+            ]
+          },
+          {
+            "name": "3",
+            "difficulty": "Difícil",
+            "perks": [
+              {
+                "name": "Temple de Hombre",
+                "image": "mettle-of-man.webp"
+              },
+              {
+                "name": "Fuga",
+                "image": "breakout.webp"
+              },
+              {
+                "name": "Jugador de Fondo",
+                "image": "background-player.webp"
+              },
+              {
+                "name": "Fuera de Registro",
+                "image": "off-the-record.webp"
+              }
+            ]
+          }
+        ]
+      },
+      "Recolector": {
+        "image": "/Images/Roles/Comodin.png",
+        "variants": [
+          {
+            "name": "1",
+            "difficulty": "Fácil",
+            "perks": [
+              {
+                "name": "Instinto Saqueador",
+                "image": "plunderers-instinct.webp"
+              },
+              {
+                "name": "Tasación",
+                "image": "appraisal.webp"
+              },
+              {
+                "name": "Empatía Compartida",
+                "image": "kindred.webp"
+              },
+              {
+                "name": "Resiliencia",
+                "image": "resilience.webp"
+              }
+            ]
+          },
+          {
+            "name": "2",
+            "difficulty": "Media",
+            "perks": [
+              {
+                "name": "Tasación",
+                "image": "appraisal.webp"
+              },
+              {
+                "name": "As Bajo la Manga",
+                "image": "ace-in-the-hole.webp"
+              },
+              {
+                "name": "Instinto Saqueador",
+                "image": "plunderers-instinct.webp"
+              },
+              {
+                "name": "Resiliencia",
+                "image": "resilience.webp"
+              }
+            ]
+          },
+          {
+            "name": "3",
+            "difficulty": "Difícil",
+            "perks": [
+              {
+                "name": "Carroñero",
+                "image": "scavenger.webp"
+              },
+              {
+                "name": "Instinto Saqueador",
+                "image": "plunderers-instinct.webp"
+              },
+              {
+                "name": "As Bajo la Manga",
+                "image": "ace-in-the-hole.webp"
+              },
+              {
+                "name": "Tasación",
+                "image": "appraisal.webp"
+              }
+            ]
+          }
+        ]
+      },
+      "Anti-slug": {
+        "image": "/Images/Roles/Tanque.png",
+        "variants": [
+          {
+            "name": "1",
+            "difficulty": "Fácil",
+            "perks": [
+              {
+                "name": "Irrompible",
+                "image": "unbreakable.webp"
+              },
+              {
+                "name": "Tenacidad",
+                "image": "tenacity.webp"
+              },
+              {
+                "name": "Empatía Compartida",
+                "image": "kindred.webp"
+              },
+              {
+                "name": "Resiliencia",
+                "image": "resilience.webp"
+              }
+            ]
+          },
+          {
+            "name": "2",
+            "difficulty": "Media",
+            "perks": [
+              {
+                "name": "Tenacidad",
+                "image": "tenacity.webp"
+              },
+              {
+                "name": "Irrompible",
+                "image": "unbreakable.webp"
+              },
+              {
+                "name": "Voltereta",
+                "image": "flip-flop.webp"
+              },
+              {
+                "name": "Rebeldía",
+                "image": "boil-over.webp"
+              }
+            ]
+          },
+          {
+            "name": "3",
+            "difficulty": "Difícil",
+            "perks": [
+              {
+                "name": "Voltereta",
+                "image": "flip-flop.webp"
+              },
+              {
+                "name": "Irrompible",
+                "image": "unbreakable.webp"
+              },
+              {
+                "name": "Tenacidad",
+                "image": "tenacity.webp"
+              },
+              {
+                "name": "Rebeldía",
+                "image": "boil-over.webp"
+              }
+            ]
+          }
+        ]
+      },
+      "Líder": {
+        "image": "/Images/Roles/Estratega.png",
+        "variants": [
+          {
+            "name": "1",
+            "difficulty": "Fácil",
+            "perks": [
+              {
+                "name": "Líder",
+                "image": "leader.webp"
+              },
+              {
+                "name": "Demuéstralo",
+                "image": "prove-thyself.webp"
+              },
+              {
+                "name": "Empatía Compartida",
+                "image": "kindred.webp"
+              },
+              {
+                "name": "Vínculo",
+                "image": "bond.webp"
+              }
+            ]
+          },
+          {
+            "name": "2",
+            "difficulty": "Media",
+            "perks": [
+              {
+                "name": "Demuéstralo",
+                "image": "prove-thyself.webp"
+              },
+              {
+                "name": "Líder",
+                "image": "leader.webp"
+              },
+              {
+                "name": "Vínculo",
+                "image": "bond.webp"
+              },
+              {
+                "name": "Lo Lograremos",
+                "image": "well-make-it.webp"
+              }
+            ]
+          },
+          {
+            "name": "3",
+            "difficulty": "Difícil",
+            "perks": [
+              {
+                "name": "Trabajo en Equipo: Poder de Dos",
+                "image": "teamwork-power-of-two.webp"
+              },
+              {
+                "name": "Demuéstralo",
+                "image": "prove-thyself.webp"
+              },
+              {
+                "name": "Líder",
+                "image": "leader.webp"
+              },
+              {
+                "name": "Vínculo",
+                "image": "bond.webp"
+              }
+            ]
+          }
+        ]
+      },
+      "Controlador": {
+        "image": "/Images/Roles/Estratega.png",
+        "variants": [
+          {
+            "name": "1",
+            "difficulty": "Fácil",
+            "perks": [
+              {
+                "name": "Alerta",
+                "image": "alert.webp"
+              },
+              {
+                "name": "Empatía Compartida",
+                "image": "kindred.webp"
+              },
+              {
+                "name": "Vínculo",
+                "image": "bond.webp"
+              },
+              {
+                "name": "Déjà Vu",
+                "image": "deja-vu.webp"
+              }
+            ]
+          },
+          {
+            "name": "2",
+            "difficulty": "Media",
+            "perks": [
+              {
+                "name": "Empatía Compartida",
+                "image": "kindred.webp"
+              },
+              {
+                "name": "Alerta",
+                "image": "alert.webp"
+              },
+              {
+                "name": "Ventanas de Oportunidad",
+                "image": "windows-of-opportunity.webp"
+              },
+              {
+                "name": "Vínculo",
+                "image": "bond.webp"
+              }
+            ]
+          },
+          {
+            "name": "3",
+            "difficulty": "Difícil",
+            "perks": [
+              {
+                "name": "Ventanas de Oportunidad",
+                "image": "windows-of-opportunity.webp"
+              },
+              {
+                "name": "Empatía Compartida",
+                "image": "kindred.webp"
+              },
+              {
+                "name": "Alerta",
+                "image": "alert.webp"
+              },
+              {
+                "name": "Enfoque Interno",
+                "image": "inner-focus.webp"
+              }
+            ]
+          }
+        ]
+      },
+      "Especialista en Objetivos": {
+        "image": "/Images/Roles/Reparador.png",
+        "variants": [
+          {
+            "name": "1",
+            "difficulty": "Fácil",
+            "perks": [
+              {
+                "name": "Déjà Vu",
+                "image": "deja-vu.webp"
+              },
+              {
+                "name": "Demuéstralo",
+                "image": "prove-thyself.webp"
+              },
+              {
+                "name": "Resiliencia",
+                "image": "resilience.webp"
+              },
+              {
+                "name": "Empatía Compartida",
+                "image": "kindred.webp"
+              }
+            ]
+          },
+          {
+            "name": "2",
+            "difficulty": "Media",
+            "perks": [
+              {
+                "name": "Resiliencia",
+                "image": "resilience.webp"
+              },
+              {
+                "name": "Déjà Vu",
+                "image": "deja-vu.webp"
+              },
+              {
+                "name": "Demuéstralo",
+                "image": "prove-thyself.webp"
+              },
+              {
+                "name": "Hiperconcentración",
+                "image": "hyperfocus.webp"
+              }
+            ]
+          },
+          {
+            "name": "3",
+            "difficulty": "Difícil",
+            "perks": [
+              {
+                "name": "Especialista",
+                "image": "specialist.webp"
+              },
+              {
+                "name": "Resiliencia",
+                "image": "resilience.webp"
+              },
+              {
+                "name": "Déjà Vu",
+                "image": "deja-vu.webp"
+              },
+              {
+                "name": "Hiperconcentración",
+                "image": "hyperfocus.webp"
+              }
+            ]
+          }
+        ]
+      }
+    }
   },
-
   {
     "id": "items",
     "title": "Ruleta de Items",
@@ -200,31 +2091,96 @@
       "#315a8e"
     ],
     "options": [
-      { "label": "Caja de herramientas de Alex", "image": "/Images/Items/AlexToolbox.webp" },
-      { "label": "Mapa anotado", "image": "/Images/Items/AnnotatedMap.webp" },
-      { "label": "Vial de niebla del aprendiz", "image": "/Images/Items/ApprenticesFogVial.webp" },
-      { "label": "Vial de niebla del artesano", "image": "/Images/Items/ArtisansFogVial.webp" },
-      { "label": "Llave rota", "image": "/Images/Items/BrokenKey.webp" },
-      { "label": "Botiquín de campamento", "image": "/Images/Items/CampingAidKit.webp" },
-      { "label": "Caja de herramientas cómoda", "image": "/Images/Items/CommodiousToolbox.webp" },
-      { "label": "Mapa críptico", "image": "/Images/Items/CrypticMap.webp" },
-      { "label": "Llave opaca", "image": "/Images/Items/DullKey.webp" },
-      { "label": "Botiquín de emergencia", "image": "/Images/Items/EmergencyMedKit.webp" },
-      { "label": "Caja de herramientas del ingeniero", "image": "/Images/Items/EngineersToolbox.webp" },
-      { "label": "Botiquín básico", "image": "/Images/Items/FirstAidKit.webp" },
-      { "label": "Linterna", "image": "/Images/Items/Flashlight.webp" },
-      { "label": "Caja de herramientas mecánica", "image": "/Images/Items/MechanicsToolbox.webp" },
-      { "label": "Botiquín de ranger", "image": "/Images/Items/RangerMedKit.webp" },
-      { "label": "Mapa garabateado", "image": "/Images/Items/ScribbledMap.webp" },
-      { "label": "Llave esqueleto", "image": "/Images/Items/SkeletonKey.webp" },
-      { "label": "Linterna deportiva", "image": "/Images/Items/SportFlashlight.webp" },
-      { "label": "Caja de herramientas", "image": "/Images/Items/Toolbox.webp" },
-      { "label": "Linterna de utilidad", "image": "/Images/Items/UtilityFlashlight.webp" },
-      { "label": "Vial de niebla vigoroso", "image": "/Images/Items/VigosFogVial.webp" },
-      { "label": "Caja de herramientas desgastada", "image": "/Images/Items/WornOutTools.webp" }
+      {
+        "label": "Caja de herramientas de Alex",
+        "image": "/Images/Items/AlexToolbox.webp"
+      },
+      {
+        "label": "Mapa anotado",
+        "image": "/Images/Items/AnnotatedMap.webp"
+      },
+      {
+        "label": "Vial de niebla del aprendiz",
+        "image": "/Images/Items/ApprenticesFogVial.webp"
+      },
+      {
+        "label": "Vial de niebla del artesano",
+        "image": "/Images/Items/ArtisansFogVial.webp"
+      },
+      {
+        "label": "Llave rota",
+        "image": "/Images/Items/BrokenKey.webp"
+      },
+      {
+        "label": "Botiquín de campamento",
+        "image": "/Images/Items/CampingAidKit.webp"
+      },
+      {
+        "label": "Caja de herramientas cómoda",
+        "image": "/Images/Items/CommodiousToolbox.webp"
+      },
+      {
+        "label": "Mapa críptico",
+        "image": "/Images/Items/CrypticMap.webp"
+      },
+      {
+        "label": "Llave opaca",
+        "image": "/Images/Items/DullKey.webp"
+      },
+      {
+        "label": "Botiquín de emergencia",
+        "image": "/Images/Items/EmergencyMedKit.webp"
+      },
+      {
+        "label": "Caja de herramientas del ingeniero",
+        "image": "/Images/Items/EngineersToolbox.webp"
+      },
+      {
+        "label": "Botiquín básico",
+        "image": "/Images/Items/FirstAidKit.webp"
+      },
+      {
+        "label": "Linterna",
+        "image": "/Images/Items/Flashlight.webp"
+      },
+      {
+        "label": "Caja de herramientas mecánica",
+        "image": "/Images/Items/MechanicsToolbox.webp"
+      },
+      {
+        "label": "Botiquín de ranger",
+        "image": "/Images/Items/RangerMedKit.webp"
+      },
+      {
+        "label": "Mapa garabateado",
+        "image": "/Images/Items/ScribbledMap.webp"
+      },
+      {
+        "label": "Llave esqueleto",
+        "image": "/Images/Items/SkeletonKey.webp"
+      },
+      {
+        "label": "Linterna deportiva",
+        "image": "/Images/Items/SportFlashlight.webp"
+      },
+      {
+        "label": "Caja de herramientas",
+        "image": "/Images/Items/Toolbox.webp"
+      },
+      {
+        "label": "Linterna de utilidad",
+        "image": "/Images/Items/UtilityFlashlight.webp"
+      },
+      {
+        "label": "Vial de niebla vigoroso",
+        "image": "/Images/Items/VigosFogVial.webp"
+      },
+      {
+        "label": "Caja de herramientas desgastada",
+        "image": "/Images/Items/WornOutTools.webp"
+      }
     ]
   },
-
   {
     "id": "hardcore-items",
     "title": "Ruleta de Perks",
@@ -238,171 +2194,666 @@
       "#92400e"
     ],
     "options": [
-      { "label": "As Bajo la Manga", "image": "/Images/Perks/ace-in-the-hole.webp" },
-      { "label": "Adrenalina", "image": "/Images/Perks/adrenaline.webp" },
-      { "label": "Cuidados Posteriores", "image": "/Images/Perks/aftercare.webp" },
-      { "label": "Alerta", "image": "/Images/Perks/alert.webp" },
-      { "label": "Por Cualquier Medio", "image": "/Images/Perks/any-means-necessary.webp" },
-      { "label": "Un Lugar para Nosotros", "image": "/Images/Perks/a-place-for-us.webp" },
-      { "label": "Ingenio Apocalíptico", "image": "/Images/Perks/apocalyptic-ingenuity.webp" },
-      { "label": "Tasación", "image": "/Images/Perks/appraisal.webp" },
-      { "label": "Autodidacta", "image": "/Images/Perks/autodidact.webp" },
-      { "label": "Niñero", "image": "/Images/Perks/babysitter.webp" },
-      { "label": "Jugador de Fondo", "image": "/Images/Perks/background-player.webp" },
-      { "label": "Bada Bada Boom", "image": "/Images/Perks/bada-bada-boom.webp" },
-      { "label": "Aterrizaje Equilibrado", "image": "/Images/Perks/balanced-landing.webp" },
-      { "label": "Inspiración Bárdica", "image": "/Images/Perks/bardic-inspiration.webp" },
-      { "label": "Mejor que Nuevo", "image": "/Images/Perks/better-than-new.webp" },
-      { "label": "Mejor Juntos", "image": "/Images/Perks/better-together.webp" },
-      { "label": "Muerde la Bala", "image": "/Images/Perks/bite-the-bullet.webp" },
-      { "label": "Mina Explosiva", "image": "/Images/Perks/blast-mine.webp" },
-      { "label": "Pacto de Sangre", "image": "/Images/Perks/blood-pact.webp" },
-      { "label": "Torrente de Sangre", "image": "/Images/Perks/blood-rush.webp" },
-      { "label": "Rebeldía", "image": "/Images/Perks/boil-over.webp" },
-      { "label": "Vínculo", "image": "/Images/Perks/bond.webp" },
-      { "label": "Bendición: Círculo de Sanación", "image": "/Images/Perks/boon-circle-of-healing.webp" },
-      { "label": "Bendición: Teoría Oscura", "image": "/Images/Perks/boon-dark-theory.webp" },
-      { "label": "Bendición: Exponencial", "image": "/Images/Perks/boon-exponential.webp" },
-      { "label": "Bendición: Iluminación", "image": "/Images/Perks/boon-illumination.webp" },
-      { "label": "Bendición: Paso Sombrío", "image": "/Images/Perks/boon-shadow-step.webp" },
-      { "label": "Tiempo Prestado", "image": "/Images/Perks/borrowed-time.webp" },
-      { "label": "Conocimiento en Botánica", "image": "/Images/Perks/botany-knowledge.webp" },
-      { "label": "Colapso", "image": "/Images/Perks/breakdown.webp" },
-      { "label": "Fuga", "image": "/Images/Perks/breakout.webp" },
-      { "label": "Abrocharse", "image": "/Images/Perks/buckle-up.webp" },
-      { "label": "Hecho para Durar", "image": "/Images/Perks/built-to-last.webp" },
-      { "label": "Espíritu Tranquilo", "image": "/Images/Perks/calm-spirit.webp" },
-      { "label": "Camaradería", "image": "/Images/Perks/camaraderie.webp" },
-      { "label": "Campeón de la Luz", "image": "/Images/Perks/champion-of-light.webp" },
-      { "label": "Cambio de Planes", "image": "/Images/Perks/change-of-plan.webp" },
-      { "label": "Trampa Química", "image": "/Images/Perks/chemical-trap.webp" },
-      { "label": "Clarividencia", "image": "/Images/Perks/clairvoyance.webp" },
-      { "label": "Ruptura Limpia", "image": "/Images/Perks/clean-break.webp" },
-      { "label": "Ven a por Mí", "image": "/Images/Perks/come-and-get-me.webp" },
-      { "label": "Convicción", "image": "/Images/Perks/conviction.webp" },
-      { "label": "Acción Correctiva", "image": "/Images/Perks/corrective-action.webp" },
-      { "label": "Soltarse", "image": "/Images/Perks/cut-loose.webp" },
-      { "label": "Baila Conmigo", "image": "/Images/Perks/dance-with-me.webp" },
-      { "label": "Sentido Oscuro", "image": "/Images/Perks/dark-sense.webp" },
-      { "label": "Esfuerzo Final", "image": "/Images/Perks/dead-hard.webp" },
-      { "label": "Fecha Límite", "image": "/Images/Perks/deadline.webp" },
-      { "label": "Engaño", "image": "/Images/Perks/deception.webp" },
-      { "label": "Golpe Decisivo", "image": "/Images/Perks/decisive-strike.webp" },
-      { "label": "Déjà Vu", "image": "/Images/Perks/deja-vu.webp" },
-      { "label": "Liberación", "image": "/Images/Perks/deliverance.webp" },
-      { "label": "Medidas Desesperadas", "image": "/Images/Perks/desperate-measures.webp" },
-      { "label": "Corazonada del Detective", "image": "/Images/Perks/detectives-hunch.webp" },
-      { "label": "Distorsión", "image": "/Images/Perks/distortion.webp" },
-      { "label": "Diversión", "image": "/Images/Perks/diversion.webp" },
-      { "label": "No Hacer Daño", "image": "/Images/Perks/do-no-harm.webp" },
-      { "label": "Dramaturgia", "image": "/Images/Perks/dramaturgy.webp" },
-      { "label": "Deber de Cuidado", "image": "/Images/Perks/duty-of-care.webp" },
-      { "label": "Conexión Empática", "image": "/Images/Perks/empathic-connection.webp" },
-      { "label": "Empatía", "image": "/Images/Perks/empathy.webp" },
-      { "label": "Percepción Extrasensorial", "image": "/Images/Perks/extrasensory-perception.webp" },
-      { "label": "Exultación", "image": "/Images/Perks/exultation.webp" },
-      { "label": "Ojos de Belmont", "image": "/Images/Perks/eyes-of-belmont.webp" },
-      { "label": "Vía Rápida", "image": "/Images/Perks/fast-track.webp" },
-      { "label": "Delicadeza", "image": "/Images/Perks/finesse.webp" },
-      { "label": "Cinco Movimientos Adelante", "image": "/Images/Perks/five-moves-ahead.webp" },
-      { "label": "Concentración", "image": "/Images/Perks/fixated.webp" },
-      { "label": "Bomba de Luz", "image": "/Images/Perks/flashbang.webp" },
-      { "label": "Voltereta", "image": "/Images/Perks/flip-flop.webp" },
-      { "label": "Estado de Flujo", "image": "/Images/Perks/flow-state.webp" },
-      { "label": "Sabio de la Niebla", "image": "/Images/Perks/fogwise.webp" },
-      { "label": "Por la Gente", "image": "/Images/Perks/for-the-people.webp" },
-      { "label": "Competencia Amistosa", "image": "/Images/Perks/friendly-competition.webp" },
-      { "label": "Notas Fantasma", "image": "/Images/Perks/ghost-notes.webp" },
-      { "label": "Endurecido", "image": "/Images/Perks/hardened.webp" },
-      { "label": "De Frente", "image": "/Images/Perks/head-on.webp" },
-      { "label": "Esperanza", "image": "/Images/Perks/hope.webp" },
-      { "label": "Hiperconcentración", "image": "/Images/Perks/hyperfocus.webp" },
-      { "label": "Enfoque Interno", "image": "/Images/Perks/inner-focus.webp" },
-      { "label": "Fuerza Interna", "image": "/Images/Perks/inner-strength.webp" },
-      { "label": "Invocación: Cuervos Traicioneros", "image": "/Images/Perks/invocation-treacherous-crows.webp" },
-      { "label": "Invocación: Arañas Tejedoras", "image": "/Images/Perks/invocation-weaving-spiders.webp" },
-      { "label": "Voluntad de Hierro", "image": "/Images/Perks/iron-will.webp" },
-      { "label": "Empatía Compartida", "image": "/Images/Perks/kindred.webp" },
-      { "label": "Última Resistencia", "image": "/Images/Perks/last-stand.webp" },
-      { "label": "Líder", "image": "/Images/Perks/leader.webp" },
-      { "label": "Dejado Atrás", "image": "/Images/Perks/left-behind.webp" },
-      { "label": "Pies Ligeros", "image": "/Images/Perks/light-footed.webp" },
-      { "label": "Peso Ligero", "image": "/Images/Perks/lightweight.webp" },
-      { "label": "Ágil", "image": "/Images/Perks/lithe.webp" },
-      { "label": "Perfil Bajo", "image": "/Images/Perks/low-profile.webp" },
-      { "label": "Golpe de Suerte", "image": "/Images/Perks/lucky-break.webp" },
-      { "label": "Estrella de la Suerte", "image": "/Images/Perks/lucky-star.webp" },
-      { "label": "Hecho para Esto", "image": "/Images/Perks/made-for-this.webp" },
-      { "label": "Temple de Hombre", "image": "/Images/Perks/mettle-of-man.webp" },
-      { "label": "Ilusión Reflejada", "image": "/Images/Perks/mirrored-illusion.webp" },
-      { "label": "Momento de Gloria", "image": "/Images/Perks/moment-of-glory.webp" },
-      { "label": "Sin Miedo", "image": "/Images/Perks/no-mither.webp" },
-      { "label": "Nadie se Queda Atrás", "image": "/Images/Perks/no-one-left-behind.webp" },
-      { "label": "Objeto de Obsesión", "image": "/Images/Perks/object-of-obsession.webp" },
-      { "label": "Fuera de Registro", "image": "/Images/Perks/off-the-record.webp" },
-      { "label": "Uno Dos Tres Cuatro", "image": "/Images/Perks/one-two-three-four.webp" },
-      { "label": "Mano Abierta", "image": "/Images/Perks/open-handed.webp" },
-      { "label": "Superar", "image": "/Images/Perks/overcome.webp" },
-      { "label": "Guía Parental", "image": "/Images/Perks/parental-guidance.webp" },
-      { "label": "Farmacia", "image": "/Images/Perks/pharmacy.webp" },
-      { "label": "Giro Argumental", "image": "/Images/Perks/plot-twist.webp" },
-      { "label": "Instinto Saqueador", "image": "/Images/Perks/plunderers-instinct.webp" },
-      { "label": "Sereno", "image": "/Images/Perks/poised.webp" },
-      { "label": "Energía Potencial", "image": "/Images/Perks/potential-energy.webp" },
-      { "label": "Premonición", "image": "/Images/Perks/premonition.webp" },
-      { "label": "Demuéstralo", "image": "/Images/Perks/prove-thyself.webp" },
-      { "label": "Apuesta Rápida", "image": "/Images/Perks/quick-gambit.webp" },
-      { "label": "Rápido y Silencioso", "image": "/Images/Perks/quick-quiet.webp" },
-      { "label": "Respuesta Rápida", "image": "/Images/Perks/rapid-response.webp" },
-      { "label": "Tranquilidad", "image": "/Images/Perks/reassurance.webp" },
-      { "label": "Pista Falsa", "image": "/Images/Perks/red-herring.webp" },
-      { "label": "Alianza Reprimida", "image": "/Images/Perks/repressed-alliance.webp" },
-      { "label": "Manifestación Residual", "image": "/Images/Perks/residual-manifest.webp" },
-      { "label": "Resiliencia", "image": "/Images/Perks/resilience.webp" },
-      { "label": "Resurgimiento", "image": "/Images/Perks/resurgence.webp" },
-      { "label": "Vida en la Carretera", "image": "/Images/Perks/road-life.webp" },
-      { "label": "Espíritu Novato", "image": "/Images/Perks/rookie-spirit.webp" },
-      { "label": "Saboteador", "image": "/Images/Perks/saboteur.webp" },
-      { "label": "Carroñero", "image": "/Images/Perks/scavenger.webp" },
-      { "label": "Compañero de Escena", "image": "/Images/Perks/scene-partner.webp" },
-      { "label": "Segundo Aliento", "image": "/Images/Perks/second-wind.webp" },
-      { "label": "Autocuración", "image": "/Images/Perks/self-care.webp" },
-      { "label": "Autopreservación", "image": "/Images/Perks/self-preservation.webp" },
-      { "label": "Cargar con la Carga", "image": "/Images/Perks/shoulder-the-burden.webp" },
-      { "label": "Carne Resbaladiza", "image": "/Images/Perks/slippery-meat.webp" },
-      { "label": "Juego Pequeño", "image": "/Images/Perks/small-game.webp" },
-      { "label": "Golpe Aplastante", "image": "/Images/Perks/smash-hit.webp" },
-      { "label": "Único Superviviente", "image": "/Images/Perks/sole-survivor.webp" },
-      { "label": "Solidaridad", "image": "/Images/Perks/solidarity.webp" },
-      { "label": "Guardián del Alma", "image": "/Images/Perks/soul-guard.webp" },
-      { "label": "Especialista", "image": "/Images/Perks/specialist.webp" },
-      { "label": "Escalofrío", "image": "/Images/Perks/spine-chill.webp" },
-      { "label": "Arranque Veloz", "image": "/Images/Perks/sprint-burst.webp" },
-      { "label": "Vigilancia", "image": "/Images/Perks/stake-out.webp" },
-      { "label": "Vista Quieta", "image": "/Images/Perks/still-sight.webp" },
-      { "label": "Callejero", "image": "/Images/Perks/streetwise.webp" },
-      { "label": "Fuerza en las Sombras", "image": "/Images/Perks/strength-in-shadows.webp" },
-      { "label": "Trabajo en Equipo: Sigilo Colectivo", "image": "/Images/Perks/teamwork-collective-stealth.webp" },
-      { "label": "Trabajo en Equipo: Circuito Completo", "image": "/Images/Perks/teamwork-full-circuit.webp" },
-      { "label": "Trabajo en Equipo: Poder de Dos", "image": "/Images/Perks/teamwork-power-of-two.webp" },
-      { "label": "Trabajo en Equipo: Derribar", "image": "/Images/Perks/teamwork-throw-down.webp" },
-      { "label": "Trabajo en Equipo: Endurecer", "image": "/Images/Perks/teamwork-toughen-up.webp" },
-      { "label": "Técnico", "image": "/Images/Perks/technician.webp" },
-      { "label": "Tenacidad", "image": "/Images/Perks/tenacity.webp" },
-      { "label": "Esto No Está Pasando", "image": "/Images/Perks/this-is-not-happening.webp" },
-      { "label": "Solucionador de Problemas", "image": "/Images/Perks/troubleshooter.webp" },
-      { "label": "Irrompible", "image": "/Images/Perks/unbreakable.webp" },
-      { "label": "Subir la Apuesta", "image": "/Images/Perks/up-the-ante.webp" },
-      { "label": "Evasión Urbana", "image": "/Images/Perks/urban-evasion.webp" },
-      { "label": "Vigilia", "image": "/Images/Perks/vigil.webp" },
-      { "label": "Visionario", "image": "/Images/Perks/visionary.webp" },
-      { "label": "¡Despierta!", "image": "/Images/Perks/wake-up.webp" },
-      { "label": "Lo Lograremos", "image": "/Images/Perks/well-make-it.webp" },
-      { "label": "Viviremos para Siempre", "image": "/Images/Perks/were-gonna-live-forever.webp" },
-      { "label": "Te Vemos", "image": "/Images/Perks/we-see-you.webp" },
-      { "label": "Malvado", "image": "/Images/Perks/wicked.webp" },
-      { "label": "Ventanas de Oportunidad", "image": "/Images/Perks/windows-of-opportunity.webp" },
-      { "label": "Escucha Telefónica", "image": "/Images/Perks/wiretap.webp" }
+      {
+        "label": "As Bajo la Manga",
+        "image": "/Images/Perks/ace-in-the-hole.webp"
+      },
+      {
+        "label": "Adrenalina",
+        "image": "/Images/Perks/adrenaline.webp"
+      },
+      {
+        "label": "Cuidados Posteriores",
+        "image": "/Images/Perks/aftercare.webp"
+      },
+      {
+        "label": "Alerta",
+        "image": "/Images/Perks/alert.webp"
+      },
+      {
+        "label": "Por Cualquier Medio",
+        "image": "/Images/Perks/any-means-necessary.webp"
+      },
+      {
+        "label": "Un Lugar para Nosotros",
+        "image": "/Images/Perks/a-place-for-us.webp"
+      },
+      {
+        "label": "Ingenio Apocalíptico",
+        "image": "/Images/Perks/apocalyptic-ingenuity.webp"
+      },
+      {
+        "label": "Tasación",
+        "image": "/Images/Perks/appraisal.webp"
+      },
+      {
+        "label": "Autodidacta",
+        "image": "/Images/Perks/autodidact.webp"
+      },
+      {
+        "label": "Niñero",
+        "image": "/Images/Perks/babysitter.webp"
+      },
+      {
+        "label": "Jugador de Fondo",
+        "image": "/Images/Perks/background-player.webp"
+      },
+      {
+        "label": "Bada Bada Boom",
+        "image": "/Images/Perks/bada-bada-boom.webp"
+      },
+      {
+        "label": "Aterrizaje Equilibrado",
+        "image": "/Images/Perks/balanced-landing.webp"
+      },
+      {
+        "label": "Inspiración Bárdica",
+        "image": "/Images/Perks/bardic-inspiration.webp"
+      },
+      {
+        "label": "Mejor que Nuevo",
+        "image": "/Images/Perks/better-than-new.webp"
+      },
+      {
+        "label": "Mejor Juntos",
+        "image": "/Images/Perks/better-together.webp"
+      },
+      {
+        "label": "Muerde la Bala",
+        "image": "/Images/Perks/bite-the-bullet.webp"
+      },
+      {
+        "label": "Mina Explosiva",
+        "image": "/Images/Perks/blast-mine.webp"
+      },
+      {
+        "label": "Pacto de Sangre",
+        "image": "/Images/Perks/blood-pact.webp"
+      },
+      {
+        "label": "Torrente de Sangre",
+        "image": "/Images/Perks/blood-rush.webp"
+      },
+      {
+        "label": "Rebeldía",
+        "image": "/Images/Perks/boil-over.webp"
+      },
+      {
+        "label": "Vínculo",
+        "image": "/Images/Perks/bond.webp"
+      },
+      {
+        "label": "Bendición: Círculo de Sanación",
+        "image": "/Images/Perks/boon-circle-of-healing.webp"
+      },
+      {
+        "label": "Bendición: Teoría Oscura",
+        "image": "/Images/Perks/boon-dark-theory.webp"
+      },
+      {
+        "label": "Bendición: Exponencial",
+        "image": "/Images/Perks/boon-exponential.webp"
+      },
+      {
+        "label": "Bendición: Iluminación",
+        "image": "/Images/Perks/boon-illumination.webp"
+      },
+      {
+        "label": "Bendición: Paso Sombrío",
+        "image": "/Images/Perks/boon-shadow-step.webp"
+      },
+      {
+        "label": "Tiempo Prestado",
+        "image": "/Images/Perks/borrowed-time.webp"
+      },
+      {
+        "label": "Conocimiento en Botánica",
+        "image": "/Images/Perks/botany-knowledge.webp"
+      },
+      {
+        "label": "Colapso",
+        "image": "/Images/Perks/breakdown.webp"
+      },
+      {
+        "label": "Fuga",
+        "image": "/Images/Perks/breakout.webp"
+      },
+      {
+        "label": "Abrocharse",
+        "image": "/Images/Perks/buckle-up.webp"
+      },
+      {
+        "label": "Hecho para Durar",
+        "image": "/Images/Perks/built-to-last.webp"
+      },
+      {
+        "label": "Espíritu Tranquilo",
+        "image": "/Images/Perks/calm-spirit.webp"
+      },
+      {
+        "label": "Camaradería",
+        "image": "/Images/Perks/camaraderie.webp"
+      },
+      {
+        "label": "Campeón de la Luz",
+        "image": "/Images/Perks/champion-of-light.webp"
+      },
+      {
+        "label": "Cambio de Planes",
+        "image": "/Images/Perks/change-of-plan.webp"
+      },
+      {
+        "label": "Trampa Química",
+        "image": "/Images/Perks/chemical-trap.webp"
+      },
+      {
+        "label": "Clarividencia",
+        "image": "/Images/Perks/clairvoyance.webp"
+      },
+      {
+        "label": "Ruptura Limpia",
+        "image": "/Images/Perks/clean-break.webp"
+      },
+      {
+        "label": "Ven a por Mí",
+        "image": "/Images/Perks/come-and-get-me.webp"
+      },
+      {
+        "label": "Convicción",
+        "image": "/Images/Perks/conviction.webp"
+      },
+      {
+        "label": "Acción Correctiva",
+        "image": "/Images/Perks/corrective-action.webp"
+      },
+      {
+        "label": "Soltarse",
+        "image": "/Images/Perks/cut-loose.webp"
+      },
+      {
+        "label": "Baila Conmigo",
+        "image": "/Images/Perks/dance-with-me.webp"
+      },
+      {
+        "label": "Sentido Oscuro",
+        "image": "/Images/Perks/dark-sense.webp"
+      },
+      {
+        "label": "Esfuerzo Final",
+        "image": "/Images/Perks/dead-hard.webp"
+      },
+      {
+        "label": "Fecha Límite",
+        "image": "/Images/Perks/deadline.webp"
+      },
+      {
+        "label": "Engaño",
+        "image": "/Images/Perks/deception.webp"
+      },
+      {
+        "label": "Golpe Decisivo",
+        "image": "/Images/Perks/decisive-strike.webp"
+      },
+      {
+        "label": "Déjà Vu",
+        "image": "/Images/Perks/deja-vu.webp"
+      },
+      {
+        "label": "Liberación",
+        "image": "/Images/Perks/deliverance.webp"
+      },
+      {
+        "label": "Medidas Desesperadas",
+        "image": "/Images/Perks/desperate-measures.webp"
+      },
+      {
+        "label": "Corazonada del Detective",
+        "image": "/Images/Perks/detectives-hunch.webp"
+      },
+      {
+        "label": "Distorsión",
+        "image": "/Images/Perks/distortion.webp"
+      },
+      {
+        "label": "Diversión",
+        "image": "/Images/Perks/diversion.webp"
+      },
+      {
+        "label": "No Hacer Daño",
+        "image": "/Images/Perks/do-no-harm.webp"
+      },
+      {
+        "label": "Dramaturgia",
+        "image": "/Images/Perks/dramaturgy.webp"
+      },
+      {
+        "label": "Deber de Cuidado",
+        "image": "/Images/Perks/duty-of-care.webp"
+      },
+      {
+        "label": "Conexión Empática",
+        "image": "/Images/Perks/empathic-connection.webp"
+      },
+      {
+        "label": "Empatía",
+        "image": "/Images/Perks/empathy.webp"
+      },
+      {
+        "label": "Percepción Extrasensorial",
+        "image": "/Images/Perks/extrasensory-perception.webp"
+      },
+      {
+        "label": "Exultación",
+        "image": "/Images/Perks/exultation.webp"
+      },
+      {
+        "label": "Ojos de Belmont",
+        "image": "/Images/Perks/eyes-of-belmont.webp"
+      },
+      {
+        "label": "Vía Rápida",
+        "image": "/Images/Perks/fast-track.webp"
+      },
+      {
+        "label": "Delicadeza",
+        "image": "/Images/Perks/finesse.webp"
+      },
+      {
+        "label": "Cinco Movimientos Adelante",
+        "image": "/Images/Perks/five-moves-ahead.webp"
+      },
+      {
+        "label": "Concentración",
+        "image": "/Images/Perks/fixated.webp"
+      },
+      {
+        "label": "Bomba de Luz",
+        "image": "/Images/Perks/flashbang.webp"
+      },
+      {
+        "label": "Voltereta",
+        "image": "/Images/Perks/flip-flop.webp"
+      },
+      {
+        "label": "Estado de Flujo",
+        "image": "/Images/Perks/flow-state.webp"
+      },
+      {
+        "label": "Sabio de la Niebla",
+        "image": "/Images/Perks/fogwise.webp"
+      },
+      {
+        "label": "Por la Gente",
+        "image": "/Images/Perks/for-the-people.webp"
+      },
+      {
+        "label": "Competencia Amistosa",
+        "image": "/Images/Perks/friendly-competition.webp"
+      },
+      {
+        "label": "Notas Fantasma",
+        "image": "/Images/Perks/ghost-notes.webp"
+      },
+      {
+        "label": "Endurecido",
+        "image": "/Images/Perks/hardened.webp"
+      },
+      {
+        "label": "De Frente",
+        "image": "/Images/Perks/head-on.webp"
+      },
+      {
+        "label": "Esperanza",
+        "image": "/Images/Perks/hope.webp"
+      },
+      {
+        "label": "Hiperconcentración",
+        "image": "/Images/Perks/hyperfocus.webp"
+      },
+      {
+        "label": "Enfoque Interno",
+        "image": "/Images/Perks/inner-focus.webp"
+      },
+      {
+        "label": "Fuerza Interna",
+        "image": "/Images/Perks/inner-strength.webp"
+      },
+      {
+        "label": "Invocación: Cuervos Traicioneros",
+        "image": "/Images/Perks/invocation-treacherous-crows.webp"
+      },
+      {
+        "label": "Invocación: Arañas Tejedoras",
+        "image": "/Images/Perks/invocation-weaving-spiders.webp"
+      },
+      {
+        "label": "Voluntad de Hierro",
+        "image": "/Images/Perks/iron-will.webp"
+      },
+      {
+        "label": "Empatía Compartida",
+        "image": "/Images/Perks/kindred.webp"
+      },
+      {
+        "label": "Última Resistencia",
+        "image": "/Images/Perks/last-stand.webp"
+      },
+      {
+        "label": "Líder",
+        "image": "/Images/Perks/leader.webp"
+      },
+      {
+        "label": "Dejado Atrás",
+        "image": "/Images/Perks/left-behind.webp"
+      },
+      {
+        "label": "Pies Ligeros",
+        "image": "/Images/Perks/light-footed.webp"
+      },
+      {
+        "label": "Peso Ligero",
+        "image": "/Images/Perks/lightweight.webp"
+      },
+      {
+        "label": "Ágil",
+        "image": "/Images/Perks/lithe.webp"
+      },
+      {
+        "label": "Perfil Bajo",
+        "image": "/Images/Perks/low-profile.webp"
+      },
+      {
+        "label": "Golpe de Suerte",
+        "image": "/Images/Perks/lucky-break.webp"
+      },
+      {
+        "label": "Estrella de la Suerte",
+        "image": "/Images/Perks/lucky-star.webp"
+      },
+      {
+        "label": "Hecho para Esto",
+        "image": "/Images/Perks/made-for-this.webp"
+      },
+      {
+        "label": "Temple de Hombre",
+        "image": "/Images/Perks/mettle-of-man.webp"
+      },
+      {
+        "label": "Ilusión Reflejada",
+        "image": "/Images/Perks/mirrored-illusion.webp"
+      },
+      {
+        "label": "Momento de Gloria",
+        "image": "/Images/Perks/moment-of-glory.webp"
+      },
+      {
+        "label": "Sin Miedo",
+        "image": "/Images/Perks/no-mither.webp"
+      },
+      {
+        "label": "Nadie se Queda Atrás",
+        "image": "/Images/Perks/no-one-left-behind.webp"
+      },
+      {
+        "label": "Objeto de Obsesión",
+        "image": "/Images/Perks/object-of-obsession.webp"
+      },
+      {
+        "label": "Fuera de Registro",
+        "image": "/Images/Perks/off-the-record.webp"
+      },
+      {
+        "label": "Uno Dos Tres Cuatro",
+        "image": "/Images/Perks/one-two-three-four.webp"
+      },
+      {
+        "label": "Mano Abierta",
+        "image": "/Images/Perks/open-handed.webp"
+      },
+      {
+        "label": "Superar",
+        "image": "/Images/Perks/overcome.webp"
+      },
+      {
+        "label": "Guía Parental",
+        "image": "/Images/Perks/parental-guidance.webp"
+      },
+      {
+        "label": "Farmacia",
+        "image": "/Images/Perks/pharmacy.webp"
+      },
+      {
+        "label": "Giro Argumental",
+        "image": "/Images/Perks/plot-twist.webp"
+      },
+      {
+        "label": "Instinto Saqueador",
+        "image": "/Images/Perks/plunderers-instinct.webp"
+      },
+      {
+        "label": "Sereno",
+        "image": "/Images/Perks/poised.webp"
+      },
+      {
+        "label": "Energía Potencial",
+        "image": "/Images/Perks/potential-energy.webp"
+      },
+      {
+        "label": "Premonición",
+        "image": "/Images/Perks/premonition.webp"
+      },
+      {
+        "label": "Demuéstralo",
+        "image": "/Images/Perks/prove-thyself.webp"
+      },
+      {
+        "label": "Apuesta Rápida",
+        "image": "/Images/Perks/quick-gambit.webp"
+      },
+      {
+        "label": "Rápido y Silencioso",
+        "image": "/Images/Perks/quick-quiet.webp"
+      },
+      {
+        "label": "Respuesta Rápida",
+        "image": "/Images/Perks/rapid-response.webp"
+      },
+      {
+        "label": "Tranquilidad",
+        "image": "/Images/Perks/reassurance.webp"
+      },
+      {
+        "label": "Pista Falsa",
+        "image": "/Images/Perks/red-herring.webp"
+      },
+      {
+        "label": "Alianza Reprimida",
+        "image": "/Images/Perks/repressed-alliance.webp"
+      },
+      {
+        "label": "Manifestación Residual",
+        "image": "/Images/Perks/residual-manifest.webp"
+      },
+      {
+        "label": "Resiliencia",
+        "image": "/Images/Perks/resilience.webp"
+      },
+      {
+        "label": "Resurgimiento",
+        "image": "/Images/Perks/resurgence.webp"
+      },
+      {
+        "label": "Vida en la Carretera",
+        "image": "/Images/Perks/road-life.webp"
+      },
+      {
+        "label": "Espíritu Novato",
+        "image": "/Images/Perks/rookie-spirit.webp"
+      },
+      {
+        "label": "Saboteador",
+        "image": "/Images/Perks/saboteur.webp"
+      },
+      {
+        "label": "Carroñero",
+        "image": "/Images/Perks/scavenger.webp"
+      },
+      {
+        "label": "Compañero de Escena",
+        "image": "/Images/Perks/scene-partner.webp"
+      },
+      {
+        "label": "Segundo Aliento",
+        "image": "/Images/Perks/second-wind.webp"
+      },
+      {
+        "label": "Autocuración",
+        "image": "/Images/Perks/self-care.webp"
+      },
+      {
+        "label": "Autopreservación",
+        "image": "/Images/Perks/self-preservation.webp"
+      },
+      {
+        "label": "Cargar con la Carga",
+        "image": "/Images/Perks/shoulder-the-burden.webp"
+      },
+      {
+        "label": "Carne Resbaladiza",
+        "image": "/Images/Perks/slippery-meat.webp"
+      },
+      {
+        "label": "Juego Pequeño",
+        "image": "/Images/Perks/small-game.webp"
+      },
+      {
+        "label": "Golpe Aplastante",
+        "image": "/Images/Perks/smash-hit.webp"
+      },
+      {
+        "label": "Único Superviviente",
+        "image": "/Images/Perks/sole-survivor.webp"
+      },
+      {
+        "label": "Solidaridad",
+        "image": "/Images/Perks/solidarity.webp"
+      },
+      {
+        "label": "Guardián del Alma",
+        "image": "/Images/Perks/soul-guard.webp"
+      },
+      {
+        "label": "Especialista",
+        "image": "/Images/Perks/specialist.webp"
+      },
+      {
+        "label": "Escalofrío",
+        "image": "/Images/Perks/spine-chill.webp"
+      },
+      {
+        "label": "Arranque Veloz",
+        "image": "/Images/Perks/sprint-burst.webp"
+      },
+      {
+        "label": "Vigilancia",
+        "image": "/Images/Perks/stake-out.webp"
+      },
+      {
+        "label": "Vista Quieta",
+        "image": "/Images/Perks/still-sight.webp"
+      },
+      {
+        "label": "Callejero",
+        "image": "/Images/Perks/streetwise.webp"
+      },
+      {
+        "label": "Fuerza en las Sombras",
+        "image": "/Images/Perks/strength-in-shadows.webp"
+      },
+      {
+        "label": "Trabajo en Equipo: Sigilo Colectivo",
+        "image": "/Images/Perks/teamwork-collective-stealth.webp"
+      },
+      {
+        "label": "Trabajo en Equipo: Circuito Completo",
+        "image": "/Images/Perks/teamwork-full-circuit.webp"
+      },
+      {
+        "label": "Trabajo en Equipo: Poder de Dos",
+        "image": "/Images/Perks/teamwork-power-of-two.webp"
+      },
+      {
+        "label": "Trabajo en Equipo: Derribar",
+        "image": "/Images/Perks/teamwork-throw-down.webp"
+      },
+      {
+        "label": "Trabajo en Equipo: Endurecer",
+        "image": "/Images/Perks/teamwork-toughen-up.webp"
+      },
+      {
+        "label": "Técnico",
+        "image": "/Images/Perks/technician.webp"
+      },
+      {
+        "label": "Tenacidad",
+        "image": "/Images/Perks/tenacity.webp"
+      },
+      {
+        "label": "Esto No Está Pasando",
+        "image": "/Images/Perks/this-is-not-happening.webp"
+      },
+      {
+        "label": "Solucionador de Problemas",
+        "image": "/Images/Perks/troubleshooter.webp"
+      },
+      {
+        "label": "Irrompible",
+        "image": "/Images/Perks/unbreakable.webp"
+      },
+      {
+        "label": "Subir la Apuesta",
+        "image": "/Images/Perks/up-the-ante.webp"
+      },
+      {
+        "label": "Evasión Urbana",
+        "image": "/Images/Perks/urban-evasion.webp"
+      },
+      {
+        "label": "Vigilia",
+        "image": "/Images/Perks/vigil.webp"
+      },
+      {
+        "label": "Visionario",
+        "image": "/Images/Perks/visionary.webp"
+      },
+      {
+        "label": "¡Despierta!",
+        "image": "/Images/Perks/wake-up.webp"
+      },
+      {
+        "label": "Lo Lograremos",
+        "image": "/Images/Perks/well-make-it.webp"
+      },
+      {
+        "label": "Viviremos para Siempre",
+        "image": "/Images/Perks/were-gonna-live-forever.webp"
+      },
+      {
+        "label": "Te Vemos",
+        "image": "/Images/Perks/we-see-you.webp"
+      },
+      {
+        "label": "Malvado",
+        "image": "/Images/Perks/wicked.webp"
+      },
+      {
+        "label": "Ventanas de Oportunidad",
+        "image": "/Images/Perks/windows-of-opportunity.webp"
+      },
+      {
+        "label": "Escucha Telefónica",
+        "image": "/Images/Perks/wiretap.webp"
+      }
     ]
   },
   {
@@ -410,14 +2861,13 @@
     "title": "Ruleta Hardcore - Modificadores",
     "spinDuration": 13,
     "colors": [
-    "#b91c1c",
-    "#1f2937",
-    "#7c3aed",
-    "#0f766e",
-    "#1d4ed8",
-    "#92400e"
-  ],
-  
+      "#b91c1c",
+      "#1f2937",
+      "#7c3aed",
+      "#0f766e",
+      "#1d4ed8",
+      "#92400e"
+    ],
     "options": [
       "No puedes correr",
       "No puedes agacharte",

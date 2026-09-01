@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import SpinWheel from "./SpinWheel";
-import rolesData from "../data/rolesData.json";
+import RolesEditor from "./RolesEditor";
+import { perkImageSrc } from "../utils/perks";
 
 const ELIMINATION_STORAGE_KEY = "dbd-elimination";
 
@@ -27,9 +28,12 @@ export default function WheelCard({
   onAddColor,
   onRemoveColor,
   onTitleChange,
+  onRolesChange,
+  onShowPerksChange,
   cleanMode = false,
-  streamMode = false,
 }) {
+  const isRolesWheel = wheel.type === "roles";
+  const showPerks = wheel.showPerks !== false;
   const [isSpinning, setIsSpinning] = useState(false);
   const [rotation, setRotation] = useState(0);
   const [showWinnerOverlay, setShowWinnerOverlay] = useState(false);
@@ -129,21 +133,28 @@ export default function WheelCard({
   }
 
   function finishSpin(winnerIndex) {
-    if (wheel.id === "rolesV2") {
+    if (isRolesWheel) {
       const roleName = wheel.options[winnerIndex];
-      const roleData = rolesData[roleName];
-      if (roleData && roleData.variants) {
-        const randomVariant = roleData.variants[Math.floor(Math.random() * roleData.variants.length)];
-        onSpin(wheel.id, winnerIndex, {
-          roleName,
-          roleImage: roleData.image,
-          variant: randomVariant.name,
-          difficulty: randomVariant.difficulty,
-          perks: randomVariant.perks,
-        });
-      } else {
-        onSpin(wheel.id, winnerIndex);
-      }
+      const roleData = wheel.roles ? wheel.roles[roleName] : null;
+      const variants = roleData && roleData.variants ? roleData.variants : [];
+
+      // Elegir una versión al azar (si existen versiones)
+      const randomVariant =
+        variants.length > 0
+          ? variants[Math.floor(Math.random() * variants.length)]
+          : null;
+
+      onSpin(wheel.id, winnerIndex, {
+        roleName,
+        roleImage: roleData ? roleData.image : null,
+        variant: randomVariant ? randomVariant.name : null,
+        difficulty: randomVariant ? randomVariant.difficulty : null,
+        // Solo adjuntar perks si el toggle está activo y hay versión con perks
+        perks:
+          showPerks && randomVariant && randomVariant.perks
+            ? randomVariant.perks
+            : [],
+      });
     } else {
       onSpin(wheel.id, winnerIndex);
     }
@@ -237,13 +248,17 @@ export default function WheelCard({
 
   // Extraer label e imagen del resultado de forma segura
   const result = wheel.result;
-  
-  // Determinar si es rolesV2 y tiene datos especiales
-  const isRolesV2 = wheel.id === "rolesV2" && result && typeof result === "object" && result.roleName;
-  
+
+  // Determinar si es un resultado de ruleta de roles con datos especiales
+  const isRolesResult =
+    isRolesWheel && result && typeof result === "object" && result.roleName;
+  // Mostrar el bloque de perks solo si el toggle está activo y hay perks
+  const showPerksResult =
+    isRolesResult && showPerks && result.perks && result.perks.length > 0;
+
   let resultLabel, resultImage;
-  
-  if (isRolesV2) {
+
+  if (isRolesResult) {
     resultLabel = result.roleName;
     resultImage = result.roleImage;
   } else {
@@ -254,15 +269,14 @@ export default function WheelCard({
   }
 
   const cleanClass = cleanMode ? " wheel-card--clean" : "";
-  const streamClass = streamMode ? " wheel-card--stream" : "";
   const visualClass = showWinnerOverlay
     ? "wheel-card__visual wheel-card__visual--winner"
     : "wheel-card__visual";
 
   return (
-    <div className={`wheel-card${cleanClass}${streamClass}`}>
+    <div className={`wheel-card${cleanClass}`}>
       <div className="wheel-card__header">
-        {!cleanMode && !streamMode ? (
+        {!cleanMode ? (
           <input
             className="wheel-card__title-input"
             type="text"
@@ -290,8 +304,8 @@ export default function WheelCard({
 
         {showWinnerOverlay && (
           <div className="wheel-card__winner-overlay">
-            {wheel.id === "rolesV2" && isRolesV2 ? (
-              // Diseño especial para rolesV2
+            {showPerksResult ? (
+              // Diseño especial para roles con perks
               <div className="roles-v2-result">
                 <h2 className="roles-v2-result__title">{result.roleName}</h2>
                 
@@ -299,7 +313,7 @@ export default function WheelCard({
                   {result.perks && result.perks.map((perk, index) => (
                     <img
                       key={index}
-                      src={`/Images/Perks/${perk.image}`}
+                      src={perkImageSrc(perk.image)}
                       alt={perk.name}
                       className="roles-v2-result__perk-icon"
                       title={perk.name}
@@ -313,21 +327,23 @@ export default function WheelCard({
                   ))}
                 </div>
                 
-                <div className="roles-v2-result__bottom">
-                  <div className="roles-v2-result__info">
-                    <span className="roles-v2-result__label">Variante</span>
-                    <span className="roles-v2-result__value">{result.variant}</span>
-                    <span className="roles-v2-result__separator">-</span>
-                    <span className="roles-v2-result__label">Dificultad</span>
-                    <span className={`roles-v2-result__value ${
-                      result.difficulty === 'Fácil' ? 'roles-v2-result__value--facil' :
-                      result.difficulty === 'Media' ? 'roles-v2-result__value--media' :
-                      result.difficulty === 'Difícil' ? 'roles-v2-result__value--dificil' : ''
-                    }`}>
-                      {result.difficulty}
-                    </span>
+                {(result.variant || result.difficulty) && (
+                  <div className="roles-v2-result__bottom">
+                    <div className="roles-v2-result__info">
+                      <span className="roles-v2-result__label">Variante</span>
+                      <span className="roles-v2-result__value">{result.variant}</span>
+                      <span className="roles-v2-result__separator">-</span>
+                      <span className="roles-v2-result__label">Dificultad</span>
+                      <span className={`roles-v2-result__value ${
+                        result.difficulty === 'Fácil' ? 'roles-v2-result__value--facil' :
+                        result.difficulty === 'Media' ? 'roles-v2-result__value--media' :
+                        result.difficulty === 'Difícil' ? 'roles-v2-result__value--dificil' : ''
+                      }`}>
+                        {result.difficulty}
+                      </span>
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
             ) : (
               // Diseño normal para otras ruletas
@@ -372,8 +388,7 @@ export default function WheelCard({
         </div>
       )}
 
-      {!streamMode && (
-        <div className="wheel-card__controls">
+      <div className="wheel-card__controls">
           <label>
             Tiempo de giro (segundos)
             <input
@@ -387,7 +402,7 @@ export default function WheelCard({
 
           {allUsed && (
             <div className="elimination-message">
-              Todos los killers ya fueron utilizados. Reinicia la ruleta.
+              Todas las opciones ya fueron utilizadas. Reinicia la ruleta.
             </div>
           )}
 
@@ -425,23 +440,24 @@ export default function WheelCard({
                 ↻ Restaurar eliminados
               </button>
             )}
+            {isRolesWheel && (
+              <div className="mode-toggle">
+                <span className={`mode-toggle__label ${!showPerks ? 'mode-toggle__label--active' : ''}`}>Solo rol</span>
+                <button
+                  type="button"
+                  className={`mode-toggle__switch ${showPerks ? 'mode-toggle__switch--on' : ''}`}
+                  onClick={() => onShowPerksChange && onShowPerksChange(wheel.id, !showPerks)}
+                  aria-label="Mostrar u ocultar perks"
+                >
+                  <span className="mode-toggle__knob" />
+                </button>
+                <span className={`mode-toggle__label ${showPerks ? 'mode-toggle__label--active' : ''}`}>Mostrar perks</span>
+              </div>
+            )}
           </div>
-        </div>
-      )}
+      </div>
 
-      {streamMode && (
-        <div className="wheel-card__stream-controls">
-          <button
-            className="wheel-card__stop-btn"
-            onClick={cancelSpin}
-            disabled={!isSpinning}
-          >
-            ⏹ Detener
-          </button>
-        </div>
-      )}
-
-      {!cleanMode && !streamMode && (
+      {!cleanMode && (
         <>
           <div className="wheel-card__result">
             <strong>Resultado:</strong>
@@ -450,7 +466,17 @@ export default function WheelCard({
         </>
       )}
 
-      {!streamMode && (
+      {isRolesWheel && (
+        <RolesEditor
+          roles={wheel.roles || {}}
+          options={wheel.options}
+          onChange={(nextRoles, nextOptions) =>
+            onRolesChange && onRolesChange(wheel.id, nextRoles, nextOptions)
+          }
+        />
+      )}
+
+      {!isRolesWheel && (
         <>
           <div className="wheel-card__options">
             <h3>Opciones</h3>
@@ -499,7 +525,7 @@ export default function WheelCard({
         </>
       )}
 
-      {!cleanMode && !streamMode && (
+      {!cleanMode && (
         <>
           <div className="wheel-card__colors">
             <h3>Colores</h3>

@@ -20,10 +20,74 @@ function withInitialResult(wheels) {
   }));
 }
 
+// Migra configuraciones guardadas del modelo antiguo (dos ruletas de roles:
+// "roles" (Roles Libres) y "rolesV2" (Roles Predeterminados)) al nuevo modelo
+// híbrido de una sola ruleta "roles" con versiones y perks embebidos.
+// Si la config ya está migrada, la devuelve tal cual.
+function migrateWheels(saved) {
+  if (!Array.isArray(saved)) return saved;
+
+  const hasHybrid = saved.some((w) => w.id === "roles" && w.type === "roles");
+  if (hasHybrid) return saved;
+
+  const defaultRoles = defaultWheels.find(
+    (w) => w.id === "roles" && w.type === "roles"
+  );
+
+  const oldRolesV2 = saved.find((w) => w.id === "rolesV2");
+  const oldRoles = saved.find((w) => w.id === "roles");
+
+  // Construir la ruleta híbrida partiendo de los datos por defecto (que ya
+  // traen los roles + versiones), pero respetando duración/colores/opciones
+  // que el usuario pudiera haber tenido en su ruleta de predeterminados.
+  const base = defaultRoles || {
+    id: "roles",
+    title: "Roles",
+    type: "roles",
+    showPerks: true,
+    spinDuration: 13,
+    colors: [],
+    options: [],
+    roles: {},
+  };
+
+  const hybrid = {
+    ...base,
+    spinDuration:
+      (oldRolesV2 && oldRolesV2.spinDuration) ||
+      (oldRoles && oldRoles.spinDuration) ||
+      base.spinDuration,
+    colors:
+      (oldRolesV2 && oldRolesV2.colors) ||
+      (oldRoles && oldRoles.colors) ||
+      base.colors,
+    result: "",
+  };
+
+  const result = [];
+  let inserted = false;
+  for (const w of saved) {
+    if (w.id === "roles" || w.id === "rolesV2") {
+      if (!inserted) {
+        result.push(hybrid);
+        inserted = true;
+      }
+      // omitir las ruletas antiguas de roles
+      continue;
+    }
+    result.push(w);
+  }
+  if (!inserted) result.push(hybrid);
+
+  return result;
+}
+
 export default function App() {
   const [wheels, setWheels] = useState(() => {
     const saved = loadWheels();
-    return saved ? withInitialResult(saved) : withInitialResult(defaultWheels);
+    return saved
+      ? withInitialResult(migrateWheels(saved))
+      : withInitialResult(defaultWheels);
   });
 
   const [cleanMode, setCleanMode] = useState(false);
@@ -39,7 +103,7 @@ export default function App() {
       if (e.key === 'dbd-wheels-config' && e.newValue) {
         try {
           const newWheels = JSON.parse(e.newValue);
-          setWheels(withInitialResult(newWheels));
+          setWheels(withInitialResult(migrateWheels(newWheels)));
         } catch (error) {
           console.error('Error parsing wheels from storage:', error);
         }
@@ -184,6 +248,18 @@ export default function App() {
     updateWheel(id, (wheel) => ({ ...wheel, title: value }));
   }
 
+  function handleRolesChange(id, nextRoles, nextOptions) {
+    updateWheel(id, (wheel) => ({
+      ...wheel,
+      roles: nextRoles,
+      options: nextOptions !== undefined ? nextOptions : wheel.options,
+    }));
+  }
+
+  function handleShowPerksChange(id, value) {
+    updateWheel(id, (wheel) => ({ ...wheel, showPerks: value }));
+  }
+
   function handleResetAll() {
     localStorage.removeItem('dbd-wheels-config');
     setWheels(withInitialResult(defaultWheels));
@@ -193,18 +269,14 @@ export default function App() {
     <div className="app">
       <header className="app__header">
         <h1>DBD Roulette Manager</h1>
-        <p>
-          Administra y gira tus ruletas personalizadas de Dead by
-          Daylight.
-        </p>
 
         <div className="app__header-buttons">
           <button onClick={() => setCleanMode((prev) => !prev)}>
-            {cleanMode ? "Volver al editor" : "Modo ruleta limpia"}
+            {cleanMode ? "Editar" : "Proyectar"}
           </button>
 
           <button onClick={handleResetAll}>
-            Restaurar ruletas por defecto
+            Por defecto
           </button>
 
           {cleanMode && (
@@ -264,6 +336,8 @@ export default function App() {
               onAddColor={handleAddColor}
               onRemoveColor={handleRemoveColor}
               onTitleChange={handleTitleChange}
+              onRolesChange={handleRolesChange}
+              onShowPerksChange={handleShowPerksChange}
               cleanMode={cleanMode}
             />
           ))}

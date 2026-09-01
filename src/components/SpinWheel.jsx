@@ -1,4 +1,4 @@
-import { useMemo, forwardRef } from "react";
+import { useMemo } from "react";
 
 const FALLBACK_COLORS = [
   "#b91c1c",
@@ -43,7 +43,7 @@ function truncateText(text, maxLength = 14) {
 }
 
 // Sin CSS transition — la rotación se controla 100% desde JS via requestAnimationFrame
-const SpinWheel = forwardRef(function SpinWheel({ options, rotation, colors = [], usedIndices = [] }, ref) {
+function SpinWheel({ options, rotation, colors = [], usedIndices = [] }) {
   const palette = colors.length ? colors : FALLBACK_COLORS;
   const usedSet = useMemo(() => new Set(usedIndices), [usedIndices]);
 
@@ -78,9 +78,6 @@ const SpinWheel = forwardRef(function SpinWheel({ options, rotation, colors = []
       };
     });
   }, [options, palette]);
-
-  // Tamaño de imagen según cantidad de segmentos
-  const imgSize = options.length <= 12 ? 36 : options.length <= 24 ? 26 : 20;
 
   return (
     <div className="spin-wheel-wrapper">
@@ -128,6 +125,6 @@ const SpinWheel = forwardRef(function SpinWheel({ options, rotation, colors = []
       </div>
     </div>
   );
-});
+}
 
 export default SpinWheel;
