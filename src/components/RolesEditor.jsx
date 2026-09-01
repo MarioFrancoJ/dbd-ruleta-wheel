@@ -15,7 +15,13 @@ export default function RolesEditor({ roles = {}, options = [], onChange }) {
   // Estado del selector de perks: { roleName, variantIndex } | null
   const [perkEditor, setPerkEditor] = useState(null);
 
-  const roleNames = options.filter((name) => roles[name] !== undefined || true);
+  // Lista de roles a mostrar: primero los que están en options (respetando su
+  // orden), y luego cualquier rol que exista en `roles` pero no esté en options
+  // (para no ocultar roles huérfanos).
+  const roleNames = [
+    ...options,
+    ...Object.keys(roles).filter((name) => !options.includes(name)),
+  ];
 
   function commit(nextRoles, nextOptions = options) {
     onChange(nextRoles, nextOptions);
@@ -222,7 +228,7 @@ export default function RolesEditor({ roles = {}, options = [], onChange }) {
                         ) : (
                           variant.perks.map((perk) => (
                             <img
-                              key={perk.name}
+                              key={perk.image}
                               className="roles-editor__perk-icon"
                               src={perkImageSrc(perk.image)}
                               alt={perk.name}

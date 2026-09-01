@@ -405,7 +405,7 @@ export default function WheelCard({
 
           {allUsed && (
             <div className="elimination-message">
-              Todos los killers ya fueron utilizados. Reinicia la ruleta.
+              Todas las opciones ya fueron utilizadas. Reinicia la ruleta.
             </div>
           )}
 

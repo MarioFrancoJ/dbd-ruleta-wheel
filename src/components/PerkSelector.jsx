@@ -11,8 +11,10 @@ export default function PerkSelector({ selectedPerks = [], onConfirm, onClose })
   );
 
   const results = useMemo(() => searchPerks(query), [query]);
-  const selectedNames = useMemo(
-    () => new Set(selection.map((p) => p.name)),
+  // Identificamos las perks por su imagen (identificador estable) en vez de por
+  // el nombre, para que la selección funcione aunque los nombres difieran.
+  const selectedImages = useMemo(
+    () => new Set(selection.map((p) => p.image)),
     [selection]
   );
 
@@ -20,9 +22,9 @@ export default function PerkSelector({ selectedPerks = [], onConfirm, onClose })
 
   function togglePerk(perk) {
     setSelection((prev) => {
-      const exists = prev.some((p) => p.name === perk.name);
+      const exists = prev.some((p) => p.image === perk.image);
       if (exists) {
-        return prev.filter((p) => p.name !== perk.name);
+        return prev.filter((p) => p.image !== perk.image);
       }
       if (prev.length >= MAX_PERKS_PER_VERSION) return prev;
       return [...prev, { name: perk.name, image: perk.image }];
@@ -49,7 +51,7 @@ export default function PerkSelector({ selectedPerks = [], onConfirm, onClose })
           ) : (
             selection.map((perk) => (
               <button
-                key={perk.name}
+                key={perk.image}
                 type="button"
                 className="perk-selector__chip"
                 onClick={() => togglePerk(perk)}
@@ -74,11 +76,11 @@ export default function PerkSelector({ selectedPerks = [], onConfirm, onClose })
 
         <div className="perk-selector__grid">
           {results.map((perk) => {
-            const isSelected = selectedNames.has(perk.name);
+            const isSelected = selectedImages.has(perk.image);
             const disabled = !isSelected && isFull;
             return (
               <button
-                key={perk.name}
+                key={perk.image}
                 type="button"
                 className={`perk-selector__item${
                   isSelected ? " perk-selector__item--selected" : ""

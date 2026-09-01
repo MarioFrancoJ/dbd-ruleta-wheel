@@ -1,4 +1,4 @@
-import { useMemo, useState, useEffect } from "react";
+import { useMemo, useState } from "react";
 import { useParams } from "react-router-dom";
 import defaultWheels from "./data/defaultWheels.json";
 import WheelCard from "./components/WheelCard";
@@ -78,22 +78,16 @@ export default function StreamView() {
       : withInitialResult(defaultWheels);
   });
 
-  const [selectedWheelId, setSelectedWheelId] = useState(() => {
-    // Si hay wheelId en la URL, usarlo; si no, usar "killers"
-    if (wheelId && wheels.some(w => w.id === wheelId)) {
-      return wheelId;
-    }
-    return "killers";
-  });
-  
+  // Estado del selector interno (solo aplica cuando NO hay wheelId en la URL)
+  const [manualWheelId, setManualWheelId] = useState("killers");
+
   const [results, setResults] = useState({});
 
-  // Actualizar selectedWheelId cuando cambie el parámetro de la URL
-  useEffect(() => {
-    if (wheelId && wheels.some(w => w.id === wheelId)) {
-      setSelectedWheelId(wheelId);
-    }
-  }, [wheelId, wheels]);
+  // La ruleta activa se deriva directamente: si la URL trae un wheelId válido,
+  // manda la URL; si no, manda la selección manual del selector.
+  const urlWheelId =
+    wheelId && wheels.some((w) => w.id === wheelId) ? wheelId : null;
+  const selectedWheelId = urlWheelId || manualWheelId;
 
   const selectedWheel = useMemo(() => {
     return wheels.find((wheel) => wheel.id === selectedWheelId) || wheels[0];
@@ -122,7 +116,7 @@ export default function StreamView() {
           <select
             id="stream-wheel-select"
             value={selectedWheelId}
-            onChange={(e) => setSelectedWheelId(e.target.value)}
+            onChange={(e) => setManualWheelId(e.target.value)}
           >
             {wheels.map((wheel) => (
               <option key={wheel.id} value={wheel.id}>

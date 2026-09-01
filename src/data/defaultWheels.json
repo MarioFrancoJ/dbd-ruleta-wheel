@@ -607,7 +607,7 @@
                 "image": "off-the-record.webp"
               },
               {
-                "name": "Guardián",
+                "name": "Niñero",
                 "image": "babysitter.webp"
               }
             ]
@@ -629,7 +629,7 @@
                 "image": "off-the-record.webp"
               },
               {
-                "name": "Guardián",
+                "name": "Niñero",
                 "image": "babysitter.webp"
               }
             ]
@@ -651,7 +651,7 @@
                 "image": "off-the-record.webp"
               },
               {
-                "name": "Guardián",
+                "name": "Niñero",
                 "image": "babysitter.webp"
               }
             ]
@@ -1305,7 +1305,7 @@
             "difficulty": "Fácil",
             "perks": [
               {
-                "name": "Sprint",
+                "name": "Arranque Veloz",
                 "image": "sprint-burst.webp"
               },
               {
@@ -1327,7 +1327,7 @@
             "difficulty": "Media",
             "perks": [
               {
-                "name": "Sprint",
+                "name": "Arranque Veloz",
                 "image": "sprint-burst.webp"
               },
               {
@@ -1349,7 +1349,7 @@
             "difficulty": "Difícil",
             "perks": [
               {
-                "name": "Sprint",
+                "name": "Arranque Veloz",
                 "image": "sprint-burst.webp"
               },
               {
@@ -1611,7 +1611,7 @@
             "difficulty": "Media",
             "perks": [
               {
-                "name": "Estrella Afortunada",
+                "name": "Estrella de la Suerte",
                 "image": "lucky-star.webp"
               },
               {
@@ -1641,7 +1641,7 @@
                 "image": "alert.webp"
               },
               {
-                "name": "Sprint",
+                "name": "Arranque Veloz",
                 "image": "sprint-burst.webp"
               },
               {
@@ -1660,7 +1660,7 @@
             "difficulty": "Fácil",
             "perks": [
               {
-                "name": "Guardián",
+                "name": "Niñero",
                 "image": "babysitter.webp"
               },
               {
@@ -1731,7 +1731,7 @@
             "difficulty": "Fácil",
             "perks": [
               {
-                "name": "Instinto de Saqueador",
+                "name": "Instinto Saqueador",
                 "image": "plunderers-instinct.webp"
               },
               {
@@ -1761,7 +1761,7 @@
                 "image": "ace-in-the-hole.webp"
               },
               {
-                "name": "Instinto de Saqueador",
+                "name": "Instinto Saqueador",
                 "image": "plunderers-instinct.webp"
               },
               {
@@ -1779,7 +1779,7 @@
                 "image": "scavenger.webp"
               },
               {
-                "name": "Instinto de Saqueador",
+                "name": "Instinto Saqueador",
                 "image": "plunderers-instinct.webp"
               },
               {
@@ -1802,7 +1802,7 @@
             "difficulty": "Fácil",
             "perks": [
               {
-                "name": "Inquebrantable",
+                "name": "Irrompible",
                 "image": "unbreakable.webp"
               },
               {
@@ -1828,7 +1828,7 @@
                 "image": "tenacity.webp"
               },
               {
-                "name": "Inquebrantable",
+                "name": "Irrompible",
                 "image": "unbreakable.webp"
               },
               {
@@ -1850,7 +1850,7 @@
                 "image": "flip-flop.webp"
               },
               {
-                "name": "Inquebrantable",
+                "name": "Irrompible",
                 "image": "unbreakable.webp"
               },
               {
