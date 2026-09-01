@@ -402,6 +402,14 @@
       {
         "label": "Kwon Tae-Young",
         "image": "/Images/Survivors/S52_KwonTaeYoung_Portrait.webp"
+      },
+      {
+        "label": "Shane Wiigwaas",
+        "image": "/Images/Survivors/S53_ShaneWiigwaas_Portrait.webp"
+      },
+      {
+        "label": "Aurora Stardotter",
+        "image": "/Images/Survivors/S54_AuroraStardotter_Portrait.webp"
       }
     ]
   },
@@ -2182,7 +2190,7 @@
     ]
   },
   {
-    "id": "hardcore-items",
+    "id": "perks-survivors",
     "title": "Ruleta de Perks",
     "spinDuration": 13,
     "colors": [
@@ -2853,6 +2861,30 @@
       {
         "label": "Escucha Telefónica",
         "image": "/Images/Perks/wiretap.webp"
+      },
+      {
+        "label": "Cross Examination",
+        "image": "/Images/Perks/Cross_Examination.webp"
+      },
+      {
+        "label": "Lend A Hand",
+        "image": "/Images/Perks/Lend_A_Hand.webp"
+      },
+      {
+        "label": "Wide Open Throttle",
+        "image": "/Images/Perks/Wide_Open_Throttle.webp"
+      },
+      {
+        "label": "Boon: Steadfast",
+        "image": "/Images/Perks/Boon_Steadfast.webp"
+      },
+      {
+        "label": "Fruits Of Your Labor",
+        "image": "/Images/Perks/Fruits_Of_Your_Labor.webp"
+      },
+      {
+        "label": "Salvation's Cry",
+        "image": "/Images/Perks/Salvations_Cry.webp"
       }
     ]
   },

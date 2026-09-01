@@ -1,6 +1,6 @@
 const STORAGE_KEY = "dbd-wheels-config";
 const VERSION_KEY = "dbd-wheels-version";
-const CURRENT_VERSION = "5.0"; // Ruleta híbrida de Roles (fusión Roles Libres + Predeterminados)
+const CURRENT_VERSION = "6.0"; // Ruleta perks-survivors (id renombrado) + perks de Shane y Aurora
 
 export function loadWheels() {
   try {

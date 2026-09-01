@@ -1491,6 +1491,16 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
   object-fit: contain;
 }
 
+.perk-selector__item-char {
+  font-size: 10px;
+  color: #94a3b8;
+  font-style: italic;
+}
+
+.perk-selector__item--selected .perk-selector__item-char {
+  color: #c4b5fd;
+}
+
 .perk-selector__item:hover:not(.perk-selector__item--disabled) {
   border-color: rgba(124, 58, 237, 0.6);
   background: rgba(124, 58, 237, 0.1);

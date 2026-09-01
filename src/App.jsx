@@ -24,11 +24,46 @@ function withInitialResult(wheels) {
 // "roles" (Roles Libres) y "rolesV2" (Roles Predeterminados)) al nuevo modelo
 // híbrido de una sola ruleta "roles" con versiones y perks embebidos.
 // Si la config ya está migrada, la devuelve tal cual.
+// Migra la ruleta de perks: renombra el id antiguo "hardcore-items" al nuevo
+// "perks-survivors" y asegura que estén las perks nuevas (Shane/Aurora).
+function migratePerksWheel(wheels) {
+  if (!Array.isArray(wheels)) return wheels;
+
+  const defaultPerks = defaultWheels.find((w) => w.id === "perks-survivors");
+  const defaultPerkImages = defaultPerks
+    ? new Set(defaultPerks.options.map((o) => o.image))
+    : new Set();
+
+  return wheels.map((w) => {
+    if (w.id !== "perks-survivors" && w.id !== "hardcore-items") return w;
+
+    // Renombrar id si venía del antiguo
+    const next = { ...w, id: "perks-survivors" };
+
+    // Añadir cualquier perk por defecto que falte (p.ej. las 6 nuevas),
+    // respetando las opciones que el usuario ya tuviera.
+    if (defaultPerks && Array.isArray(next.options)) {
+      const currentImages = new Set(
+        next.options
+          .filter((o) => o && typeof o === "object")
+          .map((o) => o.image)
+      );
+      const missing = defaultPerks.options.filter(
+        (o) => defaultPerkImages.has(o.image) && !currentImages.has(o.image)
+      );
+      if (missing.length) {
+        next.options = [...next.options, ...missing];
+      }
+    }
+    return next;
+  });
+}
+
 function migrateWheels(saved) {
   if (!Array.isArray(saved)) return saved;
 
   const hasHybrid = saved.some((w) => w.id === "roles" && w.type === "roles");
-  if (hasHybrid) return saved;
+  if (hasHybrid) return migratePerksWheel(saved);
 
   const defaultRoles = defaultWheels.find(
     (w) => w.id === "roles" && w.type === "roles"
@@ -79,7 +114,7 @@ function migrateWheels(saved) {
   }
   if (!inserted) result.push(hybrid);
 
-  return result;
+  return migratePerksWheel(result);
 }
 
 export default function App() {

@@ -68,7 +68,7 @@ export default function PerkSelector({ selectedPerks = [], onConfirm, onClose })
         <input
           type="text"
           className="perk-selector__search"
-          placeholder="Buscar perk..."
+          placeholder="Buscar por perk o personaje..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           autoFocus
@@ -78,6 +78,7 @@ export default function PerkSelector({ selectedPerks = [], onConfirm, onClose })
           {results.map((perk) => {
             const isSelected = selectedImages.has(perk.image);
             const disabled = !isSelected && isFull;
+            const character = perk.character || "General";
             return (
               <button
                 key={perk.image}
@@ -87,10 +88,11 @@ export default function PerkSelector({ selectedPerks = [], onConfirm, onClose })
                 }${disabled ? " perk-selector__item--disabled" : ""}`}
                 onClick={() => togglePerk(perk)}
                 disabled={disabled}
-                title={perk.name}
+                title={`${perk.name} (${character})`}
               >
                 <img src={perkImageSrc(perk.image)} alt={perk.name} />
                 <span>{perk.name}</span>
+                <span className="perk-selector__item-char">({character})</span>
               </button>
             );
           })}
