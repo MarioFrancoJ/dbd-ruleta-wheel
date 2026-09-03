@@ -514,9 +514,7 @@ export default function WheelCard({
                 ↺ Restablecer
               </button>
             )}
-          </div>
 
-          <div className="wheel-card__toggles">
             <div className="mode-toggle">
               <span className={`mode-toggle__label ${!eliminationMode ? 'mode-toggle__label--active' : ''}`}>Clásico</span>
               <button

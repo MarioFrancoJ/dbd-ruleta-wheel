@@ -161,22 +161,15 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 
 .wheel-card__buttons {
   display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.wheel-card__toggles {
-  display: flex;
-  gap: 16px;
+  gap: 12px;
   flex-wrap: wrap;
   align-items: center;
-  margin-top: 12px;
 }
 
-/* El toggle Clásico/Eliminación y "Restaurar eliminados" van juntos,
-   sin que el resto de toggles se separen a otra fila. */
-.wheel-card__toggles .mode-toggle,
-.wheel-card__toggles .elimination-toggle__reset {
+/* El toggle Clásico/Eliminación y "Restaurar eliminados" quedan en la misma
+   fila que los botones (Random, Detener, Restablecer). */
+.wheel-card__buttons .mode-toggle,
+.wheel-card__buttons .elimination-toggle__reset {
   margin: 0;
 }
 
