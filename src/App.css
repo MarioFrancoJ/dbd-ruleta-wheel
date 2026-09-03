@@ -1790,7 +1790,7 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
 }
 
 .wheel-card__add-row .wheel-card__add {
-  flex: 1 1 0;
+  flex: 0 0 auto;
   width: auto;
   margin-top: 0;
 }
