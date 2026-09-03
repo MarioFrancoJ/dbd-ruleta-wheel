@@ -1787,16 +1787,17 @@ transition-timing-function: cubic-bezier(0.17, 0.67, 0.2, 1);
   background: #0d5f58;
 }
 
-/* Fila con los dos botones de agregar (Agregar opción + Entrada especial) */
+/* Fila con los dos botones de agregar (Agregar opción + Entrada especial).
+   Ocupa el ancho completo de la lista de opciones para que su borde derecho
+   quede alineado con el final del botón X de cada fila. */
 .wheel-card__add-row {
   display: flex;
   gap: 10px;
   margin-top: 8px;
-  flex-wrap: wrap;
 }
 
 .wheel-card__add-row .wheel-card__add {
-  flex: 0 0 auto;
+  flex: 1 1 0;
   width: auto;
   margin-top: 0;
 }
