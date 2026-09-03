@@ -579,13 +579,26 @@ export default function WheelCard({
             <h3>Opciones</h3>
 
             <div className="wheel-card__options-toolbar">
-              <input
-                type="text"
-                className="wheel-card__options-search"
-                placeholder="Buscar opción para mostrar/ocultar..."
-                value={optionQuery}
-                onChange={(e) => setOptionQuery(e.target.value)}
-              />
+              <div className="wheel-card__search-wrap">
+                <input
+                  type="text"
+                  className="wheel-card__options-search"
+                  placeholder="Buscar opción para mostrar/ocultar..."
+                  value={optionQuery}
+                  onChange={(e) => setOptionQuery(e.target.value)}
+                />
+                {optionQuery && (
+                  <button
+                    type="button"
+                    className="wheel-card__search-clear"
+                    onClick={() => setOptionQuery("")}
+                    aria-label="Limpiar búsqueda"
+                    title="Limpiar búsqueda"
+                  >
+                    ✖
+                  </button>
+                )}
+              </div>
               {hasCatalog && (
                 <button
                   type="button"
