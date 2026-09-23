@@ -552,14 +552,15 @@ export default function WheelCard({
               </button>
               <span className={`mode-toggle__label ${eliminationMode ? 'mode-toggle__label--active' : ''}`}>Eliminación</span>
             </div>
-            {eliminationMode && (
-              <button
-                className="elimination-toggle__reset"
-                onClick={() => setUsedIndices([])}
-              >
-                ↻ Restaurar eliminados
-              </button>
-            )}
+
+            {/* El botón "Restaurar eliminados" ahora aparece siempre, en ambos modos. */}
+            <button
+              className="elimination-toggle__reset"
+              onClick={() => setUsedIndices([])}
+            >
+              ↻ Restaurar eliminados
+            </button>
+
             {isRolesWheel && (
               <div className="mode-toggle">
                 <span className={`mode-toggle__label ${!showPerks ? 'mode-toggle__label--active' : ''}`}>Solo rol</span>
