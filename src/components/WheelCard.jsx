@@ -59,6 +59,12 @@ export default function WheelCard({
   const [lastWinnerIndex, setLastWinnerIndex] = useState(null);
 
   // === Modo Eliminación (todas las ruletas) ===
+  // usedIndices: índices de opciones que YA NO pueden volver a salir.
+  // Se llenan de dos formas:
+  //   1. El ojito de la lista (marcar manualmente como "ya usada").
+  //   2. En modo eliminación, cuando el usuario pulsa "Ganó" tras un giro.
+  // En ambos casos el efecto es el mismo: la opción se ve en gris en la ruleta
+  // y no puede volver a salir como ganadora.
   const [eliminationMode, setEliminationMode] = useState(() => {
     const saved = loadEliminationState(wheel.id);
     return saved.enabled || false;
@@ -68,36 +74,22 @@ export default function WheelCard({
     return saved.used || [];
   });
 
-  // Opciones ocultas por el usuario (no se muestran en la ruleta ni en la lista).
-  // Es DISTINTO de usedIndices: ocultar ≠ usada.
-  const [hiddenIndices, setHiddenIndices] = useState(() => {
-    const saved = loadEliminationState(wheel.id);
-    return saved.hidden || [];
-  });
-
   // Persistir cambios en eliminación
   useEffect(() => {
     saveEliminationState(wheel.id, {
       enabled: eliminationMode,
       used: usedIndices,
-      hidden: hiddenIndices,
     });
-  }, [eliminationMode, usedIndices, hiddenIndices, wheel.id]);
+  }, [eliminationMode, usedIndices, wheel.id]);
 
-  // Índices "activos": los que no están ocultos por el usuario.
-  const activeIndices = wheel.options
+  // Opciones que todavía pueden salir: todas las que NO están usadas.
+  // (En modo clásico y en modo eliminación el criterio es el mismo.)
+  const availableIndices = wheel.options
     .map((_, i) => i)
-    .filter((i) => !hiddenIndices.includes(i));
+    .filter((i) => !usedIndices.includes(i));
 
-  // Índices disponibles para girar:
-  // - Modo clásico: todos los activos.
-  // - Modo eliminación: los activos que no están usados.
-  const availableIndices = eliminationMode
-    ? activeIndices.filter((i) => !usedIndices.includes(i))
-    : activeIndices;
-
-  // La ruleta está agotada SOLO si no queda ningún índice disponible.
-  const allUsed = eliminationMode && availableIndices.length === 0;
+  // La ruleta está agotada SOLO si no queda ninguna opción disponible.
+  const allUsed = availableIndices.length === 0;
 
   // Refs para controlar la animación RAF
   const rafRef = useRef(null);
@@ -211,21 +203,21 @@ export default function WheelCard({
   }
 
   function handleEliminationChoice(won) {
-    // Solo eliminar el killer si ganó la partida
+    // Solo marcar como usada si ganó la partida y no estaba ya marcada.
     if (won && lastWinnerIndex !== null && !usedIndices.includes(lastWinnerIndex)) {
       setUsedIndices(prev => [...prev, lastWinnerIndex]);
     }
 
-    // Logs temporales (solo en desarrollo) para auditar el modo eliminación
+    // Logs temporales (solo en desarrollo) para auditar el modo eliminación.
     if (import.meta.env.DEV) {
       console.groupCollapsed(
         `[Eliminación] wheel=${wheel.id} choice=${won ? "ganó" : "perdió"}`
       );
       console.log("totalOptions     :", wheel.options.length);
-      console.log("hiddenIndices    :", hiddenIndices);
       console.log("usedIndices      :", usedIndices);
       console.log("availableIndices :", availableIndices);
       console.log("remainingOptions :", availableIndices.length);
+      console.log("allUsed          :", allUsed);
       console.groupEnd();
     }
 
@@ -237,13 +229,13 @@ export default function WheelCard({
   function handleSpin() {
     if (!wheel.options.length) return;
 
-    // Si modo eliminación activo y todos usados, no girar
+    // Si no quedan opciones disponibles, no girar.
     if (allUsed) return;
 
     setShowWinnerOverlay(false);
 
     // Seleccionar ganador entre los índices disponibles
-    // (ya excluye ocultas y, en eliminación, también las usadas)
+    // (siempre excluye las marcadas con el ojito, en ambos modos).
     if (availableIndices.length === 0) return;
     const winnerIndex =
       availableIndices[Math.floor(Math.random() * availableIndices.length)];
@@ -408,7 +400,7 @@ export default function WheelCard({
           rotation={rotation}
           spinDuration={wheel.spinDuration}
           colors={wheel.colors}
-          usedIndices={eliminationMode ? usedIndices : []}
+          usedIndices={usedIndices}
         />
 
         {showWinnerOverlay && (
@@ -563,10 +555,7 @@ export default function WheelCard({
             {eliminationMode && (
               <button
                 className="elimination-toggle__reset"
-                onClick={() => {
-                  setUsedIndices([]);
-                  setHiddenIndices([]);
-                }}
+                onClick={() => setUsedIndices([])}
               >
                 ↻ Restaurar eliminados
               </button>
@@ -646,10 +635,10 @@ export default function WheelCard({
 
             {wheel.options.map((option, index) => {
               const optionLabel = typeof option === "object" ? option.label : option;
-              const isHidden = hiddenIndices.includes(index);
+              const isUsed = usedIndices.includes(index);
               if (!optionMatches(option)) return null;
               return (
-                <div key={`${wheel.id}-${index}`} className={`wheel-card__option-row${isHidden ? ' wheel-card__option-row--hidden' : ''}`}>
+                <div key={`${wheel.id}-${index}`} className={`wheel-card__option-row${isUsed ? ' wheel-card__option-row--hidden' : ''}`}>
                   <input
                     type="text"
                     value={optionLabel}
@@ -657,18 +646,18 @@ export default function WheelCard({
                     placeholder={`Opción ${index + 1}`}
                   />
                   <button
-                    className={`wheel-card__visibility-toggle${isHidden ? ' wheel-card__visibility-toggle--hidden' : ''}`}
+                    className={`wheel-card__visibility-toggle${isUsed ? ' wheel-card__visibility-toggle--hidden' : ''}`}
                     onClick={() => {
-                      if (isHidden) {
-                        setHiddenIndices(prev => prev.filter(i => i !== index));
+                      if (isUsed) {
+                        setUsedIndices(prev => prev.filter(i => i !== index));
                       } else {
-                        setHiddenIndices(prev => [...prev, index]);
+                        setUsedIndices(prev => [...prev, index]);
                       }
                     }}
-                    aria-label={isHidden ? 'Mostrar en ruleta' : 'Ocultar de ruleta'}
-                    title={isHidden ? 'Mostrar en ruleta' : 'Ocultar de ruleta'}
+                    aria-label={isUsed ? 'Mostrar en ruleta' : 'Ocultar de ruleta'}
+                    title={isUsed ? 'Mostrar en ruleta' : 'Ocultar de ruleta'}
                   >
-                    {isHidden ? (
+                    {isUsed ? (
                       <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
                         <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2.5"/>
                       </svg>
