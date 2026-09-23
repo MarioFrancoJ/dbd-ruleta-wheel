@@ -17,6 +17,16 @@
   --fw-semibold: 600;
   --fw-bold: 700;
 
+  /* Line-heights */
+  --lh-tight: 1.15;
+  --lh-snug: 1.3;
+  --lh-normal: 1.5;
+
+  /* Letter-spacing */
+  --ls-tight: -0.01em;
+  --ls-normal: 0;
+  --ls-wide: 0.02em;
+
   /* ===== TOKENS SEMÁNTICOS (jerarquía) =====
      Úsense estos en lugar de valores sueltos. */
 
@@ -43,6 +53,18 @@
   /* Botones (Random, Detener, Restablecer, Crear rol...) */
   --type-button-size: var(--fs-16);
   --type-button-weight: var(--fw-semibold);
+
+  /* Resultado grande (nombre del ganador, título del rol) */
+  --type-result-size: var(--fs-32);
+  --type-result-weight: var(--fw-bold);
+
+  /* Resultado inline (valor de dificultad, contador grande) */
+  --type-result-inline-size: var(--fs-20);
+  --type-result-inline-weight: var(--fw-bold);
+
+  /* Metadatos / badges / chips */
+  --type-meta-size: var(--fs-12);
+  --type-meta-weight: var(--fw-regular);
 }
 
 html,
